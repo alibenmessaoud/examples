@@ -1,2 +1,5 @@
 Private-Package: com.example.gateway.persistence
 -buildpath: gateway.api;version=latest
+Include-Resource: \
+  OSGI-INF=OSGI-INF
+Bundle-Blueprint: OSGI-INF/fileListener.xml

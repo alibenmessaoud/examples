@@ -26,4 +26,4 @@ repos -l gateway
 repos -l aries
 repos -l aries-ext
 
-nim add osgi.active.bundle/com.example.gateway.persistence
+nim add osgi.active.bundle/gateway.persistence

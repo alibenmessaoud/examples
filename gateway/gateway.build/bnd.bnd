@@ -2,5 +2,6 @@
 	gateway.cli,\
 	gateway.impl,\
 	gateway.pricer
+	gateway.persistence
 	
 -nobundles: true
