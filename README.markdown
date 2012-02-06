@@ -43,7 +43,7 @@ Where $EXAMPLES is the directory in which this file resides.
 
 ### Fabric ###
 
-To deploy these components via the service fabric using a system document, first launch a number of fibres (runtime instances) with one providing the infrastructure services.
+To deploy these components via the service fabric using a system document, first launch a number of fibres (runtime instances) with one providing the infrastructure services. Please note that in this example they are all running on the same physical machine.
 
 Where $FABRIC is the location of your Paremus Service Fabric installation and $EXAMPLES is the directory in which this file resides.
 
