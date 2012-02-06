@@ -1,4 +1,4 @@
-# Paremus Service Fabric - 'System' examples #
+# Paremus Service Fabric - Example Applications #
 ### A distributed OSGi PaaS solution for the Enterprise ###
 
 [Terminlogy and Concepts](https://docs.paremus.com/display/SF18/Terminology+and+Concepts)
@@ -36,28 +36,34 @@ The source is split up into the following directories:
 
 All the dependencies are packaged with this example so just run ant from the top level gateway directory
 
-    $ cd $examples
+Where $EXAMPLES is the directory in which this file resides.
+
+    $ cd $EXAMPLES/gateway
     $ ant -f gateway.build/build.xml
 
 ### Fabric ###
 
+To deploy these components via the service fabric using a system document, first launch a number of fibres (runtime instances) with one providing the infrastructure services.
 
-The final example is to deploy these components via the service fabric using a system document.
+Where $FABRIC is the location of your Paremus Service Fabric installation and $EXAMPLES is the directory in which this file resides.
 
-First launch a number of fibres with one providing the infrastructure services.
+    $0 cd $EXAMPLES/gateway
+    $0 $FABRIC/bin/posh
+    $1 $FABRIC/bin/posh -kc fibre --type=infra
+    $n $FABRIC/bin/posh -kc fibre
 
-    $0 cd examples/gateway
-    $0 $fabric/bin/posh
-    $1 $fabric/bin/posh -kc fibre --type=infra
-    $n $fabric/bin/posh -kc fibre
+Now build the repositories that nimble will use to install the artifacts
 
-Now connect to the infrastructure fibre and import/deploy the gateway system.
+    $0 sh gateway.scripts/repos/makeRepos.osh
+    $0 sh gateway.scripts/repos/loadRepos.osh
 
-    %0 fabric connect localhost:9101
+Now connect to the infrastructure fibre and import/deploy the gateway system:
+
+    %0 fabric:connect localhost:9101
     %0 sh gateway.scripts/systems/gateway.osh
     %0 fabric status -S gateway.system
 
-Now use the gateway cli to connect and request some quotes
+Now use the gateway cli to connect and request some quotes:
 
     %0 sh gateway.scripts/services/client.osh
     %0 gateway testbatch --batchSize=10000 --batchCount=10 --requestTimeout=60000
