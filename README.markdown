@@ -1,5 +1,5 @@
 # Paremus Service Fabric - 'System' examples #
-## A distributed OSGi PaaS solution for the Enterprise ##
+### A distributed OSGi PaaS solution for the Enterprise ###
 
 [Terminlogy and Concepts](https://docs.paremus.com/display/SF18/Terminology+and+Concepts)
 
@@ -65,4 +65,4 @@ Now use the gateway cli to connect and request some quotes
 
 ### Other deployment methods ####
 
-See [README.singlevm] and [README.multivm]
+See (README_SINGLEVM.markdown)[README_SINGLEVM.markdown] and (README_MULTIVM.markdown)[README_MULTIVM.markdown]
