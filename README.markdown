@@ -52,10 +52,10 @@ Where $FABRIC is the location of your Paremus Service Fabric installation and $E
     $1 $FABRIC/bin/posh -kc fibre --type=infra
     $n $FABRIC/bin/posh -kc fibre
 
-Now build the repositories that nimble will use to install the artifacts
+Now build the repositories that nimble will use to install the artifacts, in the first instance (created by $0 $FABRIC/bin/posh)
 
-    $0 sh gateway.scripts/repos/makeRepos.osh
-    $0 sh gateway.scripts/repos/loadRepos.osh
+    %0 sh gateway.scripts/repos/makeRepos.osh
+    %0 sh gateway.scripts/repos/loadRepos.osh
 
 Now connect to the infrastructure fibre and import/deploy the gateway system:
 
