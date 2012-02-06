@@ -66,6 +66,8 @@ Now connect to the infrastructure fibre and import/deploy the gateway system:
 Now use the gateway cli to connect and request some quotes:
 
     %0 sh gateway.scripts/services/client.osh
+    %0 gateway login demo
+    %0 gateway request paremus ibm oracle microsoft yahoo
     %0 gateway testbatch --batchSize=10000 --batchCount=10 --requestTimeout=60000
 
 
