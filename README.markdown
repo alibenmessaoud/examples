@@ -65,4 +65,4 @@ Now use the gateway cli to connect and request some quotes
 
 ### Other deployment methods ####
 
-See (README_SINGLEVM.markdown)[README_SINGLEVM.markdown] and (README_MULTIVM.markdown)[README_MULTIVM.markdown]
+See [README_SINGLEVM.markdown](https://github.com/paremus/examples/blob/master/README_SINGLEVM.markdown) and [README_MULTIVM.markdown](https://github.com/paremus/examples/blob/master/README_MULTIVM.markdown)
