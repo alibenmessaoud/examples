@@ -1,0 +1,24 @@
+<component name="libraryTable">
+  <library name="dependencies">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/ee.minimum" />
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/junit.osgi" />
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/org.apache.felix.framework" />
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/org.eclipse.osgi" />
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/osgi.core" />
+      <root url="jar://$PROJECT_DIR$/gateway/cnf/repo/org.apache.commons.cli/org.apache.commons.cli-1.22.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/ee.minimum" />
+      <root url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/osgi.core" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/ee.minimum" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/junit.osgi" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/org.apache.felix.framework" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/org.eclipse.osgi" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/osgi.core" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/ee.minimum" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$PROJECT_DIR$/gateway/cnf/buildrepo/osgi.core" recursive="false" type="SOURCES" />
+  </library>
+</component>
