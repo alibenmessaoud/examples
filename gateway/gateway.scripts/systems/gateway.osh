@@ -19,5 +19,7 @@ httpURL = poshx:sfs 9085 gateway $baseURL
 poshx:sfs -l
 
 fabric:repos -lcm $httpURL/gateway.repos
-fabric:import gateway.systems/gateway.system
-fabric:deploy gateway.system
+fabric:import gateway.systems/gateway.dds.system
+# fabric:import gateway.systems/gateway.slp.system 
+fabric:deploy gateway.dds.system
+# fabric:deploy gateway.slp.system

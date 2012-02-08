@@ -65,7 +65,7 @@ Now connect to the infrastructure fibre and import/deploy the gateway system:
 
     %0 fabric:connect localhost:9101
     %0 sh gateway.scripts/systems/gateway.osh
-    %0 fabric status -S gateway.system
+    %0 fabric status -S gateway.dds.system
 
 NOTE: Check the HTTP port announced when starting the infrastructure fibre. Depending on sequence the fibres were started in - you may need to connect to localhost:9000 or localhost:9001
 
