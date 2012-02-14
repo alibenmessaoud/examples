@@ -14,10 +14,19 @@
 # under the License. 
 # see http://www.apache.org/licenses/LICENSE-2.0 
 
-nim:index --enable-ee-spotters helloworld helloworld.build/release helloworld.build/release/index-nim.xml
 nim:index localrepo cnf/localrepo cnf/localrepo/index-nim.xml
-nim:index aries cnf/ariesrepo cnf/ariesrepo/index-nim.xml
 
+nim:index --enable-ee-spotters helloworld helloworld.build/release helloworld.build/release/index-nim.xml
+nim:repository helloworld-ext {
+	rule ms/com.example.hello {
+		req builder/primordial.builder
+		req osgi.active.bundle/helloworld.blueprint
+		cap ms/com.example.hello
+	}
+}
+nim:export helloworld-ext helloworld.build/release/index-nim-ext.xml
+
+nim:index aries cnf/ariesrepo cnf/ariesrepo/index-nim.xml
 nim:repository aries-ext {
   rule osgi.service/blueprint {
     req builder/primordial.builder
