@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<blueprint default-activation="eager" default-timeout="0"
-	xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+	default-activation="eager" default-timeout="0">
 
-	<bean id="hello" class="com.example.hello.impl.GreetingImpl" />
+	<!-- The main bean -->
+	<bean id="hello" class="com.example.hello.impl.GreetingImpl">
+		<cm:managed-properties persistent-id="com.example.hello"
+			update-strategy="container-managed" />
+	</bean>
 
+	<!-- Publish the bean as a service -->
 	<service interface="com.example.hello.Greeting" ref="hello" />
 
 </blueprint>
