@@ -1,0 +1,4 @@
+-buildpath: helloworld.api;version=latest
+Private-Package: com.example.hello.impl
+Include-Resource: resources
+Bundle-Blueprint: OSGI-INF/hello.xml

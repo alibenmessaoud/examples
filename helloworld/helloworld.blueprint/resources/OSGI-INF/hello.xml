@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint default-activation="eager" default-timeout="0"
+	xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+	<bean id="hello" class="com.example.hello.impl.GreetingImpl" />
+
+	<service interface="com.example.hello.Greeting" ref="hello" />
+
+</blueprint>

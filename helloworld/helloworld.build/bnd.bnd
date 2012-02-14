@@ -1,0 +1,4 @@
+-nobundles
+-dependson:\
+	helloworld.cli,\
+	helloworld.blueprint
