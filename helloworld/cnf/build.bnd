@@ -7,10 +7,13 @@
 Git-Descriptor: ${system;git describe --dirty --always}
 Git-SHA: ${system;git rev-list -1 HEAD}
 
+repo:           ${build}/localrepo
+releaserepo:    ${workspace}/helloworld.build/release
+
 -plugin: aQute.lib.deployer.obr.LocalOBR;name=Local;local=${build}/localrepo,\
 	aQute.lib.deployer.obr.OBR;name=Build Repository;mode=build;locations=file:${build}/buildrepo/repository.xml,\
 	aQute.lib.deployer.obr.OBR;name=Aries;locations=file:${build}/ariesrepo/repository.xml,\
-	aQute.lib.deployer.obr.LocalOBR;name=HelloWorldRelease;local=${workspace}/helloworld.build/release;readonly=false,\
+	aQute.lib.deployer.obr.LocalOBR;name=HelloWorldRelease;local=${releaserepo};readonly=false,\
 	org.osgi.impl.bundle.bindex.BundleIndexerImpl;path:=${repo}/org.osgi.impl.bundle.bindex/org.osgi.impl.bundle.bindex-2.2.0.jar
 
 -releaserepo: HelloWorldRelease
