@@ -1,18 +1,17 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="helloworld-system"
+<system xmlns="http://schema.paremus.com/sf/1" name="helloworld-blueprint-system"
 	boundary="fibre" repopath="helloworld-ext,helloworld,aries-ext,aries">
 
 	<description>
-		Deploys a Blueprint-based Greeting service and a CLI
-		command.
+		Deploys a Blueprint-based Greeting service and a CLI command.
 	</description>
 	<nature group="demo" />
 
+	<!-- Blueprint Version -->
 	<system.part category="ms" name="com.example.hello">
 		<property name="language" value="de" />
 	</system.part>
-
-
 	<system.part category="osgi.active.bundle" name="helloworld.blueprint" />
+	
 	<system.part category="osgi.active.bundle" name="helloworld.cli" />
 
 </system>

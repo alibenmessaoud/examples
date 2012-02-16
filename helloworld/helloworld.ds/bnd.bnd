@@ -1,0 +1,8 @@
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	helloworld.api;version=latest
+Private-Package: com.example.hello.impl,\
+	aQute.bnd.annotation.metatype
+Service-Component: *

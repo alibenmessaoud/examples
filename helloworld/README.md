@@ -1,8 +1,8 @@
 Hello World Example
 ===================
 
-Instructions
-------------
+Instructions for Blueprint Version
+----------------------------------
 
 1.	Build the bundles:
 
@@ -49,8 +49,8 @@ Deploy to Fibre
 
 3.	Deploy and test the system:
 
-		% fabric:import helloworld.scripts/helloworld-system.xml
-		% fabric:deploy helloworld-system
+		% fabric:import helloworld.scripts/helloworld-blueprint-system.xml
+		% fabric:deploy helloworld-blueprint-system
 		% sayHello Neil
 		Hello Neil!
 

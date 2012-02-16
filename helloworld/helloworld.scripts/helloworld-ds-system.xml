@@ -1,0 +1,17 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="helloworld-ds-system"
+	boundary="fibre" repopath="helloworld-ext,helloworld,aries-ext,aries">
+
+	<description>
+		Deploys a Declarative Services based Greeting service and a CLI command.
+	</description>
+	<nature group="demo" />
+
+	<!-- Declarative Services Version -->
+	<system.part category="ms" name="com.example.hello.ds">
+		<property name="language" value="ja" />
+	</system.part>
+	<system.part category="osgi.active.bundle" name="helloworld.ds" />
+	
+	<system.part category="osgi.active.bundle" name="helloworld.cli" />
+
+</system>
