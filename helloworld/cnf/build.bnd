@@ -4,8 +4,8 @@
 # you specify in this file.
 
 # If you use git, you might want to uncomment the following lines:
-Git-Descriptor: ${system;git describe --dirty --always}
-Git-SHA: ${system;git rev-list -1 HEAD}
+# Git-Descriptor: ${system;git describe --dirty --always}
+# Git-SHA: ${system;git rev-list -1 HEAD}
 
 repo:           ${build}/localrepo
 releaserepo:    ${workspace}/helloworld.build/release
