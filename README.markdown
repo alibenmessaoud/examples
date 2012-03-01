@@ -1,4 +1,4 @@
-# Paremus Service Fabric - Examples #
+# Paremus Service Fabric - examples #
 ### A distributed OSGi based Cloud platform ###
 
 [Terminlogy and Concepts](https://docs.paremus.com/display/SF18/Terminology+and+Concepts)
