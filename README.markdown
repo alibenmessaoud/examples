@@ -1,8 +1,8 @@
 # Paremus Service Fabric - Example Applications #
-### A distributed composite Java / Scala Platform for the Enterprise ###
+### A distributed OSGi based Cloud platform ###
 
 [Terminlogy and Concepts](https://docs.paremus.com/display/SF18/Terminology+and+Concepts)
 
-* Helloworld - Simple Blueprint and Declarative Service examples which also demonstrated re-configuration.
-* trivial-calc - Simple demonstration of Paremus RSA implementation (discovery via SLP & EssenceRMI provider)
-* Gateway - A CLI driven Pricer Application: Demonstrates use of Java & Scala, Blueprint & Declarative Services and RSA.   
+* [Helloworld](https://github.com/paremus/examples/tree/master/helloworld) - Simple Blueprint and Declarative service examples which also demonstrate re-configuration.
+* [trivial-calc](https://github.com/paremus/examples/tree/master/trivial-calc) - Simple demonstration of Paremus RSA implementation: Discovery via SLP & provider via EssenceRMI.
+* [Gateway](https://github.com/paremus/examples/tree/master/gateway) - A CLI driven Pricer Application: Demonstrates combined use of Java & Scala, Blueprint & Declarative Services and RSA.   
