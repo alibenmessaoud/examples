@@ -1,8 +1,10 @@
 
-## Single JVM ##
+## Nimble on a Single JVM ##
 
-The following example shows how to setup the components so that they run in a single framework with
-no remote communication. First launch posh in the gateway example directory.
+This version of the example shows how to setup the components so that they run in a single framework with
+no remote communication. 
+
+First launch posh in the gateway example directory.
 
     $ $fabric/bin/posh
 

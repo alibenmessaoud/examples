@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com.paremus.dosgi.examples.calculator" default="build"> 
+    <import file="../cnf/build.xml"/>
+
+    <target name="build" depends="bnd-common.build">
+       <echo>
+Now create a nimble index:
+	posh -c index calc build/lib build/lib/index.xml
+       </echo>
+    </target>
+
+</project>

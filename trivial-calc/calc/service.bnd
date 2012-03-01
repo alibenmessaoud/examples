@@ -1,0 +1,12 @@
+# cmd.bnd
+
+bundle.namespace: ${bundle.basepkg}.service
+
+Bundle-Name: DOSGi Calculator Example Service
+Bundle-SymbolicName: ${bundle.namespace}
+
+Bundle-Activator: ${bundle.namespace}.internal.Activator
+Export-Package: !${bundle.namespace}.internal.*,\
+    ${bundle.namespace}.*;version=${Bundle-Version}
+Private-Package: ${bundle.namespace}.internal.*
+

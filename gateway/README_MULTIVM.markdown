@@ -1,8 +1,8 @@
 
-## Multi JVM ##
+## Nimble on Multi JVMs ##
 
-This example launches several nimble instances and installs components in each
-using slp and essence rmi for the remote discovery/communication
+This version of the example launches several nimble instances and installs the required services via 
+posh scripts. 
 
     $0 $fabric/bin/posh
     $1 $fabric/bin/posh

@@ -1,0 +1,47 @@
+#!/usr/bin/env posh
+
+# calculator-api/cmd/service implement a trivial but fully "live" example of a
+# remote service. The example is split into a remote service that can add two
+# numbers, and a command line client that can be used to invoke the service.
+
+rsa_base = {
+  # load RSA and calc example repository
+  nim:repos --load nimble-rs
+  nim:repos --load ($0 resolve build/lib/index-nim.xml)
+
+  # show commands executed
+  set -x
+
+  # add the TopologyManager, which is responsible for controlling visibility of
+  # imported & exported endpoints.
+  nim:add com.paremus.dosgi.topologymanager@active
+
+  # adds a transport provider, in this case essence-rmi.
+  nim:add com.paremus.dosgi.dsw.essencermi@active
+
+  # add a discovery provider, in this case SLP. Any other discovery should work
+  # just the same. You can also install multiple discovery bundles at the same
+  # time.
+  nim:add com.paremus.dosgi.discovery.slp@active
+}
+
+if { "base" equals $1 } {
+  # install the base RSA stack
+  rsa_base
+} { "client" equals $1 } {
+  # start the calculator command-line client
+  rsa_base
+  # This starts the command-line client, which provides the 'calc' command
+  nim:add com.paremus.dosgi.examples.calculator.cmd@active
+  calc:status
+} { "server" equals $1 } {
+  # start the calculator server
+  rsa_base
+  # This will expose a service endpoint over essence-rmi, listening on a socket.
+  # The discovery should be almost instantaneous on the same machine.
+  nim:add com.paremus.dosgi.examples.calculator.service@active
+} {
+  echo "Usage: calculator.osh {base | client | server}"
+}
+
+# end

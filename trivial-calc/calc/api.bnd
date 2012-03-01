@@ -1,0 +1,9 @@
+# api.bnd
+
+bundle.namespace: ${bundle.basepkg}.api
+
+Bundle-Name: DOSGi Calculator Example API
+Bundle-SymbolicName: ${bundle.namespace}
+
+Export-Package: ${bundle.namespace}.*;version=${Bundle-Version}
+

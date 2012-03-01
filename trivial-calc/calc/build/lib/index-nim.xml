@@ -1,0 +1,45 @@
+<repository name="calc:0" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/com.paremus.dosgi.examples.calculator.api:1.0.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.api:[1.0.1,1.0.1)" />
+  <cap name="osgi.active.bundle/com.paremus.dosgi.examples.calculator.api:1.0.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/com.paremus.dosgi.examples.calculator.cmd:1.0.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.cmd:[1.0.1,1.0.1)" />
+  <cap name="osgi.active.bundle/com.paremus.dosgi.examples.calculator.cmd:1.0.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/com.paremus.dosgi.examples.calculator.service:1.0.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.service:[1.0.1,1.0.1)" />
+  <cap name="osgi.active.bundle/com.paremus.dosgi.examples.calculator.service:1.0.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.api:1.0.1" >
+  <artifact name="com.paremus.dosgi.examples.calculator.api:1.0.1" uri="com.paremus.dosgi.examples.calculator.api.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <cap name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.api:1.0.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.dosgi.examples.calculator.api:1.0.1" attrs="bundle-version=1.0.1,bundle-symbolic-name=&quot;com.paremus.dosgi.examples.calculator.api&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.dosgi.examples.calculator.api:1.0.1" />
+ </part>
+ <part name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.cmd:1.0.1" >
+  <artifact name="com.paremus.dosgi.examples.calculator.cmd:1.0.1" uri="com.paremus.dosgi.examples.calculator.cmd.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.paremus.dosgi.examples.calculator.api" />
+  <req name="osgi.package/com.paremus.dosgi.examples.calculator.cmd:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,1.6)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,1.5)" />
+  <cap name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.cmd:1.0.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.dosgi.examples.calculator.cmd:1.0.1" attrs="bundle-version=1.0.1,bundle-symbolic-name=&quot;com.paremus.dosgi.examples.calculator.cmd&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.dosgi.examples.calculator.cmd:1.0.1" />
+ </part>
+ <part name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.service:1.0.1" >
+  <artifact name="com.paremus.dosgi.examples.calculator.service:1.0.1" uri="com.paremus.dosgi.examples.calculator.service.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.paremus.dosgi.examples.calculator.api" />
+  <req name="osgi.package/com.paremus.dosgi.examples.calculator.service:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,1.6)" />
+  <cap name="osgi.resolved.bundle/com.paremus.dosgi.examples.calculator.service:1.0.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.dosgi.examples.calculator.service:1.0.1" attrs="bundle-version=1.0.1,bundle-symbolic-name=&quot;com.paremus.dosgi.examples.calculator.service&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.dosgi.examples.calculator.service:1.0.1" />
+ </part>
+</repository>

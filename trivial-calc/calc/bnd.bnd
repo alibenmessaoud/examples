@@ -1,0 +1,12 @@
+# bnd defaults
+
+bundle.basepkg: com.paremus.dosgi.examples.calculator
+
+-sub: *.bnd
+
+-buildpath: \
+   osgi.core, \
+   osgi.enterprise
+
+Bundle-Version: 1.0.1
+Bundle-Vendor: Paremus Limited
