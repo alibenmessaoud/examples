@@ -5,7 +5,7 @@ example of a remote service. The example is split into a remote service that
 can add two numbers, and a command line client that can be used to invoke the
 service.
 
-### Build ###
+## Build
 
 All the dependencies are packaged with this example so just run ant from the top level directory
 (where $CALC is the directory in which this file resides).
