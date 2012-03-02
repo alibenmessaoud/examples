@@ -1,0 +1,2 @@
+-nobundles
+-dependson: calculator.client, calculator.server

@@ -1,0 +1,8 @@
+/.metadata
+.DS_Store
+*~
+/*/bin/
+/*/bin_test/
+/*/generated/
+/cnf/cache
+.obrcache

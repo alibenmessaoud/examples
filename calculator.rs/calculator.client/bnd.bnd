@@ -1,0 +1,9 @@
+-buildpath: calculator.api;version=latest,\
+	biz.aQute.bnd.annotation,\
+	com.paremus.command,\
+	com.paremus.core.types
+Bundle-Version: 1.0.0
+Bundle-Name: Calculator Client
+Private-Package: com.paremus.examples.calculator.client
+Posh-Namespace-calc: calc
+Service-Component: *

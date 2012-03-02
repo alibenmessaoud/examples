@@ -1,0 +1,8 @@
+-buildpath: biz.aQute.bnd.annotation,\
+	calculator.api;version=latest,\
+	osgi.core
+
+Bundle-Version: 1.0.0
+Bundle-Name: Calculator Server
+Private-Package: com.paremus.examples.calculator.server
+Service-Component: *
