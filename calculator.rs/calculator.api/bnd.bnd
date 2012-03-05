@@ -1,0 +1,3 @@
+Bundle-Version: 1.0.0
+Export-Package: com.paremus.examples.calculator.api
+-buildpath: ee.minimum;version=1.2.0.200908310645
