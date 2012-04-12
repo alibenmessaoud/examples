@@ -54,8 +54,8 @@ Deploy to Fibre
 		% sayHello Neil
 		Hello Neil!
 
-4.	Update configuration:
+4.	Update configuration (using part:systemname/partname/pid):
 
-		% fabric:config pid:com.example.hello language=de
+		% fabric:config part:helloworld-ds-system/com.example.hello.ds/com.example.hello.ds language=de
 		% sayHello Neil
 		Guten Tag Neil!
