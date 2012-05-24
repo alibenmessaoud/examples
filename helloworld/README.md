@@ -27,7 +27,7 @@ Instructions for Blueprint Version
 		% sayHello Neil
 		Hello Neil!
 
-6.      Lets test the service :)
+6.	Lets test the service :)
 
 		% sayHello Neil
                 Hello Neil!
