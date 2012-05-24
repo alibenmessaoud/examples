@@ -24,8 +24,6 @@ Instructions for Blueprint Version
 5.	Start the CLI bundle and test the service:
 
 		% nim:add osgi.active.bundle/helloworld.cli
-		% sayHello Neil
-		Hello Neil!
 
 6.	Lets test the service :)
 
