@@ -10,7 +10,6 @@
 	<system.part category="ms" name="com.example.hello.ds">
 		<property name="language" value="ja" />
 	</system.part>
-	<system.part category="osgi.active.bundle" name="helloworld.ds" />
 	
 	<system.part category="osgi.active.bundle" name="helloworld.cli" />
 
