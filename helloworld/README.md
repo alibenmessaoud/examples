@@ -40,24 +40,24 @@ Instructions for Blueprint Version
 Instructions for Declarative Service Version
 ----------------------------------
 
-1.      Build the bundles:
+1.	Build the bundles:
 
                 $ ant -f helloworld.build/build.xml build release
 
-2.      Build the repository indexes:
+2.	Build the repository indexes:
 
                 $ posh helloworld.scripts/repos/makeRepos.osh
 
-3.      Start posh and load repositories:
+3.	Start posh and load repositories:
 
                 $ posh
                 % sh helloworld.scripts/repos/loadRepos.osh
 
-4.      Start the Declarative Service example:
+4.	Start the Declarative Service example:
 
                 % nim:add ms/com.example.hello.ds 
 
-5.      Start the CLI bundle and test the service:
+5.	Start the CLI bundle and test the service:
 
                 % nim:add osgi.active.bundle/helloworld.cli
 
