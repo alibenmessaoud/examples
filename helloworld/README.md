@@ -28,12 +28,13 @@ Instructions for Blueprint Version
 		Hello Neil!
 
 6.      Lets test the service :)
-               % sayHello Neil
+
+		% sayHello Neil
                 Hello Neil!
-               % setpid com.example.hello language=de
-               -------> Setting language to de
-               % sayHello Neil
-               Guten Tag, Neil.
+		% setpid com.example.hello language=de
+		-------> Setting language to de
+		% sayHello Neil
+		Guten Tag, Neil.
 
 
 Instructions for Declarative Service Version
@@ -61,15 +62,16 @@ Instructions for Declarative Service Version
                 % nim:add osgi.active.bundle/helloworld.cli
 
 6.	Lets test the service :)
-                % sayHello Neil
-                Hello Neil!
-                % 
-                % setpid com.example.hello.ds language=fr
-                -------> Setting language to fr
-                % sayHello Neil
-                Bonjour Neil.
-                % pids
-                com.example.hello.ds {language="fr"}
+
+		% sayHello Neil
+		Hello Neil!
+		% 
+		% setpid com.example.hello.ds language=fr
+		-------> Setting language to fr
+		% sayHello Neil
+		Bonjour Neil.
+		% pids
+		com.example.hello.ds {language="fr"}
 
 
 Deploy to Fibre
