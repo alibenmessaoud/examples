@@ -24,36 +24,21 @@
   <!-- set SystemGroup for security control -->
   <nature group="demo" />
 
-  <system name="pricer" boundary="fibre">
     <system.part category="msf" name="com.example.pricer">
       <property name="type" value="firm" />
+
+      <replication.handler type="scalable">
+        <property name="scaleFactor" value="1" type="float" />
+        <property name="fixedDelta" value="-2" type="integer" />
+        <property name="minimum" value="1" type="integer" />
+      </replication.handler>
+
     </system.part>
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
-    <system.part category="osgi.active.bundle" name="com.paremus.rtidds"/>
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
-    <replication.handler type="scalable">
-      <property name="scaleFactor" value="1" type="float" />
-      <property name="fixedDelta" value="-2" type="integer" />
-      <property name="minimum" value="1" type="integer" />
-    </replication.handler>
-  </system>
 
-  <system name="persistence" boundary="fibre">
     <system.part category="osgi.active.bundle" name="gateway.persistence" />
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
-    <system.part category="osgi.active.bundle" name="com.paremus.rtidds"/>
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
-  </system>
 
-  <system name="gateway" boundary="fibre">
     <system.part category="msf" name="com.example.gateway">
       <property name="id" value="foo" />
     </system.part>
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
-    <system.part category="osgi.active.bundle" name="com.paremus.rtidds"/>
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
-    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
-  </system>
+
 </system>
