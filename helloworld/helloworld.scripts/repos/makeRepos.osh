@@ -19,7 +19,7 @@ nim:index localrepo cnf/localrepo cnf/localrepo/index-nim.xml
 nim:index --enable-ee-spotters helloworld helloworld.build/release helloworld.build/release/index-nim.xml
 nim:repository helloworld-ext {
 	rule ms/com.example.hello {
-		req builder/primordial.builder
+		req builder/ms
 		req osgi.active.bundle/helloworld.blueprint
 		cap ms/com.example.hello
 	}
