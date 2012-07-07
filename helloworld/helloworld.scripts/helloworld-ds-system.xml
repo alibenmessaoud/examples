@@ -11,6 +11,8 @@
 		<property name="language" value="ja" />
 	</system.part>
 	
-	<system.part category="osgi.active.bundle" name="helloworld.cli" />
+	<system.part category="osgi.active.bundle" name="helloworld.cli"  >
+                <contract features="(fibre.composite.com.example.hello.ds=1)" />
+        </system.part>
 
 </system>
