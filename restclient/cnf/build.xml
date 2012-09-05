@@ -21,5 +21,11 @@
 			...
 		</target>
 	-->
+	
+	<target name="package" depends="build">
+		<java fork="true" classname="aQute.bnd.main.bnd" classpathref="bnd-classpath" dir="${projectdir}">
+			<arg line="package --output ${target}/restclient.jar restclient.bndrun"/>
+		</java>
+	</target>
 
 </project>

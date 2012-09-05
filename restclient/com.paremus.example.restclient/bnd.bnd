@@ -6,15 +6,4 @@
 	jackson-databind
 
 Private-Package: com.paremus.example.restclient
--runbundles: org.apache.felix.gogo.runtime,\
-	org.apache.felix.gogo.shell,\
-	org.apache.felix.scr,\
-	osgi.cmpn,\
-	org.apache.felix.gogo.command,\
-	jackson-core,\
-	jackson-databind,\
-	jackson-annotations,\
-	org.restlet
--runfw: org.apache.felix.framework;version='[4.0.3,4.0.3]'
--runee: JavaSE-1.6
 Service-Component: *
