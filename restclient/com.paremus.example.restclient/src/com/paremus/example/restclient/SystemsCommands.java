@@ -1,11 +1,13 @@
 package com.paremus.example.restclient;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.StringWriter;
 import java.net.URLEncoder;
 
 import org.apache.felix.service.command.Descriptor;
+import org.restlet.Response;
 import org.restlet.data.MediaType;
 import org.restlet.representation.Representation;
 import org.restlet.resource.ClientResource;
@@ -19,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 		provide = Object.class,
 		properties = {
 				"osgi.command.scope=system",
-				"osgi.command.function=list|show"
+				"osgi.command.function=list|show|install"
 		})
 public class SystemsCommands {
 	
@@ -60,6 +62,21 @@ public class SystemsCommands {
 		representation.write(outputBuffer);
 		
 		out.println(outputBuffer.toString());
+	}
+	
+	@Descriptor("Install system document")
+	public void install(@Descriptor("Path to system document on local filesystem") String path) throws IOException {
+		File file = new File(path);
+		if (!file.isFile())
+			throw new IllegalArgumentException("System document does not exist: " + path);
+		
+		ClientResource resource = new ClientResource(BASE_URL);
+		resource.post(file);
+		
+		// The new system URL is in the Location header of the response
+		Response response = resource.getResponse();
+		String location = response.getLocationRef().toString();
+		out.printf("System uploaded to location %s\n", location);
 	}
 	
 }
