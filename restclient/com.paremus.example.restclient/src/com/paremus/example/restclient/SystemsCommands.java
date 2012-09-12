@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 		provide = Object.class,
 		properties = {
 				"osgi.command.scope=system",
-				"osgi.command.function=list|show|install|uninstall"
+				"osgi.command.function=list|content|install|uninstall"
 		})
 public class SystemsCommands {
 	
@@ -52,10 +52,10 @@ public class SystemsCommands {
 		}
 	}
 	
-	@Descriptor("Show system detail")
-	public void show(@Descriptor("System URI of selected system") String systemUri) throws IOException {
-		out.printf("Showing details for system: %s\n", systemUri);
-		ClientResource resource = new ClientResource(BASE_URL + "/" + URLEncoder.encode(systemUri, "UTF-8"));
+	@Descriptor("Show system document contents")
+	public void content(@Descriptor("System URI of selected system") String systemUri) throws IOException {
+		out.printf("Showing contents for system: %s\n", systemUri);
+		ClientResource resource = new ClientResource(BASE_URL + "/" + URLEncoder.encode(systemUri, "UTF-8") + "/content");
 		Representation representation = resource.get();
 		
 		StringWriter outputBuffer = new StringWriter();
