@@ -9,6 +9,7 @@ import java.net.URLEncoder;
 import org.apache.felix.service.command.Descriptor;
 import org.restlet.Response;
 import org.restlet.data.MediaType;
+import org.restlet.data.Method;
 import org.restlet.representation.Representation;
 import org.restlet.resource.ClientResource;
 
@@ -21,11 +22,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 		provide = Object.class,
 		properties = {
 				"osgi.command.scope=system",
-				"osgi.command.function=list|content|install|uninstall"
+				"osgi.command.function=list|content|install|uninstall|deploy|undeploy"
 		})
 public class SystemsCommands {
 	
 	private static final String BASE_URL = "http://localhost:9000/fabric/systems";
+	private static final Method PATCH = new Method("PATCH");
 	
 	private final PrintStream out = System.out;
 	
@@ -94,6 +96,30 @@ public class SystemsCommands {
 		
 		ClientResource resource = new ClientResource(BASE_URL + "/" + URLEncoder.encode(systemUri, "UTF-8"));
 		resource.delete();
+	}
+	
+	@Descriptor("Deploy system")
+	public void deploy(@Descriptor("System URI") String systemUri) throws IOException {
+		out.printf("Deploying system with URI %s\n", systemUri);
+		
+		ClientResource resource = new ClientResource(PATCH, BASE_URL + "/" + URLEncoder.encode(systemUri, "UTF-8"));
+		resource.getRequest().setEntity("{\"deployed\":true}", MediaType.APPLICATION_JSON);
+		resource.handle();
+		
+		if (resource.getStatus().isError())
+			throw new IOException(resource.getStatus().toString());
+	}
+	
+	@Descriptor("Undeploy system")
+	public void undeploy(@Descriptor("System URI") String systemUri) throws IOException {
+		out.printf("Deploying system with URI %s\n", systemUri);
+		
+		ClientResource resource = new ClientResource(PATCH, BASE_URL + "/" + URLEncoder.encode(systemUri, "UTF-8"));
+		resource.getRequest().setEntity("{\"deployed\":false}", MediaType.APPLICATION_JSON);
+		resource.handle();
+		
+		if (resource.getStatus().isError())
+			throw new IOException(resource.getStatus().toString());
 	}
 	
 }
