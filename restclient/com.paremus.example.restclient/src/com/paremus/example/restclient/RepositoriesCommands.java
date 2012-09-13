@@ -17,7 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 		provide = Object.class,
 		properties = {
 				"osgi.command.scope=repo",
-				"osgi.command.function=list|add"
+				"osgi.command.function=list|add|remove"
 		})
 public class RepositoriesCommands {
 	
