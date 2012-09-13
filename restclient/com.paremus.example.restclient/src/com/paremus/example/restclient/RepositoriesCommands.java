@@ -17,16 +17,15 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 		provide = Object.class,
 		properties = {
 				"osgi.command.scope=repo",
-				"osgi.command.function=list"
+				"osgi.command.function=list|add"
 		})
 public class RepositoriesCommands {
 	
 	private static final String BASE_URL = "http://localhost:9000/fabric/repos";
+	private PrintStream out = System.out;
 	
 	@Descriptor("List fabric repositories")
 	public void list() throws IOException {
-		PrintStream out = System.out;
-		
 		// Fetch the JSON
 		ClientResource resource = new ClientResource(BASE_URL);
 		Representation representation = resource.get(MediaType.APPLICATION_JSON);
@@ -43,6 +42,20 @@ public class RepositoriesCommands {
 			String address = node.get("address").asText();
 			out.printf("%s ==> %s\n", name, address);
 		}
+	}
+	
+	@Descriptor("Add repository")
+	public void add(@Descriptor("Repository URL") String url) throws IOException {
+		ClientResource resource = new ClientResource(BASE_URL);
+		Representation representation = resource.post(url);
+		
+		representation.write(out);
+	}
+	
+	@Descriptor("Remove repository")
+	public void remove(@Descriptor("Repository name") String name) {
+		ClientResource resource = new ClientResource(BASE_URL + "/" + name);
+		resource.delete();
 	}
 	
 }
