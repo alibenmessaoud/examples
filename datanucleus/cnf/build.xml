@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="master" default="none">
+	
+	<import file="build-template.xml"/>
+	
+	<!--
+		Use this file to provide your workspace-specific tasks. Several examples follow.
+		
+		1. To execute tasks before/after compilation:
+		
+		<target name="compile">
+			<echo message="This task executed before compilation..."/>
+			<antcall target="template.compile"/>
+			<echo message="This task executed AFTER compilation."/>
+		</target>
+		
+		2. Insert a build target:
+		
+		<target name="build" depends="template.build, findbugs"/>
+		<target name="findbugs">
+			...
+		</target>
+	-->
+	
+	
+	<target name="init" depends="template.init">
+		<property name="datanucleus.buildlib.dir" location="${workspacedir}/cnf/datanucleus-build-3.1.0"/>
+		
+		<!-- DEFINE ENHANCER TASK -->
+		<path id="enhancer.classpath">
+			<fileset dir="${datanucleus.buildlib.dir}" includes="*.jar"/>
+			<pathelement location="${datanucleus.buildlib.dir}"/>
+		</path>
+		<taskdef
+			classname="org.datanucleus.enhancer.tools.EnhancerTask"
+			name="dnenhance"
+			classpathref="enhancer.classpath"
+		/>
+		
+		<!-- DEFINE SCHEMATOOL TASK -->
+		<path id="schematool.classpath">
+			<fileset dir="${datanucleus.buildlib.dir}" includes="*.jar"/>
+			<pathelement location="${datanucleus.buildlib.dir}"/>
+		</path>
+		<taskdef
+			classname="org.datanucleus.store.schema.SchemaToolTask"
+			name="dnschematool"
+			classpathref="schematool.classpath"
+		/>
+	</target>
+
+	<target name="enhance" depends="compile">
+		<echo message="Enhancing classes in ${project.output}"/>
+		<dnenhance dir="${project.output}" failonerror="true" verbose="true" filesuffixes="jdo,class">
+			<classpath>
+				<path refid="enhancer.classpath"/>
+				<pathelement location="${project.output}"/>
+			</classpath>
+		</dnenhance>
+	</target>
+	
+	<target name="schemagen" depends="enhance">
+		<echo message="Generating schema for ${project.output}"/>
+		<pathconvert property="schematool.classpath.prop" refid="schematool.classpath"/>
+		<echo message="classpath = ${schematool.classpath.prop}"/>
+		
+		<dnschematool failonerror="true" verbose="true" mode="create">
+			<classpath>
+				<path refid="schematool.classpath"></path>
+				<pathelement location="${project.output}"/>
+			</classpath>
+			<fileset dir="${project.output}" includes="**/*.class"/>
+		    <sysproperty key="datanucleus.ConnectionDriverName" 
+		                 value="org.apache.derby.jdbc.ClientDriver"/>
+		    <sysproperty key="datanucleus.ConnectionURL" 
+		                 value="jdbc:derby://localhost/datanucleussample;create=true"/>
+		    <sysproperty key="datanucleus.ConnectionUserName" 
+		                 value="APP"/>
+		    <sysproperty key="datanucleus.ConnectionPassword" 
+		                 value="APP"/>
+		</dnschematool>
+	</target>
+	
+</project>

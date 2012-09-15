@@ -1,0 +1,2 @@
+-buildpath: javax.jdo
+Export-Package: org.datanucleus.samples.jdo.tutorial

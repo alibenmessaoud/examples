@@ -1,0 +1,2 @@
+Private-Package: com.paremus.example.datanucleus.service
+Service-Component: *

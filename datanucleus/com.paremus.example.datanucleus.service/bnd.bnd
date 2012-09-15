@@ -1,0 +1,10 @@
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	org.apache.felix.gogo.runtime,\
+	javax.jdo,\
+	org.datanucleus,\
+	com.paremus.example.datanucleus.model;version=latest
+
+-sub: *.bnd
