@@ -26,6 +26,11 @@
 	<target name="init" depends="template.init">
 		<property name="datanucleus.buildlib.dir" location="${workspacedir}/cnf/datanucleus-build-3.1.0"/>
 		
+    <!-- LOAD FABRIC PROPERTIES -->
+    <property file="../cnf/fabric.properties"/>
+    <fail unless="fabric.home" message="The 'fabric.home' property is not available. Please refer to build instructions for defining the Paremus Fabric installation directory."/>
+    <echo message="Defined 'fabric.home' as ${fabric.home}"/>
+
 		<!-- DEFINE ENHANCER TASK -->
 		<path id="enhancer.classpath">
 			<fileset dir="${datanucleus.buildlib.dir}" includes="*.jar"/>
@@ -47,6 +52,7 @@
 			name="dnschematool"
 			classpathref="schematool.classpath"
 		/>
+
 	</target>
 
 	<target name="enhance" depends="compile">
@@ -80,5 +86,17 @@
 		                 value="APP"/>
 		</dnschematool>
 	</target>
+
+  <target name="release" depends="template.release">
+	  <property file="../cnf/fabric.properties"/>
+  	<echo message="Regenerating release repository index in ${workspacedir}/cnf/releaserepo/index-nim.xml"/>
+    <path id="posh.classpath">
+      <pathelement path="${fabric.home}/lib/boot/boot-launch.jar"/>
+      <pathelement path="${fabric.home}/bin/posh.jar"/>
+    </path>
+  	<java classname="com.paremus.posh.launch.Posh" classpathref="posh.classpath" fork="true">
+  	  <arg line='-c "nim:index DataNucleus ${workspacedir}/cnf/releaserepo ${workspacedir}/cnf/releaserepo/index-nim.xml"'/>
+  	</java>
+  </target>
 	
 </project>
