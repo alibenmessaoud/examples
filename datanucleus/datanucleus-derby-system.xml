@@ -10,11 +10,6 @@
     <property name="javax.jdo.option.ConnectionPassword" value="APP"/>
   </system.part>
 
-  <!-- The data model bundle -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
-  <!-- The DataNucleus extender that binds is all together -->
-  <system.part category="osgi.active.bundle" name="com.paremus.datanucleus.extender"/>
-
   <!-- This defines that we want DataNucleus with an RDBMS -->
   <system.part category="osgi.active.bundle" name="org.datanucleus.store.rdbms"/>
   <!-- This defines that we want Apache Derby to be our RDBMS -->

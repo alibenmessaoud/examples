@@ -7,11 +7,6 @@
     <property name="javax.jdo.option.ConnectionURL" value="mongodb:/DataNucleusExample"/>
   </system.part>
 
-  <!-- The data model bundle -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
-  <!-- The DataNucleus extender that binds is all together -->
-  <system.part category="osgi.active.bundle" name="com.paremus.datanucleus.extender"/>
-
   <!-- This defines that we want DataNucleus with MongoDB -->
   <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb"/>
 
