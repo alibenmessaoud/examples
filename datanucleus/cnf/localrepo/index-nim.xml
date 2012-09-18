@@ -1,0 +1,320 @@
+<repository name="DataNucleusDeps:0" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/com.mongodb:2.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/com.mongodb:[2.1,2.1)" />
+  <cap name="osgi.active.bundle/com.mongodb:2.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/javax.jdo:3.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/javax.jdo:[3.1,3.1)" />
+  <cap name="osgi.active.bundle/javax.jdo:3.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.derby:10.5.1.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.derby:[10.5.1.1,10.5.1.1)" />
+  <cap name="osgi.active.bundle/org.apache.derby:10.5.1.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.datanucleus:3.1.0.release" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.datanucleus:[3.1.0.release,3.1.0.release)" />
+  <cap name="osgi.active.bundle/org.datanucleus:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.datanucleus.api.jdo:3.1.0.release" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.datanucleus.api.jdo:[3.1.0.release,3.1.0.release)" />
+  <cap name="osgi.active.bundle/org.datanucleus.api.jdo:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.datanucleus.store.mongodb:3.1.0.release" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.datanucleus.store.mongodb:[3.1.0.release,3.1.0.release)" />
+  <cap name="osgi.active.bundle/org.datanucleus.store.mongodb:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.datanucleus.store.rdbms:3.1.0.release" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.datanucleus.store.rdbms:[3.1.0.release,3.1.0.release)" />
+  <cap name="osgi.active.bundle/org.datanucleus.store.rdbms:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/com.mongodb:2.1" >
+  <artifact name="com.mongodb:2.1.0" uri="com.mongodb/com.mongodb-2.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <cap name="osgi.resolved.bundle/com.mongodb:2.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.mongodb" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb.io" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb.util" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb.gridfs" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson.util" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson.types" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson.io" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.require.bundle/com.mongodb:2.1" />
+ </part>
+ <part name="osgi.resolved.bundle/javax.jdo:3.1" >
+  <artifact name="javax.jdo:3.1.0" uri="javax.jdo/javax.jdo-3.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.transaction" optional="true" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.rmi" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/javax.persistence" optional="true" />
+  <cap name="osgi.resolved.bundle/javax.jdo:3.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/javax.jdo:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.package/javax.jdo.annotations:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.package/javax.jdo.datastore:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.package/javax.jdo.identity:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.package/javax.jdo.listener:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.package/javax.jdo.metadata:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.package/javax.jdo.spi:3.1" attrs="bundle-version=3.1.0,bundle-symbolic-name=&quot;javax.jdo&quot;" />
+  <cap name="osgi.require.bundle/javax.jdo:3.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.derby:10.5.1.1" >
+  <artifact name="org.apache.derby:10.5.1.1" uri="org.apache.derby/org.apache.derby-10.5.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.sql" />
+  <req name="osgi.package/javax.net" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.naming.spi" />
+  <req name="osgi.package/javax.crypto" />
+  <req name="osgi.package/javax.crypto.spec" />
+  <req name="osgi.package/javax.transaction" />
+  <req name="osgi.package/javax.transaction.xa" />
+  <req name="osgi.package/org.osgi.framework:1.3" />
+  <cap name="osgi.resolved.bundle/org.apache.derby:10.5.1.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.derby.authentication" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.client" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.client.am" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.database" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.io" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.jdbc" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.vti" attrs="bundle-version=10.5.1.1,bundle-symbolic-name=&quot;org.apache.derby&quot;" />
+  <cap name="osgi.require.bundle/org.apache.derby:10.5.1.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.datanucleus:3.1.0.release" versionSingleton="true" attrs="singleton=true" >
+  <artifact name="org.datanucleus:3.1.0.release" uri="org.datanucleus/org.datanucleus-3.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.annotation.processing" optional="true" />
+  <req name="osgi.package/javax.cache" optional="true" />
+  <req name="osgi.package/javax.jdo:3" />
+  <req name="osgi.package/javax.jdo.annotations:3" />
+  <req name="osgi.package/javax.jdo.datastore:3" />
+  <req name="osgi.package/javax.jdo.identity:3" />
+  <req name="osgi.package/javax.jdo.listener:3" />
+  <req name="osgi.package/javax.jdo.metadata:3" />
+  <req name="osgi.package/javax.jdo.spi:3" />
+  <req name="osgi.package/javax.lang.model.element" optional="true" />
+  <req name="osgi.package/javax.lang.model.type" optional="true" />
+  <req name="osgi.package/javax.lang.model.util" optional="true" />
+  <req name="osgi.package/javax.naming" optional="true" />
+  <req name="osgi.package/javax.time.calendar" optional="true" />
+  <req name="osgi.package/javax.transaction" optional="true" />
+  <req name="osgi.package/javax.transaction.xa" optional="true" />
+  <req name="osgi.package/javax.validation" optional="true" />
+  <req name="osgi.package/javax.validation.bootstrap" optional="true" />
+  <req name="osgi.package/javax.validation.constraints" optional="true" />
+  <req name="osgi.package/javax.validation.groups" optional="true" />
+  <req name="osgi.package/javax.validation.metadata" optional="true" />
+  <req name="osgi.package/javax.validation.spi" optional="true" />
+  <req name="osgi.package/javax.xml.parsers" optional="true" />
+  <req name="osgi.package/javax.xml.validation" optional="true" />
+  <req name="osgi.package/mx4j.tools.naming" optional="true" />
+  <req name="osgi.package/org.apache.log4j" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.taskdefs" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.types" optional="true" />
+  <req name="osgi.package/org.omg.CORBA" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" optional="true" />
+  <req name="osgi.package/org.w3c.dom" optional="true" />
+  <req name="osgi.package/org.xml.sax" optional="true" />
+  <req name="osgi.package/org.xml.sax.helpers" optional="true" />
+  <req name="osgi.require.bundle/org.eclipse.equinox.registry" optional="true" />
+  <req name="osgi.require.bundle/org.eclipse.core.runtime" optional="true" />
+  <cap name="osgi.resolved.bundle/org.datanucleus:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.datanucleus:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.api:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.cache:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.exceptions:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.identity:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.jpa:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.jta:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.management:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.management.jmx:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.metadata:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.metadata.annotations:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.metadata.xml:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.plugin:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.properties:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.cache:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.compiler:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.evaluator:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.evaluator.memory:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.expression:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.node:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.symbol:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.query.typesafe:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.state:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.state.lock:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.autostart:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.connection:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.encryption:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.exceptions:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.federation:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.fieldmanager:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.mapped:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.mapped.exceptions:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.mapped.identifier:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.mapped.mapping:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.objectvaluegenerator:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.query:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.query.cache:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.schema:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.schema.naming:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.schema.table:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.scostore:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.types:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.types.converters:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.types.sco:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.types.sco.backed:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.types.sco.queued:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.types.sco.simple:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.valuegenerator:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.transaction:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.util:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.package/org.datanucleus.validation:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus&quot;" />
+  <cap name="osgi.require.bundle/org.datanucleus:3.1.0.release" />
+ </part>
+ <part name="osgi.resolved.bundle/org.datanucleus.api.jdo:3.1.0.release" versionSingleton="true" attrs="singleton=true" >
+  <artifact name="org.datanucleus.api.jdo:3.1.0.release" uri="org.datanucleus.api.jdo/org.datanucleus.api.jdo-3.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.jdo:3" />
+  <req name="osgi.package/javax.jdo.annotations:3" />
+  <req name="osgi.package/javax.jdo.datastore:3" />
+  <req name="osgi.package/javax.jdo.identity:3" />
+  <req name="osgi.package/javax.jdo.listener:3" />
+  <req name="osgi.package/javax.jdo.metadata:3" />
+  <req name="osgi.package/javax.jdo.spi:3" />
+  <req name="osgi.package/javax.naming" optional="true" />
+  <req name="osgi.package/javax.naming.spi" optional="true" />
+  <req name="osgi.package/javax.transaction" optional="true" />
+  <req name="osgi.package/javax.transaction.xa" optional="true" />
+  <req name="osgi.package/org.xml.sax" optional="true" />
+  <req name="osgi.require.bundle/org.datanucleus:3.1.0.m5" />
+  <cap name="osgi.resolved.bundle/org.datanucleus.api.jdo:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.datanucleus.api.jdo:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.api.jdo&quot;" />
+  <cap name="osgi.package/org.datanucleus.api.jdo.exceptions:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.api.jdo&quot;" />
+  <cap name="osgi.package/org.datanucleus.api.jdo.metadata:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.api.jdo&quot;" />
+  <cap name="osgi.package/org.datanucleus.api.jdo.query:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.api.jdo&quot;" />
+  <cap name="osgi.package/org.datanucleus.api.jdo.state:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.api.jdo&quot;" />
+  <cap name="osgi.require.bundle/org.datanucleus.api.jdo:3.1.0.release" />
+ </part>
+ <part name="osgi.resolved.bundle/org.datanucleus.store.mongodb:3.1.0.release" versionSingleton="true" attrs="singleton=true" >
+  <artifact name="org.datanucleus.store.mongodb:3.1.0.release" uri="org.datanucleus.store.mongodb/org.datanucleus.store.mongodb-3.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.mongodb" />
+  <req name="osgi.package/com.mongodb.gridfs" />
+  <req name="osgi.package/com.mongodb.io" />
+  <req name="osgi.package/com.mongodb.util" />
+  <req name="osgi.package/javax.transaction" optional="true" />
+  <req name="osgi.package/javax.transaction.xa" optional="true" />
+  <req name="osgi.package/org.bson" />
+  <req name="osgi.package/org.bson.io" />
+  <req name="osgi.package/org.bson.types" />
+  <req name="osgi.package/org.bson.util" />
+  <req name="osgi.require.bundle/org.datanucleus:3.1.0.m5" />
+  <cap name="osgi.resolved.bundle/org.datanucleus.store.mongodb:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.datanucleus.store.mongodb:3.1.0.release" />
+ </part>
+ <part name="osgi.resolved.bundle/org.datanucleus.store.rdbms:3.1.0.release" versionSingleton="true" attrs="singleton=true" >
+  <artifact name="org.datanucleus.store.rdbms:3.1.0.release" uri="org.datanucleus.store.rdbms/org.datanucleus.store.rdbms-3.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.ibm.db2.jcc" optional="true" />
+  <req name="osgi.package/com.informix.jdbc" optional="true" />
+  <req name="osgi.package/com.jolbox.bonecp" optional="true" />
+  <req name="osgi.package/com.mchange.v2.c3p0" optional="true" />
+  <req name="osgi.package/com.mckoi" optional="true" />
+  <req name="osgi.package/com.microsoft.sqlserver.jdbc" optional="true" />
+  <req name="osgi.package/com.mysql.jdbc" optional="true" />
+  <req name="osgi.package/com.sap.dbtech.jdbc" optional="true" />
+  <req name="osgi.package/com.sybase.jdbc2.jdbc" optional="true" />
+  <req name="osgi.package/javax.jdo:3" />
+  <req name="osgi.package/javax.jdo.datastore:3" />
+  <req name="osgi.package/javax.jdo.identity:3" />
+  <req name="osgi.package/javax.jdo.listener:3" />
+  <req name="osgi.package/javax.jdo.spi:3" />
+  <req name="osgi.package/javax.naming" optional="true" />
+  <req name="osgi.package/javax.naming.spi" optional="true" />
+  <req name="osgi.package/javax.sql" optional="true" />
+  <req name="osgi.package/javax.time.calendar" optional="true" />
+  <req name="osgi.package/javax.transaction" optional="true" />
+  <req name="osgi.package/javax.transaction.xa" optional="true" />
+  <req name="osgi.package/net.sourceforge.jtds.jdbc" optional="true" />
+  <req name="osgi.package/oracle.core.lmx" optional="true" />
+  <req name="osgi.package/oracle.core.lvf" optional="true" />
+  <req name="osgi.package/oracle.jdbc" optional="true" />
+  <req name="osgi.package/oracle.jdbc.connector" optional="true" />
+  <req name="osgi.package/oracle.jdbc.driver" optional="true" />
+  <req name="osgi.package/oracle.jdbc.internal" optional="true" />
+  <req name="osgi.package/oracle.jdbc.oci" optional="true" />
+  <req name="osgi.package/oracle.jdbc.oracore" optional="true" />
+  <req name="osgi.package/oracle.jdbc.pool" optional="true" />
+  <req name="osgi.package/oracle.jdbc.rowset" optional="true" />
+  <req name="osgi.package/oracle.jdbc.util" optional="true" />
+  <req name="osgi.package/oracle.jdbc.xa" optional="true" />
+  <req name="osgi.package/oracle.jdbc.xa.client" optional="true" />
+  <req name="osgi.package/oracle.jpub.runtime" optional="true" />
+  <req name="osgi.package/oracle.net.TNSAddress" optional="true" />
+  <req name="osgi.package/oracle.net.ano" optional="true" />
+  <req name="osgi.package/oracle.net.aso" optional="true" />
+  <req name="osgi.package/oracle.net.jndi" optional="true" />
+  <req name="osgi.package/oracle.net.nl" optional="true" />
+  <req name="osgi.package/oracle.net.nl.mesg" optional="true" />
+  <req name="osgi.package/oracle.net.ns" optional="true" />
+  <req name="osgi.package/oracle.net.nt" optional="true" />
+  <req name="osgi.package/oracle.net.resolver" optional="true" />
+  <req name="osgi.package/oracle.security.o3logon" optional="true" />
+  <req name="osgi.package/oracle.sql" optional="true" />
+  <req name="osgi.package/oracle.sql.converter" optional="true" />
+  <req name="osgi.package/oracle.xdb" optional="true" />
+  <req name="osgi.package/oracle.xdb.bean" optional="true" />
+  <req name="osgi.package/oracle.xdb.dom" optional="true" />
+  <req name="osgi.package/oracle.xdb.servlet" optional="true" />
+  <req name="osgi.package/oracle.xdb.spi" optional="true" />
+  <req name="osgi.package/org.apache.commons.dbcp" optional="true" />
+  <req name="osgi.package/org.apache.commons.pool" optional="true" />
+  <req name="osgi.package/org.apache.commons.pool.impl" optional="true" />
+  <req name="osgi.package/org.apache.derby.jdbc" optional="true" />
+  <req name="osgi.package/org.firebirdsql.jdbc" optional="true" />
+  <req name="osgi.package/org.h2" optional="true" />
+  <req name="osgi.package/org.hsqldb" optional="true" />
+  <req name="osgi.package/org.logicalcobwebs.proxool" optional="true" />
+  <req name="osgi.package/org.postgresql" optional="true" />
+  <req name="osgi.package/org.xml.sax" optional="true" />
+  <req name="osgi.package/org.xml.sax.helpers" optional="true" />
+  <req name="osgi.require.bundle/org.datanucleus:3.1.0.m3" />
+  <req name="osgi.require.bundle/org.datanucleus.api.jdo:3.1.0.m1" optional="true" />
+  <cap name="osgi.resolved.bundle/org.datanucleus.store.rdbms:3.1.0.release" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.adapter:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.autostart:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.datasource:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.datatype:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.exceptions:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.fieldmanager:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.key:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.mapping:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.mapping.oracle:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.query:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.request:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.schema:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.scostore:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.sql:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.sql.expression:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.sql.method:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.sql.operation:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.table:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.package/org.datanucleus.store.rdbms.valuegenerator:3.1.0.release" attrs="bundle-version=3.1.0.release,bundle-symbolic-name=&quot;org.datanucleus.store.rdbms&quot;" />
+  <cap name="osgi.require.bundle/org.datanucleus.store.rdbms:3.1.0.release" />
+ </part>
+</repository>

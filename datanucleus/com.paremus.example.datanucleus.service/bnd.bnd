@@ -5,6 +5,10 @@
 	org.apache.felix.gogo.runtime,\
 	javax.jdo,\
 	org.datanucleus,\
-	com.paremus.example.datanucleus.model;version=latest
+	com.paremus.example.datanucleus.model;version=latest,\
+	com.paremus.datanucleus.extender;version=latest
 
--sub: *.bnd
+Private-Package: com.paremus.example.datanucleus.service
+Service-Component: *
+Import-Package: org.apache.felix.service.command;resolution:=optional,\
+	*

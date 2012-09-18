@@ -2,6 +2,7 @@ package com.paremus.example.datanucleus.service;
 
 import java.io.PrintStream;
 import java.util.List;
+import java.util.Map;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
@@ -16,30 +17,39 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
+import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
+
 @Component(
 		provide = Object.class,
+		immediate = true,
 		properties = {
 			"osgi.command.scope=product",
 			"osgi.command.function=create|list"
-		})
+		},
+		designate = ExampleComponent.Config.class)
 public class ExampleComponent {
-
+	
+	interface Config {}
+	
+	private PersistenceManagerFactoryBuilder pmfb;
 	private PersistenceManagerFactory pmf;
 	private PersistenceManager pm;
 	
 	@Reference
-	public void setPMF(PersistenceManagerFactory pmf) {
-		this.pmf = pmf;
+	public void setPMFBuilder(PersistenceManagerFactoryBuilder pmfb) {
+		this.pmfb = pmfb;
 	}
 	
 	@Activate
-	public void activate() {
+	public void activate(Map<String, Object> config) throws Exception {
+		pmf = pmfb.createPersistenceManagerFactory(config);
 		pm = pmf.getPersistenceManager();
 	}
 	
 	@Deactivate
 	public void deactivate() {
 		pm.close();
+		pmf.close();
 	}
 
 	@Descriptor("Create a new product and save it in the database.")

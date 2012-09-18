@@ -1,2 +1,4 @@
 -buildpath: javax.jdo
+DataNucleus-Model: SampleModel
 Export-Package: org.datanucleus.samples.jdo.tutorial
+#Include-Resource: resources

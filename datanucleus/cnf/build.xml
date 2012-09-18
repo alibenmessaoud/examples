@@ -2,6 +2,7 @@
 <project name="master" default="none">
 	
 	<import file="build-template.xml"/>
+	<property environment="ENV"/>
 	
 	<!--
 		Use this file to provide your workspace-specific tasks. Several examples follow.
@@ -28,8 +29,10 @@
 		
     <!-- LOAD FABRIC PROPERTIES -->
     <property file="../cnf/fabric.properties"/>
-    <fail unless="fabric.home" message="The 'fabric.home' property is not available. Please refer to build instructions for defining the Paremus Fabric installation directory."/>
-    <echo message="Defined 'fabric.home' as ${fabric.home}"/>
+    <property name="fabric.home" value="${ENV.FABRIC_HOME}"/>
+    <available property="fabric.home.exists" file="${fabric.home}" type="dir"/>
+    <fail unless="fabric.home.exists" message="${fabric.home} does not exist! Please refer to build instructions for defining the Paremus Fabric directory."/>
+    <echo message="Found Paremus Service Fabric in ${fabric.home}"/>
 
 		<!-- DEFINE ENHANCER TASK -->
 		<path id="enhancer.classpath">

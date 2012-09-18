@@ -1,7 +1,0 @@
-Service-Component: *
-Private-Package: com.paremus.example.datanucleus.pmf
-Require-Bundle: com.paremus.example.datanucleus.model,\
-	javax.jdo,\
-	org.datanucleus,\
-	org.datanucleus.api.jdo,\
-	org.apache.derby

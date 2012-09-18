@@ -17,26 +17,16 @@ public class BundleClassLoader extends ClassLoader {
 	
 	@Override
 	protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
-		System.out.println("----------> Trying to load class " + name);
 		Class<?> loaded = findLoadedClass(name);
 		
-		if (loaded != null) {
-			System.out.println("----------> Returning already loaded class");
-		} else {
+		if (loaded == null) {
 			try {
 				loaded = super.loadClass(name, false);
 			} catch (ClassNotFoundException e) {
 				// swallow
 			}
 			if (loaded == null) {
-				try {
-					loaded = bundle.loadClass(name);
-					System.out.println("----------> Successfully loaded class + " + name);
-				} catch (ClassNotFoundException e) {
-					System.out.println("----------> ERROR loading class + " + name);
-					e.printStackTrace();
-					throw e;
-				}
+				loaded = bundle.loadClass(name);
 			}
 		}
 		
