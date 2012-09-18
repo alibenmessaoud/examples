@@ -1,35 +1,36 @@
 -runfw: org.apache.felix.framework;version='[4,5)'
 -runee: JavaSE-1.6
 
--runbundles: org.apache.felix.metatype;version='[1.0.4,1.0.5)',\
+-runbundles: org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
 	org.datanucleus;version='[3.1.0,3.1.1)',\
-	javax.jdo;version=latest,\
-	org.apache.derby;version='[10.5.1,10.5.2)',\
-	com.paremus.datanucleus.extender;version=latest,\
 	com.paremus.example.datanucleus.service;version=latest,\
-	org.apache.felix.scr;version='[1.6.0,1.6.1)',\
-	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
 	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
 	osgi.cmpn;version='[4.2.0,4.2.1)',\
-	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
-	com.paremus.example.datanucleus.model;version=latest,\
-	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
-	org.datanucleus.store.rdbms;version='[3.1.0,3.1.1)',\
-	org.apache.felix.log;version='[1.0.1,1.0.2)',\
 	javax.servlet;version='[2.5.0,2.5.1)',\
+	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
+	javax.jdo;version='[3.1.0,3.1.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.metatype;version='[1.0.4,1.0.5)',\
+	org.apache.felix.fileinstall;version='[3.2.4,3.2.5)',\
+	com.paremus.example.datanucleus.model;version='[0.0.0,0.0.1)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
 	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
+	org.datanucleus.store.mongodb;version='[3.1.0,3.1.1)',\
+	com.mongodb;version=latest,\
+	org.apache.felix.scr;version='[1.6.0,1.6.1)',\
 	org.datanucleus.api.jdo;version='[3.1.0,3.1.1)',\
-	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)'
+	com.paremus.datanucleus.extender;version='[0.0.0,0.0.1)'
 
 -runrequires: osgi.identity;filter:='(osgi.identity=com.paremus.example.datanucleus.service)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.example.datanucleus.model)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.datanucleus.extender)',\
-	osgi.identity;filter:='(osgi.identity=org.datanucleus.store.rdbms)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.derby)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=osgi.cmpn)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)'
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.fileinstall)',\
+	osgi.identity;filter:='(osgi.identity=org.datanucleus.store.mongodb)'

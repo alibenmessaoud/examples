@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1347762088825' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1347930939380' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='javax.jdo'/>
@@ -1159,9 +1159,9 @@
       <attribute name='version' type='Version' value='2.1.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='77fc4b9dec884e0f01e6b501f98bb3b51bb9e4ef11ea3722b52b3676ddbb1036'/>
+      <attribute name='osgi.content' value='a8888aa87b8662460c3a2613678677eb93d6a7283b0f69053811b3c25feb7572'/>
       <attribute name='url' value='com.mongodb/com.mongodb-2.1.0.jar'/>
-      <attribute name='size' type='Long' value='243993'/>
+      <attribute name='size' type='Long' value='246453'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -1174,52 +1174,68 @@
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='com.mongodb'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
+      <directive name='uses' value='org.bson,com.mongodb.util,org.bson.types'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='com.mongodb.io'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='com.mongodb.util'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
+      <directive name='uses' value='org.bson,org.testng.annotations,org.testng,com.mongodb,javax.management'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='com.mongodb.gridfs'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
+      <directive name='uses' value='org.bson,org.bson.types,com.mongodb'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='org.bson'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
+      <directive name='uses' value='org.bson.types,org.bson.io'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='org.bson.util'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='org.bson.types'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
+      <directive name='uses' value='org.bson'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='org.bson.io'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
       <attribute name='bundle-symbolic-name' value='com.mongodb'/>
       <attribute name='bundle-version' type='Version' value='2.1.0'/>
     </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.testng)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.testng.annotations)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.management)'/>
+    </requirement>
   </resource>
   <resource>
     <capability namespace='osgi.identity'>

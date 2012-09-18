@@ -37,15 +37,18 @@
  <part name="osgi.resolved.bundle/com.mongodb:2.1" >
   <artifact name="com.mongodb:2.1.0" uri="com.mongodb/com.mongodb-2.1.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.testng" optional="true" />
+  <req name="osgi.package/org.testng.annotations" optional="true" />
+  <req name="osgi.package/javax.management" />
   <cap name="osgi.resolved.bundle/com.mongodb:2.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.mongodb" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/com.mongodb.io" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/com.mongodb.util" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/com.mongodb.gridfs" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/org.bson" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/org.bson.util" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/org.bson.types" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
-  <cap name="osgi.package/org.bson.io" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb.io:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb.util:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/com.mongodb.gridfs:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson.util:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson.types:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
+  <cap name="osgi.package/org.bson.io:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
   <cap name="osgi.require.bundle/com.mongodb:2.1" />
  </part>
  <part name="osgi.resolved.bundle/javax.jdo:3.1" >
