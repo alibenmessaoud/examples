@@ -1,0 +1,9 @@
+nim:repository PackagerExt {
+  rule ms/com.paremus.packager.examples.mongodb {
+    req builder/ms
+    req osgi.active.bundle/com.paremus.packager.examples.mongodb
+    req osgi.active.bundle/com.paremus.packager.osgi.remote
+    cap ms/com.paremus.packager.examples.mongodb
+  }
+}
+nim:export PackagerExt index-nim-ext.xml
