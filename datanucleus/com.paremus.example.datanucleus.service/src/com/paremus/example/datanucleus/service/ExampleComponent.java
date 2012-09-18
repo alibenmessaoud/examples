@@ -2,7 +2,6 @@ package com.paremus.example.datanucleus.service;
 
 import java.io.PrintStream;
 import java.util.List;
-import java.util.Map;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
@@ -17,8 +16,6 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
-import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
-
 @Component(
 		provide = Object.class,
 		immediate = true,
@@ -28,28 +25,25 @@ import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
 		},
 		designate = ExampleComponent.Config.class)
 public class ExampleComponent {
+
+    interface Config {}
 	
-	interface Config {}
-	
-	private PersistenceManagerFactoryBuilder pmfb;
 	private PersistenceManagerFactory pmf;
 	private PersistenceManager pm;
 	
 	@Reference
-	public void setPMFBuilder(PersistenceManagerFactoryBuilder pmfb) {
-		this.pmfb = pmfb;
+	public void setPMFBuilder(PersistenceManagerFactory pmf) {
+		this.pmf = pmf;
 	}
 	
 	@Activate
-	public void activate(Map<String, Object> config) throws Exception {
-		pmf = pmfb.createPersistenceManagerFactory(config);
+	public void activate() throws Exception {
 		pm = pmf.getPersistenceManager();
 	}
 	
 	@Deactivate
 	public void deactivate() {
 		pm.close();
-		pmf.close();
 	}
 
 	@Descriptor("Create a new product and save it in the database.")

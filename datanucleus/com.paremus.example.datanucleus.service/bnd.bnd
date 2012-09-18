@@ -6,9 +6,12 @@
 	javax.jdo,\
 	org.datanucleus,\
 	com.paremus.example.datanucleus.model;version=latest,\
-	com.paremus.datanucleus.extender;version=latest
+	com.paremus.datanucleus.extender;version=latest,\
+	com.paremus.packager.whiteboard;version=latest,\
+	com.paremus.packager.api
 
 Private-Package: com.paremus.example.datanucleus.service
 Service-Component: *
+ParemusPackager-Scope: global
 Import-Package: org.apache.felix.service.command;resolution:=optional,\
 	*

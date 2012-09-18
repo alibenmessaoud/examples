@@ -1,11 +1,10 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="DataNucleusExample" boundary="fibre"
         repopath="Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
 
-  <!-- The "application" bundle -->
-  <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent">
-    <property name="javax.jdo.PersistenceManagerFactoryClass" value="org.datanucleus.api.jdo.JDOPersistenceManagerFactory"/>
-    <property name="javax.jdo.option.ConnectionURL" value="mongodb:/DataNucleusExample"/>
-  </system.part>
+  <!-- The top-level "application" bundles -->
+  <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent"/>
+  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
+  <system.part category="osgi.active.bundle" name="com.paremus.datanucleus.extender"/>
 
   <!-- This defines that we want DataNucleus with MongoDB -->
   <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb"/>
@@ -14,5 +13,6 @@
   <system.part category="ms" name="com.paremus.packager.examples.mongodb">
     <property name="mongodb.port" value="27017"/>
   </system.part>
+  <system.part category="osgi.active.bundle" name="com.paremus.packager.whiteboard"/>
 
 </system>
