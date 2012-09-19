@@ -1,0 +1,3012 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type='text/xsl' href='http://www2.osgi.org/www/obr2html.xsl'?>
+
+<repository lastmodified='20120919123415.505' name='Untitled'>
+  <resource id='Untitled--1772870043/0.0.0' symbolicname='Untitled--1772870043' uri='httpclient-4.2.1.jar' version='0.0.0'>
+    <size>
+      427021
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled--1772870043'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled--2137849860/0.0.0' symbolicname='Untitled--2137849860' uri='jaffl-0.5.7.jar' version='0.0.0'>
+    <size>
+      256131
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled--2137849860'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled--441152826/0.0.0' symbolicname='Untitled--441152826' uri='mongo-jackson-mapper-1.4.2.jar' version='0.0.0'>
+    <size>
+      93072
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled--441152826'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-1097730919/0.0.0' symbolicname='Untitled-1097730919' uri='rhino-1.7R4.jar' version='0.0.0'>
+    <size>
+      1134765
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-1097730919'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-1141618913/0.0.0' symbolicname='Untitled-1141618913' uri='persistence-api-1.0.2.jar' version='0.0.0'>
+    <size>
+      53842
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-1141618913'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-1495496329/0.0.0' symbolicname='Untitled-1495496329' uri='mina-core-1.1.7.jar' version='0.0.0'>
+    <size>
+      315583
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-1495496329'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-1632189730/0.0.0' symbolicname='Untitled-1632189730' uri='jnr-posix-1.1.5.jar' version='0.0.0'>
+    <size>
+      92406
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-1632189730'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-1767148580/0.0.0' symbolicname='Untitled-1767148580' uri='org.apache.felix.scr.annotations-1.6.0.jar' version='0.0.0'>
+    <size>
+      45766
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-1767148580'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-1879325728/0.0.0' symbolicname='Untitled-1879325728' uri='httpcore-4.2.1.jar' version='0.0.0'>
+    <size>
+      223374
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-1879325728'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-2128220339/0.0.0' symbolicname='Untitled-2128220339' uri='constantine-0.7.jar' version='0.0.0'>
+    <size>
+      257288
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-2128220339'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-578336013/0.0.0' symbolicname='Untitled-578336013' uri='commons-logging-1.1.1.jar' version='0.0.0'>
+    <size>
+      60686
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-578336013'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-625156222/0.0.0' symbolicname='Untitled-625156222' uri='jline-0.9.94.jar' version='0.0.0'>
+    <size>
+      87325
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-625156222'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-638419583/0.0.0' symbolicname='Untitled-638419583' uri='jstl-1.2.jar' version='0.0.0'>
+    <size>
+      414240
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-638419583'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='Untitled-869918870/0.0.0' symbolicname='Untitled-869918870' uri='junit-4.7.jar' version='0.0.0'>
+    <size>
+      232354
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='1'/>
+      <p n='symbolicname' v='Untitled-869918870'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+  </resource>
+  <resource id='biz.aQute.bndlib/1.50.0' presentationname='bnd - Bundle Tool' symbolicname='biz.aQute.bndlib' uri='bndlib-1.50.0.jar' version='1.50.0'>
+    <description>
+      A Swiss Army Knife for OSGi
+    </description>
+    <size>
+      919577
+    </size>
+    <license>
+      http://www.opensource.org/licenses/apache2.0.php; description="Apache
+       Software License 2.0"; link=http://www.apache.org/licenses/LICENSE-2.0.html
+    </license>
+    <documentation>
+      http://www.aQute.biz/Code/Bnd
+    </documentation>
+    <copyright>
+      Copyright Â© aQute SARL (2000, 2011). All Rights Reserved.
+    </copyright>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='bnd - Bundle Tool'/>
+      <p n='symbolicname' v='biz.aQute.bndlib'/>
+      <p n='version' t='version' v='1.50.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.annotation'/>
+      <p n='version' t='version' v='1.43.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.annotation.metatype'/>
+      <p n='version' t='version' v='1.43.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.annotation.component'/>
+      <p n='version' t='version' v='1.43.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.lib.osgi'/>
+      <p n='uses' v='aQute.bnd.annotation,aQute.libg.version,aQute.bnd.service,aQute.libg.header,aQute.bnd.annotation.metatype,aQute.libg.reporter,aQute.libg.sed,aQute.libg.qtokens'/>
+      <p n='version' t='version' v='1.43.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.build'/>
+      <p n='uses' v='aQute.bnd.service,aQute.lib.osgi,aQute.libg.reporter,aQute.libg.version,aQute.bnd.help,aQute.libg.header,aQute.bnd.service.action,aQute.libg.sed,javax.naming'/>
+      <p n='version' t='version' v='1.43.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.service'/>
+      <p n='uses' v='aQute.lib.osgi,aQute.libg.reporter,aQute.bnd.build,aQute.libg.version'/>
+      <p n='version' t='version' v='1.44.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.service.url'/>
+      <p n='version' t='version' v='1.50.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.service.action'/>
+      <p n='uses' v='aQute.bnd.build'/>
+      <p n='version' t='version' v='1.43.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.bnd.help'/>
+      <p n='uses' v='aQute.lib.osgi'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.libg.reporter'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.libg.version'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.libg.sed'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.libg.header'/>
+      <p n='uses' v='aQute.libg.reporter,aQute.libg.qtokens'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.libg.qtokens'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='aQute.libg.sax'/>
+      <p n='uses' v='org.xml.sax,javax.xml.transform,javax.xml.parsers,javax.xml.transform.sax'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.osgi.service.bindex'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.xpath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.xpath
+    </require>
+    <require extend='false' filter='(&amp;(package=junit.framework)(version&gt;=3.8.0)(!(version&gt;=4.0.0)))' multiple='false' name='package' optional='false'>
+      Import package junit.framework ;version=[3.8.0,4.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.bindex)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.bindex ;version=[1.0.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax.helpers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax.helpers
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.5))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5))
+    </require>
+  </resource>
+  <resource id='com.hazelcast/2.0.2' presentationname='hazelcast' symbolicname='com.hazelcast' uri='hazelcast-2.0.2.jar' version='2.0.2'>
+    <description>
+      Hazelcast In-Memory DataGrid
+    </description>
+    <size>
+      1697803
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://www.hazelcast.com/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='hazelcast'/>
+      <p n='symbolicname' v='com.hazelcast'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.cluster'/>
+      <p n='uses' v='com.hazelcast.nio,com.hazelcast.impl,com.hazelcast.config,com.hazelcast.core,com.hazelcast.impl.base,com.hazelcast.logging,com.hazelcast.util,com.hazelcast.security,javax.security.auth.login'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.config'/>
+      <p n='uses' v='org.w3c.dom,com.hazelcast.nio,com.hazelcast.logging,com.hazelcast.merge,com.hazelcast.util,javax.xml.transform,javax.xml.transform.stream,com.hazelcast.security,com.hazelcast.core,com.hazelcast.query,javax.xml.parsers,com.hazelcast.impl'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.core'/>
+      <p n='uses' v='com.hazelcast.monitor,com.hazelcast.impl,com.hazelcast.config,com.hazelcast.partition,com.hazelcast.logging,com.hazelcast.query,com.hazelcast.nio'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.examples'/>
+      <p n='uses' v='com.hazelcast.core,com.hazelcast.query,com.hazelcast.monitor,com.hazelcast.config,com.hazelcast.logging,com.hazelcast.partition'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl'/>
+      <p n='uses' v='com.hazelcast.cluster,com.hazelcast.logging,com.hazelcast.impl.base,com.hazelcast.nio,com.hazelcast.config,com.hazelcast.core,com.hazelcast.impl.concurrentmap,com.hazelcast.impl.monitor,com.hazelcast.monitor,com.hazelcast.util,com.hazelcast.query,com.hazelcast.impl.partition,com.hazelcast.merge,com.hazelcast.impl.executor,com.hazelcast.impl.wan,javax.security.auth,javax.security.auth.login,com.hazelcast.security,com.hazelcast.partition,com.hazelcast.jmx,com.hazelcast.impl.management,com.hazelcast.impl.ascii,javax.xml.transform,javax.xml.transform.stream,javax.xml.transform.dom,org.w3c.dom'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.ascii'/>
+      <p n='uses' v='com.hazelcast.nio.ascii,com.hazelcast.nio,com.hazelcast.impl.ascii.memcache,com.hazelcast.impl,com.hazelcast.logging,com.hazelcast.util,com.hazelcast.impl.ascii.rest,com.hazelcast.impl.executor,com.hazelcast.core'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.ascii.memcache'/>
+      <p n='uses' v='com.hazelcast.impl.ascii,com.hazelcast.nio.ascii,com.hazelcast.nio,com.hazelcast.impl,com.hazelcast.logging'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.ascii.rest'/>
+      <p n='uses' v='com.hazelcast.impl.ascii,com.hazelcast.nio,com.hazelcast.impl.ascii.memcache,com.hazelcast.nio.ascii,com.hazelcast.impl,com.hazelcast.impl.base,com.hazelcast.cluster'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.base'/>
+      <p n='uses' v='com.hazelcast.nio,com.hazelcast.impl,com.hazelcast.util,com.hazelcast.core,com.hazelcast.security,com.hazelcast.impl.concurrentmap,com.hazelcast.logging,javax.xml.xpath,javax.xml.parsers,org.w3c.dom,javax.xml.namespace'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.concurrentmap'/>
+      <p n='uses' v='com.hazelcast.cluster,com.hazelcast.query,com.hazelcast.impl,com.hazelcast.nio,com.hazelcast.impl.base,com.hazelcast.core,com.hazelcast.impl.partition'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.executor'/>
+      <p n='uses' v='com.hazelcast.logging'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.management'/>
+      <p n='uses' v='com.hazelcast.cluster,com.hazelcast.core,com.hazelcast.impl,com.hazelcast.examples,com.hazelcast.nio,com.hazelcast.impl.base,com.hazelcast.monitor,com.hazelcast.config,com.hazelcast.logging,com.hazelcast.impl.monitor,com.hazelcast.util,com.hazelcast.partition'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.monitor'/>
+      <p n='uses' v='com.hazelcast.monitor,com.hazelcast.nio,com.hazelcast.util'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.partition'/>
+      <p n='uses' v='com.hazelcast.nio,com.hazelcast.cluster,com.hazelcast.impl,com.hazelcast.config,com.hazelcast.core,com.hazelcast.impl.concurrentmap,com.hazelcast.logging,com.hazelcast.impl.base'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.impl.wan'/>
+      <p n='uses' v='com.hazelcast.impl.base,com.hazelcast.nio,com.hazelcast.impl,com.hazelcast.cluster,com.hazelcast.config,com.hazelcast.logging'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.jmx'/>
+      <p n='uses' v='javax.management,com.hazelcast.core,com.hazelcast.config,com.hazelcast.impl,com.hazelcast.logging,com.hazelcast.query'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.logging'/>
+      <p n='uses' v='org.apache.log4j,org.apache.log4j.spi,com.hazelcast.core,com.hazelcast.nio,com.hazelcast.impl.base,com.hazelcast.cluster,org.slf4j'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.merge'/>
+      <p n='uses' v='com.hazelcast.impl.base,com.hazelcast.nio,com.hazelcast.core'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.monitor'/>
+      <p n='uses' v='com.hazelcast.nio,com.hazelcast.core,com.hazelcast.impl,com.hazelcast.partition,com.hazelcast.util,com.hazelcast.impl.monitor'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.nio'/>
+      <p n='uses' v='com.hazelcast.impl.base,com.hazelcast.logging,com.hazelcast.config,javax.crypto,javax.crypto.spec,com.hazelcast.util,com.hazelcast.nio.ssl,javax.net.ssl,com.hazelcast.impl,com.hazelcast.cluster,com.hazelcast.impl.ascii,com.hazelcast.nio.ascii,com.hazelcast.core'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.nio.ascii'/>
+      <p n='uses' v='com.hazelcast.impl.ascii.rest,com.hazelcast.impl.ascii,com.hazelcast.nio,com.hazelcast.impl.ascii.memcache,com.hazelcast.logging'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.nio.ssl'/>
+      <p n='uses' v='javax.net.ssl,com.hazelcast.nio'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.partition'/>
+      <p n='uses' v='com.hazelcast.core'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.query'/>
+      <p n='uses' v='com.hazelcast.core,com.hazelcast.impl,com.hazelcast.nio,com.hazelcast.util.concurrent,com.hazelcast.util'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.security'/>
+      <p n='uses' v='com.hazelcast.nio,com.hazelcast.config,javax.security.auth,com.hazelcast.cluster,com.hazelcast.core,javax.security.auth.login'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.util'/>
+      <p n='uses' v='com.hazelcast.nio'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.hazelcast.util.concurrent'/>
+      <p n='uses' v='com.hazelcast.util'/>
+      <p n='version' t='version' v='2.0.2'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.crypto)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto.spec)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto.spec
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.security.auth
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth.login)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.security.auth.login
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.xpath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.xpath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.log4j)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.log4j
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.log4j.spi)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.log4j.spi
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.api/0.4.0.SNAPSHOT' presentationname='Packager API' symbolicname='com.paremus.packager.api' uri='com.paremus.packager.api-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <description>
+      The API bundle which provides non programmatic classes such
+       as interfaces, enumerations, value objects        and model
+       objects.
+    </description>
+    <size>
+      33069
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Packager API'/>
+      <p n='symbolicname' v='com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.api'/>
+      <p n='uses' v='javax.annotation,com.paremus.packager.api.discovery'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.api.discovery'/>
+      <p n='uses' v='javax.annotation,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.api.log'/>
+      <p n='uses' v='com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.annotation)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package javax.annotation ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.annotate)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.annotate ;version=[1.8.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.camel/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.camel' symbolicname='com.paremus.packager.examples.camel' uri='com.paremus.packager.examples.camel-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      2182343
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt, http://www.gnu.org/licenses/gpl-3.0.txt
+    </license>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.camel'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.camel'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.camel'/>
+      <p n='uses' v='com.paremus.packager.api.discovery,com.paremus.packager.osgi.discovery'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.activation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.activation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management.modelmbean)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management.modelmbean
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management.remote)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management.remote
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming.spi)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming.spi
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.bind
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind.annotation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.bind.annotation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind.annotation.adapters)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.bind.annotation.adapters
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.validation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.validation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.xpath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.xpath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom.ls)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom.ls
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.derby/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.derby' symbolicname='com.paremus.packager.examples.derby' uri='com.paremus.packager.examples.derby-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      4665821
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.derby'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.derby'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.derby'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.runtime)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.runtime
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.derbyclient/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.derbyclient' symbolicname='com.paremus.packager.examples.derbyclient' uri='com.paremus.packager.examples.derbyclient-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      513744
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt, http://www.gnu.org/licenses/gpl-3.0.txt
+    </license>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.derbyclient'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.derbyclient'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.derbyclient'/>
+      <p n='uses' v='com.paremus.packager.api.discovery,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto.interfaces)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto.interfaces
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto.spec)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto.spec
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming.spi)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming.spi
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.sql)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.sql
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.transaction.xa)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.transaction.xa
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.hazelcast/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.hazelcast' symbolicname='com.paremus.packager.examples.hazelcast' uri='com.paremus.packager.examples.hazelcast-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      8185
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt, http://www.gnu.org/licenses/gpl-3.0.txt
+    </license>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.hazelcast'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.hazelcast'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.hazelcast'/>
+      <p n='uses' v='com.hazelcast.config,com.paremus.packager.osgi.discovery,com.paremus.packager.api.discovery'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.hazelcast.config)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.hazelcast.config ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.discovery ;version=[0.4.0,1.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.hello-tomcat-war/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.hello-tomcat-war' symbolicname='com.paremus.packager.examples.hello-tomcat-war' uri='com.paremus.packager.examples.hello-tomcat-war-0.0.1-SNAPSHOT-package.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      10331294
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.hello-tomcat-war'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.hello-tomcat-war'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.hello-tomcat-war'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.runtime)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.runtime
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.mongodb/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.mongodb' symbolicname='com.paremus.packager.examples.mongodb' uri='com.paremus.packager.examples.mongodb-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      163859281
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.mongodb'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.mongodb'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.mongodb'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.runtime)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.runtime
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.mongodbclient/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.mongodbclient' symbolicname='com.paremus.packager.examples.mongodbclient' uri='com.paremus.packager.examples.mongodbclient-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      7548
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt, http://www.gnu.org/licenses/gpl-3.0.txt
+    </license>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.mongodbclient'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.mongodbclient'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.mongodbclient'/>
+      <p n='uses' v='com.mongodb,com.paremus.packager.api.discovery,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.mongodb)(version&gt;=2.8.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.mongodb ;version=[2.8.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.mysql/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.mysql' symbolicname='com.paremus.packager.examples.mysql' uri='com.paremus.packager.examples.mysql-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      13744
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.mysql'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.mysql'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.mysql'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.runtime)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.runtime
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.mysqlclient/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.mysqlclient' symbolicname='com.paremus.packager.examples.mysqlclient' uri='com.paremus.packager.examples.mysqlclient-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      682390
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt, http://www.gnu.org/licenses/gpl-3.0.txt
+    </license>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.mysqlclient'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.mysqlclient'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.mysqlclient'/>
+      <p n='uses' v='com.paremus.packager.api.discovery,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming.spi)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming.spi
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.sql)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.sql
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.transaction.xa)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.transaction.xa
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax.helpers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax.helpers
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.systems.play-mongo/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.systems.play-mongo' symbolicname='com.paremus.packager.examples.systems.play-mongo' uri='com.paremus.packager.examples.systems.play-mongo-0.0.1-SNAPSHOT-package.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      35296422
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.systems.play-mongo'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.systems.play-mongo'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.systems.play-mongo'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.runtime)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.runtime
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.examples.tomcat/0.0.1.SNAPSHOT' presentationname='com.paremus.packager.examples.tomcat' symbolicname='com.paremus.packager.examples.tomcat' uri='com.paremus.packager.examples.tomcat-0.0.1-SNAPSHOT.jar' version='0.0.1.SNAPSHOT'>
+    <description>
+      Example applications built using Paremus Packager and deployable
+       to Paremus Service Fabric
+    </description>
+    <size>
+      8362215
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='com.paremus.packager.examples.tomcat'/>
+      <p n='symbolicname' v='com.paremus.packager.examples.tomcat'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.examples.tomcat'/>
+      <p n='version' t='version' v='0.0.1.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.osgi.runtime)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.osgi.runtime
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.impl/0.4.0.SNAPSHOT' presentationname='Packager API Implementation' symbolicname='com.paremus.packager.impl' uri='com.paremus.packager.impl-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <description>
+      General implementation classes for the Packager API - providing
+       a default implementation.
+    </description>
+    <size>
+      3472247
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Packager API Implementation'/>
+      <p n='symbolicname' v='com.paremus.packager.impl'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.api.impl'/>
+      <p n='uses' v='org.slf4j,com.paremus.packager.api.discovery,com.paremus.packager.api,org.apache.commons.io.filefilter,aQute.lib.osgi,org.apache.commons.io'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=aQute.lib.osgi)(version&gt;=1.43.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package aQute.lib.osgi ;version=[1.43.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.ringo)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.ringo ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.crypto.spec)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.crypto.spec
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.security.auth.x500)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.security.auth.x500
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.border)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.border
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.event)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.event
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.filechooser)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.filechooser
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.table)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.table
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.text)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.text
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.tree)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.tree
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections)(version&gt;=3.2.0)(!(version&gt;=4.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections ;version=[3.2.0,4.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.io)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.io ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.io.filefilter)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.io.filefilter ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.logging)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.logging
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.velocity)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.velocity
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.velocity.app)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.velocity.app
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.velocity.context)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.velocity.context
+    </require>
+    <require extend='false' filter='(&amp;(package=org.ietf.jgss)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.ietf.jgss
+    </require>
+    <require extend='false' filter='(&amp;(package=org.ringojs.engine)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.ringojs.engine ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.ringojs.repository)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.ringojs.repository ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.osgi.discovery/0.4.0.SNAPSHOT' presentationname='OSGi Discovery Helper' symbolicname='com.paremus.packager.osgi.discovery' uri='com.paremus.packager.osgi.discovery-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <description>
+      A bundle providing support classes for bundles which use Packager's
+       discovery mechanism.
+    </description>
+    <size>
+      6341
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='OSGi Discovery Helper'/>
+      <p n='symbolicname' v='com.paremus.packager.osgi.discovery'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.discovery'/>
+      <p n='uses' v='javax.annotation,org.osgi.framework,com.paremus.packager.api.impl,org.osgi.service.component,org.slf4j,com.paremus.packager.api.discovery,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.impl)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.impl ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.annotation)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package javax.annotation ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.component)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.component ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.osgi.local/0.4.0.SNAPSHOT' presentationname='Local Discovery Runtime' symbolicname='com.paremus.packager.osgi.local' uri='com.paremus.packager.osgi.local-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <description>
+      An implementation of the discovery API which works only in
+       any local container.
+    </description>
+    <size>
+      7450
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Local Discovery Runtime'/>
+      <p n='symbolicname' v='com.paremus.packager.osgi.local'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.local.discovery'/>
+      <p n='uses' v='javax.annotation,org.osgi.framework,org.slf4j,com.paremus.packager.api.discovery,com.paremus.packager.api.impl,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.impl)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.impl ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.annotation)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package javax.annotation ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.osgi.remote/0.4.0.SNAPSHOT' presentationname='Remote Discovery Runtime' symbolicname='com.paremus.packager.osgi.remote' uri='com.paremus.packager.osgi.remote-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <description>
+      An implementation of the discovery API which works only in
+       a remote (Paremus Service Fabric)        container.
+    </description>
+    <size>
+      16203
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Remote Discovery Runtime'/>
+      <p n='symbolicname' v='com.paremus.packager.osgi.remote'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.remote'/>
+      <p n='uses' v='javax.annotation,com.paremus.packager.api.log,com.paremus.packager.osgi.remote.event,com.paremus.packager.osgi.remote.discovery,com.paremus.packager.osgi.remote.log,org.osgi.framework,org.slf4j,com.paremus.packager.api.discovery'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.remote.discovery'/>
+      <p n='uses' v='com.rti.dds.domain,javax.annotation,com.paremus.packager.api.discovery,com.paremus.packager.api.impl,com.paremus.packager.api,com.paremus.packager.osgi.remote.event,org.slf4j'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.remote.event'/>
+      <p n='uses' v='com.rti.dds.domain,com.paremus.packager.osgi.remote.discovery,org.osgi.framework,com.paremus.rtidds.util,org.slf4j,org.codehaus.jackson.map,org.apache.commons.io,com.paremus.packager.api,com.rti.dds.infrastructure,com.rti.dds.publication,com.rti.dds.topic,javax.annotation,com.rti.dds.subscription,com.rti.dds.type.builtin,com.paremus.packager.api.impl'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.remote.log'/>
+      <p n='uses' v='javax.annotation,com.paremus.packager.api.log,com.rti.dds.domain,com.paremus.packager.osgi.remote.event,com.paremus.packager.osgi.remote.discovery,com.paremus.packager.api'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.impl)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.impl ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.log)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.log ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.rtidds.util)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.rtidds.util ;version=[1.3.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.rti.dds.domain)(version&gt;=4.5.0)(!(version&gt;=5.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.rti.dds.domain ;version=[4.5.0,5.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.rti.dds.infrastructure)(version&gt;=4.5.0)(!(version&gt;=5.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.rti.dds.infrastructure ;version=[4.5.0,5.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.rti.dds.publication)(version&gt;=4.5.0)(!(version&gt;=5.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.rti.dds.publication ;version=[4.5.0,5.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.rti.dds.subscription)(version&gt;=4.5.0)(!(version&gt;=5.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.rti.dds.subscription ;version=[4.5.0,5.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.rti.dds.topic)(version&gt;=4.5.0)(!(version&gt;=5.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.rti.dds.topic ;version=[4.5.0,5.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.rti.dds.type.builtin)(version&gt;=4.5.0)(!(version&gt;=5.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.rti.dds.type.builtin ;version=[4.5.0,5.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.annotation)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package javax.annotation ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.io)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.io ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map ;version=[1.8.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.osgi.runtime/0.4.0.SNAPSHOT' presentationname='OSGi Package Runtime' symbolicname='com.paremus.packager.osgi.runtime' uri='com.paremus.packager.osgi.runtime-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <description>
+      This bundle provides all the OSGi runtime support for a Packager
+       package.
+    </description>
+    <size>
+      71312
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='OSGi Package Runtime'/>
+      <p n='symbolicname' v='com.paremus.packager.osgi.runtime'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.osgi.runtime'/>
+      <p n='uses' v='javax.annotation,org.osgi.framework,com.paremus.packager.api.discovery,com.paremus.packager.api.impl,com.paremus.packager.api,org.osgi.util.tracker,org.slf4j,org.osgi.service.cm,org.apache.commons.lang'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.discovery)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.discovery ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=com.paremus.packager.api.impl)(version&gt;=0.4.0)(!(version&gt;=1.0.0)))' multiple='false' name='package' optional='false'>
+      Import package com.paremus.packager.api.impl ;version=[0.4.0,1.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.annotation)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package javax.annotation ;version=[1.1.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.io)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.io ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang)(version&gt;=2.4.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang ;version=[2.4.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map ;version=[1.8.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.service.cm)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.service.cm ;version=[1.3.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.util.tracker)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.osgi.util.tracker ;version=[1.4.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='com.paremus.packager.ringo/0.4.0.SNAPSHOT' presentationname='RingoJS for Packager' symbolicname='com.paremus.packager.ringo' uri='com.paremus.packager.ringo-0.4-SNAPSHOT.jar' version='0.4.0.SNAPSHOT'>
+    <size>
+      2460815
+    </size>
+    <documentation>
+      http://paremus.com
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='RingoJS for Packager'/>
+      <p n='symbolicname' v='com.paremus.packager.ringo'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.ringojs.repository'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.ringojs.engine'/>
+      <p n='uses' v='org.ringojs.repository,com.paremus.packager.ringo'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.paremus.packager.ringo'/>
+      <p n='uses' v='org.ringojs.repository,org.apache.commons.io'/>
+      <p n='version' t='version' v='0.4.0.SNAPSHOT'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.swing)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.border)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.border
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.event)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.event
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.filechooser)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.filechooser
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.table)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.table
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.text)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.text
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.swing.tree)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.swing.tree
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.io)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.io ;version=[2.0.0,3.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.ringojs.engine)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.ringojs.engine
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+  </resource>
+  <resource id='com.springsource.org.junit/4.8.2' presentationname='JUnit' symbolicname='com.springsource.org.junit' uri='com.springsource.org.junit-4.8.2.jar' version='4.8.2'>
+    <size>
+      241743
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='JUnit'/>
+      <p n='symbolicname' v='com.springsource.org.junit'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='junit.extensions'/>
+      <p n='uses' v='junit.framework'/>
+      <p n='version' t='version' v='3.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='junit.framework'/>
+      <p n='uses' v='org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification'/>
+      <p n='version' t='version' v='3.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='junit.runner'/>
+      <p n='uses' v='junit.framework'/>
+      <p n='version' t='version' v='3.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='junit.textui'/>
+      <p n='uses' v='junit.framework,junit.runner'/>
+      <p n='version' t='version' v='3.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.hamcrest'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.hamcrest.core'/>
+      <p n='uses' v='org.hamcrest'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.hamcrest.internal'/>
+      <p n='uses' v='org.hamcrest'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit'/>
+      <p n='uses' v='org.hamcrest,org.junit.internal'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental'/>
+      <p n='uses' v='org.junit.runner,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.categories'/>
+      <p n='uses' v='org.junit.runner,org.junit.runner.manipulation,org.junit.runners,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.max'/>
+      <p n='uses' v='org.junit.runner,org.junit.runner.notification,org.junit.runners,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.results'/>
+      <p n='uses' v='org.hamcrest,org.junit.internal.matchers,org.junit.runner'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.runners'/>
+      <p n='uses' v='org.junit.runners,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.theories'/>
+      <p n='uses' v='org.junit.experimental.theories.internal,org.junit.internal,org.junit.runners,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.theories.internal'/>
+      <p n='uses' v='org.junit.experimental.theories,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.experimental.theories.suppliers'/>
+      <p n='uses' v='org.junit.experimental.theories'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal'/>
+      <p n='uses' v='org.hamcrest,org.junit.runner,org.junit.runner.notification'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal.builders'/>
+      <p n='uses' v='org.junit.runner,org.junit.runner.notification,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal.matchers'/>
+      <p n='uses' v='org.hamcrest'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal.requests'/>
+      <p n='uses' v='org.junit.runner,org.junit.runner.manipulation'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal.runners'/>
+      <p n='uses' v='junit.framework,org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal.runners.model'/>
+      <p n='uses' v='org.junit.internal,org.junit.runner,org.junit.runner.notification'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.internal.runners.statements'/>
+      <p n='uses' v='org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.matchers'/>
+      <p n='uses' v='org.hamcrest,org.junit.internal.matchers'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.rules'/>
+      <p n='uses' v='org.hamcrest,org.junit.internal.matchers,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.runner'/>
+      <p n='uses' v='junit.framework,org.junit.internal,org.junit.runner.manipulation,org.junit.runner.notification,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.runner.manipulation'/>
+      <p n='uses' v='org.junit.runner'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.runner.notification'/>
+      <p n='uses' v='org.junit.runner'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.runners'/>
+      <p n='uses' v='org.junit.internal.runners,org.junit.internal.runners.model,org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification,org.junit.runners.model'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.junit.runners.model'/>
+      <p n='uses' v='org.junit.internal.runners.model,org.junit.runner'/>
+      <p n='version' t='version' v='4.8.2'/>
+    </capability>
+  </resource>
+  <resource id='de.undercouch.bson4jackson/1.3.0' presentationname='bson4jackson' symbolicname='de.undercouch.bson4jackson' uri='bson4jackson-1.3.0.jar' version='1.3.0'>
+    <size>
+      54294
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='bson4jackson'/>
+      <p n='symbolicname' v='de.undercouch.bson4jackson'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='de.undercouch.bson4jackson.io'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='de.undercouch.bson4jackson.serializers'/>
+      <p n='uses' v='org.codehaus.jackson.map,org.codehaus.jackson,de.undercouch.bson4jackson,de.undercouch.bson4jackson.types'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='de.undercouch.bson4jackson.types'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='de.undercouch.bson4jackson.uuid'/>
+      <p n='uses' v='org.codehaus.jackson.map,de.undercouch.bson4jackson.serializers,org.codehaus.jackson.map.module,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='de.undercouch.bson4jackson'/>
+      <p n='uses' v='org.codehaus.jackson.io,org.codehaus.jackson,de.undercouch.bson4jackson.io,org.codehaus.jackson.map,org.codehaus.jackson.impl,de.undercouch.bson4jackson.types,de.undercouch.bson4jackson.serializers,org.codehaus.jackson.map.module,org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.3.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=de.undercouch.bson4jackson)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package de.undercouch.bson4jackson ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=de.undercouch.bson4jackson.io)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package de.undercouch.bson4jackson.io ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=de.undercouch.bson4jackson.serializers)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package de.undercouch.bson4jackson.serializers ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=de.undercouch.bson4jackson.types)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package de.undercouch.bson4jackson.types ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=de.undercouch.bson4jackson.uuid)(version&gt;=1.3.0))' multiple='false' name='package' optional='false'>
+      Import package de.undercouch.bson4jackson.uuid ;version=1.3.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson)(version&gt;=1.7.0))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson ;version=1.7.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.impl)(version&gt;=1.7.0))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.impl ;version=1.7.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.io)(version&gt;=1.7.0))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.io ;version=1.7.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map)(version&gt;=1.7.0))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map ;version=1.7.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.module)(version&gt;=1.7.0))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.module ;version=1.7.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.type)(version&gt;=1.7.0))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.type ;version=1.7.0
+    </require>
+  </resource>
+  <resource id='jackson-core-asl/1.8.1' presentationname='Jackson JSON processor' symbolicname='jackson-core-asl' uri='jackson-core-asl-1.8.1.jar' version='1.8.1'>
+    <size>
+      227120
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Jackson JSON processor'/>
+      <p n='symbolicname' v='jackson-core-asl'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.format'/>
+      <p n='uses' v='org.codehaus.jackson.io,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.io'/>
+      <p n='uses' v='org.codehaus.jackson.util,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.sym'/>
+      <p n='uses' v='org.codehaus.jackson.util'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.util'/>
+      <p n='uses' v='org.codehaus.jackson.io,org.codehaus.jackson.impl,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.annotate'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.impl'/>
+      <p n='uses' v='org.codehaus.jackson.format,org.codehaus.jackson.io,org.codehaus.jackson.sym,org.codehaus.jackson.util,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson'/>
+      <p n='uses' v='org.codehaus.jackson.format,org.codehaus.jackson.sym,org.codehaus.jackson.annotate,org.codehaus.jackson.impl,org.codehaus.jackson.type,org.codehaus.jackson.io,org.codehaus.jackson.util'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.annotate)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.annotate ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.format)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.format ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.impl)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.impl ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.io)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.io ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.sym)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.sym ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.type)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.type ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.util)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.util ;version=1.8.1
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.5)(ee=JavaSE-1.6))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5)(ee=JavaSE-1.6))
+    </require>
+  </resource>
+  <resource id='jackson-mapper-asl/1.8.1' presentationname='Data mapper for Jackson JSON processor' symbolicname='jackson-mapper-asl' uri='jackson-mapper-asl-1.8.1.jar' version='1.8.1'>
+    <size>
+      666474
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Data mapper for Jackson JSON processor'/>
+      <p n='symbolicname' v='jackson-mapper-asl'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.schema'/>
+      <p n='uses' v='org.codehaus.jackson.node,org.codehaus.jackson.map,org.codehaus.jackson.annotate,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.deser.impl'/>
+      <p n='uses' v='org.codehaus.jackson.map,org.codehaus.jackson.map.annotate,org.codehaus.jackson.map.deser,org.codehaus.jackson,org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.exc'/>
+      <p n='uses' v='org.codehaus.jackson.map,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.annotate'/>
+      <p n='uses' v='org.codehaus.jackson.map,org.codehaus.jackson.annotate'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.ser.impl'/>
+      <p n='uses' v='org.codehaus.jackson.schema,org.codehaus.jackson.map.annotate,org.codehaus.jackson.map.type,org.codehaus.jackson.type,org.codehaus.jackson.node,org.codehaus.jackson.map,org.codehaus.jackson,org.codehaus.jackson.map.ser'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.type'/>
+      <p n='uses' v='org.codehaus.jackson.map.util,org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.module'/>
+      <p n='uses' v='org.codehaus.jackson.map,org.codehaus.jackson.map.type,org.codehaus.jackson,org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.node'/>
+      <p n='uses' v='org.codehaus.jackson.io,org.codehaus.jackson.map,org.codehaus.jackson.util,org.codehaus.jackson.impl,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map'/>
+      <p n='uses' v='org.codehaus.jackson.format,org.codehaus.jackson.schema,org.codehaus.jackson.map.annotate,org.codehaus.jackson.annotate,org.codehaus.jackson.map.type,org.codehaus.jackson.type,org.codehaus.jackson.io,org.codehaus.jackson.node,org.codehaus.jackson.map.deser,org.codehaus.jackson.util,org.codehaus.jackson.map.introspect,org.codehaus.jackson.map.jsontype,org.codehaus.jackson.map.util,org.codehaus.jackson,org.codehaus.jackson.map.ser,org.codehaus.jackson.map.jsontype.impl'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.deser'/>
+      <p n='uses' v='org.codehaus.jackson.map.exc,org.codehaus.jackson.map.annotate,org.codehaus.jackson.annotate,org.codehaus.jackson.node,org.codehaus.jackson.map,org.codehaus.jackson.map.introspect,org.codehaus.jackson.map.jsontype,org.codehaus.jackson.map.util,org.codehaus.jackson.map.deser.impl,org.codehaus.jackson.map.type,org.codehaus.jackson.type,org.codehaus.jackson.io,org.codehaus.jackson.util,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.introspect'/>
+      <p n='uses' v='org.codehaus.jackson.map.annotate,org.codehaus.jackson.annotate,org.codehaus.jackson.map.ser.impl,org.codehaus.jackson.map.type,org.codehaus.jackson.type,org.codehaus.jackson.map,org.codehaus.jackson.map.jsontype,org.codehaus.jackson.map.util,org.codehaus.jackson.map.jsontype.impl'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.jsontype'/>
+      <p n='uses' v='org.codehaus.jackson.map,org.codehaus.jackson.annotate,org.codehaus.jackson.map.introspect,org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.util'/>
+      <p n='uses' v='org.codehaus.jackson.io,org.codehaus.jackson.map,org.codehaus.jackson.map.type,org.codehaus.jackson.map.introspect,org.codehaus.jackson,org.codehaus.jackson.type'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.jsontype.impl'/>
+      <p n='uses' v='org.codehaus.jackson.annotate,org.codehaus.jackson.map.type,org.codehaus.jackson.type,org.codehaus.jackson.map,org.codehaus.jackson.util,org.codehaus.jackson.map.introspect,org.codehaus.jackson.map.jsontype,org.codehaus.jackson,org.codehaus.jackson.map.util'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.map.ser'/>
+      <p n='uses' v='org.codehaus.jackson.map.annotate,org.codehaus.jackson.annotate,org.codehaus.jackson.node,org.codehaus.jackson.map,org.codehaus.jackson.map.introspect,org.codehaus.jackson.map.jsontype,org.codehaus.jackson.map.util,org.codehaus.jackson.schema,org.codehaus.jackson.map.ser.impl,org.codehaus.jackson.map.type,org.codehaus.jackson.type,org.codehaus.jackson.io,org.codehaus.jackson.util,org.codehaus.jackson'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.xml.datatype)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.datatype
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.annotate)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.annotate ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.format)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.format ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.impl)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.impl ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.io)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.io ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.type)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.type ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.util)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.util ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.5)(ee=JavaSE-1.6))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5)(ee=JavaSE-1.6))
+    </require>
+  </resource>
+  <resource id='jackson-xc/1.8.1' presentationname='XML Compatibility extensions for Jackson data binding' symbolicname='jackson-xc' uri='jackson-xc-1.8.1.jar' version='1.8.1'>
+    <size>
+      32320
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='XML Compatibility extensions for Jackson data binding'/>
+      <p n='symbolicname' v='jackson-xc'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.codehaus.jackson.xc'/>
+      <p n='uses' v='org.codehaus.jackson.map.annotate,org.codehaus.jackson.annotate,org.codehaus.jackson.node,org.codehaus.jackson.map,org.codehaus.jackson.map.introspect,org.codehaus.jackson.map.jsontype,org.codehaus.jackson.map.util,org.codehaus.jackson.map.jsontype.impl,org.codehaus.jackson.map.ser,org.codehaus.jackson.schema,org.codehaus.jackson.map.type,javax.xml.bind.annotation.adapters,org.codehaus.jackson.type,javax.activation,org.codehaus.jackson.map.deser,org.codehaus.jackson.util,javax.xml.bind.annotation,org.codehaus.jackson,javax.xml.bind'/>
+      <p n='version' t='version' v='1.8.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.activation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.activation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.bind
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind.annotation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.bind.annotation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind.annotation.adapters)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.bind.annotation.adapters
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.annotate)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.annotate ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.annotate)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.annotate ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.deser)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.deser ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.introspect)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.introspect ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.jsontype)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.jsontype ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.jsontype.impl)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.jsontype.impl ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.ser)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.ser ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.type)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.type ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.map.util)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.map.util ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.node)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.node ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.schema)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.schema ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.type)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.type ;version=1.8.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.codehaus.jackson.util)(version&gt;=1.8.1))' multiple='false' name='package' optional='false'>
+      Import package org.codehaus.jackson.util ;version=1.8.1
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.5)(ee=JavaSE-1.6))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.5)(ee=JavaSE-1.6))
+    </require>
+  </resource>
+  <resource id='org.apache.camel.camel-core/2.9.1' presentationname='camel-core' symbolicname='org.apache.camel.camel-core' uri='camel-core-2.9.1.jar' version='2.9.1'>
+    <description>
+      The Core Camel Java DSL based router
+    </description>
+    <size>
+      2101234
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://www.apache.org/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='camel-core'/>
+      <p n='symbolicname' v='org.apache.camel.camel-core'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.view'/>
+      <p n='uses' v='org.apache.camel.model,org.apache.camel,org.apache.camel.util,org.apache.camel.model.language,org.slf4j,javax.xml.parsers,javax.xml.transform.dom,org.w3c.dom,javax.xml.transform,org.apache.camel.converter.jaxp,javax.xml.bind.annotation,javax.xml.transform.stream,javax.xml.bind'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.validator'/>
+      <p n='uses' v='org.apache.camel.util,org.w3c.dom.ls,org.apache.camel,org.apache.camel.spi,org.apache.camel.impl,org.apache.camel.processor.validation,org.slf4j,javax.xml.transform,javax.xml.transform.stream'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.model.loadbalancer'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.model,org.apache.camel,javax.xml.bind.annotation,org.apache.camel.processor.loadbalancer,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.simple'/>
+      <p n='uses' v='org.apache.camel.language.simple.types,org.apache.camel.language.simple.ast,org.apache.camel.util,org.apache.camel,org.apache.camel.builder,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.seda'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel,org.apache.camel.util,org.apache.camel.support,org.apache.camel.processor,org.apache.camel.spi,org.slf4j,org.apache.camel.api.management,org.apache.camel.processor.aggregate'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.model'/>
+      <p n='uses' v='org.apache.camel,javax.xml.bind.annotation,org.apache.camel.processor,org.apache.camel.spi,org.apache.camel.builder,org.apache.camel.util.concurrent,org.apache.camel.model.language,org.apache.camel.processor.aggregate,org.apache.camel.util,org.apache.camel.component.bean,org.apache.camel.builder.xml,org.apache.camel.processor.idempotent,javax.xml.bind.annotation.adapters,org.apache.camel.support,org.apache.camel.impl,org.apache.camel.model.loadbalancer,org.apache.camel.processor.loadbalancer,org.apache.camel.model.dataformat,javax.xml.bind,org.apache.camel.processor.interceptor,org.slf4j,javax.xml.namespace,org.apache.camel.processor.resequencer,org.apache.camel.model.config,org.apache.camel.processor.validation'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.constant'/>
+      <p n='uses' v='org.apache.camel.builder,org.apache.camel.util,org.apache.camel,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.xslt'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,javax.xml.transform,org.apache.camel,org.apache.camel.converter.jaxp,org.apache.camel.builder.xml,org.apache.camel.spi,org.slf4j,org.apache.camel.api.management'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.ref'/>
+      <p n='uses' v='org.apache.camel.support,org.apache.camel,org.apache.camel.builder,org.apache.camel.util,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.converter.jaxp'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel,javax.xml.transform,org.w3c.dom,javax.xml.stream,javax.xml.transform.stream,javax.xml.transform.stax,javax.xml.parsers,javax.xml.transform.dom,org.xml.sax,javax.xml.transform.sax,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.impl.osgi'/>
+      <p n='uses' v='org.apache.camel,org.osgi.framework,org.apache.camel.spi,org.slf4j,org.apache.camel.model,org.apache.camel.util,org.apache.camel.impl.converter,org.apache.camel.impl.scan,org.apache.camel.impl.osgi.tracker'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.dataset'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.impl,org.apache.camel.util,org.apache.camel.processor,org.apache.camel.spi,org.apache.camel.component.mock,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.util.jndi'/>
+      <p n='uses' v='org.apache.camel.util,javax.naming,javax.naming.spi,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.properties'/>
+      <p n='uses' v='org.apache.camel.util,org.slf4j,org.apache.camel,org.apache.camel.spi,org.apache.camel.impl'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.timer'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel,org.slf4j,org.apache.camel.spi,org.apache.camel.api.management'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,org.apache.camel.api.management.mbean,org.apache.camel.api.management,org.apache.camel,org.apache.camel.converter,org.apache.camel.spi,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.api.management.mbean'/>
+      <p n='uses' v='org.apache.camel.api.management'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.management'/>
+      <p n='uses' v='javax.management.remote,org.slf4j,org.apache.camel,javax.management,org.apache.camel.util,org.apache.camel.support,javax.management.modelmbean,org.apache.camel.spi,org.apache.camel.impl,org.apache.camel.processor.interceptor,org.apache.camel.api.management,org.apache.camel.model,org.apache.camel.management.mbean,org.apache.camel.builder,org.apache.camel.component.bean,org.apache.camel.processor.idempotent,org.apache.camel.processor,org.apache.camel.management.event'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.test'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,org.apache.camel,org.slf4j,org.apache.camel.component.mock'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.xpath'/>
+      <p n='uses' v='javax.xml.xpath,org.apache.camel,org.apache.camel.builder.xml,org.apache.camel.spi,javax.xml.namespace'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.simple.ast'/>
+      <p n='uses' v='org.apache.camel.language.simple.types,org.apache.camel.builder,org.apache.camel,org.apache.camel.spi,org.apache.camel.util'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.idempotent'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.api.management,org.apache.camel.support,org.apache.camel,org.apache.camel.spi,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.validation'/>
+      <p n='uses' v='javax.xml.transform,org.apache.camel,javax.xml.validation,org.slf4j,org.xml.sax,org.w3c.dom.ls,javax.xml.transform.sax,javax.xml.transform.dom'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.model.dataformat'/>
+      <p n='uses' v='org.apache.camel.model,javax.xml.bind.annotation,org.apache.camel.spi,org.apache.camel.util,org.apache.camel,org.apache.camel.impl,javax.xml.namespace,org.w3c.dom,org.apache.camel.util.jsse,javax.xml.bind.annotation.adapters'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.header'/>
+      <p n='uses' v='org.apache.camel.builder,org.apache.camel.util,org.apache.camel,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.resequencer'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.util.concurrent'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.impl.scan'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.model.language'/>
+      <p n='uses' v='javax.xml.bind.annotation,org.apache.camel.util,org.apache.camel,javax.xml.bind.annotation.adapters,org.apache.camel.spi,org.apache.camel.component.bean,org.apache.camel.language.bean,org.apache.camel.builder,org.apache.camel.language.tokenizer,javax.xml.xpath,org.apache.camel.builder.xml'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.language'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,org.apache.camel,org.apache.camel.spi,org.apache.camel.component,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.management.event'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.management.mbean'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.model,org.apache.camel.processor.interceptor,org.apache.camel.api.management,org.apache.camel,javax.management,org.apache.camel.component.bean,org.apache.camel.api.management.mbean,org.apache.camel.spi,org.apache.camel.impl,org.apache.camel.builder,org.apache.camel.processor,org.apache.camel.processor.idempotent'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language'/>
+      <p n='uses' v='org.apache.camel.component.bean'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.browse'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel,org.apache.camel.processor.loadbalancer,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.impl'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.spi,org.slf4j,org.apache.camel.model,org.apache.camel,org.apache.camel.model.language,org.apache.camel.component.bean,javax.xml.bind.annotation,org.apache.camel.processor,org.apache.camel.impl.converter,org.apache.camel.support,org.apache.camel.component.properties,org.apache.camel.builder,javax.naming,org.apache.camel.processor.interceptor,org.apache.camel.management,javax.xml.bind,org.apache.camel.management.event,org.apache.camel.util.concurrent,javax.activation,org.apache.camel.impl.scan,org.apache.camel.component.mock,org.apache.camel.main'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.builder'/>
+      <p n='uses' v='org.apache.camel.model,org.apache.camel.impl,org.apache.camel.util,org.apache.camel,org.apache.camel.spi,org.slf4j,org.apache.camel.model.language,org.apache.camel.builder.xml,org.apache.camel.util.jsse,org.apache.camel.model.dataformat,org.w3c.dom,org.apache.camel.processor.exceptionpolicy,org.apache.camel.processor,org.apache.camel.support,org.apache.camel.component.bean,org.apache.camel.component.properties,org.apache.camel.language.bean,org.apache.camel.component.mock,org.apache.camel.component.direct,org.apache.camel.management.event,org.apache.camel.language.simple'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.util.concurrent'/>
+      <p n='uses' v='org.slf4j,org.apache.camel.util'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.interceptor'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.model,org.apache.camel,org.apache.camel.spi,org.apache.camel.processor,org.apache.camel.support,org.slf4j,org.apache.camel.impl'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.mock'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.builder,org.apache.camel.util,org.apache.camel.model.language,org.apache.camel.impl,org.apache.camel.processor,org.apache.camel.spi,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.bean'/>
+      <p n='uses' v='org.apache.camel,org.slf4j,org.apache.camel.impl,org.apache.camel.util,org.apache.camel.spi,org.apache.camel.language,org.apache.camel.language.bean,org.apache.camel.builder,org.apache.camel.support,org.apache.camel.processor,org.apache.camel.processor.aggregate,org.apache.camel.builder.xml'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.exceptionpolicy'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.model,org.apache.camel,org.apache.camel.model.language,org.apache.camel.spi,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.builder.xml'/>
+      <p n='uses' v='javax.xml.xpath,org.apache.camel.util,org.apache.camel.spi,javax.xml.namespace,javax.xml.transform,org.slf4j,org.xml.sax,org.apache.camel,javax.xml.transform.dom,org.w3c.dom,javax.xml.transform.stream,org.apache.camel.model.language,javax.xml.bind.annotation.adapters,org.apache.camel.support,org.apache.camel.impl,org.apache.camel.component.bean,javax.xml.transform.stax,javax.xml.parsers,org.apache.camel.converter.jaxp,javax.xml.transform.sax'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.bean'/>
+      <p n='uses' v='org.apache.camel.component.bean,org.apache.camel,org.apache.camel.util,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.converter.stream'/>
+      <p n='uses' v='org.apache.camel.support,org.apache.camel,org.slf4j,org.apache.camel.util,org.apache.camel.spi,javax.xml.transform,javax.xml.transform.stream,javax.xml.transform.sax'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.model.config'/>
+      <p n='uses' v='javax.xml.bind.annotation,org.apache.camel.processor.resequencer'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.util'/>
+      <p n='uses' v='org.apache.camel,org.slf4j,org.apache.camel.spi,javax.naming,org.w3c.dom,org.apache.camel.impl,javax.xml.transform.stream'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.main'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.view,org.apache.camel,javax.xml.bind,org.slf4j,org.apache.camel.builder,org.apache.camel.util,org.apache.camel.model,org.apache.camel.support'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.impl.converter'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel,org.apache.camel.spi,org.slf4j,org.apache.camel.support,org.apache.camel.component.file,org.apache.camel.component.bean,org.apache.camel.converter.jaxp,org.apache.camel.converter,org.apache.camel.converter.stream'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.util.jsse'/>
+      <p n='uses' v='javax.net.ssl,org.slf4j,org.apache.camel,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.converter'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.spi,org.slf4j,org.apache.camel.util'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.ref'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,org.apache.camel'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.loadbalancer'/>
+      <p n='uses' v='org.apache.camel,org.slf4j,org.apache.camel.util,org.apache.camel.impl,org.apache.camel.support'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.spi'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.model,javax.management,javax.management.modelmbean'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.tokenizer'/>
+      <p n='uses' v='org.apache.camel.builder,org.apache.camel.util,org.apache.camel,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.api.management'/>
+      <p n='uses' v='javax.management,org.apache.camel'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.direct'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,org.apache.camel,org.apache.camel.spi,org.slf4j'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel'/>
+      <p n='uses' v='javax.xml.transform.stream,org.apache.camel.builder,org.apache.camel.model,org.apache.camel.spi,javax.xml.bind.annotation,org.apache.camel.main,javax.activation'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.property'/>
+      <p n='uses' v='org.apache.camel.builder,org.apache.camel.util,org.apache.camel,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.spi,org.slf4j,org.apache.camel.impl,org.apache.camel.util,org.apache.camel.support,org.apache.camel.builder,org.apache.camel.processor.exceptionpolicy,org.apache.camel.processor.aggregate,org.apache.camel.model,org.apache.camel.util.concurrent,org.apache.camel.processor.resequencer'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.impl.osgi.tracker'/>
+      <p n='uses' v='org.osgi.framework'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.processor.aggregate'/>
+      <p n='uses' v='org.apache.camel,org.apache.camel.spi,org.slf4j,org.apache.camel.support,org.apache.camel.impl,org.apache.camel.util'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.vm'/>
+      <p n='uses' v='org.apache.camel.component.seda'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.file.strategy'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel.component.file,org.apache.camel,org.slf4j,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.file'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel,org.apache.camel.spi,org.slf4j,org.apache.camel.processor.idempotent,org.apache.camel.impl'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.support'/>
+      <p n='uses' v='org.apache.camel.util,org.apache.camel,org.slf4j,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.language.simple.types'/>
+      <p n='uses' v='org.apache.camel'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.log'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel.util,org.apache.camel,org.apache.camel.processor,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.activation)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.activation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management.modelmbean)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management.modelmbean
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.management.remote)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management.remote
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming.spi)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming.spi
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.bind
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind.annotation)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.bind.annotation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.bind.annotation.adapters)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.bind.annotation.adapters
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.namespace)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.namespace
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.parsers)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.parsers
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.sax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stax)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.xml.transform.stax
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.transform.stream)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.transform.stream
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.validation)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.validation
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.xml.xpath)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.xml.xpath
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.xalan.xsltc.trax)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.xalan.xsltc.trax
+    </require>
+    <require extend='false' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='true'>
+      Import package org.osgi.framework ;version=[1.5.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.w3c.dom.ls)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.w3c.dom.ls
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+  </resource>
+  <resource id='org.apache.camel.camel-mina/2.9.1' presentationname='camel-mina' symbolicname='org.apache.camel.camel-mina' uri='camel-mina-2.9.1.jar' version='2.9.1'>
+    <description>
+      Camel MINA support
+    </description>
+    <size>
+      46349
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://www.apache.org/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='camel-mina'/>
+      <p n='symbolicname' v='org.apache.camel.camel-mina'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.camel.component.mina'/>
+      <p n='uses' v='org.apache.camel.impl,org.apache.camel,org.apache.mina.transport.vmpipe,org.slf4j,org.apache.mina.filter.executor,org.apache.mina.filter.codec,org.apache.camel.util,org.apache.mina.common,org.apache.mina.filter,org.apache.mina.transport.socket.nio,org.apache.mina.filter.codec.serialization,org.apache.mina.filter.codec.textline,org.apache.camel.spi'/>
+      <p n='version' t='version' v='2.9.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.apache.camel)(version&gt;=2.9.0)(!(version&gt;=2.10.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.camel ;version=[2.9.0,2.10.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.camel.impl)(version&gt;=2.9.0)(!(version&gt;=2.10.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.camel.impl ;version=[2.9.0,2.10.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.camel.spi)(version&gt;=2.9.0)(!(version&gt;=2.10.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.camel.spi ;version=[2.9.0,2.10.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.camel.util)(version&gt;=2.9.0)(!(version&gt;=2.10.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.camel.util ;version=[2.9.0,2.10.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.common)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.common ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.filter)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.filter ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.filter.codec)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.filter.codec ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.filter.codec.serialization)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.filter.codec.serialization ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.filter.codec.textline)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.filter.codec.textline ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.filter.executor)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.filter.executor ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.transport.socket.nio)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.transport.socket.nio ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.mina.transport.vmpipe)(version&gt;=1.1.7)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.apache.mina.transport.vmpipe ;version=[1.1.7,2.0.0)
+    </require>
+    <require extend='false' filter='(&amp;(package=org.slf4j)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j ;version=[1.6.0,2.0.0)
+    </require>
+  </resource>
+  <resource id='org.apache.commons.codec/1.6.0' presentationname='Commons Codec' symbolicname='org.apache.commons.codec' uri='commons-codec-1.6.jar' version='1.6.0'>
+    <description>
+      The codec package contains simple encoder and decoders for
+           various formats such as Base64 and Hexadecimal.  In addition
+       to these     widely used encoders and decoders, the codec
+       package also maintains a     collection of phonetic encoding
+       utilities.
+    </description>
+    <size>
+      232771
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://commons.apache.org/codec/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Commons Codec'/>
+      <p n='symbolicname' v='org.apache.commons.codec'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.codec'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.codec.net'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.codec.language.bm'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.codec.language'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.codec.digest'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.codec.binary'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+  </resource>
+  <resource id='org.apache.commons.collections/3.2.1' presentationname='Commons Collections' symbolicname='org.apache.commons.collections' uri='commons-collections-3.2.1.jar' version='3.2.1'>
+    <description>
+      Types that extend and augment the Java Collections Framework.
+    </description>
+    <size>
+      575389
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://commons.apache.org/collections/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Commons Collections'/>
+      <p n='symbolicname' v='org.apache.commons.collections'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.map'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.buffer'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.comparators'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.collection'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.bag'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.iterators'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.bidimap'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.set'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.functors'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.list'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections.keyvalue'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.collections'/>
+      <p n='version' t='version' v='3.2.1'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.bag)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.bag ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.bidimap)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.bidimap ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.buffer)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.buffer ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.collection)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.collection ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.comparators)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.comparators ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.functors)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.functors ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.iterators)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.iterators ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.keyvalue)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.keyvalue ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.list)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.list ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.map)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.map ;version=3.2.1
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.set)(version&gt;=3.2.1))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.set ;version=3.2.1
+    </require>
+  </resource>
+  <resource id='org.apache.commons.io/2.0.1' presentationname='Commons IO' symbolicname='org.apache.commons.io' uri='commons-io-2.0.1.jar' version='2.0.1'>
+    <description>
+      Commons-IO contains utility classes, stream implementations,
+       file filters, file comparators and endian classes.
+    </description>
+    <size>
+      159509
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://commons.apache.org/io/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Commons IO'/>
+      <p n='symbolicname' v='org.apache.commons.io'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.io.output'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.io.comparator'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.io'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.io.monitor'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.io.input'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.io.filefilter'/>
+      <p n='version' t='version' v='2.0.1'/>
+    </capability>
+  </resource>
+  <resource id='org.apache.commons.lang/2.4.0' presentationname='Commons Lang' symbolicname='org.apache.commons.lang' uri='commons-lang-2.4.jar' version='2.4.0'>
+    <description>
+      Commons Lang, a package of Java utility classes for the   
+           classes that are in java.lang's hierarchy, or are considered
+       to be so        standard as to justify existence in java.lang.
+    </description>
+    <size>
+      261809
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://commons.apache.org/lang/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Commons Lang'/>
+      <p n='symbolicname' v='org.apache.commons.lang'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.math'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.enums'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.builder'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.exception'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.enum'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.mutable'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.text'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang.time'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.commons.lang'/>
+      <p n='version' t='version' v='2.4.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.builder)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.builder ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.enum)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.enum ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.enums)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.enums ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.exception)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.exception ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.math)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.math ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.mutable)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.mutable ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.text)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.text ;version=2.4.0
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.time)(version&gt;=2.4.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.time ;version=2.4.0
+    </require>
+  </resource>
+  <resource id='org.apache.servicemix.bundles.jsr305/1.3.9.1' presentationname='Apache ServiceMix :: Bundles :: jsr305' symbolicname='org.apache.servicemix.bundles.jsr305' uri='org.apache.servicemix.bundles.jsr305-1.3.9_1.jar' version='1.3.9.1'>
+    <description>
+      This OSGi bundle wraps jsr305 1.1.0 jar file.
+    </description>
+    <size>
+      24629
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <documentation>
+      http://www.apache.org/
+    </documentation>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Apache ServiceMix :: Bundles :: jsr305'/>
+      <p n='symbolicname' v='org.apache.servicemix.bundles.jsr305'/>
+      <p n='version' t='version' v='1.3.9.1'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.annotation'/>
+      <p n='uses' v='javax.annotation.meta'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='javax.annotation.meta'/>
+      <p n='uses' v='javax.annotation'/>
+      <p n='version' t='version' v='1.1.0'/>
+    </capability>
+  </resource>
+  <resource id='org.apache.velocity/1.7.0' presentationname='Apache Velocity' symbolicname='org.apache.velocity' uri='velocity-1.7.jar' version='1.7.0'>
+    <size>
+      449505
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='Apache Velocity'/>
+      <p n='symbolicname' v='org.apache.velocity'/>
+      <p n='version' t='version' v='1.7.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity'/>
+      <p n='uses' v='org.apache.velocity.context,org.apache.velocity.exception,org.apache.velocity.runtime.resource'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.anakia'/>
+      <p n='uses' v='com.werken.xpath,org.apache.tools.ant,org.apache.tools.ant.taskdefs,org.jdom,org.jdom.output'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.app'/>
+      <p n='uses' v='org.apache.commons.collections,org.apache.velocity,org.apache.velocity.context,org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.log'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.app.event'/>
+      <p n='uses' v='org.apache.velocity.context,org.apache.velocity.runtime,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.app.event.implement'/>
+      <p n='uses' v='org.apache.velocity.app.event,org.apache.velocity.context,org.apache.velocity.runtime,org.apache.velocity.util,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.app.tools'/>
+      <p n='uses' v='org.apache.velocity.context'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.context'/>
+      <p n='uses' v='org.apache.velocity.app.event,org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.parser.node,org.apache.velocity.runtime.resource,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.convert'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.exception'/>
+      <p n='uses' v='org.apache.velocity.runtime.parser,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.io'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime'/>
+      <p n='uses' v='org.apache.commons.collections,org.apache.velocity,org.apache.velocity.app.event,org.apache.velocity.context,org.apache.velocity.exception,org.apache.velocity.runtime.directive,org.apache.velocity.runtime.log,org.apache.velocity.runtime.parser,org.apache.velocity.runtime.parser.node,org.apache.velocity.runtime.resource,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.defaults'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.directive'/>
+      <p n='uses' v='org.apache.velocity.context,org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.parser,org.apache.velocity.runtime.parser.node'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.log'/>
+      <p n='uses' v='org.apache.log.format,org.apache.velocity.runtime,org.apache.velocity.runtime.directive,org.apache.velocity.runtime.parser.node,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.parser'/>
+      <p n='uses' v='org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.directive,org.apache.velocity.runtime.parser.node'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.parser.node'/>
+      <p n='uses' v='org.apache.commons.lang.text,org.apache.velocity.context,org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.log,org.apache.velocity.runtime.parser,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.resource'/>
+      <p n='uses' v='org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.resource.loader'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.resource.loader'/>
+      <p n='uses' v='javax.sql,org.apache.commons.collections,org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.resource,org.apache.velocity.runtime.resource.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.resource.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.runtime.visitor'/>
+      <p n='uses' v='org.apache.velocity.context,org.apache.velocity.runtime.parser.node'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.servlet'/>
+      <p n='uses' v='javax.servlet,javax.servlet.http,org.apache.velocity,org.apache.velocity.context,org.apache.velocity.exception'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.texen'/>
+      <p n='uses' v='org.apache.velocity,org.apache.velocity.app,org.apache.velocity.context'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.texen.ant'/>
+      <p n='uses' v='org.apache.commons.collections,org.apache.tools.ant,org.apache.velocity.context'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.texen.defaults'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.texen.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.util'/>
+      <p n='uses' v='org.apache.velocity.context,org.apache.velocity.runtime,org.apache.velocity.runtime.parser.node,org.apache.velocity.util.introspection'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.apache.velocity.util.introspection'/>
+      <p n='uses' v='org.apache.velocity.runtime,org.apache.velocity.runtime.log,org.apache.velocity.runtime.parser.node,org.apache.velocity.util'/>
+      <p n='version' t='version' v='0.0.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=com.werken.xpath)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package com.werken.xpath
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.naming)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.naming
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.servlet
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.servlet.http)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package javax.servlet.http
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.sql)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.sql
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.collections.map)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.collections.map
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.builder)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.builder
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.lang.text)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.apache.commons.lang.text
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.commons.logging)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.commons.logging
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.log)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.log
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.log.format)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.log.format
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.log.output.io)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.log.output.io
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.log4j)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.log4j
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.oro.text.perl)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.oro.text.perl
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.tools.ant)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.tools.ant
+    </require>
+    <require extend='false' filter='(&amp;(package=org.apache.tools.ant.taskdefs)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.apache.tools.ant.taskdefs
+    </require>
+    <require extend='false' filter='(&amp;(package=org.jdom)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.jdom
+    </require>
+    <require extend='false' filter='(&amp;(package=org.jdom.input)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.jdom.input
+    </require>
+    <require extend='false' filter='(&amp;(package=org.jdom.output)(version&gt;=0.0.0))' multiple='false' name='package' optional='true'>
+      Import package org.jdom.output
+    </require>
+    <require extend='false' filter='(&amp;(package=org.xml.sax)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package org.xml.sax
+    </require>
+  </resource>
+  <resource id='org.mongodb.mongo-java-driver/2.8.0.RELEASE' presentationname='MongoDB Java Driver' symbolicname='org.mongodb.mongo-java-driver' uri='mongo-java-driver-2.8.0.jar' version='2.8.0.RELEASE'>
+    <size>
+      344552
+    </size>
+    <license>
+      http://www.apache.org/licenses/LICENSE-2.0.txt
+    </license>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='MongoDB Java Driver'/>
+      <p n='symbolicname' v='org.mongodb.mongo-java-driver'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.mongodb'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.mongodb.io'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.mongodb.util'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='com.mongodb.gridfs'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.bson'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.bson.util'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.bson.util.annotations'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.bson.types'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.bson.io'/>
+      <p n='version' t='version' v='2.8.0.RELEASE'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=javax.management)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.management
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net
+    </require>
+    <require extend='false' filter='(&amp;(package=javax.net.ssl)(version&gt;=0.0.0))' multiple='false' name='package' optional='false'>
+      Import package javax.net.ssl
+    </require>
+  </resource>
+  <resource id='slf4j.api/1.6.0' presentationname='slf4j-api' symbolicname='slf4j.api' uri='slf4j-api-1.6.0.jar' version='1.6.0'>
+    <description>
+      The slf4j API
+    </description>
+    <size>
+      25496
+    </size>
+    <capability name='bundle'>
+      <p n='manifestversion' v='2'/>
+      <p n='presentationname' v='slf4j-api'/>
+      <p n='symbolicname' v='slf4j.api'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j.spi'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='org.slf4j.helpers'/>
+      <p n='version' t='version' v='1.6.0'/>
+    </capability>
+    <require extend='false' filter='(&amp;(package=org.slf4j.impl)(version&gt;=1.5.5))' multiple='false' name='package' optional='false'>
+      Import package org.slf4j.impl ;version=1.5.5
+    </require>
+    <require extend='false' filter='(|(ee=J2SE-1.3))' multiple='false' name='ee' optional='false'>
+      Execution Environment (|(ee=J2SE-1.3))
+    </require>
+  </resource>
+</repository>

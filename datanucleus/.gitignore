@@ -1,3 +1,8 @@
+# vi detritus
+~*
+*.swp
+
+# bnd project outputs
 /cnf/cache/
 /*/bin/
 /*/bin_test/
