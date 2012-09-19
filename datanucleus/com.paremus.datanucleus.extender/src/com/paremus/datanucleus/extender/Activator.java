@@ -13,6 +13,7 @@ public class Activator implements BundleActivator {
 
 	private LogServiceTracker log;
 	private DataNucleusModelBundleTracker extender;
+	private ConnectionConfigurerTracker configurerTracker;
 
 	@Override
 	public void start(BundleContext context) throws Exception {
@@ -30,10 +31,14 @@ public class Activator implements BundleActivator {
 		
 		extender = new DataNucleusModelBundleTracker(context, log);
 		extender.open();
+		
+		configurerTracker = new ConnectionConfigurerTracker(context);
+		configurerTracker.open();
 	}
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
+		configurerTracker.close();
 		extender.close();
 		log.close();
 	}

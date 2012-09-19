@@ -28,6 +28,7 @@ public class PMFBImpl implements PersistenceManagerFactoryBuilder {
 		initialProps.put("datanucleus.autoCreateSchema", "true");
 		initialProps.put("datanucleus.validateTables", "false");
 		initialProps.put("datanucleus.validateConstraints", false);
+		initialProps.put("javax.jdo.PersistenceManagerFactoryClass", "org.datanucleus.api.jdo.JDOPersistenceManagerFactory");
 	}
 
 	public PersistenceManagerFactory createPersistenceManagerFactory(Map<String, Object> configProps) throws Exception {

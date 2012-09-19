@@ -18,7 +18,6 @@ public class DataNucleusModelBundleTracker extends BundleTracker {
 
 	private static final String HEADER_KEY = "DataNucleus-Model";
 	private static final String PROPERTIES_ENTRY = "OSGI-INF/datanucleus/model.properties";
-	private static final String SERVICE_REGISTRATION_PROP_MODEL = "com.paremus.datanucleus.model";
 	
 	private LogService log;
 
@@ -39,8 +38,7 @@ public class DataNucleusModelBundleTracker extends BundleTracker {
 			PMFBImpl pmfb = new PMFBImpl(bundle, props);
 			
 			Properties svcRegProps = new Properties();
-			svcRegProps.put(SERVICE_REGISTRATION_PROP_MODEL, modelName);
-			
+			svcRegProps.put(PersistenceManagerFactoryBuilder.PROP_MODEL_NAME, modelName);
 			return context.registerService(PersistenceManagerFactoryBuilder.class.getName(), pmfb, svcRegProps);
 		} catch (IOException e) {
 			log.log(LogService.LOG_ERROR, String.format("Error loading DataNucleus properties from " + PROPERTIES_ENTRY + " entry in bundle %d.", bundle.getBundleId()), e);

@@ -1,0 +1,27 @@
+-buildpath: osgi.core;version='[4.2,5)',\
+	osgi.cmpn,\
+	junit.osgi,\
+	org.mockito.mockito-all,\
+	com.paremus.packager.whiteboard;version=latest,\
+	com.paremus.datanucleus.extender;version=latest,\
+	javax.jdo
+Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
+Private-Package: com.paremus.datanucleus.extender.test
+
+-runee: JavaSE-1.6
+-runvm: -ea
+-runfw: org.apache.felix.framework
+-runsystempackages: sun.reflect
+-runbundles: org.mockito.mockito-all,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
+	com.paremus.datanucleus.extender;version=latest,\
+	org.datanucleus,\
+	org.datanucleus.api.jdo,\
+	javax.jdo,\
+	com.paremus.packager.whiteboard;version=latest,\
+	com.paremus.packager.api,\
+	org.apache.servicemix.bundles.jsr305,\
+	jackson-core-asl
+

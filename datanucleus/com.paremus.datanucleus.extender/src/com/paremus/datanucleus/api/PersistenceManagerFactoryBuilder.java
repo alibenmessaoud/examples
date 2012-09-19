@@ -5,7 +5,9 @@ import java.util.Map;
 import javax.jdo.PersistenceManagerFactory;
 
 public interface PersistenceManagerFactoryBuilder {
+	
+	static final String PROP_MODEL_NAME = "com.paremus.datanucleus.model";
 
-	public PersistenceManagerFactory createPersistenceManagerFactory(Map<String, Object> properties) throws Exception;
+	PersistenceManagerFactory createPersistenceManagerFactory(Map<String, Object> properties) throws Exception;
 
 }
