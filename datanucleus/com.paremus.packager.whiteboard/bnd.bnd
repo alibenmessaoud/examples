@@ -1,0 +1,6 @@
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	com.paremus.packager.api
+Private-Package: com.paremus.packager.whiteboard
+Export-Package: com.paremus.packager.whiteboard.api
+Bundle-Activator: com.paremus.packager.whiteboard.Activator

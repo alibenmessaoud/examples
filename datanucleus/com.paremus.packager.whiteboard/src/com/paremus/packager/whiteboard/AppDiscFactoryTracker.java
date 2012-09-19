@@ -1,0 +1,79 @@
+package com.paremus.packager.whiteboard;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceReference;
+import org.osgi.framework.ServiceRegistration;
+import org.osgi.util.tracker.ServiceTracker;
+
+import com.paremus.packager.api.PackagerException;
+import com.paremus.packager.api.Scope;
+import com.paremus.packager.api.discovery.ApplicationDiscoveryEvent;
+import com.paremus.packager.api.discovery.ApplicationDiscoveryListener;
+import com.paremus.packager.api.discovery.ApplicationDiscoveryService;
+import com.paremus.packager.api.discovery.ApplicationDiscoveryServiceFactory;
+import com.paremus.packager.api.discovery.ApplicationServiceReference;
+import com.paremus.packager.whiteboard.api.PublishedApplication;
+
+public class AppDiscFactoryTracker extends ServiceTracker implements ApplicationDiscoveryListener {
+
+	private final Map<String, ServiceRegistration> registrations = new HashMap<String, ServiceRegistration>();
+	private final Scope scope;
+
+	public AppDiscFactoryTracker(BundleContext context, String scopeName) {
+		super(context, ApplicationDiscoveryServiceFactory.class.getName(), null);
+		this.scope = new Scope(scopeName);
+	}
+	
+	@Override
+	public Object addingService(ServiceReference reference) {
+		ApplicationDiscoveryServiceFactory discServiceFactory = (ApplicationDiscoveryServiceFactory) context.getService(reference);
+		ApplicationDiscoveryService discService = discServiceFactory.getServiceForScope(scope);
+		try {
+			discService.addListener(this);
+			return discService;
+		} catch (PackagerException e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
+	
+	@Override
+	public void removedService(ServiceReference reference, Object service) {
+		ApplicationDiscoveryService discService = (ApplicationDiscoveryService) service;
+		discService.removeListener(this);
+	}
+
+	@Override
+	public void serviceReferenceChange(ApplicationDiscoveryEvent event) throws Exception {
+		Set<String> currentUris = new HashSet<String>(registrations.keySet());
+		
+		Set<ApplicationServiceReference> appRefs = event.getServiceReferences();
+		for (ApplicationServiceReference appRef : appRefs) {
+			String appUri = appRef.getUri();
+
+			boolean exists = currentUris.remove(appUri);
+			if (!exists) {
+				// publish service
+				Properties serviceProps = new Properties();
+				serviceProps.put(PublishedApplication.PROP_URI, appUri);
+				PublishedApplication markerService = new PublishedApplication() {};
+				ServiceRegistration registration = context.registerService(PublishedApplication.class.getName(), markerService, serviceProps);
+				registrations.put(appUri, registration);
+			}
+		}
+		
+		// Unpublish services for URIs that no longer exist (i.e. left in the currentUris set)
+		for (String uri : currentUris) {
+			ServiceRegistration registration = registrations.remove(uri);
+			if (registration != null)
+				registration.unregister();
+		}
+	}
+	
+}
