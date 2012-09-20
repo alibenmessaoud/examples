@@ -1,0 +1,4 @@
+-buildpath: biz.aQute.bnd.annotation,\
+	com.paremus.packager.whiteboard;version=latest
+Service-Component: *
+Private-Package: com.paremus.example.packager.dummy

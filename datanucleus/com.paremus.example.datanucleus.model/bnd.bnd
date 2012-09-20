@@ -1,3 +1,4 @@
 -buildpath: javax.jdo
 DataNucleus-Model: SampleModel
-Export-Package: org.datanucleus.samples.jdo.tutorial
+Export-Package: org.datanucleus.samples.jdo.tutorial,\
+	org.datanucleus.samples.blog.model

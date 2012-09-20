@@ -8,10 +8,19 @@
 	com.paremus.example.datanucleus.model;version=latest,\
 	com.paremus.datanucleus.extender;version=latest,\
 	com.paremus.packager.whiteboard;version=latest,\
-	com.paremus.packager.api
+	com.paremus.packager.api,\
+	javax.inject,\
+	javax.ws.rs.jsr311-api,\
+	jackson-core,\
+	jackson-databind
 
-Private-Package: com.paremus.example.datanucleus.service
+Private-Package: com.paremus.example.datanucleus.service,\
+	com.paremus.example.datanucleus.service.rest
 Service-Component: *
 ParemusPackager-Scope: global
 Import-Package: org.apache.felix.service.command;resolution:=optional,\
 	*
+Export-Package: com.paremus.example.datanucleus.blog.api
+
+REST-Alias: /blog
+REST-Classes: com.paremus.example.datanucleus.service.rest.BlogCommentsResource
