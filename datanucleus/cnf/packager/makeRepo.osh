@@ -2,8 +2,14 @@ nim:repository PackagerExt {
   rule ms/com.paremus.packager.examples.mongodb {
     req builder/ms
     req osgi.active.bundle/com.paremus.packager.examples.mongodb
-    req osgi.active.bundle/com.paremus.packager.osgi.remote
+    req osgi.active.bundle/com.paremus.packager.osgi.local
     cap ms/com.paremus.packager.examples.mongodb
+  }
+  rule msf/com.paremus.packager.examples.derby {
+    req builder/ms
+    req osgi.active.bundle/com.paremus.packager.examples.derby
+    req osgi.active.bundle/com.paremus.packager.osgi.local
+    cap msf/com.paremus.packager.examples.derby
   }
 }
 nim:export PackagerExt index-nim-ext.xml

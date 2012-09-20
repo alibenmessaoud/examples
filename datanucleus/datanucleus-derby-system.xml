@@ -1,18 +1,20 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="DataNucleusExample" boundary="fibre"
-  repopath="DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
+        repopath="Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
 
-  <!-- The "application" bundle -->
-  <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent">
-    <property name="javax.jdo.PersistenceManagerFactoryClass" value="org.datanucleus.api.jdo.JDOPersistenceManagerFactory"/>
-    <property name="javax.jdo.option.ConnectionURL" value="jdbc:derby://localhost/datanucleussample;create=true"/>
-    <property name="javax.jdo.option.ConnectionDriverName" value="org.apache.derby.jdbc.ClientDriver"/>
-    <property name="javax.jdo.option.ConnectionUserName" value="APP"/>
-    <property name="javax.jdo.option.ConnectionPassword" value="APP"/>
-  </system.part>
+  <!-- The top-level "application" bundles -->
+  <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent"/>
+  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
+  <system.part category="osgi.active.bundle" name="com.paremus.datanucleus.extender"/>
 
   <!-- This defines that we want DataNucleus with an RDBMS -->
   <system.part category="osgi.active.bundle" name="org.datanucleus.store.rdbms"/>
   <!-- This defines that we want Apache Derby to be our RDBMS -->
   <system.part category="osgi.active.bundle" name="org.apache.derby"/>
+
+  <!-- Use packager to include the MongoDB server -->
+  <system.part category="msf" name="com.paremus.packager.examples.derby">
+    <property name="env.DERBY_PORT" value="1527"/>
+  </system.part>
+  <system.part category="osgi.active.bundle" name="com.paremus.packager.whiteboard"/>
 
 </system>

@@ -1,5 +1,11 @@
 <repository name="Packager:0" xmlns="http://schema.paremus.com/nri/2" >
  <!-- START MANUALLY ADDED SECTION -->
+ <part name="msf/com.paremus.packager.examples.derby" >
+  <req name="builder/ms" />
+  <req name="osgi.active.bundle/com.paremus.packager.examples.derby" />
+  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
+  <cap name="msf/com.paremus.packager.examples.derby" attrs="selfcap=&quot;true&quot;" />
+ </part>
  <part name="ms/com.paremus.packager.examples.mongodb" >
   <req name="builder/ms" />
   <req name="osgi.active.bundle/com.paremus.packager.examples.mongodb" />
