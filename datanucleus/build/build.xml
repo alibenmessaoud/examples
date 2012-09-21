@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="build">
+	
+	<import file="../cnf/build.xml"/>
+
+  <target name="release" depends="template.release">
+    <!-- LOAD FABRIC PROPERTIES -->
+	  <property file="fabric.properties"/>
+    <property name="fabric.home" value="${ENV.FABRIC_HOME}"/>
+    <available property="fabric.home.exists" file="${fabric.home}" type="dir"/>
+    <fail unless="fabric.home.exists" message="${fabric.home} does not exist! Please refer to build instructions for defining the Paremus Fabric directory."/>
+    <echo message="Found Paremus Service Fabric in ${fabric.home}"/>
+
+    <!-- GENERATE NIMBLE INDEX -->
+  	<echo message="Regenerating release repository index in ${workspacedir}/cnf/releaserepo/index-nim.xml"/>
+    <path id="posh.classpath">
+      <pathelement path="${fabric.home}/lib/boot/boot-launch.jar"/>
+      <pathelement path="${fabric.home}/bin/posh.jar"/>
+    </path>
+  	<java classname="com.paremus.posh.launch.Posh" classpathref="posh.classpath" fork="true">
+  	  <arg line='-c "nim:index DataNucleus ${workspacedir}/cnf/releaserepo ${workspacedir}/cnf/releaserepo/index-nim.xml"'/>
+  	</java>
+  </target>
+	
+
+</project>

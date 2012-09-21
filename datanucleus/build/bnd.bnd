@@ -1,0 +1,4 @@
+-nobundles
+-dependson: \
+	com.paremus.example.datanucleus.service,\
+	com.paremus.example.camel
