@@ -1,10 +1,13 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="DataNucleusExample" boundary="fibre"
-        repopath="Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
+        repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
 
   <!-- The top-level "application" bundles -->
   <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent"/>
   <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
   <system.part category="osgi.active.bundle" name="com.paremus.datanucleus.extender"/>
+
+  <!-- Add the camel example -->
+  <system.part category="osgi.active.bundle" name="com.paremus.example.camel"/>
 
   <!-- This defines that we want DataNucleus with MongoDB -->
   <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb"/>

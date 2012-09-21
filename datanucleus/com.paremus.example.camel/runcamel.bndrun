@@ -1,0 +1,51 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.6
+
+-runbundles: org.apache.felix.scr;version='[1.6.0,1.6.1)',\
+	org.datanucleus.api.jdo;version='[3.1.0,3.1.1)',\
+	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
+	org.bndtools.rt.rest;version='[0.0.0,0.0.1)',\
+	osgi.cmpn;version='[4.2.0,4.2.1)',\
+	org.apache.camel.camel-core;version='[2.10.1,2.10.2)',\
+	javax.inject;version='[1.0.0,1.0.1)',\
+	com.paremus.example.datanucleus.model;version=latest,\
+	com.paremus.example.camel;version=latest,\
+	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
+	jackson-core-asl;version='[1.8.1,1.8.2)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	jackson-core;version='[2.0.0,2.0.1)',\
+	slf4j.api;version='[1.6.2,1.6.3)',\
+	org.apache.felix.metatype;version='[1.0.4,1.0.5)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	jackson-annotations;version='[2.0.0,2.0.1)',\
+	com.paremus.packager.whiteboard;version=latest,\
+	com.paremus.datanucleus.extender;version=latest,\
+	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
+	javax.servlet;version='[2.5.0,2.5.1)',\
+	org.apache.servicemix.bundles.jsr305;version='[1.3.9,1.3.10)',\
+	com.paremus.example.datanucleus.service;version=latest,\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	javax.jdo;version='[3.1.0,3.1.1)',\
+	com.paremus.packager.api;version='[0.4.0,0.4.1)',\
+	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
+	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
+	org.datanucleus;version='[3.1.0,3.1.1)',\
+	jackson-databind;version='[2.0.0,2.0.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)'
+
+## Uncomment if you need to change the HTTP port
+-runproperties: org.osgi.service.http.port=8081
+
+-runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.2))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.0))',\
+	osgi.identity;filter:='(osgi.identity=com.paremus.example.camel)'
+-runrepos: Workspace,\
+	Local,\
+	Bndtools Hub,\
+	Camel

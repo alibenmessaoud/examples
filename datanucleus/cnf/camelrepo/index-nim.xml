@@ -1,0 +1,146 @@
+<repository name="Camel:0" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/org.apache.camel.camel-core:2.10.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.camel.camel-core:[2.10.1,2.10.1)" />
+  <cap name="osgi.active.bundle/org.apache.camel.camel-core:2.10.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.camel.camel-core-osgi:2.10.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.camel.camel-core-osgi:[2.10.1,2.10.1)" />
+  <cap name="osgi.active.bundle/org.apache.camel.camel-core-osgi:2.10.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.camel.camel-jackson:2.10.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.camel.camel-jackson:[2.10.1,2.10.1)" />
+  <cap name="osgi.active.bundle/org.apache.camel.camel-jackson:2.10.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.camel.camel-core:2.10.1" >
+  <artifact name="org.apache.camel.camel-core:2.10.1" uri="org.apache.camel.camel-core/org.apache.camel.camel-core-2.10.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.activation" optional="true" />
+  <req name="osgi.package/javax.management" />
+  <req name="osgi.package/javax.management.modelmbean" />
+  <req name="osgi.package/javax.management.remote" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.naming.spi" />
+  <req name="osgi.package/javax.net.ssl" />
+  <req name="osgi.package/javax.xml.bind" optional="true" />
+  <req name="osgi.package/javax.xml.bind.annotation" optional="true" />
+  <req name="osgi.package/javax.xml.bind.annotation.adapters" optional="true" />
+  <req name="osgi.package/javax.xml.namespace" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.stream" optional="true" />
+  <req name="osgi.package/javax.xml.transform" />
+  <req name="osgi.package/javax.xml.transform.dom" />
+  <req name="osgi.package/javax.xml.transform.sax" />
+  <req name="osgi.package/javax.xml.transform.stax" optional="true" />
+  <req name="osgi.package/javax.xml.transform.stream" />
+  <req name="osgi.package/javax.xml.validation" />
+  <req name="osgi.package/javax.xml.xpath" />
+  <req name="osgi.package/org.apache.xalan.xsltc.trax" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" optional="true" />
+  <req name="osgi.package/org.slf4j:[1.6,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.w3c.dom.ls" />
+  <req name="osgi.package/org.xml.sax" />
+  <cap name="osgi.resolved.bundle/org.apache.camel.camel-core:2.10.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.camel.view:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.validator:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.model.loadbalancer:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.simple:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.seda:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.model:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.constant:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.stub:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.xslt:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.ref:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.converter.jaxp:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.impl.osgi:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.dataset:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.util.jndi:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.properties:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.timer:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.api.management.mbean:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.management:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.test:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.xpath:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.simple.ast:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.idempotent:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.validation:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.model.dataformat:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.header:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.resequencer:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.impl.scan:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.model.language:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.language:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.management.event:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.management.mbean:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.browse:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.impl:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.builder:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.util.concurrent:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.interceptor:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.mock:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.bean:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.exceptionpolicy:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.builder.xml:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.bean:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.converter.stream:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.model.config:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.util:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.main:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.impl.converter:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.util.jsse:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.converter:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.ref:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.loadbalancer:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.spi:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.tokenizer:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.api.management:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.directvm:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.direct:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.property:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.impl.osgi.tracker:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.processor.aggregate:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.vm:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.file.strategy:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.file:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.support:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.language.simple.types:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.log:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
+  <cap name="osgi.require.bundle/org.apache.camel.camel-core:2.10.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.camel.camel-core-osgi:2.10.1" >
+  <artifact name="org.apache.camel.camel-core-osgi:2.10.1" uri="org.apache.camel.camel-core-osgi/org.apache.camel.camel-core-osgi-2.10.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.camel:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.impl:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.impl.converter:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.management.event:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.spi:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.support:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.util:[2.10,2.11)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.event:[1.2,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <req name="osgi.package/org.slf4j:[1.6,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.camel.camel-core-osgi:2.10.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.camel.core.osgi:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core-osgi&quot;" />
+  <cap name="osgi.package/org.apache.camel.core.osgi.utils:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core-osgi&quot;" />
+  <cap name="osgi.require.bundle/org.apache.camel.camel-core-osgi:2.10.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.camel.camel-jackson:2.10.1" >
+  <artifact name="org.apache.camel.camel-jackson:2.10.1" uri="org.apache.camel.camel-jackson/org.apache.camel.camel-jackson-2.10.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.camel:[2.10,2.11)" />
+  <req name="osgi.package/org.apache.camel.spi:[2.10,2.11)" />
+  <req name="osgi.package/org.codehaus.jackson.map:[1.9,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.camel.camel-jackson:2.10.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.camel.component.jackson:2.10.1" attrs="bundle-version=2.10.1,bundle-symbolic-name=&quot;org.apache.camel.camel-jackson&quot;" />
+  <cap name="osgi.require.bundle/org.apache.camel.camel-jackson:2.10.1" />
+ </part>
+</repository>
