@@ -75,5 +75,12 @@ public class BlogImpl implements Blog {
         }
         return null;
     }
+    
+    public void deleteComment(String id) throws Exception {
+        Comment comment = find(id);
+        if (comment != null) {
+            persistenceMgr.deletePersistent(comment);
+        }
+    }
 
 }

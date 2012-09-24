@@ -8,6 +8,7 @@ import java.util.UUID;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.HttpMethod;
 import javax.ws.rs.POST;
@@ -100,6 +101,12 @@ public class BlogCommentsResource {
         else
             comment.text = data;
         blog.saveComment(comment);
+    }
+
+    @DELETE @Path("{id}")
+    public Response delete(@PathParam("id") String id) throws Exception {
+        blog.deleteComment(id);
+        return Response.noContent().build();
     }
 
     private void generateCommentJson(JsonGenerator generator, Comment comment, boolean appendId) throws IOException, JsonGenerationException {

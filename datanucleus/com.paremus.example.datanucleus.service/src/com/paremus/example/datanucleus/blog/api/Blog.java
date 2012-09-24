@@ -11,5 +11,7 @@ public interface Blog {
     void saveComment(Comment comment) throws Exception;
     
     Comment find(String id) throws Exception;
+    
+    void deleteComment(String id) throws Exception;
 
 }
