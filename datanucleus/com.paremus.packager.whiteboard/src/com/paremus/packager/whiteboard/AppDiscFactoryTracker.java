@@ -33,6 +33,7 @@ public class AppDiscFactoryTracker extends ServiceTracker implements Application
 	@Override
 	public Object addingService(ServiceReference reference) {
 		ApplicationDiscoveryServiceFactory discServiceFactory = (ApplicationDiscoveryServiceFactory) context.getService(reference);
+		System.out.println("===> Bound to ApplicationDiscoveryService with Scope " + scope.getScopeKey());
 		ApplicationDiscoveryService discService = discServiceFactory.getServiceForScope(scope);
 		try {
 			discService.addListener(this);
@@ -45,21 +46,25 @@ public class AppDiscFactoryTracker extends ServiceTracker implements Application
 	
 	@Override
 	public void removedService(ServiceReference reference, Object service) {
+		System.out.println("===> Unbinding ApplicationDiscoveryService with Scope " + scope.getScopeKey());
 		ApplicationDiscoveryService discService = (ApplicationDiscoveryService) service;
 		discService.removeListener(this);
 	}
 
 	@Override
 	public void serviceReferenceChange(ApplicationDiscoveryEvent event) throws Exception {
+		System.out.println("===> Received service reference change event");
 		Set<String> currentUris = new HashSet<String>(registrations.keySet());
 		
 		Set<ApplicationServiceReference> appRefs = event.getServiceReferences();
 		for (ApplicationServiceReference appRef : appRefs) {
 			String appUri = appRef.getUri();
+			System.out.println("===>    URI = " + appUri);
 
 			boolean exists = currentUris.remove(appUri);
 			if (!exists) {
 				// publish service
+				System.out.println("===> Publishing PublishedApplication service for URI " + appUri);
 				Properties serviceProps = new Properties();
 				serviceProps.put(PublishedApplication.PROP_URI, appUri);
 				PublishedApplication markerService = new PublishedApplication() {};
@@ -71,8 +76,10 @@ public class AppDiscFactoryTracker extends ServiceTracker implements Application
 		// Unpublish services for URIs that no longer exist (i.e. left in the currentUris set)
 		for (String uri : currentUris) {
 			ServiceRegistration registration = registrations.remove(uri);
-			if (registration != null)
+			if (registration != null) {
+				System.out.println("===> Unpublishing PublishedApplication service for URI " + uri);
 				registration.unregister();
+			}
 		}
 	}
 	
