@@ -1,6 +1,5 @@
 package com.paremus.example.datanucleus.service.rest;
 
-import java.net.InetAddress;
 import java.net.URI;
 
 import org.osgi.framework.BundleContext;
@@ -33,12 +32,15 @@ public class Publisher {
     
     @Activate
     public void activate(BundleContext context) throws Exception {
-        URI httpUri = new URI("http", null, getAddress(), findHttpPort(context), "/blog/comments", null, null);
+        applicationDiscoveryService = applicationDiscoveryServiceFactory.getServiceForScope(new Scope("global"));
+
+        String httpHostName = applicationDiscoveryService.getHostname();
+        int httpPort = findHttpPort(context);
+        URI httpUri = new URI("http", null, httpHostName, httpPort, "/blog/comments", null, null);
         URI midtierUri = new URI("midtier", httpUri.toString(), null);
-        
+        System.out.println("====> Publishing URI " + midtierUri);
         appRef = new ApplicationServiceReference(midtierUri.toString());
         
-        applicationDiscoveryService = applicationDiscoveryServiceFactory.getServiceForScope(new Scope("global"));
         applicationDiscoveryService.publish(appRef);
     }
     
@@ -70,8 +72,4 @@ public class Publisher {
         return portNum;
     }
     
-    private String getAddress() throws Exception {
-        return InetAddress.getLocalHost().getCanonicalHostName();
-    }
-
 }

@@ -293,6 +293,7 @@
   <req name="osgi.package/com.paremus.packager.api" />
   <req name="osgi.package/javax.annotation:[1.1,2)" />
   <req name="osgi.package/org.codehaus.jackson.annotate:[1.8,2)" />
+  <req name="osgi.package/org.slf4j:[1.6,2)" />
   <cap name="osgi.resolved.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
   <cap name="osgi.package/com.paremus.packager.api.discovery:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1348168051658' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1348524062825' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.datanucleus.api.jdo'/>
@@ -2220,9 +2220,9 @@
       <attribute name='version' type='Version' value='0.4.0.SNAPSHOT'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='b903300d2fb645a7c6423fb803c8e174c10e3d28ca747c6d97d61d4e3957566c'/>
+      <attribute name='osgi.content' value='96f124c8356c3b34686fca4cea5ae9ed5aaeb180579119307762f0b3eee32e4a'/>
       <attribute name='url' value='com.paremus.packager.api/com.paremus.packager.api-0.4.0.jar'/>
-      <attribute name='size' type='Long' value='33069'/>
+      <attribute name='size' type='Long' value='33652'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
