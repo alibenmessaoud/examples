@@ -1,18 +1,24 @@
 <repository name="Packager:0" xmlns="http://schema.paremus.com/nri/2" >
- <!-- START MANUALLY ADDED SECTION -->
- <part name="msf/com.paremus.packager.examples.derby" >
-  <req name="builder/ms" />
-  <req name="osgi.active.bundle/com.paremus.packager.examples.derby" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
-  <cap name="msf/com.paremus.packager.examples.derby" attrs="selfcap=&quot;true&quot;" />
- </part>
+ <!-- ADDED -->
  <part name="ms/com.paremus.packager.examples.mongodb" >
   <req name="builder/ms" />
   <req name="osgi.active.bundle/com.paremus.packager.examples.mongodb" />
   <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
   <cap name="ms/com.paremus.packager.examples.mongodb" attrs="selfcap=&quot;true&quot;" />
  </part>
- <!-- END MANUALLY ADDED SECTION -->
+ <part name="ms/com.paremus.packager.examples.systems.play-rest" >
+  <req name="builder/ms" />
+  <req name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest" />
+  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
+  <cap name="ms/com.paremus.packager.examples.systems.play-rest" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="msf/com.paremus.packager.examples.derby" >
+  <req name="builder/ms" />
+  <req name="osgi.active.bundle/com.paremus.packager.examples.derby" />
+  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
+  <cap name="msf/com.paremus.packager.examples.derby" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <!-- END -->
  <part name="osgi.active.bundle/biz.aQute.bndlib:1.50" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/biz.aQute.bndlib:[1.50,1.50)" />
@@ -82,6 +88,11 @@
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-mongo:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
   <cap name="osgi.active.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-rest:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
+  <cap name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.active.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" >
   <req name="builder/osgi.active.bundle" />
@@ -424,6 +435,14 @@
   <cap name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.systems.play-mongo&quot;" />
   <cap name="osgi.require.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" />
+ </part>
+ <part name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" >
+  <artifact name="com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.systems.play-rest-0.0.1-SNAPSHOT-package.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.systems.play-rest&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" />
  </part>
  <part name="osgi.resolved.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" >
   <artifact name="com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.tomcat-0.0.1-SNAPSHOT.jar" />

@@ -1,4 +1,10 @@
 nim:repository PackagerExt {
+  rule ms/com.paremus.packager.examples.systems.play-rest {
+    req builder/ms
+    req osgi.active.bundle/com.paremus.packager.examples.systems.play-rest
+    req osgi.active.bundle/com.paremus.packager.osgi.local
+    cap ms/com.paremus.packager.examples.systems.play-rest
+  }
   rule ms/com.paremus.packager.examples.mongodb {
     req builder/ms
     req osgi.active.bundle/com.paremus.packager.examples.mongodb

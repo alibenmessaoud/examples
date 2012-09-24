@@ -1,6 +1,10 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="DataNucleusExample" boundary="fibre"
         repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
 
+
+  <!-- Play application -->
+  <system.part category="ms" name="com.paremus.packager.examples.systems.play-rest"/>
+
   <!-- The top-level "application" bundles -->
   <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent"/>
   <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
