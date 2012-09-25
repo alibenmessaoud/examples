@@ -1,5 +1,5 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="DataNucleusExample" boundary="fibre"
-        repopath="Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
+        repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
 
   <!-- Play application -->
   <system.part category="ms" name="com.paremus.packager.examples.systems.play-rest"/>

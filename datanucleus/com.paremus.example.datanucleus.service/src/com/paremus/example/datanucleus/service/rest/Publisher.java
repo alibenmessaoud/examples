@@ -27,12 +27,12 @@ public class Publisher {
     private ApplicationDiscoveryService applicationDiscoveryService;
     private ApplicationServiceReference appRef;
 
-    @Reference(target = "(uri=mongodb:*)")
+    @Reference(target = "(|(uri=mongodb:*)(uri=jdbc:derby:*))")
     public void setPublishedApplication(PublishedApplication app, Map<String, Object> svcProps) {
-        System.out.println("===> Blog application: bound to Mongo Service on URI " + svcProps.get(PublishedApplication.PROP_URI));
+        System.out.println("===> Blog application: bound to Database app service on URI " + svcProps.get(PublishedApplication.PROP_URI));
     }
     public void unsetPublishedApplication(PublishedApplication app) {
-        System.out.println("===> Blog application: UNbound from Mongo service");
+        System.out.println("===> Blog application: UNbound from database app service");
     }
 
     @Reference
