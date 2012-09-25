@@ -3,6 +3,7 @@ package com.paremus.packager.whiteboard;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
 import java.util.Set;
 
@@ -49,11 +50,18 @@ public class AppDiscFactoryTracker extends ServiceTracker implements Application
 		System.out.println("===> Unbinding ApplicationDiscoveryService with Scope " + scope.getScopeKey());
 		ApplicationDiscoveryService discService = (ApplicationDiscoveryService) service;
 		discService.removeListener(this);
+		
+		synchronized (this) {
+			for (Entry<String, ServiceRegistration> entry : registrations.entrySet()) {
+				System.out.println("===> Unpublishing PublishedApplication service for URI " + entry.getKey());
+				entry.getValue().unregister();
+			}
+		}
 	}
 
 	@Override
-	public void serviceReferenceChange(ApplicationDiscoveryEvent event) throws Exception {
-		System.out.println("===> Received service reference change event");
+	public synchronized void serviceReferenceChange(ApplicationDiscoveryEvent event) throws Exception {
+		System.out.printf("===> Received service reference change event with %d URIs.\n", event.getServiceReferences().size());
 		Set<String> currentUris = new HashSet<String>(registrations.keySet());
 		
 		Set<ApplicationServiceReference> appRefs = event.getServiceReferences();

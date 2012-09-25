@@ -1,6 +1,7 @@
 package com.paremus.example.datanucleus.service.rest;
 
 import java.net.URI;
+import java.util.Map;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
@@ -15,19 +16,32 @@ import com.paremus.packager.api.Scope;
 import com.paremus.packager.api.discovery.ApplicationDiscoveryService;
 import com.paremus.packager.api.discovery.ApplicationDiscoveryServiceFactory;
 import com.paremus.packager.api.discovery.ApplicationServiceReference;
+import com.paremus.packager.whiteboard.api.PublishedApplication;
 
 @Component
 public class Publisher {
-    
+
     private final int DEFAULT_HTTP_PORT = 8080;
-    
+
     private ApplicationDiscoveryServiceFactory applicationDiscoveryServiceFactory;
     private ApplicationDiscoveryService applicationDiscoveryService;
     private ApplicationServiceReference appRef;
-    
+
+    @Reference(target = "(uri=mongodb:*)")
+    public void setPublishedApplication(PublishedApplication app, Map<String, Object> svcProps) {
+        System.out.println("===> Blog application: bound to Mongo Service on URI " + svcProps.get(PublishedApplication.PROP_URI));
+    }
+    public void unsetPublishedApplication(PublishedApplication app) {
+        System.out.println("===> Blog application: UNbound from Mongo service");
+    }
+
     @Reference
     public void setApplicationDiscoveryServiceFactory(ApplicationDiscoveryServiceFactory applicationDiscoveryServiceFactory) {
+        System.out.println("===> Blog application: BOUND application discovery service factory");
         this.applicationDiscoveryServiceFactory = applicationDiscoveryServiceFactory;
+    }
+    public void unsetApplicationDiscoveryServiceFactory(ApplicationDiscoveryServiceFactory applicationDiscoveryServiceFactory) {
+        System.out.println("===> Blog application: UNBOUND application discovery service factory");
     }
     
     @Activate
@@ -36,16 +50,19 @@ public class Publisher {
 
         String httpHostName = applicationDiscoveryService.getHostname();
         int httpPort = findHttpPort(context);
-        URI httpUri = new URI("http", null, httpHostName, httpPort, "/blog/comments", null, null);
+        URI httpUri = new URI("http", null, httpHostName, httpPort, "/blog", null, null);
         URI midtierUri = new URI("midtier", httpUri.toString(), null);
-        System.out.println("====> Publishing URI " + midtierUri);
-        appRef = new ApplicationServiceReference(midtierUri.toString());
+        
+        int ttl = 100000;
+        System.out.println("====> Publishing discovery URI " + midtierUri + " with TTL=" + ttl);
+        appRef = new ApplicationServiceReference(midtierUri.toString(), ttl);
         
         applicationDiscoveryService.publish(appRef);
     }
     
     @Deactivate
     public void deactivate() {
+        System.out.println("====> Retracting discovery URI " + appRef.getUri());
         applicationDiscoveryService.retract(appRef);
     }
 
