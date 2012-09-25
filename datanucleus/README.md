@@ -20,11 +20,10 @@ generated, along with a Nimble index file, in the `cnf/releaserepo` directory.
 DEPLOY/RUN
 ----------
 
-1. Start up posh with an infra node.
-2. Add the repositories: `fabric:repos -lm file:/Path/To/datanucleus/cnf/repos.properties`.
-3. Import the system doc: EITHER `fabric:import datanucleus-derby-system.xml` OR
-   `fabric:import datanucleus-mongodb.system.xml`.
-4. Deploy the system: `fabric:deploy DataNucleusExample`
+1. Start posh.
+2. Run the supplied automation script: `sh cnf/load.osh`
+
+This will start an infra node, install the repositories, import and deploy the system.
 
 SHELL INTERACTION
 -----------------
