@@ -4,5 +4,5 @@ echo Repository path = $repoPath
 fibre -I
 fabric:connect
 fabric:repos -lcm $repoPath
-fabric:import cnf/datanucleus-derby-system.xml
+fabric:import datanucleus-mongodb-system.xml
 fabric:deploy DataNucleusExample

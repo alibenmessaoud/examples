@@ -20,8 +20,9 @@ generated, along with a Nimble index file, in the `cnf/releaserepo` directory.
 DEPLOY/RUN
 ----------
 
+1. Change to the `cnf` directory.
 1. Start posh.
-2. Run the supplied automation script: `sh cnf/load.osh`
+2. Run the supplied automation script: `sh load.osh`
 
 This will start an infra node, install the repositories, import and deploy the system.
 
