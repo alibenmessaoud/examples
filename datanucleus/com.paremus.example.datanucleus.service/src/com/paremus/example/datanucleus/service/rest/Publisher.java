@@ -23,9 +23,10 @@ public class Publisher {
 
     private final int DEFAULT_HTTP_PORT = 8080;
 
-    private ApplicationDiscoveryServiceFactory applicationDiscoveryServiceFactory;
     private ApplicationDiscoveryService applicationDiscoveryService;
     private ApplicationServiceReference appRef;
+
+    private String scope;
 
     @Reference(target = "(|(uri=mongodb:*)(uri=jdbc:derby:*))")
     public void setPublishedApplication(PublishedApplication app, Map<String, Object> svcProps) {
@@ -34,27 +35,26 @@ public class Publisher {
     public void unsetPublishedApplication(PublishedApplication app) {
         System.out.println("===> Blog application: UNbound from database app service");
     }
-
-    @Reference
-    public void setApplicationDiscoveryServiceFactory(ApplicationDiscoveryServiceFactory applicationDiscoveryServiceFactory) {
-        System.out.println("===> Blog application: BOUND application discovery service factory");
-        this.applicationDiscoveryServiceFactory = applicationDiscoveryServiceFactory;
+    
+    @Reference(target = "(scope=global)")
+    public void setApplicationDiscoveryService(ApplicationDiscoveryService applicationDiscoverService, Map<String, Object> svcProps) {
+        this.scope = (String) svcProps.get("scope");
+        this.applicationDiscoveryService = applicationDiscoverService;
+        System.out.println("===> Blog application: BOUND application discovery service with scope " + scope);
     }
-    public void unsetApplicationDiscoveryServiceFactory(ApplicationDiscoveryServiceFactory applicationDiscoveryServiceFactory) {
-        System.out.println("===> Blog application: UNBOUND application discovery service factory");
+    public void unsetApplicationDiscoveryService(ApplicationDiscoveryService applicationDiscoveryService) {
+        System.out.println("===> Blog application: UNBOUND application discovery service with scope " + scope);
     }
     
     @Activate
     public void activate(BundleContext context) throws Exception {
-        applicationDiscoveryService = applicationDiscoveryServiceFactory.getServiceForScope(new Scope("global"));
-
         String httpHostName = applicationDiscoveryService.getHostname();
         int httpPort = findHttpPort(context);
         URI httpUri = new URI("http", null, httpHostName, httpPort, "/blog", null, null);
         URI midtierUri = new URI("midtier", httpUri.toString(), null);
         
         int ttl = 100000;
-        System.out.println("====> Publishing discovery URI " + midtierUri + " with TTL=" + ttl);
+        System.out.printf("====> Publishing discovery URI=%s, TTL=%d, scope=%s.%n", midtierUri, ttl, scope);
         appRef = new ApplicationServiceReference(midtierUri.toString(), ttl);
         
         applicationDiscoveryService.publish(appRef);
@@ -62,7 +62,7 @@ public class Publisher {
     
     @Deactivate
     public void deactivate() {
-        System.out.println("====> Retracting discovery URI " + appRef.getUri());
+        System.out.printf("====> Retracting discovery URI=%s, scope=%s.%n", appRef.getUri(), scope);
         applicationDiscoveryService.retract(appRef);
     }
 
