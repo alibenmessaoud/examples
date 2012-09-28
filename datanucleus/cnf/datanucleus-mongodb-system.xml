@@ -19,6 +19,10 @@
   <system.part category="ms" name="com.paremus.packager.examples.mongodb">
     <property name="mongodb.port" value="27017"/>
   </system.part>
-  <system.part category="osgi.active.bundle" name="com.paremus.packager.whiteboard"/>
+  
+  <!-- Declare packager scope global -->
+  <system.part category="msf" name="com.paremus.packager.whiteboard">
+  	<property name="scope" value="global"/>
+  </system.part>
 
 </system>

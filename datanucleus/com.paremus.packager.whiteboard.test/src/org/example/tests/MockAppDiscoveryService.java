@@ -1,5 +1,6 @@
 package org.example.tests;
 
+import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -49,5 +50,10 @@ public class MockAppDiscoveryService implements ApplicationDiscoveryService {
 
     @Override
     public void shutdown() {}
+
+    @Override
+    public String getHostname() throws UnknownHostException {
+        return "localhost";
+    }
 
 }

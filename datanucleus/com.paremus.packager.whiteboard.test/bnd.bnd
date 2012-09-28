@@ -16,7 +16,8 @@
 	org.apache.servicemix.bundles.jsr305,\
 	jackson-core-asl,\
 	osgi.cmpn,\
-	com.paremus.packager.whiteboard;version=latest
+	com.paremus.packager.whiteboard;version=latest,\
+	org.apache.felix.configadmin
 -runee: JavaSE-1.6
 -runvm: -ea
 -runfw: org.apache.felix.framework

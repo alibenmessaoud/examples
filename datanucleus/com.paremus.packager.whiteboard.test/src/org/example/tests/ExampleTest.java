@@ -8,6 +8,8 @@ import junit.framework.TestCase;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
+import org.osgi.service.cm.ConfigurationAdmin;
+import org.osgi.service.cm.ManagedServiceFactory;
 
 import com.paremus.packager.api.Scope;
 import com.paremus.packager.api.discovery.ApplicationDiscoveryServiceFactory;
@@ -19,7 +21,7 @@ public class ExampleTest extends TestCase {
     private final static Scope SCOPE_TEST = new Scope("test");
 
     private final BundleContext context = FrameworkUtil.getBundle(this.getClass()).getBundleContext();
-
+    
     public void testExample() throws Exception {
         MockAppDiscoveryFactory mockFactory = new MockAppDiscoveryFactory();
         context.registerService(ApplicationDiscoveryServiceFactory.class.getName(), mockFactory, null);
