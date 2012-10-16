@@ -3,19 +3,19 @@
  <part name="ms/com.paremus.packager.examples.mongodb" >
   <req name="builder/ms" />
   <req name="osgi.active.bundle/com.paremus.packager.examples.mongodb" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
+  <req name="osgi.active.bundle/com.paremus.packager.osgi.remote" />
   <cap name="ms/com.paremus.packager.examples.mongodb" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="ms/com.paremus.packager.examples.systems.play-rest" >
   <req name="builder/ms" />
   <req name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
+  <req name="osgi.active.bundle/com.paremus.packager.osgi.remote" />
   <cap name="ms/com.paremus.packager.examples.systems.play-rest" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="msf/com.paremus.packager.examples.derby" >
   <req name="builder/ms" />
   <req name="osgi.active.bundle/com.paremus.packager.examples.derby" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.local" />
+  <req name="osgi.active.bundle/com.paremus.packager.osgi.remote" />
   <cap name="msf/com.paremus.packager.examples.derby" attrs="selfcap=&quot;true&quot;" />
  </part>
  <!-- END -->
