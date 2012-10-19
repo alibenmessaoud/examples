@@ -20,6 +20,7 @@ ParemusPackager-Scope: global
 Import-Package: org.apache.felix.service.command;resolution:=optional,\
 	*
 Export-Package: com.paremus.example.datanucleus.blog.api
+Require-Capability: dsp.datanucleus.model;filter:="(dsp.datanucleus.model=SampleModel)"
 
 REST-Alias: /blog
 REST-Classes: com.paremus.example.datanucleus.service.rest.BlogCommentsResource

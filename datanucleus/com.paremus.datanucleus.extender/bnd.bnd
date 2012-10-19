@@ -10,3 +10,5 @@ Bundle-Activator: com.paremus.datanucleus.extender.Activator
 Require-Bundle: javax.jdo,\
 	org.datanucleus,\
 	org.datanucleus.api.jdo
+
+Provide-Capability: dsp.extender;dsp.extender=datanucleus.model
