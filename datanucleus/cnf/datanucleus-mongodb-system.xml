@@ -4,21 +4,21 @@
         repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble"
         >
 
-  <!-- Play application -->
-  <!--
-  <system.part category="ms" name="com.paremus.packager.examples.systems.play-rest"/>
-  -->
-
-  <!-- The top-level "application" bundles -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service"/>
-  <!-- This defines that we want DataNucleus with MongoDB -->
-  <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb"/>
-
-  <!-- Add the camel parts -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.camel"/>
-  
+  <!-- MongoDB package -->
   <system.part category="msf" name="com.paremus.packager.demos.mongo.guard" >
   	<property name="port" value="27017" />
   </system.part> 
+
+  <!-- This defines that we want DataNucleus with MongoDB -->
+  <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb" />
+  <!-- The top-level "application" bundles -->
+  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
+  <!-- Add the camel parts -->
+  <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
+  
+  <!-- Play-REST application -->
+  <system.part category="msf" name="com.paremus.example.play.guard" >
+  	<property name="httpPort" value="9999" />
+  </system.part>
 
 </system>
