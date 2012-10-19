@@ -1,28 +1,24 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="DataNucleusExample" boundary="fibre"
-        repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble">
+<system xmlns="http://schema.paremus.com/sf/1"
+        name="DataNucleusExample"
+        boundary="fibre"
+        repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble"
+        >
 
   <!-- Play application -->
+  <!--
   <system.part category="ms" name="com.paremus.packager.examples.systems.play-rest"/>
+  -->
 
   <!-- The top-level "application" bundles -->
-  <system.part category="ms" name="com.paremus.example.datanucleus.service.ExampleComponent"/>
-  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.model"/>
-  <system.part category="osgi.active.bundle" name="com.paremus.datanucleus.extender"/>
-
-  <!-- Add the camel example -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.camel"/>
-
+  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service"/>
   <!-- This defines that we want DataNucleus with MongoDB -->
   <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb"/>
 
-  <!-- Use packager to include the MongoDB server -->
-  <system.part category="ms" name="com.paremus.packager.examples.mongodb">
-    <property name="mongodb.port" value="27017"/>
-  </system.part>
+  <!-- Add the camel parts -->
+  <system.part category="osgi.active.bundle" name="com.paremus.example.camel"/>
   
-  <!-- Declare packager scope global -->
-  <system.part category="msf" name="com.paremus.packager.whiteboard">
-  	<property name="scope" value="global"/>
-  </system.part>
+  <system.part category="msf" name="com.paremus.packager.demos.mongo.guard" >
+  	<property name="port" value="27017" />
+  </system.part> 
 
 </system>

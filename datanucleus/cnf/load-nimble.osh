@@ -1,0 +1,10 @@
+repoPath = (($0 resolve repos.properties) getPath)
+
+echo Repository path = $repoPath
+nim:repos -lm $repoPath
+nim:repos -l Camel
+nim:repos -l Packager
+nim:repos -l DataNucleus
+nim:repos -l DataNucleusDeps
+
+nim:add -d com.paremus.example.datanucleus.service@active
