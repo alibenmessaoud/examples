@@ -20,7 +20,7 @@ public class ConnectionConfigurerTracker extends ServiceTracker {
 		System.out.println("Adding configurer with uriMatch " + matchProp);
 		
 		DatabaseConnectionConfigurer configurer = (DatabaseConnectionConfigurer) context.getService(reference);
-		PublishedAppTracker appTracker = new PublishedAppTracker(context, configurer, matchProp);
+		EndpointTracker appTracker = new EndpointTracker(context, configurer, matchProp);
 		appTracker.open();
 		
 		return appTracker;

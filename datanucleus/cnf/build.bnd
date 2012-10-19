@@ -8,8 +8,9 @@
 ## Properties from ext/*.bnd can be referenced in order to extend them.
 ## For example, to add one addtional plugin to the list defined in ext/repositories.bnd:
 -plugin: ${ext.repositories.-plugin},\
-	aQute.bnd.deployer.repository.FixedIndexedRepo; name=Packager; locations=file://${workspace}/cnf/packager/repository.xml;type=OBR,\
-	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Camel;    local=${workspace}/cnf/camelrepo;pretty=true
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Packager; local=${workspace}/cnf/packager ;pretty=true,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Camel;    local=${workspace}/cnf/camelrepo;pretty=true,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=RSA;      local=${workspace}/cnf/nimble-rs;pretty=true
 
 
 ## If you use git, you might want to uncomment the following lines:

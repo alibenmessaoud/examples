@@ -13,7 +13,7 @@ import org.osgi.framework.ServiceRegistration;
 
 import com.paremus.datanucleus.api.DatabaseConnectionConfigurer;
 import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
-import com.paremus.packager.whiteboard.api.PublishedApplication;
+import com.paremus.service.endpoint.Endpoint;
 
 public class ExampleTest extends TestCase {
 
@@ -28,10 +28,10 @@ public class ExampleTest extends TestCase {
 		ServiceRegistration mockPMFBReg = context.registerService(PersistenceManagerFactoryBuilder.class.getName(), mockPMFB, mockPMFBProps);
 		
 		// Publish an application marker service (as provided by packager with the whiteboard bundle)
-		PublishedApplication appMarker = new PublishedApplication() {};
+		Endpoint appMarker = new Endpoint() {};
 		Properties appMarkerProps = new Properties();
-		appMarkerProps.put(PublishedApplication.PROP_URI, "funkyDb://1.1.2.2:8080");
-		ServiceRegistration appMarkerReg = context.registerService(PublishedApplication.class.getName(), appMarker, appMarkerProps);
+		appMarkerProps.put(Endpoint.URI, "funkyDb://1.1.2.2:8080");
+		ServiceRegistration appMarkerReg = context.registerService(Endpoint.class.getName(), appMarker, appMarkerProps);
 		
 		// Publish a datasource configurer
 		MockDatabaseConfigurer configurer = new MockDatabaseConfigurer();

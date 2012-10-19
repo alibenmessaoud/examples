@@ -7,12 +7,11 @@
 	org.datanucleus,\
 	com.paremus.example.datanucleus.model;version=latest,\
 	com.paremus.datanucleus.extender;version=latest,\
-	com.paremus.packager.whiteboard;version=latest,\
-	com.paremus.packager.api,\
 	javax.inject,\
 	javax.ws.rs.jsr311-api,\
 	jackson-core,\
-	jackson-databind
+	jackson-databind,\
+	com.paremus.service.endpoint;version=latest
 
 Private-Package: com.paremus.example.datanucleus.service,\
 	com.paremus.example.datanucleus.service.rest

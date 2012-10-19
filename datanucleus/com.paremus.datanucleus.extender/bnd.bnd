@@ -2,7 +2,7 @@
 	osgi.cmpn;version=4.2,\
 	javax.jdo,\
 	org.datanucleus,\
-	com.paremus.packager.whiteboard;version=latest
+	com.paremus.service.endpoint
 Private-Package: com.paremus.datanucleus.extender
 Conditional-Package: com.paremus.internal.util.*
 Export-Package: com.paremus.datanucleus.api

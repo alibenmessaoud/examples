@@ -2,9 +2,9 @@
 	osgi.cmpn,\
 	junit.osgi,\
 	org.mockito.mockito-all,\
-	com.paremus.packager.whiteboard;version=latest,\
 	com.paremus.datanucleus.extender;version=latest,\
-	javax.jdo
+	javax.jdo,\
+	com.paremus.service.endpoint
 Test-Cases: ${classes;CONCRETE;EXTENDS;junit.framework.TestCase}
 Private-Package: com.paremus.datanucleus.extender.test
 

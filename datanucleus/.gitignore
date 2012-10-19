@@ -10,3 +10,7 @@
 
 # Camel junk
 /INBOX/
+
+# Packager junk
+/processes/
+/typees/

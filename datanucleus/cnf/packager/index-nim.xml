@@ -1,1018 +1,143 @@
 <repository name="Packager:0" xmlns="http://schema.paremus.com/nri/2" >
- <!-- ADDED -->
- <part name="ms/com.paremus.packager.examples.mongodb" >
+ <part name="ms/com.paremus.packager.manager" attrs="storage=&quot;pmstorage&quot;" >
   <req name="builder/ms" />
-  <req name="osgi.active.bundle/com.paremus.packager.examples.mongodb" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.remote" />
-  <cap name="ms/com.paremus.packager.examples.mongodb" attrs="selfcap=&quot;true&quot;" />
+  <cap name="ms/com.paremus.packager.manager" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="ms/com.paremus.packager.examples.systems.play-rest" >
+ <part name="msf/com.paremus.packager.demos.mongo.guard" singleton="false" attrs="port=27017" >
   <req name="builder/ms" />
-  <req name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.remote" />
-  <cap name="ms/com.paremus.packager.examples.systems.play-rest" attrs="selfcap=&quot;true&quot;" />
+  <cap name="msf/com.paremus.packager.demos.mongo.guard" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="msf/com.paremus.packager.examples.derby" >
-  <req name="builder/ms" />
-  <req name="osgi.active.bundle/com.paremus.packager.examples.derby" />
-  <req name="osgi.active.bundle/com.paremus.packager.osgi.remote" />
-  <cap name="msf/com.paremus.packager.examples.derby" attrs="selfcap=&quot;true&quot;" />
- </part>
- <!-- END -->
- <part name="osgi.active.bundle/biz.aQute.bndlib:1.50" >
+ <part name="osgi.active.bundle/com.paremus.packager.demos.mongo.client" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/biz.aQute.bndlib:[1.50,1.50)" />
-  <cap name="osgi.active.bundle/biz.aQute.bndlib:1.50" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.hazelcast:2.0.2" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.hazelcast:[2.0.2,2.0.2)" />
-  <cap name="osgi.active.bundle/com.hazelcast:2.0.2" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.api:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.camel:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.client:[0,0)" />
   <req name="osgi.service/component" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.active.bundle/com.paremus.packager.demos.mongo.client" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" >
+ <part name="osgi.active.bundle/com.paremus.packager.demos.mongo.guard" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.derby:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.derbyclient:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.guard:[0,0)" />
   <req name="osgi.service/component" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <req name="packager.type/mongo" ldap="(packager.type=mongo)" />
+  <cap name="osgi.active.bundle/com.paremus.packager.demos.mongo.guard" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" >
+ <part name="osgi.active.bundle/com.paremus.packager.manager" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.hazelcast:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.manager:[0,0)" />
   <req name="osgi.service/component" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.active.bundle/com.paremus.packager.manager" attrs="selfcap=&quot;true&quot;" />
+  <cap name="packager.manager/packager.manager" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" >
+ <part name="osgi.active.bundle/com.paremus.packager.mongo.common" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.hello-tomcat-war:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.mongo.common:[0,0)" />
+  <cap name="osgi.active.bundle/com.paremus.packager.mongo.common" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" >
+ <part name="osgi.active.bundle/com.paremus.packager.mongo.linux-x86_64" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.mongodb:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.mongodbclient:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.mongo.linux-x86_64:[0,0)" />
   <req name="osgi.service/component" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <req name="packager.manager/packager.manager" />
+  <req name="osgi.native.environment/osgi.native.environment" ldap="(&amp;(osgi.native.environment.osname=Linux)(osgi.native.environment.processor=x86_64))" />
+  <cap name="osgi.active.bundle/com.paremus.packager.mongo.linux-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="packager.type/mongo:2.2" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" >
+ <part name="osgi.active.bundle/com.paremus.packager.mongo.macos-x86_64" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.mysql:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.mysqlclient:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.mongo.macos-x86_64:[0,0)" />
   <req name="osgi.service/component" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <req name="packager.manager/packager.manager" />
+  <cap name="osgi.active.bundle/com.paremus.packager.mongo.macos-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="packager.type/mongo:2.2" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" >
+ <part name="osgi.active.bundle/com.paremus.service.endpoint" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-mongo:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <req name="osgi.resolved.bundle/com.paremus.service.endpoint:[0,0)" />
+  <cap name="osgi.active.bundle/com.paremus.service.endpoint" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-rest:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.examples.tomcat:[0.0.1.SNAPSHOT,0.0.1.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.impl:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.impl:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.impl:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.osgi.discovery:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.osgi.local:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.osgi.local:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.osgi.local:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.osgi.remote:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.osgi.runtime:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.paremus.packager.ringo:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.ringo:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.ringo:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/com.springsource.org.junit:4.8.2" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.springsource.org.junit:[4.8.2,4.8.2)" />
-  <cap name="osgi.active.bundle/com.springsource.org.junit:4.8.2" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/de.undercouch.bson4jackson:1.3" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/de.undercouch.bson4jackson:[1.3,1.3)" />
-  <cap name="osgi.active.bundle/de.undercouch.bson4jackson:1.3" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/jackson-core-asl:1.8.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/jackson-core-asl:[1.8.1,1.8.1)" />
-  <cap name="osgi.active.bundle/jackson-core-asl:1.8.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/jackson-mapper-asl:1.8.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/jackson-mapper-asl:[1.8.1,1.8.1)" />
-  <cap name="osgi.active.bundle/jackson-mapper-asl:1.8.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/jackson-xc:1.8.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/jackson-xc:[1.8.1,1.8.1)" />
-  <cap name="osgi.active.bundle/jackson-xc:1.8.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.camel.camel-core:2.9.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.camel.camel-core:[2.9.1,2.9.1)" />
-  <cap name="osgi.active.bundle/org.apache.camel.camel-core:2.9.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.camel.camel-mina:2.9.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.camel.camel-mina:[2.9.1,2.9.1)" />
-  <cap name="osgi.active.bundle/org.apache.camel.camel-mina:2.9.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.commons.codec:1.6" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.commons.codec:[1.6,1.6)" />
-  <cap name="osgi.active.bundle/org.apache.commons.codec:1.6" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.commons.collections:3.2.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.commons.collections:[3.2.1,3.2.1)" />
-  <cap name="osgi.active.bundle/org.apache.commons.collections:3.2.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.commons.io:2.0.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.commons.io:[2.0.1,2.0.1)" />
-  <cap name="osgi.active.bundle/org.apache.commons.io:2.0.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.commons.lang:2.4" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.commons.lang:[2.4,2.4)" />
-  <cap name="osgi.active.bundle/org.apache.commons.lang:2.4" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.servicemix.bundles.jsr305:[1.3.9.1,1.3.9.1)" />
-  <cap name="osgi.active.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.apache.velocity:1.7" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.velocity:[1.7,1.7)" />
-  <cap name="osgi.active.bundle/org.apache.velocity:1.7" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/org.mongodb.mongo-java-driver:2.8.0.RELEASE" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:[2.8.0.RELEASE,2.8.0.RELEASE)" />
-  <cap name="osgi.active.bundle/org.mongodb.mongo-java-driver:2.8.0.RELEASE" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.active.bundle/slf4j.api:1.6" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/slf4j.api:[1.6,1.6)" />
-  <cap name="osgi.active.bundle/slf4j.api:1.6" attrs="selfcap=&quot;true&quot;" />
- </part>
- <part name="osgi.resolved.bundle/biz.aQute.bndlib:1.50" >
-  <artifact name="biz.aQute.bndlib:1.50.0" uri="bndlib-1.50.0.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.client" >
+  <artifact name="com.paremus.packager.demos.mongo.client:0.0.0" uri="com.paremus.packager.demos.mongo.client/com.paremus.packager.demos.mongo.client-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.sax" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/javax.xml.xpath" />
-  <req name="osgi.package/junit.framework:[3.8,4)" />
-  <req name="osgi.package/org.osgi.service.bindex:[1,2)" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.xml.sax" />
-  <req name="osgi.package/org.xml.sax.helpers" />
-  <cap name="osgi.resolved.bundle/biz.aQute.bndlib:1.50" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/aQute.bnd.annotation:1.43.1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.annotation.metatype:1.43.1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.annotation.component:1.43.1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.lib.osgi:1.43.1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.build:1.43.1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.service:1.44" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.service.url:1.50" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.service.action:1.43.1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.bnd.help:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.libg.reporter:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.libg.version:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.libg.sed:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.libg.header:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.libg.qtokens:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/aQute.libg.sax:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.package/org.osgi.service.bindex:1" attrs="bundle-version=1.50.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
-  <cap name="osgi.require.bundle/biz.aQute.bndlib:1.50" />
+  <req name="osgi.package/org.apache.felix.service.command:[0.10,1)" attrs="status=&quot;provisional&quot;" optional="true" />
+  <req name="osgi.package/com.mongodb:[2.9,3)" />
+  <req name="osgi.package/com.paremus.service.endpoint:[1,2)" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.client" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.demos.mongo.client" />
  </part>
- <part name="osgi.resolved.bundle/com.hazelcast:2.0.2" >
-  <artifact name="com.hazelcast:2.0.2" uri="hazelcast-2.0.2.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.guard" >
+  <artifact name="com.paremus.packager.demos.mongo.guard:0.0.0" uri="com.paremus.packager.demos.mongo.guard/com.paremus.packager.demos.mongo.guard-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.crypto" />
-  <req name="osgi.package/javax.crypto.spec" />
-  <req name="osgi.package/javax.management" />
-  <req name="osgi.package/javax.net.ssl" />
-  <req name="osgi.package/javax.security.auth" />
-  <req name="osgi.package/javax.security.auth.login" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/javax.xml.xpath" />
-  <req name="osgi.package/org.apache.log4j" optional="true" />
-  <req name="osgi.package/org.apache.log4j.spi" optional="true" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" optional="true" />
-  <req name="osgi.package/org.w3c.dom" />
-  <cap name="osgi.resolved.bundle/com.hazelcast:2.0.2" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.hazelcast.cluster:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.config:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.core:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.examples:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.ascii:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.ascii.memcache:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.ascii.rest:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.base:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.concurrentmap:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.executor:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.management:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.monitor:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.partition:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.impl.wan:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.jmx:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.logging:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.merge:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.monitor:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.nio:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.nio.ascii:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.nio.ssl:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.partition:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.query:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.security:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.util:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.package/com.hazelcast.util.concurrent:2.0.2" attrs="bundle-version=2.0.2,bundle-symbolic-name=&quot;com.hazelcast&quot;" />
-  <cap name="osgi.require.bundle/com.hazelcast:2.0.2" />
+  <req name="packager.type/packager.type" />
+  <req name="osgi.package/com.paremus.service.endpoint:[1,2)" />
+  <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.3,2)" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.guard" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.demos.mongo.guard" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.api:0.4.0.SNAPSHOT" uri="com.paremus.packager.api-0.4-SNAPSHOT.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.manager" >
+  <artifact name="com.paremus.packager.manager:0.0.0" uri="com.paremus.packager.manager/com.paremus.packager.manager-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api" />
-  <req name="osgi.package/javax.annotation:[1.1,2)" />
-  <req name="osgi.package/org.codehaus.jackson.annotate:[1.8,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api.discovery:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api.log:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" />
+  <req name="osgi.package/aQute.bnd.annotation.metatype:[1.43,2)" />
+  <req name="osgi.package/aQute.service.reporter:[1,2)" />
+  <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <req name="osgi.package/com.paremus.service.watchdog:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.6,2)" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.manager" attrs="selfcap=&quot;true&quot;" />
+  <cap name="packager.manager/packager.manager" />
+  <cap name="osgi.package/com.paremus.service.packager:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;com.paremus.packager.manager&quot;" />
+  <cap name="osgi.package/aQute.service.reporter:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;com.paremus.packager.manager&quot;" />
+  <cap name="osgi.package/com.paremus.service.watchdog:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;com.paremus.packager.manager&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.manager" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.camel-0.0.1-SNAPSHOT.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.mongo.common" >
+  <artifact name="com.paremus.packager.mongo.common:0.0.0" uri="com.paremus.packager.mongo.common/com.paremus.packager.mongo.common-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.osgi.discovery:[0.4,1)" />
-  <req name="osgi.package/javax.activation" />
-  <req name="osgi.package/javax.management" />
-  <req name="osgi.package/javax.management.modelmbean" />
-  <req name="osgi.package/javax.management.remote" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.naming.spi" />
-  <req name="osgi.package/javax.net.ssl" />
-  <req name="osgi.package/javax.xml.bind" />
-  <req name="osgi.package/javax.xml.bind.annotation" />
-  <req name="osgi.package/javax.xml.bind.annotation.adapters" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.stream" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/javax.xml.transform.sax" />
-  <req name="osgi.package/javax.xml.transform.stax" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/javax.xml.validation" />
-  <req name="osgi.package/javax.xml.xpath" />
-  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.w3c.dom.ls" />
-  <req name="osgi.package/org.xml.sax" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.camel&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.camel:0.0.1.SNAPSHOT" />
+  <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.mongo.common" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.service.mongo:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;com.paremus.packager.mongo.common&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.mongo.common" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.derby-0.0.1-SNAPSHOT.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.mongo.linux-x86_64" >
+  <artifact name="com.paremus.packager.mongo.linux-x86_64:0.0.0" uri="com.paremus.packager.mongo.linux-x86_64/com.paremus.packager.mongo.linux-x86_64-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.derby&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.derby:0.0.1.SNAPSHOT" />
+  <req name="packager.manager/packager.manager" />
+  <req name="osgi.native.environment/osgi.native.environment" />
+  <req name="osgi.package/aQute.service.reporter:[1,2)" />
+  <req name="osgi.package/com.paremus.service.mongo:[1,2)" />
+  <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.mongo.linux-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="packager.type/packager.type" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
+  <cap name="osgi.require.bundle/com.paremus.packager.mongo.linux-x86_64" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.derbyclient-0.0.1-SNAPSHOT.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.mongo.macos-x86_64" >
+  <artifact name="com.paremus.packager.mongo.macos-x86_64:0.0.0" uri="com.paremus.packager.mongo.macos-x86_64/com.paremus.packager.mongo.macos-x86_64-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/javax.crypto" />
-  <req name="osgi.package/javax.crypto.interfaces" />
-  <req name="osgi.package/javax.crypto.spec" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.naming.spi" />
-  <req name="osgi.package/javax.net" />
-  <req name="osgi.package/javax.net.ssl" />
-  <req name="osgi.package/javax.sql" />
-  <req name="osgi.package/javax.transaction.xa" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.derbyclient&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.derbyclient:0.0.1.SNAPSHOT" />
+  <req name="packager.manager/packager.manager" />
+  <req name="osgi.package/aQute.service.reporter:[1,2)" />
+  <req name="osgi.package/com.paremus.service.mongo:[1,2)" />
+  <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.mongo.macos-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="packager.type/packager.type" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
+  <cap name="osgi.require.bundle/com.paremus.packager.mongo.macos-x86_64" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.hazelcast-0.0.1-SNAPSHOT.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.service.endpoint" >
+  <artifact name="com.paremus.service.endpoint:0.0.0" uri="com.paremus.service.endpoint/com.paremus.service.endpoint-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.hazelcast.config:[2,3)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.osgi.discovery:[0.4,1)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.hazelcast&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.hazelcast:0.0.1.SNAPSHOT" />
+  <cap name="osgi.resolved.bundle/com.paremus.service.endpoint" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;com.paremus.service.endpoint&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.service.endpoint" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.hello-tomcat-war-0.0.1-SNAPSHOT-package.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.hello-tomcat-war&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.hello-tomcat-war:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.mongodb-0.0.1-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.mongodb&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.mongodb:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.mongodbclient-0.0.1-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.mongodb:[2.8,3)" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.mongodbclient&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.mongodbclient:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.mysql-0.0.1-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.mysql&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.mysql:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.mysqlclient-0.0.1-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.naming.spi" />
-  <req name="osgi.package/javax.net" />
-  <req name="osgi.package/javax.net.ssl" />
-  <req name="osgi.package/javax.sql" />
-  <req name="osgi.package/javax.transaction.xa" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.stream" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/javax.xml.transform.sax" />
-  <req name="osgi.package/javax.xml.transform.stax" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.xml.sax" />
-  <req name="osgi.package/org.xml.sax.helpers" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.mysqlclient&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.mysqlclient:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.systems.play-mongo-0.0.1-SNAPSHOT-package.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.systems.play-mongo&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.systems.play-mongo:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.systems.play-rest-0.0.1-SNAPSHOT-package.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.systems.play-rest&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.systems.play-rest:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" >
-  <artifact name="com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" uri="com.paremus.packager.examples.tomcat-0.0.1-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.osgi.runtime" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" attrs="bundle-version=0.0.1.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.examples.tomcat&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.examples.tomcat:0.0.1.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.impl:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.impl:0.4.0.SNAPSHOT" uri="com.paremus.packager.impl-0.4-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/aQute.lib.osgi:[1.43,2)" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.ringo:[0.4,1)" />
-  <req name="osgi.package/javax.crypto" />
-  <req name="osgi.package/javax.crypto.spec" />
-  <req name="osgi.package/javax.net.ssl" />
-  <req name="osgi.package/javax.security.auth.x500" />
-  <req name="osgi.package/javax.swing" />
-  <req name="osgi.package/javax.swing.border" />
-  <req name="osgi.package/javax.swing.event" />
-  <req name="osgi.package/javax.swing.filechooser" />
-  <req name="osgi.package/javax.swing.table" />
-  <req name="osgi.package/javax.swing.text" />
-  <req name="osgi.package/javax.swing.tree" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/org.apache.commons.collections:[3.2,4)" />
-  <req name="osgi.package/org.apache.commons.io:[2,3)" />
-  <req name="osgi.package/org.apache.commons.io.filefilter:[2,3)" />
-  <req name="osgi.package/org.apache.commons.logging" />
-  <req name="osgi.package/org.apache.velocity" />
-  <req name="osgi.package/org.apache.velocity.app" />
-  <req name="osgi.package/org.apache.velocity.context" />
-  <req name="osgi.package/org.ietf.jgss" />
-  <req name="osgi.package/org.ringojs.engine:[0.4,1)" />
-  <req name="osgi.package/org.ringojs.repository:[0.4,1)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.xml.sax" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.impl:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api.impl:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.impl&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.impl:0.4.0.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" uri="com.paremus.packager.osgi.discovery-0.4-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.impl:[0.4,1)" />
-  <req name="osgi.package/javax.annotation:[1.1,2)" />
-  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
-  <req name="osgi.package/org.osgi.service.component:[1.1,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.discovery&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.osgi.discovery:0.4.0.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.osgi.local:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.osgi.local:0.4.0.SNAPSHOT" uri="com.paremus.packager.osgi.local-0.4-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.impl:[0.4,1)" />
-  <req name="osgi.package/javax.annotation:[1.1,2)" />
-  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.osgi.local:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.local.discovery:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.local&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.osgi.local:0.4.0.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" uri="com.paremus.packager.osgi.remote-0.4-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.impl:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.log:[0.4,1)" />
-  <req name="osgi.package/com.paremus.rtidds.util:[1.3,2)" />
-  <req name="osgi.package/com.rti.dds.domain:[4.5,5)" />
-  <req name="osgi.package/com.rti.dds.infrastructure:[4.5,5)" />
-  <req name="osgi.package/com.rti.dds.publication:[4.5,5)" />
-  <req name="osgi.package/com.rti.dds.subscription:[4.5,5)" />
-  <req name="osgi.package/com.rti.dds.topic:[4.5,5)" />
-  <req name="osgi.package/com.rti.dds.type.builtin:[4.5,5)" />
-  <req name="osgi.package/javax.annotation:[1.1,2)" />
-  <req name="osgi.package/org.apache.commons.io:[2,3)" />
-  <req name="osgi.package/org.codehaus.jackson.map:[1.8,2)" />
-  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.remote&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.remote.discovery:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.remote&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.remote.event:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.remote&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.remote.log:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.remote&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.osgi.remote:0.4.0.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" uri="com.paremus.packager.osgi.runtime-0.4-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.discovery:[0.4,1)" />
-  <req name="osgi.package/com.paremus.packager.api.impl:[0.4,1)" />
-  <req name="osgi.package/javax.annotation:[1.1,2)" />
-  <req name="osgi.package/org.apache.commons.io:[2,3)" />
-  <req name="osgi.package/org.apache.commons.lang:[2.4,3)" />
-  <req name="osgi.package/org.codehaus.jackson.map:[1.8,2)" />
-  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
-  <req name="osgi.package/org.osgi.service.cm:[1.3,2)" />
-  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.osgi.runtime&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.osgi.runtime:0.4.0.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.ringo:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.ringo:0.4.0.SNAPSHOT" uri="com.paremus.packager.ringo-0.4-SNAPSHOT.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.swing" />
-  <req name="osgi.package/javax.swing.border" />
-  <req name="osgi.package/javax.swing.event" />
-  <req name="osgi.package/javax.swing.filechooser" />
-  <req name="osgi.package/javax.swing.table" />
-  <req name="osgi.package/javax.swing.text" />
-  <req name="osgi.package/javax.swing.tree" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/org.apache.commons.io:[2,3)" />
-  <req name="osgi.package/org.ringojs.engine" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.xml.sax" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.ringo:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.ringojs.repository:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.ringo&quot;" />
-  <cap name="osgi.package/org.ringojs.engine:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.ringo&quot;" />
-  <cap name="osgi.package/com.paremus.packager.ringo:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.ringo&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.ringo:0.4.0.SNAPSHOT" />
- </part>
- <part name="osgi.resolved.bundle/com.springsource.org.junit:4.8.2" >
-  <artifact name="com.springsource.org.junit:4.8.2" uri="com.springsource.org.junit-4.8.2.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <cap name="osgi.resolved.bundle/com.springsource.org.junit:4.8.2" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/junit.extensions:3.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/junit.framework:3.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/junit.runner:3.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/junit.textui:3.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.hamcrest:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.hamcrest.core:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.hamcrest.internal:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.categories:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.max:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.results:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.runners:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.theories:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.theories.internal:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.experimental.theories.suppliers:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal.builders:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal.matchers:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal.requests:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal.runners:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal.runners.model:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.internal.runners.statements:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.matchers:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.rules:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.runner:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.runner.manipulation:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.runner.notification:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.runners:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.package/org.junit.runners.model:4.8.2" attrs="bundle-version=4.8.2,bundle-symbolic-name=&quot;com.springsource.org.junit&quot;" />
-  <cap name="osgi.require.bundle/com.springsource.org.junit:4.8.2" />
- </part>
- <part name="osgi.resolved.bundle/de.undercouch.bson4jackson:1.3" >
-  <artifact name="de.undercouch.bson4jackson:1.3.0" uri="bson4jackson-1.3.0.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/de.undercouch.bson4jackson:1.3" />
-  <req name="osgi.package/de.undercouch.bson4jackson.io:1.3" />
-  <req name="osgi.package/de.undercouch.bson4jackson.serializers:1.3" />
-  <req name="osgi.package/de.undercouch.bson4jackson.types:1.3" />
-  <req name="osgi.package/de.undercouch.bson4jackson.uuid:1.3" />
-  <req name="osgi.package/org.codehaus.jackson:1.7" />
-  <req name="osgi.package/org.codehaus.jackson.impl:1.7" />
-  <req name="osgi.package/org.codehaus.jackson.io:1.7" />
-  <req name="osgi.package/org.codehaus.jackson.map:1.7" />
-  <req name="osgi.package/org.codehaus.jackson.map.module:1.7" />
-  <req name="osgi.package/org.codehaus.jackson.type:1.7" />
-  <cap name="osgi.resolved.bundle/de.undercouch.bson4jackson:1.3" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/de.undercouch.bson4jackson.io:1.3" attrs="bundle-version=1.3.0,bundle-symbolic-name=&quot;de.undercouch.bson4jackson&quot;" />
-  <cap name="osgi.package/de.undercouch.bson4jackson.serializers:1.3" attrs="bundle-version=1.3.0,bundle-symbolic-name=&quot;de.undercouch.bson4jackson&quot;" />
-  <cap name="osgi.package/de.undercouch.bson4jackson.types:1.3" attrs="bundle-version=1.3.0,bundle-symbolic-name=&quot;de.undercouch.bson4jackson&quot;" />
-  <cap name="osgi.package/de.undercouch.bson4jackson.uuid:1.3" attrs="bundle-version=1.3.0,bundle-symbolic-name=&quot;de.undercouch.bson4jackson&quot;" />
-  <cap name="osgi.package/de.undercouch.bson4jackson:1.3" attrs="bundle-version=1.3.0,bundle-symbolic-name=&quot;de.undercouch.bson4jackson&quot;" />
-  <cap name="osgi.require.bundle/de.undercouch.bson4jackson:1.3" />
- </part>
- <part name="osgi.resolved.bundle/jackson-core-asl:1.8.1" >
-  <artifact name="jackson-core-asl:1.8.1" uri="jackson-core-asl-1.8.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/org.codehaus.jackson:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.annotate:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.format:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.impl:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.io:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.sym:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.type:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.util:1.8.1" />
-  <cap name="osgi.resolved.bundle/jackson-core-asl:1.8.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.format:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.io:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.sym:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.util:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.annotate:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.impl:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.type:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-core-asl&quot;" />
-  <cap name="osgi.require.bundle/jackson-core-asl:1.8.1" />
- </part>
- <part name="osgi.resolved.bundle/jackson-mapper-asl:1.8.1" >
-  <artifact name="jackson-mapper-asl:1.8.1" uri="jackson-mapper-asl-1.8.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.xml.datatype" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/org.codehaus.jackson:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.annotate:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.format:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.impl:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.io:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.type:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.util:1.8.1" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.xml.sax" />
-  <cap name="osgi.resolved.bundle/jackson-mapper-asl:1.8.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.schema:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.deser.impl:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.exc:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.annotate:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.ser.impl:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.type:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.module:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.node:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.deser:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.introspect:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.jsontype:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.util:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.jsontype.impl:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.map.ser:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-mapper-asl&quot;" />
-  <cap name="osgi.require.bundle/jackson-mapper-asl:1.8.1" />
- </part>
- <part name="osgi.resolved.bundle/jackson-xc:1.8.1" >
-  <artifact name="jackson-xc:1.8.1" uri="jackson-xc-1.8.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.activation" />
-  <req name="osgi.package/javax.xml.bind" />
-  <req name="osgi.package/javax.xml.bind.annotation" />
-  <req name="osgi.package/javax.xml.bind.annotation.adapters" />
-  <req name="osgi.package/org.codehaus.jackson:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.annotate:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.annotate:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.deser:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.introspect:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.jsontype:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.jsontype.impl:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.ser:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.type:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.map.util:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.node:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.schema:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.type:1.8.1" />
-  <req name="osgi.package/org.codehaus.jackson.util:1.8.1" />
-  <cap name="osgi.resolved.bundle/jackson-xc:1.8.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.codehaus.jackson.xc:1.8.1" attrs="bundle-version=1.8.1,bundle-symbolic-name=&quot;jackson-xc&quot;" />
-  <cap name="osgi.require.bundle/jackson-xc:1.8.1" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.camel.camel-core:2.9.1" >
-  <artifact name="org.apache.camel.camel-core:2.9.1" uri="camel-core-2.9.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.activation" optional="true" />
-  <req name="osgi.package/javax.management" />
-  <req name="osgi.package/javax.management.modelmbean" />
-  <req name="osgi.package/javax.management.remote" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.naming.spi" />
-  <req name="osgi.package/javax.net.ssl" />
-  <req name="osgi.package/javax.xml.bind" optional="true" />
-  <req name="osgi.package/javax.xml.bind.annotation" optional="true" />
-  <req name="osgi.package/javax.xml.bind.annotation.adapters" optional="true" />
-  <req name="osgi.package/javax.xml.namespace" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.stream" optional="true" />
-  <req name="osgi.package/javax.xml.transform" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/javax.xml.transform.sax" />
-  <req name="osgi.package/javax.xml.transform.stax" optional="true" />
-  <req name="osgi.package/javax.xml.transform.stream" />
-  <req name="osgi.package/javax.xml.validation" />
-  <req name="osgi.package/javax.xml.xpath" />
-  <req name="osgi.package/org.apache.xalan.xsltc.trax" optional="true" />
-  <req name="osgi.package/org.osgi.framework:[1.5,2)" optional="true" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.w3c.dom.ls" />
-  <req name="osgi.package/org.xml.sax" />
-  <cap name="osgi.resolved.bundle/org.apache.camel.camel-core:2.9.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.camel.view:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.validator:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.model.loadbalancer:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.simple:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.seda:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.model:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.constant:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.xslt:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.ref:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.converter.jaxp:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.impl.osgi:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.dataset:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.util.jndi:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.properties:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.timer:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.api.management.mbean:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.management:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.test:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.xpath:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.simple.ast:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.idempotent:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.validation:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.model.dataformat:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.header:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.resequencer:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.impl.scan:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.model.language:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.language:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.management.event:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.management.mbean:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.browse:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.impl:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.builder:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.util.concurrent:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.interceptor:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.mock:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.bean:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.exceptionpolicy:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.builder.xml:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.bean:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.converter.stream:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.model.config:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.util:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.main:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.impl.converter:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.util.jsse:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.converter:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.ref:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.loadbalancer:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.spi:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.tokenizer:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.api.management:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.direct:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.property:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.impl.osgi.tracker:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.processor.aggregate:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.vm:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.file.strategy:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.file:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.support:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.language.simple.types:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.log:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-core&quot;" />
-  <cap name="osgi.require.bundle/org.apache.camel.camel-core:2.9.1" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.camel.camel-mina:2.9.1" >
-  <artifact name="org.apache.camel.camel-mina:2.9.1" uri="camel-mina-2.9.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/org.apache.camel:[2.9,2.10)" />
-  <req name="osgi.package/org.apache.camel.impl:[2.9,2.10)" />
-  <req name="osgi.package/org.apache.camel.spi:[2.9,2.10)" />
-  <req name="osgi.package/org.apache.camel.util:[2.9,2.10)" />
-  <req name="osgi.package/org.apache.mina.common:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.filter:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.filter.codec:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.filter.codec.serialization:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.filter.codec.textline:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.filter.executor:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.transport.socket.nio:[1.1.7,2)" />
-  <req name="osgi.package/org.apache.mina.transport.vmpipe:[1.1.7,2)" />
-  <req name="osgi.package/org.slf4j:[1.6,2)" />
-  <cap name="osgi.resolved.bundle/org.apache.camel.camel-mina:2.9.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.camel.component.mina:2.9.1" attrs="bundle-version=2.9.1,bundle-symbolic-name=&quot;org.apache.camel.camel-mina&quot;" />
-  <cap name="osgi.require.bundle/org.apache.camel.camel-mina:2.9.1" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.commons.codec:1.6" >
-  <artifact name="org.apache.commons.codec:1.6.0" uri="commons-codec-1.6.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <cap name="osgi.resolved.bundle/org.apache.commons.codec:1.6" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.commons.codec:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.commons.codec&quot;" />
-  <cap name="osgi.package/org.apache.commons.codec.net:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.commons.codec&quot;" />
-  <cap name="osgi.package/org.apache.commons.codec.language.bm:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.commons.codec&quot;" />
-  <cap name="osgi.package/org.apache.commons.codec.language:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.commons.codec&quot;" />
-  <cap name="osgi.package/org.apache.commons.codec.digest:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.commons.codec&quot;" />
-  <cap name="osgi.package/org.apache.commons.codec.binary:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.commons.codec&quot;" />
-  <cap name="osgi.require.bundle/org.apache.commons.codec:1.6" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.commons.collections:3.2.1" >
-  <artifact name="org.apache.commons.collections:3.2.1" uri="commons-collections-3.2.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/org.apache.commons.collections:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.bag:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.bidimap:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.buffer:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.collection:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.comparators:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.functors:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.iterators:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.keyvalue:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.list:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.map:3.2.1" />
-  <req name="osgi.package/org.apache.commons.collections.set:3.2.1" />
-  <cap name="osgi.resolved.bundle/org.apache.commons.collections:3.2.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.map:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.buffer:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.comparators:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.collection:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.bag:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.iterators:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.bidimap:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.set:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.functors:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.list:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections.keyvalue:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.package/org.apache.commons.collections:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
-  <cap name="osgi.require.bundle/org.apache.commons.collections:3.2.1" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.commons.io:2.0.1" >
-  <artifact name="org.apache.commons.io:2.0.1" uri="commons-io-2.0.1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <cap name="osgi.resolved.bundle/org.apache.commons.io:2.0.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.commons.io.output:2.0.1" attrs="bundle-version=2.0.1,bundle-symbolic-name=&quot;org.apache.commons.io&quot;" />
-  <cap name="osgi.package/org.apache.commons.io.comparator:2.0.1" attrs="bundle-version=2.0.1,bundle-symbolic-name=&quot;org.apache.commons.io&quot;" />
-  <cap name="osgi.package/org.apache.commons.io:2.0.1" attrs="bundle-version=2.0.1,bundle-symbolic-name=&quot;org.apache.commons.io&quot;" />
-  <cap name="osgi.package/org.apache.commons.io.monitor:2.0.1" attrs="bundle-version=2.0.1,bundle-symbolic-name=&quot;org.apache.commons.io&quot;" />
-  <cap name="osgi.package/org.apache.commons.io.input:2.0.1" attrs="bundle-version=2.0.1,bundle-symbolic-name=&quot;org.apache.commons.io&quot;" />
-  <cap name="osgi.package/org.apache.commons.io.filefilter:2.0.1" attrs="bundle-version=2.0.1,bundle-symbolic-name=&quot;org.apache.commons.io&quot;" />
-  <cap name="osgi.require.bundle/org.apache.commons.io:2.0.1" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.commons.lang:2.4" >
-  <artifact name="org.apache.commons.lang:2.4.0" uri="commons-lang-2.4.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/org.apache.commons.lang:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.builder:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.enum:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.enums:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.exception:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.math:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.mutable:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.text:2.4" />
-  <req name="osgi.package/org.apache.commons.lang.time:2.4" />
-  <cap name="osgi.resolved.bundle/org.apache.commons.lang:2.4" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.math:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.enums:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.builder:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.exception:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.enum:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.mutable:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.text:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang.time:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.package/org.apache.commons.lang:2.4" attrs="bundle-version=2.4.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
-  <cap name="osgi.require.bundle/org.apache.commons.lang:2.4" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" >
-  <artifact name="org.apache.servicemix.bundles.jsr305:1.3.9.1" uri="org.apache.servicemix.bundles.jsr305-1.3.9_1.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <cap name="osgi.resolved.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/javax.annotation:1.1" attrs="bundle-version=1.3.9.1,bundle-symbolic-name=&quot;org.apache.servicemix.bundles.jsr305&quot;" />
-  <cap name="osgi.package/javax.annotation.meta:1.1" attrs="bundle-version=1.3.9.1,bundle-symbolic-name=&quot;org.apache.servicemix.bundles.jsr305&quot;" />
-  <cap name="osgi.require.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" />
- </part>
- <part name="osgi.resolved.bundle/org.apache.velocity:1.7" >
-  <artifact name="org.apache.velocity:1.7.0" uri="velocity-1.7.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.werken.xpath" optional="true" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.servlet" optional="true" />
-  <req name="osgi.package/javax.servlet.http" optional="true" />
-  <req name="osgi.package/javax.sql" />
-  <req name="osgi.package/org.apache.commons.collections" />
-  <req name="osgi.package/org.apache.commons.collections.map" />
-  <req name="osgi.package/org.apache.commons.lang" />
-  <req name="osgi.package/org.apache.commons.lang.builder" />
-  <req name="osgi.package/org.apache.commons.lang.text" />
-  <req name="osgi.package/org.apache.commons.logging" optional="true" />
-  <req name="osgi.package/org.apache.log" optional="true" />
-  <req name="osgi.package/org.apache.log.format" optional="true" />
-  <req name="osgi.package/org.apache.log.output.io" optional="true" />
-  <req name="osgi.package/org.apache.log4j" optional="true" />
-  <req name="osgi.package/org.apache.oro.text.perl" optional="true" />
-  <req name="osgi.package/org.apache.tools.ant" optional="true" />
-  <req name="osgi.package/org.apache.tools.ant.taskdefs" optional="true" />
-  <req name="osgi.package/org.jdom" optional="true" />
-  <req name="osgi.package/org.jdom.input" optional="true" />
-  <req name="osgi.package/org.jdom.output" optional="true" />
-  <req name="osgi.package/org.xml.sax" />
-  <cap name="osgi.resolved.bundle/org.apache.velocity:1.7" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.velocity" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.anakia" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.app" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.app.event" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.app.event.implement" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.app.tools" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.context" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.convert" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.exception" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.io" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.defaults" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.directive" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.log" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.parser" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.parser.node" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.resource" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.resource.loader" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.resource.util" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.runtime.visitor" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.servlet" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.texen" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.texen.ant" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.texen.defaults" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.texen.util" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.util" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.package/org.apache.velocity.util.introspection" attrs="bundle-version=1.7.0,bundle-symbolic-name=&quot;org.apache.velocity&quot;" />
-  <cap name="osgi.require.bundle/org.apache.velocity:1.7" />
- </part>
- <part name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:2.8.0.RELEASE" >
-  <artifact name="org.mongodb.mongo-java-driver:2.8.0.RELEASE" uri="mongo-java-driver-2.8.0.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.management" />
-  <req name="osgi.package/javax.net" />
-  <req name="osgi.package/javax.net.ssl" />
-  <cap name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:2.8.0.RELEASE" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.mongodb:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/com.mongodb.io:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/com.mongodb.util:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/com.mongodb.gridfs:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/org.bson:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/org.bson.util:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/org.bson.util.annotations:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/org.bson.types:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.package/org.bson.io:2.8.0.RELEASE" attrs="bundle-version=2.8.0.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
-  <cap name="osgi.require.bundle/org.mongodb.mongo-java-driver:2.8.0.RELEASE" />
- </part>
- <part name="osgi.resolved.bundle/slf4j.api:1.6" >
-  <artifact name="slf4j.api:1.6.0" uri="slf4j-api-1.6.0.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/org.slf4j.impl:1.5.5" />
-  <cap name="osgi.resolved.bundle/slf4j.api:1.6" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.slf4j:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;slf4j.api&quot;" />
-  <cap name="osgi.package/org.slf4j.spi:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;slf4j.api&quot;" />
-  <cap name="osgi.package/org.slf4j.helpers:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;slf4j.api&quot;" />
-  <cap name="osgi.require.bundle/slf4j.api:1.6" />
- </part>
+ <ext name="ms.extension/com.paremus.packager.demos.mongo.guard" target="msf/com.paremus.packager.demos.mongo.guard:[0,0]" >
+  <req name="builder/primordial.builder" />
+  <req name="osgi.active.bundle/com.paremus.packager.demos.mongo.guard:[0,0]" />
+  <cap name="ms.extension/com.paremus.packager.demos.mongo.guard" attrs="selfcap=&quot;true&quot;" />
+ </ext>
+ <ext name="ms.extension/com.paremus.packager.manager" target="ms/com.paremus.packager.manager:[0,0]" >
+  <req name="builder/primordial.builder" />
+  <req name="osgi.active.bundle/com.paremus.packager.manager:[0,0]" />
+  <cap name="ms.extension/com.paremus.packager.manager" attrs="selfcap=&quot;true&quot;" />
+ </ext>
+ <ext-policy ext="ms.extension/com.paremus.packager.manager" part="ms/com.paremus.packager.manager:[0,0]" />
+ <ext-policy ext="ms.extension/com.paremus.packager.demos.mongo.guard" part="msf/com.paremus.packager.demos.mongo.guard:[0,0]" />
 </repository>

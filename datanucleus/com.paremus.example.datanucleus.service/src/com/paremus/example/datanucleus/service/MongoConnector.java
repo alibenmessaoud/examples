@@ -15,7 +15,7 @@ import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
 import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
-import com.paremus.packager.whiteboard.api.PublishedApplication;
+import com.paremus.service.endpoint.Endpoint;
 
 @Component  
 public class MongoConnector {
@@ -31,8 +31,8 @@ public class MongoConnector {
     private ServiceRegistration registration;
 
     @Reference(target = APP_URI_FILTER)
-    public void bindPublishedApp(PublishedApplication app, Map<String, String> serviceProps) {
-        this.mongoUriStr = serviceProps.get(PublishedApplication.PROP_URI);
+    public void bindEndpoint(Endpoint ep, Map<String, String> serviceProps) {
+        this.mongoUriStr = serviceProps.get(Endpoint.URI);
     }
     
     @Reference

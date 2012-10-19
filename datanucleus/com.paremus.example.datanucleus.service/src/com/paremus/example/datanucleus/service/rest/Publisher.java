@@ -1,69 +1,43 @@
 package com.paremus.example.datanucleus.service.rest;
 
+import java.net.InetAddress;
 import java.net.URI;
-import java.util.Map;
+import java.util.Properties;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
+import org.osgi.framework.ServiceRegistration;
 
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
-import aQute.bnd.annotation.component.Reference;
 
-import com.paremus.packager.api.Scope;
-import com.paremus.packager.api.discovery.ApplicationDiscoveryService;
-import com.paremus.packager.api.discovery.ApplicationDiscoveryServiceFactory;
-import com.paremus.packager.api.discovery.ApplicationServiceReference;
-import com.paremus.packager.whiteboard.api.PublishedApplication;
+import com.paremus.service.endpoint.Endpoint;
 
 @Component
-public class Publisher {
+public class Publisher implements Endpoint {
 
     private final int DEFAULT_HTTP_PORT = 8080;
-
-    private ApplicationDiscoveryService applicationDiscoveryService;
-    private ApplicationServiceReference appRef;
-
-    private String scope;
-
-    @Reference(target = "(|(uri=mongodb:*)(uri=jdbc:derby:*))")
-    public void setPublishedApplication(PublishedApplication app, Map<String, Object> svcProps) {
-        System.out.println("===> Blog application: bound to Database app service on URI " + svcProps.get(PublishedApplication.PROP_URI));
-    }
-    public void unsetPublishedApplication(PublishedApplication app) {
-        System.out.println("===> Blog application: UNbound from database app service");
-    }
     
-    @Reference(target = "(scope=global)")
-    public void setApplicationDiscoveryService(ApplicationDiscoveryService applicationDiscoverService, Map<String, Object> svcProps) {
-        this.scope = (String) svcProps.get("scope");
-        this.applicationDiscoveryService = applicationDiscoverService;
-        System.out.println("===> Blog application: BOUND application discovery service with scope " + scope);
-    }
-    public void unsetApplicationDiscoveryService(ApplicationDiscoveryService applicationDiscoveryService) {
-        System.out.println("===> Blog application: UNBOUND application discovery service with scope " + scope);
-    }
-    
+    private ServiceRegistration endpointReg;
+
     @Activate
-    public void activate(BundleContext context) throws Exception {
-        String httpHostName = applicationDiscoveryService.getHostname();
+    public synchronized void activate(BundleContext context) throws Exception {
+        String localhost = InetAddress.getLocalHost().getHostAddress();
         int httpPort = findHttpPort(context);
-        URI httpUri = new URI("http", null, httpHostName, httpPort, "/blog", null, null);
+        
+        URI httpUri = new URI("http", null, localhost, httpPort, "/blog", null, null);
         URI midtierUri = new URI("midtier", httpUri.toString(), null);
         
-        int ttl = 100000;
-        System.out.printf("====> Publishing discovery URI=%s, TTL=%d, scope=%s.%n", midtierUri, ttl, scope);
-        appRef = new ApplicationServiceReference(midtierUri.toString(), ttl);
-        
-        applicationDiscoveryService.publish(appRef);
+        Properties props = new Properties();
+        props.put(Endpoint.URI, midtierUri.toString());
+        endpointReg = context.registerService(Endpoint.class.getName(), new Endpoint() {}, props);
     }
     
     @Deactivate
-    public void deactivate() {
-        System.out.printf("====> Retracting discovery URI=%s, scope=%s.%n", appRef.getUri(), scope);
-        applicationDiscoveryService.retract(appRef);
+    public synchronized void deactivate() {
+        endpointReg.unregister();
     }
 
     private int findHttpPort(BundleContext context) throws Exception {

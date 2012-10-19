@@ -14,7 +14,7 @@ import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
 import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
-import com.paremus.packager.whiteboard.api.PublishedApplication;
+import com.paremus.service.endpoint.Endpoint;
 
 @Component
 public class DerbyConnector {
@@ -31,8 +31,8 @@ public class DerbyConnector {
     public ServiceRegistration registration;
     
     @Reference(target = APP_URI_FILTER)
-    public void bindPublishedApp(PublishedApplication app, Map<String, String> props) {
-        this.jdbcUrl = props.get(PublishedApplication.PROP_URI) + "/" + DATABASE_NAME;
+    public void bindPublishedApp(Endpoint endpoint, Map<String, String> props) {
+        this.jdbcUrl = props.get(Endpoint.URI) + "/" + DATABASE_NAME;
     }
     
     @Reference
