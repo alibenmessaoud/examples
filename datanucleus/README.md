@@ -22,7 +22,7 @@ DEPLOY/RUN
 
 1. Change to the `cnf` directory.
 1. Start posh.
-2. Run the supplied automation script: `sh load.osh`
+2. Run the supplied automation script: `sh load-system.osh`
 
 This will start an infra node, install the repositories, import and deploy the system.
 
@@ -68,3 +68,13 @@ Create a file with any name in that directory, with the following content:
 
 The fill will be processed by Camel and immediately moved into the `.done` subdirectory.
 You can then view the new comment via the shell or REST interface.
+
+PLAY APPLICATION
+----------------
+
+The example includes a front-end application, built with the Play Framework and packaged
+with the Paremus Packager. It can be accessed by opening the URL:
+
+  http://localhost:9999/
+
+
