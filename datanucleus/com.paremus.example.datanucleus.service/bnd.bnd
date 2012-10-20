@@ -1,5 +1,5 @@
 -buildpath: osgi.core,\
-	osgi.cmpn,\
+	osgi.cmpn;version=4.3,\
 	biz.aQute.bnd.annotation,\
 	junit.osgi,\
 	org.apache.felix.gogo.runtime,\

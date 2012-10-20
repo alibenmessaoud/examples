@@ -8,20 +8,27 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
+import org.osgi.service.remoteserviceadmin.RemoteConstants;
 
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
+import aQute.bnd.annotation.component.Reference;
 
+import com.paremus.example.datanucleus.blog.api.Blog;
 import com.paremus.service.endpoint.Endpoint;
 
 @Component
-public class Publisher implements Endpoint {
+public class Publisher {
 
     private final int DEFAULT_HTTP_PORT = 8080;
     
     private ServiceRegistration endpointReg;
-
+    
+    @Reference
+    public void bindBlog(Blog blog) {
+    }
+    
     @Activate
     public synchronized void activate(BundleContext context) throws Exception {
         String localhost = InetAddress.getLocalHost().getHostAddress();
@@ -32,6 +39,7 @@ public class Publisher implements Endpoint {
         
         Properties props = new Properties();
         props.put(Endpoint.URI, midtierUri.toString());
+        props.put(RemoteConstants.SERVICE_EXPORTED_INTERFACES, "*");
         endpointReg = context.registerService(Endpoint.class.getName(), new Endpoint() {}, props);
     }
     

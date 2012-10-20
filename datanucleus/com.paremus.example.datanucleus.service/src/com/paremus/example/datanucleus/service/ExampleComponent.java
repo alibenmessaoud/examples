@@ -22,12 +22,9 @@ import aQute.bnd.annotation.component.Reference;
 		properties = {
 			"osgi.command.scope=product",
 			"osgi.command.function=create|list"
-		},
-		designate = ExampleComponent.Config.class)
+		})
 public class ExampleComponent {
 
-    interface Config {}
-	
 	private PersistenceManagerFactory pmf;
 	private PersistenceManager pm;
 	
