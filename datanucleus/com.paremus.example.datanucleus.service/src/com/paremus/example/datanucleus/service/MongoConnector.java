@@ -27,7 +27,7 @@ public class MongoConnector {
     
     private String mongoUriStr;
     private PersistenceManagerFactoryBuilder builder;
-    private LazyPMF lazyPersistenceMgrFactory;
+    private PersistenceManagerFactory persistenceMgrFactory;
     private ServiceRegistration registration;
 
     @Reference(target = APP_URI_FILTER)
@@ -48,13 +48,14 @@ public class MongoConnector {
         Map<String,Object> props = new HashMap<String,Object>();
         props.put("javax.jdo.option.ConnectionURL", connectionUrl);
         
-        lazyPersistenceMgrFactory = new LazyPMF(builder, props);
-        registration = context.registerService(PersistenceManagerFactory.class.getName(), lazyPersistenceMgrFactory, null);
+        persistenceMgrFactory = builder.createPersistenceManagerFactory(props);
+        registration = context.registerService(PersistenceManagerFactory.class.getName(), persistenceMgrFactory, null);
     }
 
     @Deactivate
     public void deactivate() {
         registration.unregister();
+        persistenceMgrFactory.close();
     }
 
     /**

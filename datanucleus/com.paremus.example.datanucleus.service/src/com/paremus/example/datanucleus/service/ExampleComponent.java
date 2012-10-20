@@ -18,6 +18,7 @@ import aQute.bnd.annotation.component.Reference;
 
 @Component(
 		provide = Object.class,
+		immediate = true,
 		properties = {
 			"osgi.command.scope=product",
 			"osgi.command.function=create|list"
