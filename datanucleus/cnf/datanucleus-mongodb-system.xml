@@ -9,8 +9,6 @@
   	<property name="port" value="27017" />
   </system.part> 
 
-  <!-- This defines that we want DataNucleus with MongoDB -->
-  <system.part category="osgi.active.bundle" name="org.datanucleus.store.mongodb" />
   <!-- The top-level "application" bundles -->
   <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
   <!-- Add the camel parts -->

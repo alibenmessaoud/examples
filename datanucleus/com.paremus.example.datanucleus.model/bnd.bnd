@@ -3,5 +3,5 @@ DataNucleus-Model: SampleModel
 Export-Package: org.datanucleus.samples.jdo.tutorial,\
 	org.datanucleus.samples.blog.model
 
-Require-Capability: dsp.extender;filter:="(dsp.extender=datanucleus.model)"
+Require-Capability: osgi.extender;filter:="(osgi.extender=datanucleus.model)"
 Provide-Capability: dsp.datanucleus.model;dsp.datanucleus.model=SampleModel 

@@ -20,7 +20,9 @@ ParemusPackager-Scope: global
 Import-Package: org.apache.felix.service.command;resolution:=optional,\
 	*
 Export-Package: com.paremus.example.datanucleus.blog.api
-Require-Capability: dsp.datanucleus.model;filter:="(dsp.datanucleus.model=SampleModel)"
+Require-Capability: \
+	dsp.datanucleus.model;filter:="(dsp.datanucleus.model=SampleModel)", \
+	osgi.service;filter:="(&(objectClass=javax.jdo.PersistenceManagerFactory)(store=mongodb))";effective:=active
 
 REST-Alias: /blog
 REST-Classes: com.paremus.example.datanucleus.service.rest.BlogCommentsResource

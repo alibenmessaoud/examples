@@ -11,4 +11,4 @@ Require-Bundle: javax.jdo,\
 	org.datanucleus,\
 	org.datanucleus.api.jdo
 
-Provide-Capability: dsp.extender;dsp.extender=datanucleus.model
+Provide-Capability: osgi.extender;osgi.extender=datanucleus.model;version:Version=0
