@@ -50,7 +50,8 @@ public class PlayAppType implements PackageType {
 		}
 		
 		// Build the scripts
-		pd.startScript = String.format("java -cp \"%s\" -Dmongo.uri=\"%s\" -Dhttp.port=%d play.core.server.NettyServer", classpath, config.restUrl(), config.httpPort());
+		pd.startScript = String.format("export SERVICE_URL_MIDTIER=%s %n exec java -cp \"%s\" -Dhttp.port=%d play.core.server.NettyServer",
+				"midtier:" + config.restUrl(), classpath, config.httpPort());
 		pd.description = "Play REST Application";
 		
 		return pd;
