@@ -1,4 +1,4 @@
-package com.paremus.example.datanucleus.service;
+package com.paremus.example.datanucleus.connector.mongo;
 
 import java.net.URI;
 import java.util.HashMap;

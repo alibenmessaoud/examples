@@ -1,0 +1,9 @@
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	javax.jdo,\
+	org.datanucleus.api.jdo,\
+	com.paremus.service.endpoint,\
+	com.paremus.datanucleus.extender;version=latest
+-sub: *.bnd

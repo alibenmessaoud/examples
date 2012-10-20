@@ -1,0 +1,4 @@
+Service-Component: *
+Private-Package: com.paremus.example.datanucleus.connector.mongo
+Require-Bundle: org.datanucleus.store.mongodb
+Provide-Capability: osgi.service;objectClass=javax.jdo.PersistenceManagerFactory;store=mongodb

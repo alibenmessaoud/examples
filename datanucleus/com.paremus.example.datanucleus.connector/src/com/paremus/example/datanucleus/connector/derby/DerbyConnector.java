@@ -1,4 +1,4 @@
-package com.paremus.example.datanucleus.service;
+package com.paremus.example.datanucleus.connector.derby;
 
 import java.util.HashMap;
 import java.util.Map;

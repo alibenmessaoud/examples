@@ -1,0 +1,4 @@
+Service-Component: *
+Private-Package: com.paremus.example.datanucleus.connector.derby
+Require-Bundle: org.datanucleus.store.rdbms, org.apache.derby
+Provide-Capability: osgi.service;objectClass=javax.jdo.PersistenceManagerFactory;store="jdbc:derby"

@@ -1,5 +1,6 @@
 -nobundles
 -dependson: \
+	com.paremus.example.datanucleus.connector,\
 	com.paremus.example.datanucleus.service,\
 	com.paremus.example.camel,\
 	com.paremus.example.play
