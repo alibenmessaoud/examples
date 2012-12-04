@@ -16,10 +16,13 @@ import java.io.StringWriter;
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.OPTIONS;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.paremus.examples.api.library.Book;
@@ -30,20 +33,33 @@ public class LibraryResource {
 	
 	@Inject
 	Library library;
-
+	
+	private ResponseBuilder addAccessControlHeaders(ResponseBuilder rb) {
+		return rb.header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "OPTIONS, GET, POST")
+				.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
+	}
+	
+	@OPTIONS
+	public Response getOptions() {
+		return addAccessControlHeaders(Response.ok()).build();
+	}
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public String listBooks() throws Exception {
+	public Response listBooks() throws Exception {
 		StringWriter writer = new StringWriter();
 		new ObjectMapper().writeValue(writer, library.listBooks());
-		return writer.toString();
+		
+		return addAccessControlHeaders(Response.ok(writer.toString())).build();
 	}
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void postBook(InputStream data) throws Exception {
+	public Response postBook(InputStream data) throws Exception {
 		Book book = new ObjectMapper().readValue(data, Book.class);
 		library.add(book);
+		return addAccessControlHeaders(Response.noContent()).build();
 	}
 	
 }
