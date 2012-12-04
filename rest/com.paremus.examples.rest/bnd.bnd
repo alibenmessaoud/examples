@@ -1,0 +1,9 @@
+-buildpath: jackson-annotations,\
+	jackson-core,\
+	jackson-databind,\
+	javax.inject,\
+	biz.aQute.bndlib,\
+	javax.ws.rs.jsr311-api,\
+	osgi.cmpn,\
+	javax.servlet
+-sub: *.bnd

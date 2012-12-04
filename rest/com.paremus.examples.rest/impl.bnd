@@ -1,0 +1,3 @@
+Service-Component: *
+Private-Package: com.paremus.examples.impl.library
+Export-Package: com.paremus.examples.api.library

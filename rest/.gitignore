@@ -1,0 +1,5 @@
+# Bndtools output artifacts
+/cnf/cache/
+/*/generated/
+/*/bin/
+/*/bin_test/
