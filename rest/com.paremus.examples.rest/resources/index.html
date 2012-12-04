@@ -11,7 +11,14 @@
 	<div class="container">
 		<div ng-controller="LibraryCtrl" class="row">
 			<h1>Book List</h1>
-			<table class="table table-striped">
+			
+			<form class="form-inline">
+				<select ng-model="selectedEndpoint" ng-change="listBooks()" ng-options="e.uri as e.uri for e in endpoints" >
+					<option value="">-- Select Library URI --</option>
+				</select>
+			</form>
+			
+			<table ng-show="books" class="table table-striped">
 				<thead>
 					<tr>
 						<th>Author</th>

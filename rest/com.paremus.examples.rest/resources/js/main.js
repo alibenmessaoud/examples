@@ -11,23 +11,42 @@
 
 var app = angular.module("demo", ["ngResource"]);
 
-app.factory("Books", function($resource) {
-	return $resource("/library/");
+app.factory("Endpoints", function($resource) {
+	return $resource("/endpoints");
 });
 
-function LibraryCtrl($scope, Books) {
+function LibraryCtrl($scope, Endpoints, $http) {
 	
-	$scope.books = Books.query();
+	$scope.endpoints = Endpoints.query();
+	
+	$scope.books = [];
+	
+	$scope.listBooks = function() {
+		var uri = $scope.selectedEndpoint;
+		if (uri) {
+			$http.get(uri).success(function(data, status) {
+				$scope.books = data;
+			}).error(function(data, status) {
+				alert ("Failed to retrieve book list: " + data);
+			});
+		} else {
+			$scope.books = [];
+		}
+	}
 	
 	$scope.addBook = function() {
 		var book = {
 				author : newBook.author.value,
 				title : newBook.title.value
 		};
-		Books.save(book, function() {
+		
+		$http.post($scope.selectedEndpoint, book).success(function() {
 			$scope.books.push(book);
+			
 			newBook.author.value = '';
 			newBook.title.value = '';
+		}).error(function(data, status) {
+			alert ("Failed to post new book: " + data);
 		});
 	}
 	
