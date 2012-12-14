@@ -1,4 +1,6 @@
--buildpath: jackson-annotations,\
+-buildpath:\
+	com.paremus.examples.api;version=latest,\
+	jackson-annotations,\
 	jackson-core,\
 	jackson-databind,\
 	javax.inject,\

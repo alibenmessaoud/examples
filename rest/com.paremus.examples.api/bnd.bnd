@@ -1,0 +1,2 @@
+-buildpath: biz.aQute.bndlib
+Export-Package: com.paremus.examples.api.library
