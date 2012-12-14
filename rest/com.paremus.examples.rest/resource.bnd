@@ -2,5 +2,6 @@ REST-Alias: /library
 REST-Classes: ${classes;CONCRETE;ANNOTATION;javax.ws.rs.Path}
 Private-Package: com.paremus.examples.impl.resource
 
-Require-Capability: osgi.extender;\
-	filter:="(osgi.extender=bndtools.rt.rest)"
+Require-Capability:\
+	osgi.extender;filter:="(osgi.extender=bndtools.rt.rest)",\
+	osgi.service;filter:="(objectClass=com.paremus.examples.api.library.Library)";effective:=active
