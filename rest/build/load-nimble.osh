@@ -1,0 +1,9 @@
+repoPath = (($0 resolve ../cnf/repos.properties) getPath)
+
+echo Repository path = $repoPath
+nim:repos -lm $repoPath
+nim:repos -l RESTdemo
+nim:repos -l RESTdemo-deps
+
+nim:add com.paremus.examples.rest.resource@active
+nim:add com.paremus.examples.rest.site@active

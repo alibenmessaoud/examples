@@ -1,0 +1,22 @@
+<system xmlns="http://schema.paremus.com/sf/1"
+        name="RESTdemo"
+        boundary="fibre"
+        repopath="RESTdemo,RESTdemo-deps,fabric-ext,fabric,nimble-cmpn,nimble"
+        >
+
+  <!-- MongoDB package -->
+  <system.part category="msf" name="com.paremus.packager.demos.mongo.guard" >
+  	<property name="port" value="27017" />
+  </system.part> 
+
+  <!-- The top-level "application" bundles -->
+  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
+  <!-- Add the camel parts -->
+  <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
+  
+  <!-- Play-REST application -->
+  <system.part category="msf" name="com.paremus.example.play.guard" >
+  	<property name="httpPort" value="9999" />
+  </system.part>
+
+</system>

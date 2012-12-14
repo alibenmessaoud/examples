@@ -1,0 +1,2 @@
+-nobundles
+-dependson: com.paremus.examples.rest
