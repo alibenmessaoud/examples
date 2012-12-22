@@ -1,3 +1,5 @@
 Service-Component: *
 Private-Package: com.paremus.examples.impl.site
 Include-Resource: static/=resources/
+
+Require-Capability: osgi.service;filter:="(objectClass=org.osgi.service.HttpService)";effective:=active

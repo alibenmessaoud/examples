@@ -3,5 +3,5 @@ REST-Classes: ${classes;CONCRETE;ANNOTATION;javax.ws.rs.Path}
 Private-Package: com.paremus.examples.impl.resource
 
 Require-Capability:\
-	osgi.extender;filter:="(osgi.extender=bndtools.rt.rest)",\
+	osgi.extender;filter:="(osgi.extender=bndtools.rt.rest)";effective:=active,\
 	osgi.service;filter:="(objectClass=com.paremus.examples.api.library.Library)";effective:=active

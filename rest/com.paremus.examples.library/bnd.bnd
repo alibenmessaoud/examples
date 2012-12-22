@@ -3,4 +3,5 @@
 
 Private-Package: com.paremus.examples.impl.library
 Service-Component: *
-Provide-Capability: osgi.service;objectClass=com.paremus.examples.api.library.Library
+
+Provide-Capability: osgi.service;objectClass=com.paremus.examples.api.library.Library;effective:=active
