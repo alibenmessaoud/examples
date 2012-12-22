@@ -1,22 +1,24 @@
-<system xmlns="http://schema.paremus.com/sf/1"
-        name="RESTdemo"
-        boundary="fibre"
-        repopath="RESTdemo,RESTdemo-deps,fabric-ext,fabric,nimble-cmpn,nimble"
-        >
+<system xmlns="http://schema.paremus.com/sf/1" name="RESTdemo"
+	boundary="fabric"
+	repopath="RESTdemo,RESTdemo-deps,jetty,fabric-ext,fabric,nimble-cmpn,nimble,nimble-rs">
 
-  <!-- MongoDB package -->
-  <system.part category="msf" name="com.paremus.packager.demos.mongo.guard" >
-  	<property name="port" value="27017" />
-  </system.part> 
+	<system name="Library" boundary="fibre">
+		<!-- The REST endpoint bundle -->
+		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.resource" />
 
-  <!-- The top-level "application" bundles -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
-  <!-- Add the camel parts -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
-  
-  <!-- Play-REST application -->
-  <system.part category="msf" name="com.paremus.example.play.guard" >
-  	<property name="httpPort" value="9999" />
-  </system.part>
+		<!-- The web application that talks to the REST endpoint -->
+		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.site" />
+
+		<!-- The RSA bundles, for publishing availability of the REST endpoint -->
+		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
+		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
+		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
+
+		<!-- Replicate this system across as many nodes as we have available -->
+		<replication.handler type="scalable">
+			<property name="scaleFactor" value="1" type="float" />
+			<property name="minimum" value="1" type="integer" />
+		</replication.handler>
+	</system>
 
 </system>

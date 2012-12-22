@@ -1,8 +1,8 @@
-repoPath = ($0 resolve repos.properties)
+repoPath = ($0 resolve ../cnf/repos.properties)
 echo Repository path = $repoPath
 
 fibre -I
 fabric:connect
 fabric:repos -lcm $repoPath
-fabric:import (($0 resolve datanucleus-mongodb-system.xml) getPath)
-fabric:deploy DataNucleusExample
+fabric:import (($0 resolve restdemo-system.xml) getPath)
+fabric:deploy RESTdemo
