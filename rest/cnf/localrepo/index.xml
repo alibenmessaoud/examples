@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1356202725036' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1356204285841' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='javax.ws.rs.jsr311-api'/>
@@ -356,9 +356,9 @@
       <attribute name='version' type='Version' value='1.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='53dc953b1c9ff7e7db7102fb7dfdae4c6de017e22809f837d4d1f66834503a07'/>
+      <attribute name='osgi.content' value='15028fb754fe34ebac503c7eb5b338f89f659c1c85bf02efe04b53322e726e5d'/>
       <attribute name='url' value='org.bndtools.rt.rest/org.bndtools.rt.rest-1.0.0.jar'/>
-      <attribute name='size' type='Long' value='2117029'/>
+      <attribute name='size' type='Long' value='2116988'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -394,7 +394,7 @@
       <attribute name='version' type='Version' value='1.1.1'/>
       <attribute name='bundle-symbolic-name' value='org.bndtools.rt.rest'/>
       <attribute name='bundle-version' type='Version' value='1.0.0'/>
-      <directive name='uses' value='javax.ws.rs,javax.ws.rs.core'/>
+      <directive name='uses' value='javax.ws.rs.core,javax.ws.rs'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='org.bndtools.service.endpoint'/>
@@ -577,10 +577,6 @@
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
-    </requirement>
-    <requirement namespace='osgi.service'>
-      <directive name='filter' value='(objectClass=org.osgi.service.http.HttpService)'/>
-      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>

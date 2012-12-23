@@ -1,11 +1,4 @@
 <repository name="Local" xmlns="http://schema.paremus.com/nri/2" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/" >
- <!-- BEGIN manual additions -->
- <part name="paremus.service/exthttp:2.2">
-  <req name="builder/primordial.builder" />
-  <req name="osgi.active.bundle/org.apache.felix.http.jetty:[2.2,2.2]" />
-  <cap name="osgi.generic/osgi.service" attrs="objectClass=org.apache.felix.http.api.ExtHttpService"/>
- </part>
- <!-- END manual additions -->
  <part name="ms/org.apache.felix.http" attrs="org.apache.felix.http.debug=false,org.apache.felix.http.enable=true,org.apache.felix.http.nio=true,org.apache.felix.https.clientcertificate=&quot;none&quot;,org.apache.felix.https.enable=false,org.apache.felix.https.nio=true,org.osgi.service.http.port=8080,org.osgi.service.http.port.secure=433" >
   <req name="builder/ms" />
   <cap name="ms/org.apache.felix.http" attrs="selfcap=&quot;true&quot;" />
@@ -58,7 +51,6 @@
  <part name="osgi.active.bundle/org.bndtools.rt.rest:1" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/org.bndtools.rt.rest:[1,1)" />
-  <req name="osgi.generic/osgi.service" ldap="(objectClass=org.osgi.service.http.HttpService)" />
   <cap name="osgi.active.bundle/org.bndtools.rt.rest:1" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/osgi.extender" attrs="osgi.extender=&quot;bndtools.rt.rest&quot;,version=1.0.0" />
  </part>
