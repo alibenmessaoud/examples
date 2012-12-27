@@ -9,9 +9,6 @@
 		<!-- The web application that talks to the REST endpoint -->
 		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.site" />
 		
-		<!-- An HTTP service -->
-		<system.part category="osgi.service" name="http"/>
-
 		<!-- The RSA bundles, for publishing availability of the REST endpoint -->
 		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
 		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
