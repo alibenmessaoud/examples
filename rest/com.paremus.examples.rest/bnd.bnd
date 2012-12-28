@@ -1,5 +1,5 @@
 -buildpath:\
-	com.paremus.examples.api;version=latest,\
+	com.paremus.examples.library.api;version=latest,\
 	jackson-annotations,\
 	jackson-core,\
 	jackson-databind,\

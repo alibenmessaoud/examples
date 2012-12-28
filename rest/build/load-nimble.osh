@@ -5,5 +5,6 @@ nim:repos -lm $repoPath
 nim:repos -l RESTdemo
 nim:repos -l RESTdemo-deps
 
-nim:add com.paremus.examples.rest.resource@active
-nim:add com.paremus.examples.rest.site@active
+#nim:add com.paremus.examples.rest.resource@active
+#nim:add com.paremus.examples.library@active
+#nim:add com.paremus.examples.rest.site@active

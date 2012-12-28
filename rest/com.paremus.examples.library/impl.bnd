@@ -1,0 +1,6 @@
+Service-Component: *
+Private-Package: com.paremus.examples.impl.library
+
+Provide-Capability: osgi.service;\
+	objectClass=com.paremus.examples.api.library.Library;\
+	effective:=active

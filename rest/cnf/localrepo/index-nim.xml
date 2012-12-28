@@ -2,6 +2,7 @@
  <part name="ms/org.apache.felix.http" attrs="org.apache.felix.http.debug=false,org.apache.felix.http.enable=true,org.apache.felix.http.nio=true,org.apache.felix.https.clientcertificate=&quot;none&quot;,org.apache.felix.https.enable=false,org.apache.felix.https.nio=true,org.osgi.service.http.port=8080,org.osgi.service.http.port.secure=433" >
   <req name="builder/ms" />
   <cap name="ms/org.apache.felix.http" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/osgi.service" attrs="objectClass=org.osgi.service.http.HttpService" />
  </part>
  <part name="osgi.active.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" >
   <req name="builder/osgi.active.bundle" />
