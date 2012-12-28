@@ -1,8 +1,7 @@
-<repository name="Local" xmlns="http://schema.paremus.com/nri/2" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/" >
+<repository name="Local:0" xmlns="http://schema.paremus.com/nri/2" >
  <part name="ms/org.apache.felix.http" attrs="org.apache.felix.http.debug=false,org.apache.felix.http.enable=true,org.apache.felix.http.nio=true,org.apache.felix.https.clientcertificate=&quot;none&quot;,org.apache.felix.https.enable=false,org.apache.felix.https.nio=true,org.osgi.service.http.port=8080,org.osgi.service.http.port.secure=433" >
   <req name="builder/ms" />
   <cap name="ms/org.apache.felix.http" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.generic/osgi.service" attrs="objectClass=org.osgi.service.http.HttpService" />
  </part>
  <part name="osgi.active.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" >
   <req name="builder/osgi.active.bundle" />
@@ -48,6 +47,7 @@
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/org.apache.felix.http.jetty:[2.2,2.2)" />
   <cap name="osgi.active.bundle/org.apache.felix.http.jetty:2.2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/osgi.service" attrs="objectClass=&quot;org.osgi.service.http.HttpService&quot;" />
  </part>
  <part name="osgi.active.bundle/org.apache.felix.scr:1.6" >
   <req name="builder/osgi.active.bundle" />
@@ -71,7 +71,7 @@
   <cap name="osgi.active.bundle/osgi.cmpn:4.2.0.200908310645" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.resolved.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" >
-  <artifact name="biz.aQute.bndlib:2.0.0.20121021-234834" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/biz.aQute.bndlib/biz.aQute.bndlib-2.0.0.jar" />
+  <artifact name="biz.aQute.bndlib:2.0.0.20121021-234834" uri="biz.aQute.bndlib/biz.aQute.bndlib-2.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/junit.framework:[3.8,4)" optional="true" />
   <req name="osgi.package/org.osgi.resource:[1,2)" optional="true" />
@@ -117,14 +117,14 @@
   <cap name="osgi.require.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" />
  </part>
  <part name="osgi.resolved.bundle/jackson-annotations:2" >
-  <artifact name="jackson-annotations:2.0.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/jackson-annotations/jackson-annotations-2.0.0.jar" />
+  <artifact name="jackson-annotations:2.0.0" uri="jackson-annotations/jackson-annotations-2.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/jackson-annotations:2" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/com.fasterxml.jackson.annotation:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;jackson-annotations&quot;" />
   <cap name="osgi.require.bundle/jackson-annotations:2" />
  </part>
  <part name="osgi.resolved.bundle/jackson-core:2" >
-  <artifact name="jackson-core:2.0.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/jackson-core/jackson-core-2.0.0.jar" />
+  <artifact name="jackson-core:2.0.0" uri="jackson-core/jackson-core-2.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/jackson-core:2" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/com.fasterxml.jackson.core:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;jackson-core&quot;" />
@@ -138,7 +138,7 @@
   <cap name="osgi.require.bundle/jackson-core:2" />
  </part>
  <part name="osgi.resolved.bundle/jackson-databind:2" >
-  <artifact name="jackson-databind:2.0.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/jackson-databind/jackson-databind-2.0.0.jar" />
+  <artifact name="jackson-databind:2.0.0" uri="jackson-databind/jackson-databind-2.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/com.fasterxml.jackson.annotation:[2,3)" />
   <req name="osgi.package/com.fasterxml.jackson.core:[2,3)" />
@@ -178,14 +178,14 @@
   <cap name="osgi.require.bundle/jackson-databind:2" />
  </part>
  <part name="osgi.resolved.bundle/javax.inject:1" >
-  <artifact name="javax.inject:1.0.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/javax.inject/javax.inject-1.0.0.jar" />
+  <artifact name="javax.inject:1.0.0" uri="javax.inject/javax.inject-1.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/javax.inject:1" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/javax.inject:1" attrs="bundle-version=1.0.0,bundle-symbolic-name=&quot;javax.inject&quot;" />
   <cap name="osgi.require.bundle/javax.inject:1" />
  </part>
  <part name="osgi.resolved.bundle/javax.servlet:2.5.0.v200910301333" >
-  <artifact name="javax.servlet:2.5.0.v200910301333" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/javax.servlet/javax.servlet-2.5.0.jar" />
+  <artifact name="javax.servlet:2.5.0.v200910301333" uri="javax.servlet/javax.servlet-2.5.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/javax.servlet:2.5.0.v200910301333" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/javax.servlet:2.5" attrs="bundle-version=2.5.0.v200910301333,bundle-symbolic-name=&quot;javax.servlet&quot;" />
@@ -194,7 +194,7 @@
   <cap name="osgi.require.bundle/javax.servlet:2.5.0.v200910301333" />
  </part>
  <part name="osgi.resolved.bundle/javax.ws.rs.jsr311-api:1.1.1" >
-  <artifact name="javax.ws.rs.jsr311-api:1.1.1" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/javax.ws.rs.jsr311-api/javax.ws.rs.jsr311-api-1.1.1.jar" />
+  <artifact name="javax.ws.rs.jsr311-api:1.1.1" uri="javax.ws.rs.jsr311-api/javax.ws.rs.jsr311-api-1.1.1.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/javax.ws.rs.jsr311-api:1.1.1" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/javax.ws.rs:1.1.1" attrs="bundle-version=1.1.1,bundle-symbolic-name=&quot;javax.ws.rs.jsr311-api&quot;" />
@@ -203,7 +203,7 @@
   <cap name="osgi.require.bundle/javax.ws.rs.jsr311-api:1.1.1" />
  </part>
  <part name="osgi.resolved.bundle/org.apache.felix.framework:4.0.3" >
-  <artifact name="org.apache.felix.framework:4.0.3" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/org.apache.felix.framework/org.apache.felix.framework-4.0.3.jar" />
+  <artifact name="org.apache.felix.framework:4.0.3" uri="org.apache.felix.framework/org.apache.felix.framework-4.0.3.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/org.apache.felix.framework:4.0.3" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/org.osgi.framework.startlevel:1" attrs="bundle-version=4.0.3,bundle-symbolic-name=&quot;org.apache.felix.framework&quot;" />
@@ -221,7 +221,7 @@
   <cap name="osgi.require.bundle/org.apache.felix.framework:4.0.3" />
  </part>
  <part name="osgi.resolved.bundle/org.apache.felix.http.jetty:2.2" >
-  <artifact name="org.apache.felix.http.jetty:2.2.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/org.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.0.jar" />
+  <artifact name="org.apache.felix.http.jetty:2.2.0" uri="org.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/javax.net.ssl" optional="true" />
   <req name="osgi.package/javax.security.cert" optional="true" />
@@ -248,7 +248,7 @@
   <cap name="osgi.require.bundle/org.apache.felix.http.jetty:2.2" />
  </part>
  <part name="osgi.resolved.bundle/org.apache.felix.scr:1.6" >
-  <artifact name="org.apache.felix.scr:1.6.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/org.apache.felix.scr/org.apache.felix.scr-1.6.0.jar" />
+  <artifact name="org.apache.felix.scr:1.6.0" uri="org.apache.felix.scr/org.apache.felix.scr-1.6.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/org.apache.felix.shell:1" optional="true" />
   <req name="osgi.package/org.osgi.framework:[1.4,2)" />
@@ -263,7 +263,7 @@
   <cap name="osgi.require.bundle/org.apache.felix.scr:1.6" />
  </part>
  <part name="osgi.resolved.bundle/org.bndtools.rt.rest:1" >
-  <artifact name="org.bndtools.rt.rest:1.0.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/org.bndtools.rt.rest/org.bndtools.rt.rest-1.0.0.jar" />
+  <artifact name="org.bndtools.rt.rest:1.0.0" uri="org.bndtools.rt.rest/org.bndtools.rt.rest-1.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/javax.servlet:[2.5,4)" />
   <req name="osgi.package/javax.servlet.http:[2.5,4)" />
@@ -322,14 +322,14 @@
   <cap name="osgi.require.bundle/org.bndtools.rt.rest:1" />
  </part>
  <part name="osgi.resolved.bundle/org.bndtools.service" >
-  <artifact name="org.bndtools.service:0.0.0" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/org.bndtools.service/org.bndtools.service-0.0.0.jar" />
+  <artifact name="org.bndtools.service:0.0.0" uri="org.bndtools.service/org.bndtools.service-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/org.bndtools.service" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/org.bndtools.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.service&quot;" />
   <cap name="osgi.require.bundle/org.bndtools.service" />
  </part>
  <part name="osgi.resolved.bundle/osgi.cmpn:4.2.0.200908310645" >
-  <artifact name="osgi.cmpn:4.2.0.200908310645" uri="file:/Users/njbartlett/Projects/Paremus/examples/rest/cnf/localrepo/osgi.cmpn/osgi.cmpn-4.2.0.jar" />
+  <artifact name="osgi.cmpn:4.2.0.200908310645" uri="osgi.cmpn/osgi.cmpn-4.2.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/info.dmtree:[1,2)" optional="true" />
   <req name="osgi.package/info.dmtree.notification:[1,2)" optional="true" />
