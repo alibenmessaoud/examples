@@ -1,8 +1,9 @@
-repoPath = ($0 resolve ../cnf/repos.properties)
-echo Repository path = $repoPath
+repoPath = ($0 resolve ../cnf)
+repoUri = poshx:sfs 9885 restdemo $repoPath
 
 fibre -I
 fabric:connect
-fabric:repos -lcm $repoPath
+
+fabric:repos -lcm $repoUri/repos.properties
 fabric:import (($0 resolve restdemo-system.xml) getPath)
 fabric:deploy RESTdemo
