@@ -7,11 +7,19 @@
 
 ## Properties from ext/*.bnd can be referenced in order to extend them.
 ## For example, to add one addtional plugin to the list defined in ext/repositories.bnd:
--plugin: ${ext.repositories.-plugin},\
-	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Packager; local=${workspace}/cnf/packager ;pretty=true,\
-	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Camel;    local=${workspace}/cnf/camelrepo;pretty=true,\
-	aQute.bnd.deployer.repository.LocalIndexedRepo; name=RSA;      local=${workspace}/cnf/nimble-rs;pretty=true
 
+-pluginpath: ${ext.repositories.-pluginpath},\
+	${plugindir}/com.paremus.nimble.bnd/com.paremus.nimble.bnd-0.0.0.jar
+
+-plugin:\
+	aQute.lib.deployer.FileRepo;                    name=Build;        location=${workspace}/cnf/buildrepo,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Release;      local=${workspace}/cnf/releaserepo;pretty=true;type=R5|Nimble,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Local;        local=${workspace}/cnf/localrepo;pretty=true,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Packager;     local=${workspace}/cnf/packager ;pretty=true,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=Camel;        local=${workspace}/cnf/camelrepo;pretty=true,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo; name=RSA;          local=${workspace}/cnf/nimble-rs;pretty=true,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo; name=Bndtools Hub; locations=https://raw.github.com/bndtools/bundle-hub/master/index.xml.gz,\
+	com.paremus.nimble.bnd.NimbleContentProvider
 
 ## If you use git, you might want to uncomment the following lines:
 # Git-Descriptor: ${system-allow-fail;git describe --dirty --always}
