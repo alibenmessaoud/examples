@@ -3,7 +3,7 @@
 	biz.aQute.bnd.annotation,\
 	junit.osgi,\
 	com.paremus.packager.manager,\
-	com.paremus.service.endpoint
+	org.bndtools.service
 
 Private-Package: com.paremus.example.play.impl
 Conditional-Package: aQute.lib*,\

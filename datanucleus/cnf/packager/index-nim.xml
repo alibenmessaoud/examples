@@ -1,4 +1,4 @@
-<repository name="Packager:0" xmlns="http://schema.paremus.com/nri/2" >
+<repository name="Packager" xmlns="http://schema.paremus.com/nri/2" >
  <part name="ms/com.paremus.packager.manager" attrs="storage=&quot;pmstorage&quot;" >
   <req name="builder/ms" />
   <cap name="ms/com.paremus.packager.manager" attrs="selfcap=&quot;true&quot;" />
@@ -17,7 +17,6 @@
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.guard:[0,0)" />
   <req name="osgi.service/component" />
-  <req name="osgi.generic/packager.type" ldap="(packager.type=mongo)" />
   <cap name="osgi.active.bundle/com.paremus.packager.demos.mongo.guard" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.active.bundle/com.paremus.packager.manager" >
@@ -36,8 +35,6 @@
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/com.paremus.packager.mongo.linux-x86_64:[0,0)" />
   <req name="osgi.service/component" />
-  <req name="osgi.generic/packager.manager" />
-  <req name="osgi.generic/osgi.native.environment" ldap="(&amp;(osgi.native.environment.osname=Linux)(osgi.native.environment.processor=x86_64))" />
   <cap name="osgi.active.bundle/com.paremus.packager.mongo.linux-x86_64" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
  </part>
@@ -45,14 +42,8 @@
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/com.paremus.packager.mongo.macos-x86_64:[0,0)" />
   <req name="osgi.service/component" />
-  <req name="osgi.generic/packager.manager" />
   <cap name="osgi.active.bundle/com.paremus.packager.mongo.macos-x86_64" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
- </part>
- <part name="osgi.active.bundle/com.paremus.service.endpoint" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.service.endpoint:[0,0)" />
-  <cap name="osgi.active.bundle/com.paremus.service.endpoint" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.client" >
   <artifact name="com.paremus.packager.demos.mongo.client:0.0.0" uri="com.paremus.packager.demos.mongo.client/com.paremus.packager.demos.mongo.client-0.0.0.jar" />
@@ -70,6 +61,7 @@
   <req name="osgi.package/com.paremus.service.endpoint:[1,2)" />
   <req name="osgi.package/com.paremus.service.packager:[1,2)" />
   <req name="osgi.package/org.osgi.framework:[1.3,2)" />
+  <req name="osgi.generic/packager.type" ldap="(packager.type=mongo)" />
   <cap name="osgi.resolved.bundle/com.paremus.packager.demos.mongo.guard" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.require.bundle/com.paremus.packager.demos.mongo.guard" />
  </part>
@@ -106,6 +98,8 @@
   <req name="osgi.package/aQute.service.reporter:[1,2)" />
   <req name="osgi.package/com.paremus.service.mongo:[1,2)" />
   <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <req name="osgi.generic/packager.manager" />
+  <req name="osgi.generic/osgi.native.environment" ldap="(&amp;(osgi.native.environment.osname=Linux)(osgi.native.environment.processor=x86_64))" />
   <cap name="osgi.resolved.bundle/com.paremus.packager.mongo.linux-x86_64" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
   <cap name="osgi.require.bundle/com.paremus.packager.mongo.linux-x86_64" />
@@ -117,16 +111,10 @@
   <req name="osgi.package/aQute.service.reporter:[1,2)" />
   <req name="osgi.package/com.paremus.service.mongo:[1,2)" />
   <req name="osgi.package/com.paremus.service.packager:[1,2)" />
+  <req name="osgi.generic/packager.manager" />
   <cap name="osgi.resolved.bundle/com.paremus.packager.mongo.macos-x86_64" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongo&quot;,version=2.2.0" />
   <cap name="osgi.require.bundle/com.paremus.packager.mongo.macos-x86_64" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.service.endpoint" >
-  <artifact name="com.paremus.service.endpoint:0.0.0" uri="com.paremus.service.endpoint/com.paremus.service.endpoint-0.0.0.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <cap name="osgi.resolved.bundle/com.paremus.service.endpoint" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;com.paremus.service.endpoint&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.service.endpoint" />
  </part>
  <ext name="ms.extension/com.paremus.packager.demos.mongo.guard" target="msf/com.paremus.packager.demos.mongo.guard:[0,0]" >
   <req name="builder/primordial.builder" />

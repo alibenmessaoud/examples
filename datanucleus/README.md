@@ -6,25 +6,13 @@ This example builds a simple application based on DataNucleus using the JDO API.
 BUILD INSTRUCTIONS
 ------------------
 
-We need to know the location of the Paremus Service Fabric installation directory. This
-can either be specified with an environment variable or a properties file in the build
-directory.
-
-* EITHER: export the `$FABRIC_HOME` environment variable
-* OR: copy `build/template.fabric.properties` to `build/fabric.properties` and edit its
-  contents.
-
-Once this is done, run the build by invoking `ant -f build/build.xml`. Artifacts will be
+Run the build by invoking `ant -f build/build.xml`. Artifacts will be
 generated, along with a Nimble index file, in the `cnf/releaserepo` directory.
 
 DEPLOY/RUN
 ----------
 
-1. Change to the `cnf` directory.
-1. Start posh.
-2. Run the supplied automation script: `sh load-system.osh`
-
-This will start an infra node, install the repositories, import and deploy the system.
+Run the supplied automation script as follows: `posh -k cnf/load-system.osh`. This will start a fibre, load repositories, import and deploy the system.
 
 SHELL INTERACTION
 -----------------

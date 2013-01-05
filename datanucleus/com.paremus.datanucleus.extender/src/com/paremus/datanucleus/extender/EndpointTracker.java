@@ -2,6 +2,7 @@ package com.paremus.datanucleus.extender;
 
 import java.net.URI;
 
+import org.bndtools.service.endpoint.Endpoint;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Filter;
 import org.osgi.framework.FrameworkUtil;
@@ -10,7 +11,6 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTracker;
 
 import com.paremus.datanucleus.api.DatabaseConnectionConfigurer;
-import com.paremus.service.endpoint.Endpoint;
 
 public class EndpointTracker extends ServiceTracker {
 

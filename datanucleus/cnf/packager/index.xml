@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1350672915726' name='Packager' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1357263506077' name='Packager' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='com.paremus.packager.demos.mongo.guard'/>
@@ -34,6 +34,7 @@
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>
@@ -75,6 +76,7 @@
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>
@@ -84,9 +86,9 @@
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='5678524e14c48aa631a715afcbf3ed6536edd56b3369f265878ac4e99e1fd8ff'/>
+      <attribute name='osgi.content' value='36041374f70fc9e402691f033bc2d8e2a1425aa157c36e0b1558ee422f2d36e3'/>
       <attribute name='url' value='com.paremus.packager.manager/com.paremus.packager.manager-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='257166'/>
+      <attribute name='size' type='Long' value='256512'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -139,6 +141,7 @@
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>
@@ -174,6 +177,7 @@
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>
@@ -243,33 +247,7 @@
     <requirement namespace='packager.manager'/>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.service.endpoint'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='983c5cf217c49acbde8601055e6b830fa4b69717671d6a61d49941a449acda56'/>
-      <attribute name='url' value='com.paremus.service.endpoint/com.paremus.service.endpoint-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='2961'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.service.endpoint'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.service.endpoint'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.service.endpoint'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.service.endpoint'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
   </resource>
 </repository>

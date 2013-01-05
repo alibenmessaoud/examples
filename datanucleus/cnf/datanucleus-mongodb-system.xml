@@ -1,7 +1,7 @@
 <system xmlns="http://schema.paremus.com/sf/1"
         name="DataNucleusExample"
         boundary="fibre"
-        repopath="Camel,Packager,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble"
+        repopath="Camel,Packager,jetty,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble"
         >
 
   <!-- MongoDB package -->

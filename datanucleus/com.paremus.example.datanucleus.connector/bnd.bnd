@@ -4,6 +4,6 @@
 	junit.osgi,\
 	javax.jdo,\
 	org.datanucleus.api.jdo,\
-	com.paremus.service.endpoint,\
+	org.bndtools.service,\
 	com.paremus.datanucleus.extender;version=latest
 -sub: *.bnd

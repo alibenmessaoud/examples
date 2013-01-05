@@ -6,6 +6,7 @@ import javax.jdo.PersistenceManagerFactory;
 
 import junit.framework.TestCase;
 
+import org.bndtools.service.endpoint.Endpoint;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
@@ -13,7 +14,6 @@ import org.osgi.framework.ServiceRegistration;
 
 import com.paremus.datanucleus.api.DatabaseConnectionConfigurer;
 import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
-import com.paremus.service.endpoint.Endpoint;
 
 public class ExampleTest extends TestCase {
 

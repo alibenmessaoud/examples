@@ -1,4 +1,10 @@
-<repository name="DataNucleusDeps:0" xmlns="http://schema.paremus.com/nri/2" >
+<repository name="Local" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/aQute.xray.plugin:1.0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/aQute.xray.plugin:[1.0.3,1.0.3)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/aQute.xray.plugin:1.0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
  <part name="osgi.active.bundle/com.mongodb:2.1" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/com.mongodb:[2.1,2.1)" />
@@ -54,10 +60,10 @@
   <req name="osgi.resolved.bundle/org.apache.servicemix.bundles.jsr305:[1.3.9.1,1.3.9.1)" />
   <cap name="osgi.active.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/org.bndtools.rt.rest" >
+ <part name="osgi.active.bundle/org.bndtools.service" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.bndtools.rt.rest:[0,0)" />
-  <cap name="osgi.active.bundle/org.bndtools.rt.rest" attrs="selfcap=&quot;true&quot;" />
+  <req name="osgi.resolved.bundle/org.bndtools.service:[0,0)" />
+  <cap name="osgi.active.bundle/org.bndtools.service" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.active.bundle/org.datanucleus:3.1.0.release" >
   <req name="builder/osgi.active.bundle" />
@@ -83,6 +89,21 @@
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/org.restlet:[2.0.11.0,2.0.11.0)" />
   <cap name="osgi.active.bundle/org.restlet:2.0.11.0" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/aQute.xray.plugin:1.0.3" >
+  <artifact name="aQute.xray.plugin:1.0.3" uri="aQute.xray.plugin/aQute.xray.plugin-1.0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.scr:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.cm:[1.3,2)" optional="true" />
+  <req name="osgi.package/javax.servlet:[2.5,3)" />
+  <req name="osgi.package/javax.servlet.http:[2.5,3)" />
+  <req name="osgi.package/org.apache.felix.webconsole:[3.1,4)" />
+  <req name="osgi.package/org.osgi.framework:[1.6,2)" />
+  <req name="osgi.package/org.osgi.framework.hooks.service:[1.1,2)" />
+  <req name="osgi.package/org.osgi.framework.wiring:[1,2)" />
+  <cap name="osgi.resolved.bundle/aQute.xray.plugin:1.0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/aQute.xray.plugin:1.0.3" />
  </part>
  <part name="osgi.resolved.bundle/com.mongodb:2.1" >
   <artifact name="com.mongodb:2.1.0" uri="com.mongodb/com.mongodb-2.1.0.jar" />
@@ -262,63 +283,12 @@
   <cap name="osgi.package/javax.annotation.meta:1.1" attrs="bundle-version=1.3.9.1,bundle-symbolic-name=&quot;org.apache.servicemix.bundles.jsr305&quot;" />
   <cap name="osgi.require.bundle/org.apache.servicemix.bundles.jsr305:1.3.9.1" />
  </part>
- <part name="osgi.resolved.bundle/org.bndtools.rt.rest" >
-  <artifact name="org.bndtools.rt.rest:0.0.0" uri="org.bndtools.rt.rest/org.bndtools.rt.rest-0.0.0.jar" />
+ <part name="osgi.resolved.bundle/org.bndtools.service" >
+  <artifact name="org.bndtools.service:0.0.0" uri="org.bndtools.service/org.bndtools.service-0.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/javax.servlet:[2.5,4)" />
-  <req name="osgi.package/javax.servlet.http:[2.5,4)" />
-  <req name="osgi.package/javax.mail" optional="true" />
-  <req name="osgi.package/javax.mail.internet" optional="true" />
-  <req name="osgi.package/javax.mail.util" optional="true" />
-  <req name="osgi.package/com.sun.net.httpserver" optional="true" />
-  <req name="osgi.package/javax.xml.bind" optional="true" />
-  <req name="osgi.package/javax.xml.bind.annotation" optional="true" />
-  <req name="osgi.package/javax.xml.bind.annotation.adapters" optional="true" />
-  <req name="osgi.package/javax.annotation" optional="true" />
-  <req name="osgi.package/javax.annotation.security" optional="true" />
-  <req name="osgi.package/javax.ejb" optional="true" />
-  <req name="osgi.package/javax.enterprise.context" optional="true" />
-  <req name="osgi.package/javax.enterprise.context.spi" optional="true" />
-  <req name="osgi.package/javax.enterprise.event" optional="true" />
-  <req name="osgi.package/javax.enterprise.inject" optional="true" />
-  <req name="osgi.package/javax.enterprise.inject.spi" optional="true" />
-  <req name="osgi.package/javax.enterprise.util" optional="true" />
-  <req name="osgi.package/javax.interceptor" optional="true" />
-  <req name="osgi.package/javax.persistence" optional="true" />
-  <req name="osgi.package/javax.servlet.annotation" optional="true" />
-  <req name="osgi.package/javax.servlet.jsp" optional="true" />
-  <req name="osgi.package/javax.servlet.jsp.tagext" optional="true" />
-  <req name="osgi.package/javax.xml.namespace" optional="true" />
-  <req name="osgi.package/javax.xml.transform" optional="true" />
-  <req name="osgi.package/javax.xml.transform.sax" optional="true" />
-  <req name="osgi.package/javax.xml.transform.stream" optional="true" />
-  <req name="osgi.package/org.objectweb.asm" optional="true" />
-  <req name="osgi.package/javax.activation" />
-  <req name="osgi.package/javax.imageio" />
-  <req name="osgi.package/javax.imageio.spi" />
-  <req name="osgi.package/javax.imageio.stream" />
-  <req name="osgi.package/javax.inject:[1,2)" />
-  <req name="osgi.package/javax.naming" />
-  <req name="osgi.package/javax.ws.rs:[1.1,2)" />
-  <req name="osgi.package/javax.ws.rs.core:[1.1,2)" />
-  <req name="osgi.package/javax.ws.rs.ext:[1.1,2)" />
-  <req name="osgi.package/javax.xml.parsers" />
-  <req name="osgi.package/javax.xml.stream" />
-  <req name="osgi.package/javax.xml.transform.dom" />
-  <req name="osgi.package/org.bndtools.inject:[1,2)" />
-  <req name="osgi.package/org.osgi.framework:[1.6,2)" />
-  <req name="osgi.package/org.osgi.service.http:[1.2,2)" />
-  <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
-  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
-  <req name="osgi.package/org.w3c.dom" />
-  <req name="osgi.package/org.xml.sax" />
-  <req name="osgi.package/com.sun.jersey.core.osgi" optional="true" />
-  <cap name="osgi.resolved.bundle/org.bndtools.rt.rest" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.bndtools.inject:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.rt.rest&quot;" />
-  <cap name="osgi.package/javax.ws.rs:1.1.1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.rt.rest&quot;" />
-  <cap name="osgi.package/javax.ws.rs.core:1.1.1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.rt.rest&quot;" />
-  <cap name="osgi.package/javax.ws.rs.ext:1.1.1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.rt.rest&quot;" />
-  <cap name="osgi.require.bundle/org.bndtools.rt.rest" />
+  <cap name="osgi.resolved.bundle/org.bndtools.service" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.bndtools.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.service&quot;" />
+  <cap name="osgi.require.bundle/org.bndtools.service" />
  </part>
  <part name="osgi.resolved.bundle/org.datanucleus:3.1.0.release" versionSingleton="true" attrs="singleton=true" >
   <artifact name="org.datanucleus:3.1.0.release" uri="org.datanucleus/org.datanucleus-3.1.0.jar" />

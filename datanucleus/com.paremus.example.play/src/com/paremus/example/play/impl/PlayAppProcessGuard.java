@@ -1,15 +1,15 @@
 package com.paremus.example.play.impl;
 
-import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.bndtools.service.endpoint.Endpoint;
 
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
 
 import com.paremus.example.play.PlayAppProperties;
-import com.paremus.service.endpoint.Endpoint;
 import com.paremus.service.packager.ProcessGuard;
 
 @Component(
@@ -27,10 +27,9 @@ public class PlayAppProcessGuard implements ProcessGuard {
 		this.config = config;
 	}
 
-	@Reference(target = "(uri=midtier:*)")
+	@Reference(target = "(uri=http://*/blog)")
 	void bindRestURL(Endpoint endpoint, Map<String, String> props) throws Exception {
-		URI midtierUri = new URI(props.get(Endpoint.URI));
-		restUrl = midtierUri.getSchemeSpecificPart();
+		restUrl = props.get(Endpoint.URI);
 	}
 	
 	public Map<String, Object> getProperties() {

@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.jdo.PersistenceManagerFactory;
 
+import org.bndtools.service.endpoint.Endpoint;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 
@@ -14,7 +15,6 @@ import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
 import com.paremus.datanucleus.api.PersistenceManagerFactoryBuilder;
-import com.paremus.service.endpoint.Endpoint;
 
 @Component
 public class DerbyConnector {

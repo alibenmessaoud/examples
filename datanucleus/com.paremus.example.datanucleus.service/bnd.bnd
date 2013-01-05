@@ -11,7 +11,7 @@
 	javax.ws.rs.jsr311-api,\
 	jackson-core,\
 	jackson-databind,\
-	com.paremus.service.endpoint;version=latest
+	org.bndtools.service
 
 Private-Package: com.paremus.example.datanucleus.service,\
 	com.paremus.example.datanucleus.service.rest
