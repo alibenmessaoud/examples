@@ -7,4 +7,5 @@ nim:repos -l Packager
 nim:repos -l DataNucleus
 nim:repos -l DataNucleusDeps
 
-nim:add -d com.paremus.example.datanucleus.service@active
+#nim:add -dt com.paremus.example.datanucleus.service@active
+nim:add -dt org.bndtools.rt.packager.mongodb.guard@active

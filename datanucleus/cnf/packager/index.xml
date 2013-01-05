@@ -1,78 +1,43 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1357367571795' name='Packager' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1357368938216' name='Packager' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.demos.mongo.guard'/>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.linux-x86_64'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='1b831abfe4a33b46f6349317d33d8345755ca9931e515653bc6a420be4185088'/>
-      <attribute name='url' value='com.paremus.packager.demos.mongo.guard/com.paremus.packager.demos.mongo.guard-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='25496'/>
+      <attribute name='osgi.content' value='a967417cfe73033e63fb6e6251141250073721261444afc061ddcbf893b3d12a'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.linux-x86_64/org.bndtools.rt.packager.mongodb.linux-x86_64-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='6137291'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.demos.mongo.guard'/>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.linux-x86_64'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.demos.mongo.guard'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.endpoint)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='packager.type'>
-      <directive name='filter' value='(packager.type=mongo)'/>
-    </requirement>
-    <requirement namespace='osgi.extender'>
-      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='effective' value='active'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.mongo.linux-x86_64'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='e56d046fd692f351a7707fb50eb219721fe37194b932bdf9a5cda5de186097df'/>
-      <attribute name='url' value='com.paremus.packager.mongo.linux-x86_64/com.paremus.packager.mongo.linux-x86_64-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='6136911'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.mongo.linux-x86_64'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.mongo.linux-x86_64'/>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.linux-x86_64'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='packager.type'>
-      <attribute name='packager.type' value='mongo'/>
+      <attribute name='packager.type' value='mongodb'/>
       <attribute name='version' type='Version' value='2.2.0'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.mongo)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.mongodb)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
-    <requirement namespace='packager.manager'/>
-    <requirement namespace='osgi.native.environment'>
-      <directive name='filter' value='(&amp; (osgi.native.environment.osname=Linux) (osgi.native.environment.processor=x86_64) )'/>
+    <requirement namespace='packager.manager'>
+      <directive name='filter' value='(!(version&gt;=2.0))'/>
+    </requirement>
+    <requirement namespace='osgi.native'>
+      <directive name='filter' value='(&amp; (osgi.native.osname=Linux) (osgi.native.processor=x86-64) )'/>
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
@@ -81,43 +46,76 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.manager'/>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='326828b643e694d782a8c2f38b5abaafc28d046d2b2c1f86c0e92df1b89907b0'/>
-      <attribute name='url' value='com.paremus.packager.manager/com.paremus.packager.manager-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='256512'/>
+      <attribute name='osgi.content' value='6523610bc19e41437720957978e60a02522435f39a8a1cfdafcef95a2328150b'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.common/org.bndtools.rt.packager.mongodb.common-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='19941'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.manager'/>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.manager'/>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.service.packager'/>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.mongodb'/>
       <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.manager'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
+      <directive name='uses' value='org.bndtools.service.packager'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.manager'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.1.0.201301050654'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='278df46f0f11c3638ba0a7094aa1d79f7019d4c11a42237f7115e4ae3817ae64'/>
+      <attribute name='url' value='org.bndtools.rt.packager.manager/org.bndtools.rt.packager.manager-0.1.0.jar'/>
+      <attribute name='size' type='Long' value='261100'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.1.0.201301050654'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.1.0.201301050654'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.packager'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.1.0.201301050654'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='aQute.service.reporter'/>
       <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.1.0.201301050654'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.service.watchdog'/>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.watchdog'/>
       <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.1.0.201301050654'/>
     </capability>
-    <capability namespace='packager.manager'/>
+    <capability namespace='packager.manager'>
+      <attribute name='version' type='Version' value='0.1.0.201301050654'/>
+    </capability>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.bnd.annotation.metatype)(version&gt;=1.43.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
@@ -125,13 +123,16 @@
       <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.watchdog)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.watchdog)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))'/>
@@ -146,22 +147,109 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.demos.mongo.client'/>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.macos-x86_64'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='05cbb2e187cafd144576e45f287499255d039da1810005535f5f4f3f7622c78f'/>
-      <attribute name='url' value='com.paremus.packager.demos.mongo.client/com.paremus.packager.demos.mongo.client-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='5583'/>
+      <attribute name='osgi.content' value='befaffda01ae5d026d78064ec3f2a9590f7ecc8048523c7b9ba7eebb8c258668'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.macos-x86_64/org.bndtools.rt.packager.mongodb.macos-x86_64-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='6559757'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.demos.mongo.client'/>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.macos-x86_64'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.demos.mongo.client'/>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.macos-x86_64'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='packager.type'>
+      <attribute name='packager.type' value='mongodb'/>
+      <attribute name='version' type='Version' value='2.2.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.mongodb)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='packager.manager'>
+      <directive name='filter' value='(!(version&gt;=2.0))'/>
+    </requirement>
+    <requirement namespace='osgi.native'>
+      <directive name='filter' value='(&amp; (osgi.native.osname=MacOSX) (osgi.native.processor=x86-64) )'/>
+    </requirement>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.guard'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='6ae526baed8d07568532638c3790307d4cdcc4b57cbb0160bb0ddf7215c7cc25'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.guard/org.bndtools.rt.packager.mongodb.guard-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='27942'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.guard'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.guard'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.endpoint'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.mongodb.guard'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.endpoint)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='packager.type'>
+      <directive name='filter' value='(packager.type=mongodb)'/>
+    </requirement>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='daf2c67343ab1d0d6253ec07c0cd897db98396fa0ea7e4f27c55c088d3be6ceb'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.client/org.bndtools.rt.packager.mongodb.client-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='6543'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.client'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
@@ -173,80 +261,10 @@
       <directive name='filter' value='(&amp;(osgi.wiring.package=com.mongodb)(version&gt;=2.9.0)(!(version&gt;=3.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.endpoint)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.endpoint)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='effective' value='active'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.mongo.common'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='4491a3d699b31951a0f4665891bd7c2b5bff6d1632030b6489387816d3c7a68b'/>
-      <attribute name='url' value='com.paremus.packager.mongo.common/com.paremus.packager.mongo.common-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='19649'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.mongo.common'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.mongo.common'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.service.mongo'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.mongo.common'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-      <directive name='uses' value='com.paremus.service.packager'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.mongo.macos-x86_64'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='0bfff2852bdf2486081a1117da164f113af39f9c99fa39b9b7a0580b7ac3a711'/>
-      <attribute name='url' value='com.paremus.packager.mongo.macos-x86_64/com.paremus.packager.mongo.macos-x86_64-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='6559317'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.mongo.macos-x86_64'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.mongo.macos-x86_64'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='packager.type'>
-      <attribute name='packager.type' value='mongo'/>
-      <attribute name='version' type='Version' value='2.2.0'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.mongo)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.packager)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='packager.manager'/>
-    <requirement namespace='osgi.extender'>
-      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
       <directive name='effective' value='active'/>
     </requirement>
   </resource>

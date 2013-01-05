@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.bndtools.service.endpoint.Endpoint;
+import org.bndtools.service.packager.ProcessGuard;
 
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
 
 import com.paremus.example.play.PlayAppProperties;
-import com.paremus.service.packager.ProcessGuard;
 
 @Component(
 		name = "com.paremus.example.play.guard",

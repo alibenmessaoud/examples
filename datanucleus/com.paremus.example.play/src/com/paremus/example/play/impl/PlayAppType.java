@@ -1,10 +1,13 @@
 package com.paremus.example.play.impl;
 
 import java.io.File;
+
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Map;
 
+import org.bndtools.service.packager.PackageDescriptor;
+import org.bndtools.service.packager.PackageType;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 
@@ -14,8 +17,6 @@ import aQute.bnd.annotation.metatype.Configurable;
 import aQute.lib.io.IO;
 
 import com.paremus.example.play.PlayAppProperties;
-import com.paremus.service.packager.PackageDescriptor;
-import com.paremus.service.packager.PackageType;
 
 @Component(properties = "package.type=play-rest")
 public class PlayAppType implements PackageType {

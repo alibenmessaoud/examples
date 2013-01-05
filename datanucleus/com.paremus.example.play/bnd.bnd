@@ -2,8 +2,8 @@
 	osgi.cmpn,\
 	biz.aQute.bnd.annotation,\
 	junit.osgi,\
-	com.paremus.packager.manager,\
-	org.bndtools.service
+	org.bndtools.service,\
+	org.bndtools.rt.packager.manager
 
 Private-Package: com.paremus.example.play.impl
 Conditional-Package: aQute.lib*,\

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1357366889730' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1357369158610' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.datanucleus.api.jdo'/>
@@ -1170,57 +1170,6 @@
     </requirement>
     <requirement namespace='osgi.ee'>
       <directive name='filter' value='(osgi.ee=J2SE-1.5)'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.api'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.4.0.SNAPSHOT'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='96f124c8356c3b34686fca4cea5ae9ed5aaeb180579119307762f0b3eee32e4a'/>
-      <attribute name='url' value='com.paremus.packager.api/com.paremus.packager.api-0.4.0.jar'/>
-      <attribute name='size' type='Long' value='33652'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.4.0.SNAPSHOT'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.4.0.SNAPSHOT'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.packager.api'/>
-      <attribute name='version' type='Version' value='0.4.0.SNAPSHOT'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.4.0.SNAPSHOT'/>
-      <directive name='uses' value='javax.annotation,com.paremus.packager.api.discovery'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.packager.api.discovery'/>
-      <attribute name='version' type='Version' value='0.4.0.SNAPSHOT'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.4.0.SNAPSHOT'/>
-      <directive name='uses' value='javax.annotation,com.paremus.packager.api'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.packager.api.log'/>
-      <attribute name='version' type='Version' value='0.4.0.SNAPSHOT'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.4.0.SNAPSHOT'/>
-      <directive name='uses' value='com.paremus.packager.api'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(osgi.wiring.package=com.paremus.packager.api)'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=javax.annotation)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.codehaus.jackson.annotate)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
   </resource>
   <resource>

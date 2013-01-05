@@ -5,7 +5,7 @@
         >
 
   <!-- MongoDB package -->
-  <system.part category="msf" name="com.paremus.packager.demos.mongo.guard" >
+  <system.part category="msf" name="org.bndtools.rt.packager.mongodb.guard" >
   	<property name="port" value="27017" />
   </system.part> 
 

@@ -10,11 +10,6 @@
   <req name="osgi.resolved.bundle/com.mongodb:[2.1,2.1)" />
   <cap name="osgi.active.bundle/com.mongodb:2.1" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" >
-  <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.api:[0.4.0.SNAPSHOT,0.4.0.SNAPSHOT)" />
-  <cap name="osgi.active.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
- </part>
  <part name="osgi.active.bundle/jackson-annotations:2" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/jackson-annotations:[2,2)" />
@@ -121,18 +116,6 @@
   <cap name="osgi.package/org.bson.types:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
   <cap name="osgi.package/org.bson.io:2.1" attrs="bundle-version=2.1.0,bundle-symbolic-name=&quot;com.mongodb&quot;" />
   <cap name="osgi.require.bundle/com.mongodb:2.1" />
- </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" >
-  <artifact name="com.paremus.packager.api:0.4.0.SNAPSHOT" uri="com.paremus.packager.api/com.paremus.packager.api-0.4.0.jar" />
-  <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/com.paremus.packager.api" />
-  <req name="osgi.package/javax.annotation:[1.1,2)" />
-  <req name="osgi.package/org.codehaus.jackson.annotate:[1.8,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api.discovery:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
-  <cap name="osgi.package/com.paremus.packager.api.log:0.4.0.SNAPSHOT" attrs="bundle-version=0.4.0.SNAPSHOT,bundle-symbolic-name=&quot;com.paremus.packager.api&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.api:0.4.0.SNAPSHOT" />
  </part>
  <part name="osgi.resolved.bundle/jackson-annotations:2" >
   <artifact name="jackson-annotations:2.0.0" uri="jackson-annotations/jackson-annotations-2.0.0.jar" />
