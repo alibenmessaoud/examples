@@ -40,10 +40,13 @@ public class PlayAppProcessGuard implements ProcessGuard {
 	}
 
 	public void state(State state) throws Exception {
-		if (state.isAlive())
-			System.out.println("Play REST App is running");
-		else
+		if (state.isAlive()) {
+			// Ignore the PINGED state... too noisy
+			if (state == State.STARTED)
+				System.out.println("Play REST App STARTED");
+		} else {
 			System.out.println("Play REST App is down");
+		}
 	}
 
 }
