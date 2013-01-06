@@ -1,22 +1,30 @@
 <system xmlns="http://schema.paremus.com/sf/1"
         name="DataNucleusExample"
-        boundary="fibre"
+        boundary="fabric"
         repopath="Camel,Packager,jetty,DataNucleus,DataNucleusDeps,fabric-ext,fabric,nimble-cmpn,nimble"
         >
 
   <!-- MongoDB package -->
   <system.part category="msf" name="org.bndtools.rt.packager.mongodb.guard" >
-  	<property name="port" value="27017" />
-  </system.part> 
+        <property name="port" value="27017" />
+  </system.part>
+
 
   <!-- The top-level "application" bundles -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
-  <!-- Add the camel parts -->
-  <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
+  <system name="MidTier OSGi" boundary="fibre">
+
+    <!-- Add the datanucleus part -->
+    <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
+    
+    <!-- Add the camel part -->
+    <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
   
+  </system>
+
+
   <!-- Play-REST application -->
   <system.part category="msf" name="com.paremus.example.play.guard" >
-  	<property name="httpPort" value="9999" />
+        <property name="httpPort" value="9999" />
   </system.part>
 
 </system>
