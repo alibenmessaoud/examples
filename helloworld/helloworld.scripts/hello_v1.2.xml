@@ -1,0 +1,39 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="HelloWorld" version="1.2.0"
+	boundary="fabric" repopath="helloworld,fabric-ext,fabric,nimble-cmpn">
+
+	<description>
+		Deploys Hello World Service. 
+	</description>
+	<nature group="demo" />
+
+        <system name="cli" boundary="fibre">
+
+	<!-- Declarative Services Version -->
+           <system.part category="osgi.active.bundle" name="helloworld.cli" />
+
+           <!-- The RSA bundles, for publishing availability of the REST endpoint -->
+           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
+           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
+           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
+
+           <contract features="(type=LOCAL)" />
+
+	</system>
+
+        <system name="hello-remote" boundary="fibre">
+
+           <system.part category="ms" name="com.example.hello.ds">
+               <property name="language" value="en" />
+               <property name="service.exported.interfaces" value="*" />
+           </system.part>
+
+           <!-- The RSA bundles, for publishing availability of the REST endpoint -->
+           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
+           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
+           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
+
+           <contract features="(type=REMOTE)" />
+
+        </system>
+
+</system>
