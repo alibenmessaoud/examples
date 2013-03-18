@@ -1,0 +1,135 @@
+<repository name="Packager" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="ms/org.bndtools.rt.packager.manager" attrs="storage=&quot;pmstorage&quot;" >
+  <req name="builder/ms" />
+  <cap name="ms/org.bndtools.rt.packager.manager" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="msf/org.bndtools.rt.packager.mongodb.guard" singleton="false" attrs="port=27017" >
+  <req name="builder/ms" />
+  <cap name="msf/org.bndtools.rt.packager.mongodb.guard" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.manager:0.1.0.201301050654" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.manager:[0.1.0.201301050654,0.1.0.201301050654)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.manager:0.1.0.201301050654" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/packager.manager" attrs="version=0.1.0.201301050654" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.client" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.client:[0,0)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.client" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.common" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.common:[0,0)" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.common" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.guard" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.guard:[0,0)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.guard" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.linux-x86_64" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.linux-x86_64:[0,0)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.linux-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongodb&quot;,version=2.2.0" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.macos-x86_64" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.macos-x86_64:[0,0)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.macos-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongodb&quot;,version=2.2.0" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.manager:0.1.0.201301050654" >
+  <artifact name="org.bndtools.rt.packager.manager:0.1.0.201301050654" uri="org.bndtools.rt.packager.manager/org.bndtools.rt.packager.manager-0.1.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/aQute.bnd.annotation.metatype:[1.43,2)" />
+  <req name="osgi.package/aQute.service.reporter:[1,2)" />
+  <req name="osgi.package/org.bndtools.service.packager:[1,2)" />
+  <req name="osgi.package/org.bndtools.service.watchdog:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.6,2)" />
+  <req name="osgi.package/org.osgi.framework.wiring:[1,2)" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.manager:0.1.0.201301050654" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/packager.manager" attrs="version=0.1.0.201301050654" />
+  <cap name="osgi.package/org.bndtools.service.packager:1" attrs="bundle-version=0.1.0.201301050654,bundle-symbolic-name=&quot;org.bndtools.rt.packager.manager&quot;" />
+  <cap name="osgi.package/aQute.service.reporter:1" attrs="bundle-version=0.1.0.201301050654,bundle-symbolic-name=&quot;org.bndtools.rt.packager.manager&quot;" />
+  <cap name="osgi.package/org.bndtools.service.watchdog:1" attrs="bundle-version=0.1.0.201301050654,bundle-symbolic-name=&quot;org.bndtools.rt.packager.manager&quot;" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.manager:0.1.0.201301050654" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.client" >
+  <artifact name="org.bndtools.rt.packager.mongodb.client:0.0.0" uri="org.bndtools.rt.packager.mongodb.client/org.bndtools.rt.packager.mongodb.client-0.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.service.command:[0.10,1)" attrs="status=&quot;provisional&quot;" optional="true" />
+  <req name="osgi.package/com.mongodb:[2.9,3)" />
+  <req name="osgi.package/org.bndtools.service.endpoint:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.client" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.mongodb.client" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.common" >
+  <artifact name="org.bndtools.rt.packager.mongodb.common:0.0.0" uri="org.bndtools.rt.packager.mongodb.common/org.bndtools.rt.packager.mongodb.common-0.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.bndtools.service.packager:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.common" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.bndtools.service.mongodb:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.rt.packager.mongodb.common&quot;" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.mongodb.common" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.guard" >
+  <artifact name="org.bndtools.rt.packager.mongodb.guard:0.0.0" uri="org.bndtools.rt.packager.mongodb.guard/org.bndtools.rt.packager.mongodb.guard-0.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.generic/packager.type" />
+  <req name="osgi.package/org.bndtools.service.endpoint:[1,1.1)" />
+  <req name="osgi.package/org.bndtools.service.packager:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.3,2)" />
+  <req name="osgi.generic/packager.type" ldap="(packager.type=mongodb)" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.guard" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.bndtools.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.rt.packager.mongodb.guard&quot;" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.mongodb.guard" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.linux-x86_64" >
+  <artifact name="org.bndtools.rt.packager.mongodb.linux-x86_64:0.0.0" uri="org.bndtools.rt.packager.mongodb.linux-x86_64/org.bndtools.rt.packager.mongodb.linux-x86_64-0.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.generic/packager.manager" />
+  <req name="osgi.generic/osgi.native" />
+  <req name="osgi.package/aQute.service.reporter:[1,2)" />
+  <req name="osgi.package/org.bndtools.service.mongodb:[1,2)" />
+  <req name="osgi.package/org.bndtools.service.packager:[1,2)" />
+  <req name="osgi.generic/packager.manager" ldap="(!(version&gt;=2.0))" />
+  <req name="osgi.generic/osgi.native" ldap="(&amp;(osgi.native.osname=Linux)(osgi.native.processor=x86-64))" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.linux-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongodb&quot;,version=2.2.0" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.mongodb.linux-x86_64" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.macos-x86_64" >
+  <artifact name="org.bndtools.rt.packager.mongodb.macos-x86_64:0.0.0" uri="org.bndtools.rt.packager.mongodb.macos-x86_64/org.bndtools.rt.packager.mongodb.macos-x86_64-0.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.generic/packager.manager" />
+  <req name="osgi.generic/osgi.native" />
+  <req name="osgi.package/aQute.service.reporter:[1,2)" />
+  <req name="osgi.package/org.bndtools.service.mongodb:[1,2)" />
+  <req name="osgi.package/org.bndtools.service.packager:[1,2)" />
+  <req name="osgi.generic/packager.manager" ldap="(!(version&gt;=2.0))" />
+  <req name="osgi.generic/osgi.native" ldap="(&amp;(osgi.native.osname=MacOSX)(osgi.native.processor=x86-64))" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.mongodb.macos-x86_64" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.generic/packager.type" attrs="packager.type=&quot;mongodb&quot;,version=2.2.0" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.mongodb.macos-x86_64" />
+ </part>
+ <ext name="ms.extension/org.bndtools.rt.packager.manager" target="ms/org.bndtools.rt.packager.manager:[0,0]" >
+  <req name="builder/primordial.builder" />
+  <req name="osgi.active.bundle/org.bndtools.rt.packager.manager:[0.1.0.201301050654,0.1.0.201301050654]" />
+  <cap name="ms.extension/org.bndtools.rt.packager.manager" attrs="selfcap=&quot;true&quot;" />
+ </ext>
+ <ext name="ms.extension/org.bndtools.rt.packager.mongodb.guard" target="msf/org.bndtools.rt.packager.mongodb.guard:[0,0]" >
+  <req name="builder/primordial.builder" />
+  <req name="osgi.active.bundle/org.bndtools.rt.packager.mongodb.guard:[0,0]" />
+  <cap name="ms.extension/org.bndtools.rt.packager.mongodb.guard" attrs="selfcap=&quot;true&quot;" />
+ </ext>
+ <ext-policy ext="ms.extension/org.bndtools.rt.packager.mongodb.guard" part="msf/org.bndtools.rt.packager.mongodb.guard:[0,0]" />
+ <ext-policy ext="ms.extension/org.bndtools.rt.packager.manager" part="ms/org.bndtools.rt.packager.manager:[0,0]" />
+</repository>

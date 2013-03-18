@@ -1,0 +1,13 @@
+Private-Package: com.paremus.packager.nginx.unix
+Conditional-Package: aQute.lib*
+Include-Resource: data=nginx/macos64
+
+Require-Capability: \
+	packager.manager;filter:="(!(version>=2.0))", \
+	osgi.native;filter:="(& \
+		(osgi.native.osname=MacOSX) \
+		(osgi.native.processor=x86-64) \
+	)"
+Provide-Capability: packager.type;packager.type=nginx;version:Version=2.2.0
+
+Service-Component: *

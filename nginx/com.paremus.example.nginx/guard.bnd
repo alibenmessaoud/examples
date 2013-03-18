@@ -1,0 +1,6 @@
+# Package com.paremus.service.nginx needs to be included in Private-Package due to bnd bug #277
+Private-Package: com.paremus.packager.nginx.guard,\
+	com.paremus.service.nginx,\
+	aQute.bnd.annotation.metatype
+Service-Component: *
+Require-Capability: packager.type;filter:="(packager.type=nginx)"
