@@ -1,0 +1,11 @@
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bndlib,\
+	junit.osgi,\
+	com.paremus.examples.library.api;version=latest,\
+	org.bndtools.service,\
+	org.mongodb.mongo-java-driver
+
+Private-Package: com.paremus.examples.library.mongo
+Conditional-Package: com.mongodb*, org.bson*
+Service-Component: *

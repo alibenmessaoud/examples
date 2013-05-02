@@ -1,0 +1,29 @@
+-runfw: org.apache.felix.framework;version='[4,5)'
+-runee: JavaSE-1.6
+-runsystemcapabilities: ${native_capability}
+
+-runbundles: biz.aQute.bndlib;version='[2.0.0,2.0.1)',\
+	com.paremus.packager.manager;version='[0.0.2,0.0.3)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	org.bndtools.rt.packager.api;version='[0.1.0,0.1.1)',\
+	org.bndtools.rt.packager.mongodb.client;version='[0.0.0,0.0.1)',\
+	org.bndtools.rt.packager.mongodb.common;version='[0.0.0,0.0.1)',\
+	org.bndtools.rt.packager.mongodb.guard;version='[0.0.0,0.0.1)',\
+	org.bndtools.rt.packager.mongodb.macos-x86_64;version='[0.0.0,0.0.1)',\
+	org.bndtools.service;version='[0.0.0,0.0.1)',\
+	org.mongodb.mongo-java-driver;version='[2.9.1,2.9.2)',\
+	osgi.cmpn;version='[4.2.0,4.2.1)'
+
+-runrequires: osgi.identity;filter:='(osgi.identity=org.bndtools.rt.packager.mongodb.guard)',\
+	osgi.identity;filter:='(osgi.identity=org.bndtools.rt.packager.mongodb.client)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)'
+
+-resolve.effective: active
+-runrepos: Local,\
+	BundleHub,\
+	Release,\
+	Workspace
