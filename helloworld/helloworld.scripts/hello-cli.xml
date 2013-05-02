@@ -1,5 +1,5 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="hello-cli"
-	boundary="fabric" repopath="helloworld,fabric-ext,fabric,nimble-cmpn">
+	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
 
 	<description>
 		Deploys CLI command service.

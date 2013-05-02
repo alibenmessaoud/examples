@@ -1,5 +1,5 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="HelloWorld" version="1.0.0"
-	boundary="fabric" repopath="helloworld,fabric-ext,fabric,nimble-cmpn">
+	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
 
 	<description>
 		Deploys Hello World Service.

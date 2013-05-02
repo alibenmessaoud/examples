@@ -17,7 +17,7 @@
   see http://www.apache.org/licenses/LICENSE-2.0 
 -->
 <system name="gateway.slp.system" version="1.0"
-        boundary="fabric" repopath="gateway,nimble-rs,aries,aries-ext,fabric,fabric-ext,nimble-cmpn"
+        boundary="fabric" repopath="gateway,nimble-rs,aries,aries-ext,fabric,nimble-cmpn"
   xmlns="http://schema.paremus.com/sf/1">
   <description>Deploys a pricer and gateway component wired together using slp and essencermi</description>
 

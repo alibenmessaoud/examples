@@ -1,6 +1,6 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="RESTdemo"
 	boundary="fabric"
-	repopath="RESTdemo,jetty,RESTdemo-deps,fabric-ext,fabric,nimble-cmpn,nimble,nimble-rs">
+	repopath="RESTdemo,jetty,RESTdemo-deps,fabric,nimble-cmpn,nimble,nimble-rs">
 
 	<system name="Library" boundary="fibre">
 		<!-- The REST endpoint bundle -->

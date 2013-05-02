@@ -1,5 +1,5 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="hello-server-remote"
-	boundary="fabric" repopath="helloworld,fabric-ext,fabric,nimble-cmpn">
+	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
 
 	<description>
 		Deploys a "remote" Declarative Services based Greeting service.
