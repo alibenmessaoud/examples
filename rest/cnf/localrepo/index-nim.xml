@@ -1,4 +1,4 @@
-<repository name="Local:0" xmlns="http://schema.paremus.com/nri/2" >
+<repository name="Local" xmlns="http://schema.paremus.com/nri/2" >
  <part name="ms/org.apache.felix.http" attrs="org.apache.felix.http.debug=false,org.apache.felix.http.enable=true,org.apache.felix.http.nio=true,org.apache.felix.https.clientcertificate=&quot;none&quot;,org.apache.felix.https.enable=false,org.apache.felix.https.nio=true,org.osgi.service.http.port=8080,org.osgi.service.http.port.secure=433" >
   <req name="builder/ms" />
   <cap name="ms/org.apache.felix.http" attrs="selfcap=&quot;true&quot;" />
@@ -43,16 +43,35 @@
   <req name="osgi.resolved.bundle/org.apache.felix.framework:[4.0.3,4.0.3)" />
   <cap name="osgi.active.bundle/org.apache.felix.framework:4.0.3" attrs="selfcap=&quot;true&quot;" />
  </part>
+ <part name="osgi.active.bundle/org.apache.felix.gogo.command:0.12" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.gogo.command:[0.12,0.12)" />
+  <cap name="osgi.active.bundle/org.apache.felix.gogo.command:0.12" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.felix.gogo.runtime:0.10" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.gogo.runtime:[0.10,0.10)" />
+  <cap name="osgi.active.bundle/org.apache.felix.gogo.runtime:0.10" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.felix.gogo.shell:0.10" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.gogo.shell:[0.10,0.10)" />
+  <cap name="osgi.active.bundle/org.apache.felix.gogo.shell:0.10" attrs="selfcap=&quot;true&quot;" />
+ </part>
  <part name="osgi.active.bundle/org.apache.felix.http.jetty:2.2" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/org.apache.felix.http.jetty:[2.2,2.2)" />
   <cap name="osgi.active.bundle/org.apache.felix.http.jetty:2.2" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.generic/osgi.service" attrs="objectClass=&quot;org.osgi.service.http.HttpService&quot;" />
  </part>
- <part name="osgi.active.bundle/org.apache.felix.scr:1.6" >
+ <part name="osgi.active.bundle/org.apache.felix.scr:1.6.2" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/org.apache.felix.scr:[1.6,1.6)" />
-  <cap name="osgi.active.bundle/org.apache.felix.scr:1.6" attrs="selfcap=&quot;true&quot;" />
+  <req name="osgi.resolved.bundle/org.apache.felix.scr:[1.6.2,1.6.2)" />
+  <cap name="osgi.active.bundle/org.apache.felix.scr:1.6.2" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.bndtools.rt.packager.api:0.2.0.201304091715" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.bndtools.rt.packager.api:[0.2.0.201304091715,0.2.0.201304091715)" />
+  <cap name="osgi.active.bundle/org.bndtools.rt.packager.api:0.2.0.201304091715" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.active.bundle/org.bndtools.rt.rest:1" >
   <req name="builder/osgi.active.bundle" />
@@ -65,10 +84,20 @@
   <req name="osgi.resolved.bundle/org.bndtools.service:[0,0)" />
   <cap name="osgi.active.bundle/org.bndtools.service" attrs="selfcap=&quot;true&quot;" />
  </part>
+ <part name="osgi.active.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:[2.9.1.RELEASE,2.9.1.RELEASE)" />
+  <cap name="osgi.active.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" attrs="selfcap=&quot;true&quot;" />
+ </part>
  <part name="osgi.active.bundle/osgi.cmpn:4.2.0.200908310645" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/osgi.cmpn:[4.2.0.200908310645,4.2.0.200908310645)" />
   <cap name="osgi.active.bundle/osgi.cmpn:4.2.0.200908310645" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/osgi.cmpn:4.3.0.201111022214" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/osgi.cmpn:[4.3.0.201111022214,4.3.0.201111022214)" />
+  <cap name="osgi.active.bundle/osgi.cmpn:4.3.0.201111022214" attrs="selfcap=&quot;true&quot;" />
  </part>
  <part name="osgi.resolved.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" >
   <artifact name="biz.aQute.bndlib:2.0.0.20121021-234834" uri="biz.aQute.bndlib/biz.aQute.bndlib-2.0.0.jar" />
@@ -220,6 +249,45 @@
   <cap name="osgi.package/org.osgi.util.tracker:1.5" attrs="bundle-version=4.0.3,bundle-symbolic-name=&quot;org.apache.felix.framework&quot;" />
   <cap name="osgi.require.bundle/org.apache.felix.framework:4.0.3" />
  </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.gogo.command:0.12" >
+  <artifact name="org.apache.felix.gogo.command:0.12.0" uri="org.apache.felix.gogo.command/org.apache.felix.gogo.command-0.12.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.service.command:[0.10,1)" attrs="status=&quot;provisional&quot;" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.framework.wiring:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
+  <req name="osgi.package/org.osgi.service.packageadmin:[1.2,2)" />
+  <req name="osgi.package/org.osgi.service.startlevel:[1.1,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.3,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.gogo.command:0.12" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.osgi.service.log:1.3" attrs="bundle-version=0.12.0,bundle-symbolic-name=&quot;org.apache.felix.gogo.command&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.gogo.command:0.12" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.gogo.runtime:0.10" >
+  <artifact name="org.apache.felix.gogo.runtime:0.10.0" uri="org.apache.felix.gogo.runtime/org.apache.felix.gogo.runtime-0.10.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.gogo.api:0.10" />
+  <req name="osgi.package/org.apache.felix.service.command:0.10" attrs="status=&quot;provisional&quot;" />
+  <req name="osgi.package/org.apache.felix.service.threadio:0.10" attrs="status=&quot;provisional&quot;" />
+  <req name="osgi.package/org.osgi.framework" />
+  <req name="osgi.package/org.osgi.service.event" optional="true" />
+  <req name="osgi.package/org.osgi.util.tracker" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.gogo.runtime:0.10" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.felix.service.command:0.10" attrs="status=&quot;provisional&quot;,bundle-version=0.10.0,bundle-symbolic-name=&quot;org.apache.felix.gogo.runtime&quot;" mandatory="status" />
+  <cap name="osgi.package/org.apache.felix.gogo.api:0.10" attrs="bundle-version=0.10.0,bundle-symbolic-name=&quot;org.apache.felix.gogo.runtime&quot;" />
+  <cap name="osgi.package/org.apache.felix.service.threadio:0.10" attrs="status=&quot;provisional&quot;,bundle-version=0.10.0,bundle-symbolic-name=&quot;org.apache.felix.gogo.runtime&quot;" mandatory="status" />
+  <cap name="osgi.require.bundle/org.apache.felix.gogo.runtime:0.10" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.gogo.shell:0.10" >
+  <artifact name="org.apache.felix.gogo.shell:0.10.0" uri="org.apache.felix.gogo.shell/org.apache.felix.gogo.shell-0.10.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.service.command:0.10" attrs="status=&quot;provisional&quot;" />
+  <req name="osgi.package/org.osgi.framework" />
+  <req name="osgi.package/org.osgi.service.startlevel" />
+  <req name="osgi.package/org.osgi.util.tracker" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.gogo.shell:0.10" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.gogo.shell:0.10" />
+ </part>
  <part name="osgi.resolved.bundle/org.apache.felix.http.jetty:2.2" >
   <artifact name="org.apache.felix.http.jetty:2.2.0" uri="org.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
@@ -247,20 +315,30 @@
   <cap name="osgi.package/javax.servlet.http:2.5" attrs="bundle-version=2.2.0,bundle-symbolic-name=&quot;org.apache.felix.http.jetty&quot;" />
   <cap name="osgi.require.bundle/org.apache.felix.http.jetty:2.2" />
  </part>
- <part name="osgi.resolved.bundle/org.apache.felix.scr:1.6" >
-  <artifact name="org.apache.felix.scr:1.6.0" uri="org.apache.felix.scr/org.apache.felix.scr-1.6.0.jar" />
+ <part name="osgi.resolved.bundle/org.apache.felix.scr:1.6.2" >
+  <artifact name="org.apache.felix.scr:1.6.2" uri="org.apache.felix.scr/org.apache.felix.scr-1.6.2.jar" />
   <req name="builder/osgi.resolved.bundle" />
-  <req name="osgi.package/org.apache.felix.shell:1" optional="true" />
+  <req name="osgi.package/org.apache.felix.scr:[1.7,1.8)" />
+  <req name="osgi.package/org.apache.felix.service.command:[0.6,1)" attrs="status=&quot;provisional&quot;" optional="true" />
+  <req name="osgi.package/org.apache.felix.shell:[1,1.1)" optional="true" />
   <req name="osgi.package/org.osgi.framework:[1.4,2)" />
-  <req name="osgi.package/org.osgi.service.cm:[1.2,2)" optional="true" />
-  <req name="osgi.package/org.osgi.service.component:[1.1,1.2)" />
+  <req name="osgi.package/org.osgi.service.component:[1.2,1.3)" />
   <req name="osgi.package/org.osgi.service.log:[1.3,2)" optional="true" />
-  <req name="osgi.package/org.osgi.service.metatype:[1.1,2)" optional="true" />
   <req name="osgi.package/org.osgi.service.packageadmin:[1.2,2)" optional="true" />
-  <cap name="osgi.resolved.bundle/org.apache.felix.scr:1.6" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/org.apache.felix.scr:1.6" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.felix.scr&quot;" />
-  <cap name="osgi.package/org.osgi.service.component:1.1" attrs="bundle-version=1.6.0,bundle-symbolic-name=&quot;org.apache.felix.scr&quot;" />
-  <cap name="osgi.require.bundle/org.apache.felix.scr:1.6" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.scr:1.6.2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.felix.scr:1.7" attrs="bundle-version=1.6.2,bundle-symbolic-name=&quot;org.apache.felix.scr&quot;" />
+  <cap name="osgi.package/org.apache.felix.scr.component:1" attrs="status=&quot;provisional&quot;,bundle-version=1.6.2,bundle-symbolic-name=&quot;org.apache.felix.scr&quot;" mandatory="status" />
+  <cap name="osgi.package/org.osgi.service.component:1.2" attrs="bundle-version=1.6.2,bundle-symbolic-name=&quot;org.apache.felix.scr&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.scr:1.6.2" />
+ </part>
+ <part name="osgi.resolved.bundle/org.bndtools.rt.packager.api:0.2.0.201304091715" >
+  <artifact name="org.bndtools.rt.packager.api:0.2.0.201304091715" uri="org.bndtools.rt.packager.api/org.bndtools.rt.packager.api-0.2.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <cap name="osgi.resolved.bundle/org.bndtools.rt.packager.api:0.2.0.201304091715" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.bndtools.service.packager:1.1" attrs="bundle-version=0.2.0.201304091715,bundle-symbolic-name=&quot;org.bndtools.rt.packager.api&quot;" />
+  <cap name="osgi.package/aQute.service.reporter:1" attrs="bundle-version=0.2.0.201304091715,bundle-symbolic-name=&quot;org.bndtools.rt.packager.api&quot;" />
+  <cap name="osgi.package/org.bndtools.service.watchdog:0.2.0.201304091715" attrs="bundle-version=0.2.0.201304091715,bundle-symbolic-name=&quot;org.bndtools.rt.packager.api&quot;" />
+  <cap name="osgi.require.bundle/org.bndtools.rt.packager.api:0.2.0.201304091715" />
  </part>
  <part name="osgi.resolved.bundle/org.bndtools.rt.rest:1" >
   <artifact name="org.bndtools.rt.rest:1.0.0" uri="org.bndtools.rt.rest/org.bndtools.rt.rest-1.0.0.jar" />
@@ -326,7 +404,26 @@
   <req name="builder/osgi.resolved.bundle" />
   <cap name="osgi.resolved.bundle/org.bndtools.service" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.package/org.bndtools.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.service&quot;" />
+  <cap name="osgi.package/org.bndtools.service.store:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.service&quot;" />
   <cap name="osgi.require.bundle/org.bndtools.service" />
+ </part>
+ <part name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" >
+  <artifact name="org.mongodb.mongo-java-driver:2.9.1.RELEASE" uri="org.mongodb.mongo-java-driver/org.mongodb.mongo-java-driver-2.9.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.management" />
+  <req name="osgi.package/javax.net" />
+  <req name="osgi.package/javax.net.ssl" />
+  <cap name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.mongodb:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/com.mongodb.io:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/com.mongodb.util:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/com.mongodb.gridfs:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/org.bson:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/org.bson.util:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/org.bson.util.annotations:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/org.bson.types:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.package/org.bson.io:2.9.1.RELEASE" attrs="bundle-version=2.9.1.RELEASE,bundle-symbolic-name=&quot;org.mongodb.mongo-java-driver&quot;" />
+  <cap name="osgi.require.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" />
  </part>
  <part name="osgi.resolved.bundle/osgi.cmpn:4.2.0.200908310645" >
   <artifact name="osgi.cmpn:4.2.0.200908310645" uri="osgi.cmpn/osgi.cmpn-4.2.0.jar" />
@@ -405,6 +502,56 @@
   <cap name="osgi.package/org.osgi.util.tracker:1.4" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
   <cap name="osgi.package/org.osgi.util.xml:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
   <cap name="osgi.require.bundle/osgi.cmpn:4.2.0.200908310645" />
+ </part>
+ <part name="osgi.resolved.bundle/osgi.cmpn:4.3.0.201111022214" >
+  <artifact name="osgi.cmpn:4.3.0.201111022214" uri="osgi.cmpn/osgi.cmpn-4.3.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.microedition.io" optional="true" />
+  <req name="osgi.package/javax.naming" optional="true" />
+  <req name="osgi.package/javax.naming.directory" optional="true" />
+  <req name="osgi.package/javax.persistence" optional="true" />
+  <req name="osgi.package/javax.servlet" optional="true" />
+  <req name="osgi.package/javax.servlet.http" optional="true" />
+  <req name="osgi.package/javax.sql" optional="true" />
+  <req name="osgi.package/javax.xml.parsers" optional="true" />
+  <req name="osgi.package/org.osgi.framework" optional="true" />
+  <cap name="osgi.resolved.bundle/osgi.cmpn:4.3.0.201111022214" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.osgi.application:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.application:1.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint.reflect:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint.container:1.0.2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.cm:1.4" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.component:1.2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.component.annotations:1.2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.coordinator:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.deploymentadmin:1.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.deploymentadmin.spi:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.device:1.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.dmt.notification:2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.dmt:2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.dmt.security:2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.dmt.spi:2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.dmt.notification.spi:2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.event:1.3" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.http:1.2.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.io:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.jdbc:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.jndi:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.jpa:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.log:1.3" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.metatype:1.2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.monitor:1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.prefs:1.1.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.provisioning:1.2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.remoteserviceadmin:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.upnp:1.2" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.useradmin:1.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.wireadmin:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.measurement:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.position:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.tracker:1.5" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.xml:1.0.1" attrs="bundle-version=4.3.0.201111022214,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.require.bundle/osgi.cmpn:4.3.0.201111022214" />
  </part>
  <ext name="ms.extension/org.apache.felix.http" target="ms/org.apache.felix.http:[0,0]" >
   <req name="builder/primordial.builder" />
