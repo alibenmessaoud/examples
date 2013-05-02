@@ -1,5 +1,3 @@
 -nobundles
 -dependson: com.paremus.examples.library,\
-	com.paremus.examples.rest,\
-	com.paremus.examples.library.mongo,\
-	org.bndtools.rt.packager.mongodb
+	com.paremus.examples.rest
