@@ -19,7 +19,7 @@ function LibraryCtrl($scope, Endpoints, $http) {
 	
 	$scope.endpoints = Endpoints.query();
 	
-	$scope.books = [];
+	$scope.books = null;
 	
 	$scope.listBooks = function() {
 		var uri = $scope.selectedEndpoint;
@@ -30,7 +30,7 @@ function LibraryCtrl($scope, Endpoints, $http) {
 				alert ("Failed to retrieve book list: " + data);
 			});
 		} else {
-			$scope.books = [];
+			$scope.books = null;
 		}
 	}
 	

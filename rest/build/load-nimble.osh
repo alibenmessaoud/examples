@@ -2,9 +2,12 @@ repoPath = (($0 resolve ../cnf/repos.properties) getPath)
 
 echo Repository path = $repoPath
 nim:repos -lm $repoPath
-nim:repos -l RESTdemo
-nim:repos -l RESTdemo-deps
+nim:repos -l Release
+nim:repos -l Local
+
+nim:repos -l http://bundlerepo.org/paremus/index-nim.xml
+nim:repos -l ($POSH_HOME resolve lib/jetty/jetty.xml)
 
 #nim:add com.paremus.examples.rest.resource@active
-#nim:add com.paremus.examples.library@active
+#nim:add com.paremus.examples.library.impl@active
 #nim:add com.paremus.examples.rest.site@active

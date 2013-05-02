@@ -1,14 +1,22 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="RESTdemo"
 	boundary="fabric"
-	repopath="RESTdemo,jetty,RESTdemo-deps,fabric,nimble-cmpn,nimble,nimble-rs">
+	repopath="Release,Local,Paremus,jetty,fabric,nimble-cmpn,nimble,nimble-rs">
 
 	<system name="Library" boundary="fibre">
-		<!-- The REST endpoint bundle -->
-		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.resource" />
-
 		<!-- The web application that talks to the REST endpoint -->
 		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.site" />
 		
+		<!-- The REST endpoint bundle and library implementation -->
+		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.resource" />
+		<system.part category="osgi.active.bundle" name="com.paremus.examples.library.mongo" />
+
+		<!-- MongoDB -->
+		<system.part category="msf" name="org.bndtools.rt.packager.mongodb.guard">
+			<!-- optionally override config here, e.g.:
+				<property name="port" value="27018" type="integer"/>
+			-->
+		</system.part>
+
 		<!-- The RSA bundles, for publishing availability of the REST endpoint -->
 		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
 		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
