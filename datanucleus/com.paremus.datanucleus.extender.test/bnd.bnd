@@ -20,8 +20,6 @@ Private-Package: com.paremus.datanucleus.extender.test
 	org.datanucleus,\
 	org.datanucleus.api.jdo,\
 	javax.jdo,\
-	com.paremus.packager.whiteboard;version=latest,\
-	com.paremus.packager.api,\
 	org.apache.servicemix.bundles.jsr305,\
 	jackson-core-asl
 
