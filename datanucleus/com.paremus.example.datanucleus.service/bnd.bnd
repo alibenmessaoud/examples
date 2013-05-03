@@ -21,8 +21,14 @@ Import-Package: org.apache.felix.service.command;resolution:=optional,\
 	*
 Export-Package: com.paremus.example.datanucleus.blog.api
 Require-Capability: \
-	dsp.datanucleus.model;filter:="(dsp.datanucleus.model=SampleModel)", \
-	osgi.service;filter:="(&(objectClass=javax.jdo.PersistenceManagerFactory)(store=mongodb))";effective:=active
+	dsp.datanucleus.model;\
+		filter:="(dsp.datanucleus.model=SampleModel)", \
+	osgi.service;\
+		filter:="(&(objectClass=javax.jdo.PersistenceManagerFactory)(store=mongodb))";\
+		effective:=active,\
+	osgi.extender;\
+		filter:="(&(osgi.extender=bndtools.rt.rest)(version>=1.0)(!(version>=2.0)))";\
+		effective:=active
 
 REST-Alias: /blog
 REST-Classes: com.paremus.example.datanucleus.service.rest.BlogCommentsResource
