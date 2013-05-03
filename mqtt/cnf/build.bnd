@@ -1,0 +1,40 @@
+## Place your specific settings here.
+
+
+## Default settings are in ext/*.bnd and they will be overridden by anything
+## you specify in this file.
+
+
+## Properties from ext/*.bnd can be referenced in order to extend them.
+## For example, to add one addtional plugin to the list defined in ext/repositories.bnd:
+# -plugin: ${ext.repositories.-plugin}, org.example.MyPlugin
+
+-pluginpath: ${ext.repositories.-pluginpath}, \
+  ${plugindir}/com.paremus.nimble.bnd/com.paremus.nimble.bnd-0.0.0.jar
+
+-plugin: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo;\
+		name=Release;\
+		local=${workspace}/cnf/releaserepo;\
+		pretty=true;\
+		type=R5|Nimble,\
+	aQute.bnd.deployer.repository.LocalIndexedRepo;\
+		name=Local;\
+		local=${workspace}/cnf/localrepo;\
+		pretty=true;\
+		type=R5|Nimble,\
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=Bndtools-RT; \
+		locations=https://bndtools.ci.cloudbees.com/job/bndtools-rt.master/lastSuccessfulBuild/artifact/cnf/releaserepo/index.xml.gz, \
+	aQute.bnd.deployer.repository.FixedIndexedRepo; \
+		name=Paremus; \
+		locations=http://bundlerepo.org/paremus/index.xml.gz, \
+	aQute.lib.deployer.FileRepo; \
+		name=Build;\
+		location=${workspace}/cnf/buildrepo,\
+	com.paremus.nimble.bnd.NimbleContentProvider
+
+## If you use git, you might want to uncomment the following lines:
+# Git-Descriptor: ${system-allow-fail;git describe --dirty --always}
+# Git-SHA: ${system-allow-fail;git rev-list -1 HEAD}
+

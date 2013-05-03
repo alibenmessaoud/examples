@@ -1,0 +1,11 @@
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	org.bndtools.service,\
+	org.bndtools.rt.packager.mosquitto.guard,\
+	org.bndtools.rt.packager.mosquitto.macos-x86_64,\
+	org.eclipse.paho.client.mqttv3
+
+Service-Component: *
+Private-Package: com.paremus.examples.mqtt.server

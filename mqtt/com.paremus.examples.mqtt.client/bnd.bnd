@@ -1,0 +1,8 @@
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	org.bndtools.service
+
+Private-Package: com.paremus.examples.mqtt.client
+Service-Component: *
