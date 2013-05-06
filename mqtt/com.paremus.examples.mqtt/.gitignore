@@ -1,0 +1,7 @@
+# Standard bnd project exclusions
+/bin/
+/bin_test/
+/generated/
+
+# Mosquitto lock files
+/*/.lck

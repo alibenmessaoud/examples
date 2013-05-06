@@ -1,0 +1,3 @@
+Private-Package: com.paremus.examples.mqtt.mockdata
+Service-Component: *
+Require-Capability: osgi.service; filter:="(objectClass=org.osgi.service.event.EventAdmin)"; effective:=active
