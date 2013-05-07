@@ -9,12 +9,12 @@
 <body ng-app="demo">
 
 	<div class="container">
-		<div ng-controller="LibraryCtrl" class="row">
+		<div ng-controller="BookshelfCtrl" class="row">
 			<h1>Book List</h1>
 			
 			<form class="form-inline">
 				<select ng-model="selectedEndpoint" ng-change="listBooks()" ng-options="e.uri as e.uri for e in endpoints" >
-					<option value="">-- Select Library URI --</option>
+					<option value="">-- Select Bookshelf URI --</option>
 				</select>
 			</form>
 			

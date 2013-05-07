@@ -8,7 +8,7 @@
  * Contributors:
  *     "Neil Bartlett, Paremus Ltd" <neil.bartlett@paremus.com> - initial API and implementation
  ******************************************************************************/
-package com.paremus.examples.api.library;
+package com.paremus.examples.api.bookshelf;
 
 public class Book {
 

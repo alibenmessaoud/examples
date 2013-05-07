@@ -9,5 +9,5 @@ nim:repos -l http://bundlerepo.org/paremus/index-nim.xml
 nim:repos -l ($POSH_HOME resolve lib/jetty/jetty.xml)
 
 #nim:add com.paremus.examples.rest.resource@active
-#nim:add com.paremus.examples.library.impl@active
+#nim:add com.paremus.examples.bookshelf.impl@active
 #nim:add com.paremus.examples.rest.site@active

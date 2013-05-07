@@ -8,7 +8,7 @@
  * Contributors:
  *     "Neil Bartlett, Paremus Ltd" <neil.bartlett@paremus.com> - initial API and implementation
  ******************************************************************************/
-package com.paremus.examples.impl.library;
+package com.paremus.examples.impl.bookshelf;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -16,15 +16,15 @@ import java.util.List;
 
 import aQute.bnd.annotation.component.Component;
 
-import com.paremus.examples.api.library.Book;
-import com.paremus.examples.api.library.Library;
+import com.paremus.examples.api.bookshelf.Book;
+import com.paremus.examples.api.bookshelf.Bookshelf;
 
 @Component(immediate = true)
-public class NonPersistentLibraryComponent implements Library {
+public class NonPersistentBookshelfComponent implements Bookshelf {
 	
 	private final List<Book> books = new LinkedList<Book>();
 	
-	public NonPersistentLibraryComponent() {
+	public NonPersistentBookshelfComponent() {
 		// Populate with some dummy books
 		books.add(new Book("Charles Dickens", "The Old Curiosity Shop"));
 		books.add(new Book("Edwin A. Abbot", "Flatland"));

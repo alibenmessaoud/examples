@@ -1,4 +1,4 @@
-REST-Alias: /library
+REST-Alias: /bookshelf
 REST-Classes: ${classes;CONCRETE;ANNOTATION;javax.ws.rs.Path}
 Private-Package: com.paremus.examples.impl.resource
 

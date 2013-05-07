@@ -8,14 +8,14 @@
  * Contributors:
  *     "Neil Bartlett, Paremus Ltd" <neil.bartlett@paremus.com> - initial API and implementation
  ******************************************************************************/
-package com.paremus.examples.api.library;
+package com.paremus.examples.api.bookshelf;
 
 import java.util.List;
 
 import aQute.bnd.annotation.ProviderType;
 
 @ProviderType
-public interface Library {
+public interface Bookshelf {
 
 	List<Book> listBooks();
 	

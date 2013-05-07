@@ -15,7 +15,7 @@ app.factory("Endpoints", function($resource) {
 	return $resource("/endpoints");
 });
 
-function LibraryCtrl($scope, Endpoints, $http) {
+function BookshelfCtrl($scope, Endpoints, $http) {
 	
 	$scope.endpoints = Endpoints.query();
 	

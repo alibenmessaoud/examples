@@ -25,14 +25,14 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.paremus.examples.api.library.Book;
-import com.paremus.examples.api.library.Library;
+import com.paremus.examples.api.bookshelf.Book;
+import com.paremus.examples.api.bookshelf.Bookshelf;
 
 @Path("/")
-public class LibraryResource {
+public class BookshelfResource {
 	
 	@Inject
-	Library library;
+	Bookshelf bookshelf;
 	
 	private ResponseBuilder addAccessControlHeaders(ResponseBuilder rb) {
 		return rb.header("Access-Control-Allow-Origin", "*")
@@ -49,7 +49,7 @@ public class LibraryResource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response listBooks() throws Exception {
 		StringWriter writer = new StringWriter();
-		new ObjectMapper().writeValue(writer, library.listBooks());
+		new ObjectMapper().writeValue(writer, bookshelf.listBooks());
 		
 		return addAccessControlHeaders(Response.ok(writer.toString())).build();
 	}
@@ -58,7 +58,7 @@ public class LibraryResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response postBook(InputStream data) throws Exception {
 		Book book = new ObjectMapper().readValue(data, Book.class);
-		library.add(book);
+		bookshelf.add(book);
 		return addAccessControlHeaders(Response.noContent()).build();
 	}
 	

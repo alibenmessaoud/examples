@@ -17,20 +17,20 @@ import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
 
 /**
- * This component creates a REST endpoint that lists Library endpoint URLs, as
+ * This component creates a REST endpoint that lists Bookshelf endpoint URLs, as
  * advertised within OSGi by the {@link Endpoint} service type. In other words a
- * REST client can get a list of available RESTful Library services, as JSON
+ * REST client can get a list of available RESTful Bookshelf services, as JSON
  * object array.
  */
 @Component(immediate = true, provide = Object.class, properties = {
 	"osgi.rest.alias=/endpoints"
 })
 @Path("/")
-public class LibraryEndpointListingComponent {
+public class BookshelfEndpointListingComponent {
 	
 	private final List<String> endpointUris = new LinkedList<String>();
 	
-	@Reference(type = '*', target = "(uri=http://*/library)")
+	@Reference(type = '*', target = "(uri=http://*/bookshelf)")
 	synchronized void bindEndpoint(Endpoint endpoint, Map<String, String> props) {
 		endpointUris.add(props.get(Endpoint.URI));
 	}

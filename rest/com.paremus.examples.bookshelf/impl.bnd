@@ -1,0 +1,6 @@
+Service-Component: *
+Private-Package: com.paremus.examples.impl.bookshelf
+
+Provide-Capability: osgi.service;\
+	objectClass=com.paremus.examples.api.bookshelf.Bookshelf;\
+	effective:=active

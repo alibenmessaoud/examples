@@ -1,4 +1,4 @@
-package com.paremus.examples.library.mongo;
+package com.paremus.examples.bookshelf.mongo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,11 +17,11 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.MongoURI;
-import com.paremus.examples.api.library.Book;
-import com.paremus.examples.api.library.Library;
+import com.paremus.examples.api.bookshelf.Book;
+import com.paremus.examples.api.bookshelf.Bookshelf;
 
 @Component(immediate = true)
-public class MongoLibraryComponent implements Library {
+public class MongoBookshelfComponent implements Bookshelf {
 	
 	private MongoURI boundUri;
 	private Mongo mongo;
