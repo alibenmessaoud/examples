@@ -1,6 +1,7 @@
 package com.paremus.examples.mqtt.mockdata;
 
 import java.net.URI;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.Executors;
@@ -9,12 +10,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.bndtools.service.endpoint.Endpoint;
 import org.eclipse.paho.client.mqttv3.MqttClient;
-import org.eclipse.paho.client.mqttv3.MqttException;
 
 import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
+
+import com.paremus.examples.util.Marshaller;
 
 /**
  * Generates random geiger-counter data and sends it to the MQTT server using
@@ -52,11 +54,13 @@ public class MockDataComponent {
 		executor = Executors.newScheduledThreadPool(1);
 		executor.scheduleAtFixedRate(new Runnable() {
 			public void run() {
-				double randomDose = random.nextDouble() * 100d;
-				System.out.printf("[mockdata]: Sending random dose value of %f%n", randomDose);
 				try {
-					mqttClient.getTopic("geiger").publish(Double.toString(randomDose).getBytes(), 0, false);
-				} catch (MqttException e) {
+					HashMap<String, Object> map = new HashMap<String, Object>();
+					map.put("dose", random.nextDouble() * 100d);
+					map.put("time", System.currentTimeMillis());
+					map.put("source", "mockdata");
+					mqttClient.getTopic("geiger").publish(Marshaller.marshal(map), 0, false);
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}

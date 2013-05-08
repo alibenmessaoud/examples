@@ -1,7 +1,6 @@
 package com.paremus.examples.mqtt.server;
 
 import java.net.URI;
-import java.util.Hashtable;
 import java.util.Map;
 
 import org.bndtools.service.endpoint.Endpoint;
@@ -17,6 +16,8 @@ import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
+
+import com.paremus.examples.util.Marshaller;
 
 /**
  * Subscribes to MQTT server and republishes messages from the topic "geiger" to
@@ -35,13 +36,9 @@ public class TopicSubscriber {
 	private MqttCallback mqttCallback = new MqttCallback() {
 		@Override
 		public void messageArrived(MqttTopic topic, MqttMessage message) throws Exception {
-			String messageStr = new String(message.getPayload());
-			double dose = Double.parseDouble(messageStr);
-			
-			System.out.printf("[subscriber]: received dose value %f over MQTT, forwarding to EventAdmin%n", dose);
-			Map<String, Object> eventProps = new Hashtable<String, Object>();
-			eventProps.put("dose", dose);
-			eventAdmin.postEvent(new Event("TELEMETRY/RADIATION", eventProps));
+			@SuppressWarnings("unchecked")
+			Map<String, Object> map = (Map<String, Object>) Marshaller.unmarshal(message.getPayload());
+			eventAdmin.postEvent(new Event("TELEMETRY/RADIATION", map));
 		}
 		
 		@Override

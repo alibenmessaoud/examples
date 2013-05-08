@@ -31,12 +31,15 @@
 			<div class="row" ng-switch on="state">
 				<div class="span12" ng-switch-when="received">
 					<div class="alert alert-block alert-info">
-						<h1>{{value}}</h1>
+						<p>Latest reading:</p>
+						<h1>{{data.dose}}</h1>
+						<p>Received from device <em>{{data.source}}</em> at {{data.time}}</p>
 					</div>
 				</div>
 				<div class="span12" ng-switch-when="error">
-					<div class="alert alert-error">
-						{{message}}
+					<div class="alert alert-block alert-error">
+						<h4>Error</h4>
+						<p>{{message}}</p>
 					</div>
 				</div>
 				<div class="span12" ng-switch-default>

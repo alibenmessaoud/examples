@@ -56,6 +56,7 @@ import org.jboss.netty.handler.codec.http.websocketx.WebSocketServerHandshakerFa
 import org.jboss.netty.logging.InternalLogger;
 import org.jboss.netty.logging.InternalLoggerFactory;
 import org.jboss.netty.util.CharsetUtil;
+import org.json.JSONObject;
 
 import com.floreysoft.jmte.Engine;
 
@@ -89,11 +90,11 @@ public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
         }
     }
     
-    public void sendText(String text) {
+    public void sendAsString(Object object) {
     	for (Iterator<Channel> iter = clients.iterator(); iter.hasNext(); ) {
     		Channel channel = iter.next();
     		if (channel.isOpen())
-    			channel.write(new TextWebSocketFrame(text));
+    			channel.write(new TextWebSocketFrame(object.toString()));
     		else
     			iter.remove();
     	}

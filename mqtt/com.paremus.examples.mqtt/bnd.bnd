@@ -7,5 +7,13 @@
 	org.eclipse.paho.client.mqttv3,\
 	org.jboss.netty;version=3.6,\
 	biz.aQute.bndlib;version=2.0,\
-	com.floreysoft.jmte;version=3.1
+	com.floreysoft.jmte;version=3.1,\
+	org.json
+
 -sub: *.bnd
+
+Conditional-Package: \
+	aQute.lib.*,\
+	org.json,\
+	com.paremus.examples.util.*
+	

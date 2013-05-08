@@ -12,7 +12,7 @@ function SensorDataCtrl ($scope) {
 		socket = new WebSocket(webSocketLocation);
 		socket.onmessage = function(event) {
 			$scope.state = "received";
-			$scope.value = event.data;
+			$scope.data = JSON.parse(event.data);
 			$scope.$apply();
 		};
 		socket.onclose = function(event) {

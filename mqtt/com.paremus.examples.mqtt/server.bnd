@@ -1,6 +1,5 @@
 Private-Package: com.paremus.examples.mqtt.server,\
 	com.paremus.examples.websocket.server
-Conditional-Package: aQute.lib.*
 Service-Component: *
 
 Include-Resource: resources=static, templates=templates

@@ -1,6 +1,10 @@
 package com.paremus.examples.websocket.server;
 
 import java.net.InetSocketAddress;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.concurrent.Executors;
 
 import org.jboss.netty.bootstrap.ServerBootstrap;
@@ -11,6 +15,8 @@ import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 import org.jboss.netty.handler.codec.http.HttpChunkAggregator;
 import org.jboss.netty.handler.codec.http.HttpRequestDecoder;
 import org.jboss.netty.handler.codec.http.HttpResponseEncoder;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
 
@@ -24,9 +30,15 @@ import aQute.bnd.annotation.component.Deactivate;
 public class WebSocketServerComponent implements EventHandler {
 	
 	private final int port = 8000; // TODO: make this configurable
+	private final DateFormat dateFormat;
 	
 	private ServerBootstrap server;
 	private WebSocketServerHandler wshandler;
+	
+	public WebSocketServerComponent() {
+		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
+		dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+	}
 
 	@Activate
 	void start() {
@@ -56,11 +68,22 @@ public class WebSocketServerComponent implements EventHandler {
 
 	@Override
 	public void handleEvent(Event event) {
-		System.out.println("[websocket]: received event on topic " + event.getTopic());
-		Object doseObj = event.getProperty("dose");
-		if (doseObj != null && doseObj instanceof Number) {
-			double dose = ((Number) doseObj).doubleValue();
-			wshandler.sendText(String.format("%.3f μSv", dose));
+		try {
+			double dose = (Double) event.getProperty("dose");
+			String formattedDose = String.format("%.3f µSv", dose);
+			JSONObject json = new JSONObject();
+			json.put("dose", formattedDose);
+			json.put("source", event.getProperty("source"));
+			json.put("time", formatTime((Long) event.getProperty("time")));
+			wshandler.sendAsString(json);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private String formatTime(long time) {
+		synchronized (dateFormat) {
+			return dateFormat.format(new Date(time));
 		}
 	}
 	
