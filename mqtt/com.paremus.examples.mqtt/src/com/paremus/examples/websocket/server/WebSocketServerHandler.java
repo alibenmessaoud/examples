@@ -15,10 +15,23 @@
  */
 package com.paremus.examples.websocket.server;
 
+import static org.jboss.netty.handler.codec.http.HttpHeaders.isKeepAlive;
+import static org.jboss.netty.handler.codec.http.HttpHeaders.setContentLength;
+import static org.jboss.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
+import static org.jboss.netty.handler.codec.http.HttpHeaders.Names.HOST;
+import static org.jboss.netty.handler.codec.http.HttpMethod.GET;
+import static org.jboss.netty.handler.codec.http.HttpResponseStatus.FORBIDDEN;
+import static org.jboss.netty.handler.codec.http.HttpResponseStatus.NOT_FOUND;
+import static org.jboss.netty.handler.codec.http.HttpResponseStatus.OK;
+import static org.jboss.netty.handler.codec.http.HttpVersion.HTTP_1_1;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.atomic.AtomicReference;
 
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.buffer.ChannelBuffers;
@@ -44,11 +57,9 @@ import org.jboss.netty.logging.InternalLogger;
 import org.jboss.netty.logging.InternalLoggerFactory;
 import org.jboss.netty.util.CharsetUtil;
 
-import static org.jboss.netty.handler.codec.http.HttpHeaders.Names.*;
-import static org.jboss.netty.handler.codec.http.HttpHeaders.*;
-import static org.jboss.netty.handler.codec.http.HttpMethod.*;
-import static org.jboss.netty.handler.codec.http.HttpResponseStatus.*;
-import static org.jboss.netty.handler.codec.http.HttpVersion.*;
+import com.floreysoft.jmte.Engine;
+
+import aQute.lib.io.IO;
 
 /**
  * Handles handshakes and messages
@@ -58,8 +69,15 @@ public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
     private static final InternalLogger logger = InternalLoggerFactory.getInstance(WebSocketServerHandler.class);
     private static final String WEBSOCKET_PATH = "/websocket";
 
+    private final Engine templateEngine;
+    
     private final List<Channel> clients = new CopyOnWriteArrayList<Channel>();
     private WebSocketServerHandshaker handshaker;
+    
+    public WebSocketServerHandler() {
+    	templateEngine = new Engine();
+    	templateEngine.setUseCompilation(false);
+	}
 
     @Override
     public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
@@ -87,44 +105,77 @@ public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
             sendHttpResponse(ctx, req, new DefaultHttpResponse(HTTP_1_1, FORBIDDEN));
             return;
         }
-
-        // Send the demo page and favicon.ico
-        if ("/".equals(req.getUri())) {
+        
+        if (WEBSOCKET_PATH.equals(req.getUri())) {
+        	handshakeWebSocket(ctx, req);
+        } else if ("/".equals(req.getUri())) {
+        	// Generate the index page
             HttpResponse res = new DefaultHttpResponse(HTTP_1_1, OK);
 
-            ChannelBuffer content = WebSocketServerIndexPage.getContent(getWebSocketLocation(req));
+            String input= IO.collect(getClass().getClassLoader().getResourceAsStream("templates/index.html"), "UTF-8");
+            Map<String, Object> templateModel = new HashMap<String, Object>();
+            templateModel.put("WebSocketLocation", getWebSocketLocation(req));
+			String data = templateEngine.transform(input, templateModel);
+            
+            ChannelBuffer content = ChannelBuffers.wrappedBuffer(data.getBytes());
 
             res.setHeader(CONTENT_TYPE, "text/html; charset=UTF-8");
             setContentLength(res, content.readableBytes());
 
             res.setContent(content);
             sendHttpResponse(ctx, req, res);
-            return;
-        }
-        if ("/favicon.ico".equals(req.getUri())) {
-            HttpResponse res = new DefaultHttpResponse(HTTP_1_1, NOT_FOUND);
-            sendHttpResponse(ctx, req, res);
-            return;
-        }
-
-        // Handshake
-        WebSocketServerHandshakerFactory wsFactory = new WebSocketServerHandshakerFactory(getWebSocketLocation(req), null, false);
-        handshaker = wsFactory.newHandshaker(req);
-        if (handshaker == null) {
-            wsFactory.sendUnsupportedWebSocketVersionResponse(ctx.getChannel());
         } else {
-			handshaker.handshake(ctx.getChannel(), req).addListener(
-					new ChannelFutureListener() {
-						public void operationComplete(ChannelFuture future) throws Exception {
-							Channel channel = future.getChannel();
-							if (!future.isSuccess()) {
-				                Channels.fireExceptionCaught(channel, future.getCause());
-				            }
-							clients.add(channel);
-							System.out.println("Added client: " + channel.getRemoteAddress());
-						}
-					});
+        	// map all other urls to the static resources
+        	String path = "resources" + req.getUri();
+        	InputStream stream = getClass().getClassLoader().getResourceAsStream(path);
+        	if (stream != null) {
+                HttpResponse res = new DefaultHttpResponse(HTTP_1_1, OK);
+
+        		ChannelBuffer content = collect(stream);
+                setContentLength(res, content.readableBytes());
+
+                res.setContent(content);
+                sendHttpResponse(ctx, req, res);
+        	} else {
+        		sendHttpResponse(ctx, req, new DefaultHttpResponse(HTTP_1_1, NOT_FOUND));
+        	}
         }
+    }
+    
+    private ChannelBuffer collect(InputStream stream) throws IOException {
+    	ChannelBuffer cb = ChannelBuffers.dynamicBuffer(1024);
+    	
+    	try {
+    		byte[] tmp = new byte[1024];
+    		int bytesRead = stream.read(tmp);
+    		while (bytesRead >= 0) {
+    			cb.writeBytes(tmp, 0, bytesRead);
+    			bytesRead = stream.read(tmp);
+    		}
+    		return cb;
+    	} finally {
+    		stream.close();
+    	}
+    }
+    
+	private void handshakeWebSocket(ChannelHandlerContext ctx, HttpRequest req) {
+		WebSocketServerHandshakerFactory wsFactory = new WebSocketServerHandshakerFactory(getWebSocketLocation(req), null, false);
+		handshaker = wsFactory.newHandshaker(req);
+		if (handshaker == null) {
+			wsFactory.sendUnsupportedWebSocketVersionResponse(ctx.getChannel());
+		} else {
+			ChannelFutureListener channelListener = new ChannelFutureListener() {
+				public void operationComplete(ChannelFuture future)
+						throws Exception {
+					Channel channel = future.getChannel();
+					if (!future.isSuccess()) {
+						Channels.fireExceptionCaught(channel,future.getCause());
+					}
+					clients.add(channel);
+				}
+			};
+			handshaker.handshake(ctx.getChannel(), req).addListener(channelListener);
+		}
     }
 
     private void handleWebSocketFrame(ChannelHandlerContext ctx, WebSocketFrame frame) {
@@ -132,7 +183,6 @@ public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
         if (frame instanceof CloseWebSocketFrame) {
             handshaker.close(ctx.getChannel(), (CloseWebSocketFrame) frame);
             clients.remove(ctx.getChannel());
-            System.out.println("Removed client: " + ctx.getChannel().getRemoteAddress());
             return;
         }
         if (frame instanceof PingWebSocketFrame) {

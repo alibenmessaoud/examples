@@ -1,7 +1,9 @@
 -runfw: org.apache.felix.framework;version='[4,5)'
 -runee: JavaSE-1.6
 
--runbundles: com.paremus.examples.mqtt.mockdata;version=latest,\
+-runbundles: biz.aQute.bndlib;version='[2.0.0,2.0.1)',\
+	com.floreysoft.jmte;version='[3.1.0,3.1.1)',\
+	com.paremus.examples.mqtt.mockdata;version=latest,\
 	com.paremus.examples.mqtt.server;version=latest,\
 	com.paremus.packager.manager;version='[0.0.2,0.0.3)',\
 	com.paremus.packager.watchdog.manager;version='[0.0.2,0.0.3)',\

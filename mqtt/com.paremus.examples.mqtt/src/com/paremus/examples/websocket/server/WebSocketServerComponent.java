@@ -60,7 +60,7 @@ public class WebSocketServerComponent implements EventHandler {
 		Object doseObj = event.getProperty("dose");
 		if (doseObj != null && doseObj instanceof Number) {
 			double dose = ((Number) doseObj).doubleValue();
-			wshandler.sendText(String.format("Current radiation level is %.3f uSv", dose));
+			wshandler.sendText(String.format("%.3f μSv", dose));
 		}
 	}
 	

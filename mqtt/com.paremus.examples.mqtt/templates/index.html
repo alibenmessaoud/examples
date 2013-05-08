@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="MQTTDemo">
+<head>
+	<title>Paremus MQTT Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="css/spacelab/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<style type="text/css">
+	    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    		display: none;
+    	}
+    </style>
+    <script>
+    	var webSocketLocation = "${WebSocketLocation}";
+    </script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="page-header">
+					<h1>Radiation Monitor</h1>
+				</div>
+			</div>
+		</div>
+	
+		<div class="ng-cloak" ng-controller="SensorDataCtrl">
+			<div class="row" ng-switch on="state">
+				<div class="span12" ng-switch-when="received">
+					<div class="alert alert-block alert-info">
+						<h1>{{value}}</h1>
+					</div>
+				</div>
+				<div class="span12" ng-switch-when="error">
+					<div class="alert alert-error">
+						{{message}}
+					</div>
+				</div>
+				<div class="span12" ng-switch-default>
+					<div class="progress progress-striped active">
+			        	<div class="bar" style="width: 100%"><strong>Waiting for Sensor Data...</strong></div>
+			      	</div>		
+				</div>
+			</div>
+		</div>
+		
+	</div> <!-- container -->
+	
+	<script src="js/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
