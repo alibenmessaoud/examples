@@ -30,9 +30,39 @@ public class TopicSubscriber {
 	private final String clientId = Long.toString(System.currentTimeMillis());
 	
 	private String mqttUri;
-	private MqttClient client;
 	private EventAdmin eventAdmin;
-
+	private MqttClient client;
+	private MqttCallback mqttCallback = new MqttCallback() {
+		@Override
+		public void messageArrived(MqttTopic topic, MqttMessage message) throws Exception {
+			String messageStr = new String(message.getPayload());
+			double dose = Double.parseDouble(messageStr);
+			
+			System.out.printf("[subscriber]: received dose value %f over MQTT, forwarding to EventAdmin%n", dose);
+			Map<String, Object> eventProps = new Hashtable<String, Object>();
+			eventProps.put("dose", dose);
+			eventAdmin.postEvent(new Event("TELEMETRY/RADIATION", eventProps));
+		}
+		
+		@Override
+		public void deliveryComplete(MqttDeliveryToken token) {
+		}
+		
+		@Override
+		public void connectionLost(Throwable ex) {
+			System.err.println("Lost connection to MQTT server");
+			if (ex != null)
+				ex.printStackTrace();
+			System.out.println("Trying to reconnect...");
+			try {
+				connect();
+			} catch (Exception e) {
+				System.err.println("Reconnection failed");
+				e.printStackTrace();
+			}
+		}
+	};
+	
 	@Reference(target = "(uri=mqtt://*)")
 	public void setEndpoint(Endpoint endpoint, Map<String, String> endpointProps) {
 		mqttUri = endpointProps.get(Endpoint.URI);
@@ -46,41 +76,21 @@ public class TopicSubscriber {
 	
 	@Activate
 	public void start() throws Exception {
-		URI boundUri = URI.create(mqttUri);
-		URI tcpUri = new URI("tcp", null, boundUri.getHost(), boundUri.getPort(), null, null, null);
-		
-		MqttCallback callback = new MqttCallback() {
-			@Override
-			public void messageArrived(MqttTopic topic, MqttMessage message) throws Exception {
-				String messageStr = new String(message.getPayload());
-				double dose = Double.parseDouble(messageStr);
-				
-				System.out.printf("[subscriber]: received dose value %f over MQTT, forwarding to EventAdmin%n", dose);
-				Map<String, Object> eventProps = new Hashtable<String, Object>();
-				eventProps.put("dose", dose);
-				eventAdmin.postEvent(new Event("TELEMETRY/RADIATION", eventProps));
-			}
-			
-			@Override
-			public void deliveryComplete(MqttDeliveryToken token) {
-			}
-			
-			@Override
-			public void connectionLost(Throwable ex) {
-				System.err.println("Lost connection to MQTT server");
-				if (ex != null)
-					ex.printStackTrace();
-			}
-		};
-		client = new MqttClient(tcpUri.toString(), clientId);
-		client.setCallback(callback);
-		client.connect();
-		client.subscribe("geiger");
+		connect();
 	}
 	
 	@Deactivate
 	public void stop() throws Exception {
 		client.disconnect();
+	}
+	
+	private void connect() throws Exception {
+		URI boundUri = URI.create(mqttUri);
+		URI tcpUri = new URI("tcp", null, boundUri.getHost(), boundUri.getPort(), null, null, null);
+		client = new MqttClient(tcpUri.toString(), clientId);
+		client.setCallback(mqttCallback);
+		client.connect();
+		client.subscribe("geiger");
 	}
 
 }
