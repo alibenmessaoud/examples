@@ -1,5 +1,6 @@
 package com.paremus.examples.mqtt.mockdata;
 
+import java.net.InetAddress;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
@@ -43,11 +44,15 @@ public class MockDataComponent {
 	
 	@Activate
 	public void start() throws Exception {
+		// Connect to MQTT
 		URI boundUri = URI.create(endpointUri);
 		URI tcpUri = new URI("tcp", null, boundUri.getHost(), boundUri.getPort(), null, null, null);
 
 		final MqttClient mqttClient = new MqttClient(tcpUri.toString(), clientId);
 		mqttClient.connect();
+		
+		// Get host name
+		final String hostName = InetAddress.getLocalHost().getHostName();
 		
 		System.out.println("[mockdata]: starting random dose generation");
 		random = new Random();
@@ -58,7 +63,7 @@ public class MockDataComponent {
 					HashMap<String, Object> map = new HashMap<String, Object>();
 					map.put("dose", random.nextDouble() * 100d);
 					map.put("time", System.currentTimeMillis());
-					map.put("source", "mockdata");
+					map.put("source", hostName + " (MOCK DATA)");
 					mqttClient.getTopic("geiger").publish(Marshaller.marshal(map), 0, false);
 				} catch (Exception e) {
 					e.printStackTrace();
