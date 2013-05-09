@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1367975716772' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1368101379972' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.felix.eventadmin'/>
@@ -598,80 +598,6 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.floreysoft.jmte'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='d7c9658a775d3b081eae1dc6640f1b25d2a84ff4798a8d88c158985eff8ae8d8'/>
-      <attribute name='url' value='com.floreysoft.jmte/com.floreysoft.jmte-3.1.0.jar'/>
-      <attribute name='size' type='Long' value='125845'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-      <directive name='uses' value='com.floreysoft.jmte.encoder,com.floreysoft.jmte.message,com.floreysoft.jmte.template,com.floreysoft.jmte.token'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.encoder'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.internal.asm'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.message'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-      <directive name='uses' value='com.floreysoft.jmte,com.floreysoft.jmte.token'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.renderer'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-      <directive name='uses' value='com.floreysoft.jmte'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.template'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-      <directive name='uses' value='com.floreysoft.jmte,com.floreysoft.jmte.internal.asm,com.floreysoft.jmte.token'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.token'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-      <directive name='uses' value='com.floreysoft.jmte'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.floreysoft.jmte.util'/>
-      <attribute name='version' type='Version' value='3.1.0'/>
-      <attribute name='bundle-symbolic-name' value='com.floreysoft.jmte'/>
-      <attribute name='bundle-version' type='Version' value='3.1.0'/>
-    </capability>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='com.paremus.dosgi.discovery.local'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='1.3.1.SNAPSHOT'/>
@@ -1202,50 +1128,6 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mosquitto.macos-x86_64'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='d05daf45e410ea1646da04fc561e349177ea027f20fb1936855fffec4445818e'/>
-      <attribute name='url' value='org.bndtools.rt.packager.mosquitto.macos-x86_64/org.bndtools.rt.packager.mosquitto.macos-x86_64-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='916529'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mosquitto.macos-x86_64'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mosquitto.macos-x86_64'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='packager.type'>
-      <attribute name='packager.type' value='mosquitto'/>
-      <attribute name='version' type='Version' value='1.0.2'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.mosquitto)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))'/>
-    </requirement>
-    <requirement namespace='packager.manager'>
-      <directive name='filter' value='(!(version&gt;=2.0))'/>
-    </requirement>
-    <requirement namespace='osgi.native'>
-      <directive name='filter' value='(&amp; (osgi.native.osname=MacOSX) (osgi.native.processor=x86-64) )'/>
-    </requirement>
-    <requirement namespace='osgi.extender'>
-      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='effective' value='active'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='com.paremus.dosgi'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='1.3.1.SNAPSHOT'/>
@@ -1298,6 +1180,50 @@
     </requirement>
     <requirement namespace='osgi.ee'>
       <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mosquitto.macos-x86_64'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='d05daf45e410ea1646da04fc561e349177ea027f20fb1936855fffec4445818e'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mosquitto.macos-x86_64/org.bndtools.rt.packager.mosquitto.macos-x86_64-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='916529'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mosquitto.macos-x86_64'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mosquitto.macos-x86_64'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+    </capability>
+    <capability namespace='packager.type'>
+      <attribute name='packager.type' value='mosquitto'/>
+      <attribute name='version' type='Version' value='1.0.2'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.mosquitto)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.1.0)(!(version&gt;=1.2.0)))'/>
+    </requirement>
+    <requirement namespace='packager.manager'>
+      <directive name='filter' value='(!(version&gt;=2.0))'/>
+    </requirement>
+    <requirement namespace='osgi.native'>
+      <directive name='filter' value='(&amp; (osgi.native.osname=MacOSX) (osgi.native.processor=x86-64) )'/>
+    </requirement>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>
