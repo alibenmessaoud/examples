@@ -45,8 +45,6 @@ import org.jboss.netty.handler.codec.http.DefaultHttpResponse;
 import org.jboss.netty.handler.codec.http.HttpHeaders;
 import org.jboss.netty.handler.codec.http.HttpRequest;
 import org.jboss.netty.handler.codec.http.HttpResponse;
-import org.jboss.netty.logging.InternalLogger;
-import org.jboss.netty.logging.InternalLoggerFactory;
 import org.jboss.netty.util.CharsetUtil;
 
 /**
@@ -97,7 +95,12 @@ public class HttpHandler extends SimpleChannelUpstreamHandler {
         	res.setHeader(CONTENT_TYPE, "text/event-stream");
         	res.setHeader(CACHE_CONTROL, HttpHeaders.Values.NO_CACHE);
         	ChannelFuture f = ctx.getChannel().write(res);
-        	clients.add(ctx.getChannel());
+        	f.addListener(new ChannelFutureListener() {
+				public void operationComplete(ChannelFuture f) throws Exception {
+					if (f.isSuccess())
+						clients.add(f.getChannel());
+				}
+			});
         } else {
         	// map all other urls to the static resources
         	String resourcePath = "resources" + path;
