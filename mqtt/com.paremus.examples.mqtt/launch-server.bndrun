@@ -4,7 +4,6 @@
 -runbundles: biz.aQute.bndlib;version='[2.0.0,2.0.1)',\
 	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
 	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
-	com.floreysoft.jmte;version=latest,\
 	com.google.guava;version='[12.0.1,12.0.2)',\
 	com.paremus.dosgi;version='[1.3.1,1.3.2)',\
 	com.paremus.dosgi.discovery;version='[1.3.1,1.3.2)',\

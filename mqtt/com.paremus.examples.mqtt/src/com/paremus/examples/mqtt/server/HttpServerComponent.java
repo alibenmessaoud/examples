@@ -1,4 +1,4 @@
-package com.paremus.examples.websocket.server;
+package com.paremus.examples.mqtt.server;
 
 import java.net.InetSocketAddress;
 import java.text.DateFormat;
@@ -15,7 +15,7 @@ import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 import org.jboss.netty.handler.codec.http.HttpChunkAggregator;
 import org.jboss.netty.handler.codec.http.HttpRequestDecoder;
 import org.jboss.netty.handler.codec.http.HttpResponseEncoder;
-import org.json.JSONException;
+import org.jboss.netty.handler.codec.string.StringEncoder;
 import org.json.JSONObject;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
@@ -24,18 +24,23 @@ import aQute.bnd.annotation.component.Activate;
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 
+/**
+ * Creates the HTTP Server, including SSE (Server-Sent Event) functionality.
+ * 
+ * @author Neil Bartlett <neil.bartlett@paremus.com>
+ */
 @Component(
 		immediate = true,
 		properties = "event.topics=TELEMETRY/RADIATION")
-public class WebSocketServerComponent implements EventHandler {
+public class HttpServerComponent implements EventHandler {
 	
 	private final int port = 8000; // TODO: make this configurable
 	private final DateFormat dateFormat;
 	
 	private ServerBootstrap server;
-	private WebSocketServerHandler wshandler;
+	private HttpHandler httpHandler;
 	
-	public WebSocketServerComponent() {
+	public HttpServerComponent() {
 		dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
 		dateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
 	}
@@ -43,7 +48,7 @@ public class WebSocketServerComponent implements EventHandler {
 	@Activate
 	void start() {
 		server = new ServerBootstrap(new NioServerSocketChannelFactory(Executors.newCachedThreadPool(), Executors.newCachedThreadPool()));
-		wshandler = new WebSocketServerHandler();
+		httpHandler = new HttpHandler();
 		server.setPipelineFactory(new ChannelPipelineFactory() {
 			public ChannelPipeline getPipeline() throws Exception {
 		        ChannelPipeline pipeline = Channels.pipeline();
@@ -51,7 +56,8 @@ public class WebSocketServerComponent implements EventHandler {
 		        pipeline.addLast("decoder", new HttpRequestDecoder());
 		        pipeline.addLast("aggregator", new HttpChunkAggregator(65536));
 		        pipeline.addLast("encoder", new HttpResponseEncoder());
-				pipeline.addLast("handler", wshandler);
+		        pipeline.addLast("sse_encoder", new StringEncoder());
+				pipeline.addLast("handler", httpHandler);
 				
 		        return pipeline;
 			}
@@ -75,7 +81,7 @@ public class WebSocketServerComponent implements EventHandler {
 			json.put("dose", formattedDose);
 			json.put("source", event.getProperty("source"));
 			json.put("time", formatTime((Long) event.getProperty("time")));
-			wshandler.sendAsString(json);
+			httpHandler.sendAsString(json);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

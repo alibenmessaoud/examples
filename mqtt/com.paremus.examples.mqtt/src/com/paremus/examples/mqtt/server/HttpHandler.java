@@ -13,12 +13,12 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-package com.paremus.examples.websocket.server;
+package com.paremus.examples.mqtt.server;
 
 import static org.jboss.netty.handler.codec.http.HttpHeaders.isKeepAlive;
 import static org.jboss.netty.handler.codec.http.HttpHeaders.setContentLength;
+import static org.jboss.netty.handler.codec.http.HttpHeaders.Names.CACHE_CONTROL;
 import static org.jboss.netty.handler.codec.http.HttpHeaders.Names.CONTENT_TYPE;
-import static org.jboss.netty.handler.codec.http.HttpHeaders.Names.HOST;
 import static org.jboss.netty.handler.codec.http.HttpMethod.GET;
 import static org.jboss.netty.handler.codec.http.HttpResponseStatus.FORBIDDEN;
 import static org.jboss.netty.handler.codec.http.HttpResponseStatus.NOT_FOUND;
@@ -27,10 +27,9 @@ import static org.jboss.netty.handler.codec.http.HttpVersion.HTTP_1_1;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.jboss.netty.buffer.ChannelBuffer;
@@ -39,96 +38,70 @@ import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelFuture;
 import org.jboss.netty.channel.ChannelFutureListener;
 import org.jboss.netty.channel.ChannelHandlerContext;
-import org.jboss.netty.channel.Channels;
 import org.jboss.netty.channel.ExceptionEvent;
 import org.jboss.netty.channel.MessageEvent;
 import org.jboss.netty.channel.SimpleChannelUpstreamHandler;
 import org.jboss.netty.handler.codec.http.DefaultHttpResponse;
+import org.jboss.netty.handler.codec.http.HttpHeaders;
 import org.jboss.netty.handler.codec.http.HttpRequest;
 import org.jboss.netty.handler.codec.http.HttpResponse;
-import org.jboss.netty.handler.codec.http.websocketx.CloseWebSocketFrame;
-import org.jboss.netty.handler.codec.http.websocketx.PingWebSocketFrame;
-import org.jboss.netty.handler.codec.http.websocketx.PongWebSocketFrame;
-import org.jboss.netty.handler.codec.http.websocketx.TextWebSocketFrame;
-import org.jboss.netty.handler.codec.http.websocketx.WebSocketFrame;
-import org.jboss.netty.handler.codec.http.websocketx.WebSocketServerHandshaker;
-import org.jboss.netty.handler.codec.http.websocketx.WebSocketServerHandshakerFactory;
 import org.jboss.netty.logging.InternalLogger;
 import org.jboss.netty.logging.InternalLoggerFactory;
 import org.jboss.netty.util.CharsetUtil;
-import org.json.JSONObject;
-
-import com.floreysoft.jmte.Engine;
-
-import aQute.lib.io.IO;
 
 /**
- * Handles handshakes and messages
+ * Handles HTTP Requests
  */
-public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
+public class HttpHandler extends SimpleChannelUpstreamHandler {
 	
-    private static final InternalLogger logger = InternalLoggerFactory.getInstance(WebSocketServerHandler.class);
-    private static final String WEBSOCKET_PATH = "/websocket";
+    private static final String EVENTS_PATH = "/events";
 
-    private final Engine templateEngine;
-    
     private final List<Channel> clients = new CopyOnWriteArrayList<Channel>();
-    private WebSocketServerHandshaker handshaker;
     
-    public WebSocketServerHandler() {
-    	templateEngine = new Engine();
-    	templateEngine.setUseCompilation(false);
-	}
-
     @Override
     public void messageReceived(ChannelHandlerContext ctx, MessageEvent e) throws Exception {
         Object msg = e.getMessage();
         if (msg instanceof HttpRequest) {
             handleHttpRequest(ctx, (HttpRequest) msg);
-        } else if (msg instanceof WebSocketFrame) {
-            handleWebSocketFrame(ctx, (WebSocketFrame) msg);
         }
     }
     
     public void sendAsString(Object object) {
+    	List<Channel> toRemove = new LinkedList<Channel>();
+    	
     	for (Iterator<Channel> iter = clients.iterator(); iter.hasNext(); ) {
     		Channel channel = iter.next();
-    		if (channel.isOpen())
-    			channel.write(new TextWebSocketFrame(object.toString()));
-    		else
-    			iter.remove();
+    		if (channel.isOpen()) {
+    			String message = new StringBuilder().append("data: ").append(object).append("\n\n").toString();
+    			channel.write(message);
+    		} else {
+    			toRemove.add(channel);
+    		}
     	}
+    	
+    	clients.removeAll(toRemove);
     }
 
     private void handleHttpRequest(ChannelHandlerContext ctx, HttpRequest req) throws Exception {
-        // Allow only GET methods.
         if (req.getMethod() != GET) {
             sendHttpResponse(ctx, req, new DefaultHttpResponse(HTTP_1_1, FORBIDDEN));
             return;
         }
         
-        if (WEBSOCKET_PATH.equals(req.getUri())) {
-        	handshakeWebSocket(ctx, req);
-        } else if ("/".equals(req.getUri())) {
-        	// Generate the index page
-            HttpResponse res = new DefaultHttpResponse(HTTP_1_1, OK);
-
-            String input= IO.collect(getClass().getClassLoader().getResourceAsStream("templates/index.html"), "UTF-8");
-            Map<String, Object> templateModel = new HashMap<String, Object>();
-            templateModel.put("WebSocketLocation", getWebSocketLocation(req));
-			String data = templateEngine.transform(input, templateModel);
-            
-            ChannelBuffer content = ChannelBuffers.wrappedBuffer(data.getBytes());
-
-            res.setHeader(CONTENT_TYPE, "text/html; charset=UTF-8");
-            setContentLength(res, content.readableBytes());
-
-            res.setContent(content);
-            sendHttpResponse(ctx, req, res);
+        String path = req.getUri();
+        if ("/".equals(path))
+        	path = "/index.html";
+        
+        if (EVENTS_PATH.equals(path)) {
+        	HttpResponse res = new DefaultHttpResponse(HTTP_1_1, OK);
+        	res.setHeader(CONTENT_TYPE, "text/event-stream");
+        	res.setHeader(CACHE_CONTROL, HttpHeaders.Values.NO_CACHE);
+        	ChannelFuture f = ctx.getChannel().write(res);
+        	clients.add(ctx.getChannel());
         } else {
         	// map all other urls to the static resources
-        	String path = "resources" + req.getUri();
-        	InputStream stream = getClass().getClassLoader().getResourceAsStream(path);
+        	String resourcePath = "resources" + path;
+        	InputStream stream = getClass().getClassLoader().getResourceAsStream(resourcePath);
         	if (stream != null) {
                 HttpResponse res = new DefaultHttpResponse(HTTP_1_1, OK);
 
@@ -159,50 +132,6 @@ public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
     	}
     }
     
-	private void handshakeWebSocket(ChannelHandlerContext ctx, HttpRequest req) {
-		WebSocketServerHandshakerFactory wsFactory = new WebSocketServerHandshakerFactory(getWebSocketLocation(req), null, false);
-		handshaker = wsFactory.newHandshaker(req);
-		if (handshaker == null) {
-			wsFactory.sendUnsupportedWebSocketVersionResponse(ctx.getChannel());
-		} else {
-			ChannelFutureListener channelListener = new ChannelFutureListener() {
-				public void operationComplete(ChannelFuture future)
-						throws Exception {
-					Channel channel = future.getChannel();
-					if (!future.isSuccess()) {
-						Channels.fireExceptionCaught(channel,future.getCause());
-					}
-					clients.add(channel);
-				}
-			};
-			handshaker.handshake(ctx.getChannel(), req).addListener(channelListener);
-		}
-    }
-
-    private void handleWebSocketFrame(ChannelHandlerContext ctx, WebSocketFrame frame) {
-        // Check for closing frame
-        if (frame instanceof CloseWebSocketFrame) {
-            handshaker.close(ctx.getChannel(), (CloseWebSocketFrame) frame);
-            clients.remove(ctx.getChannel());
-            return;
-        }
-        if (frame instanceof PingWebSocketFrame) {
-            ctx.getChannel().write(new PongWebSocketFrame(frame.getBinaryData()));
-            return;
-        }
-        if (!(frame instanceof TextWebSocketFrame)) {
-            throw new UnsupportedOperationException(String.format("%s frame types not supported", frame.getClass()
-                    .getName()));
-        }
-
-        // Send the uppercase string back.
-        String request = ((TextWebSocketFrame) frame).getText();
-        if (logger.isDebugEnabled()) {
-            logger.debug(String.format("Channel %s received %s", ctx.getChannel().getId(), request));
-        }
-        ctx.getChannel().write(new TextWebSocketFrame(request.toUpperCase()));
-    }
-
     private static void sendHttpResponse(ChannelHandlerContext ctx, HttpRequest req, HttpResponse res) {
         // Generate an error page if response status code is not OK (200).
         if (res.getStatus().getCode() != 200) {
@@ -223,7 +152,4 @@ public class WebSocketServerHandler extends SimpleChannelUpstreamHandler {
         e.getChannel().close();
     }
 
-    private static String getWebSocketLocation(HttpRequest req) {
-        return "ws://" + req.getHeader(HOST) + WEBSOCKET_PATH;
-    }
 }

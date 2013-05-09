@@ -4,25 +4,21 @@ function SensorDataCtrl ($scope) {
 	
 	$scope.state = "waiting";
 
-	var socket;
-	if (!window.WebSocket) {
-		window.WebSocket = window.MozWebSocket;
-	}
-	if (window.WebSocket) {
-		socket = new WebSocket(webSocketLocation);
-		socket.onmessage = function(event) {
+	if (!!window.EventSource) {
+		var source = new EventSource("/events");
+		source.onmessage = function(e) {
 			$scope.state = "received";
-			$scope.data = JSON.parse(event.data);
+			$scope.data = JSON.parse(e.data);
 			$scope.$apply();
 		};
-		socket.onclose = function(event) {
+		source.onerror = function(e) {
 			$scope.state = "error";
-			$scope.message = "Web Socket closed";
+			$scope.message = "Disconnected";
 			$scope.$apply();
 		};
 	} else {
 		$scope.state = "error";
-		$scope.message = "Your browser does not support Web Socket.";
+		$scope.message = "Your browser does not support HTML5 Server-Sent Events";
 	}
 
 	

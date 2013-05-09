@@ -1,8 +1,7 @@
-Private-Package: com.paremus.examples.mqtt.server,\
-	com.paremus.examples.websocket.server
+Private-Package: com.paremus.examples.mqtt.server
 Service-Component: *
 
-Include-Resource: resources=static, templates=templates
+Include-Resource: resources=static
 	
 Require-Capability: osgi.service; filter:="(objectClass=org.osgi.service.event.EventAdmin)"; effective:=active
 Provide-Capability: osgi.service; objectClass=org.osgi.service.event.EventHandler; version:Version=1.3
