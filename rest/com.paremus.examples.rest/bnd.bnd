@@ -1,5 +1,4 @@
--buildpath:\
-	com.paremus.examples.bookshelf.api;version=latest,\
+-buildpath: com.paremus.examples.bookshelf.api;version=latest,\
 	jackson-annotations,\
 	jackson-core,\
 	jackson-databind,\
@@ -8,5 +7,6 @@
 	javax.ws.rs.jsr311-api,\
 	osgi.cmpn,\
 	javax.servlet,\
-	org.bndtools.service
+	org.bndtools.service,\
+	org.jboss.netty
 -sub: *.bnd

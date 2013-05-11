@@ -11,20 +11,28 @@
 -runrequires: osgi.identity;filter:='(osgi.identity=com.paremus.examples.rest.resource)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.examples.rest.site)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.scr)',\
-	osgi.identity;filter:='(osgi.identity=osgi.cmpn)'
+	osgi.identity;filter:='(osgi.identity=osgi.cmpn)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.runtime)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=com.paremus.examples.bookshelf.impl)'
 -runrepos: Workspace,\
 	Local,\
 	Bndtools Hub
 -runbundles: com.paremus.examples.bookshelf.api;version=latest,\
+	com.paremus.examples.bookshelf.impl;version=latest,\
 	com.paremus.examples.rest.resource;version=latest,\
 	com.paremus.examples.rest.site;version=latest,\
 	jackson-annotations;version='[2.0.0,2.0.1)',\
 	jackson-core;version='[2.0.0,2.0.1)',\
 	jackson-databind;version='[2.0.0,2.0.1)',\
 	javax.inject;version='[1.0.0,1.0.1)',\
-	javax.ws.rs.jsr311-api;version='[1.1.1,1.1.2)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
 	org.apache.felix.http.jetty;version='[2.2.0,2.2.1)',\
 	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
 	org.bndtools.rt.rest;version='[1.0.0,1.0.1)',\
-	org.bndtools.service;version='[0.0.0,0.0.1)',\
+	org.jboss.netty;version='[3.6.5,3.6.6)',\
+	osgi.cmpn;version='[4.2.0,4.2.1)',\
 	osgi.cmpn;version='[4.3.0,4.3.1)'

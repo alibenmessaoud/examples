@@ -1,21 +1,19 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="RESTdemo"
 	boundary="fabric"
 	repopath="Release,Local,jetty,fabric,nimble-cmpn,nimble,nimble-rs">
-
-	<system name="Bookshelf" boundary="fibre">
-		<!-- The web application that talks to the REST endpoint -->
+	
+	<!-- The web application that talks to the REST endpoint -->
+	<system name="Bookshelf-Site" boundary="fibre">
 		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.site" />
-		
+	</system>
+
+	<!-- The "back-end" application that creates the REST endpoint -->
+	<system name="Bookshelf" boundary="fibre">
 		<!-- The REST endpoint bundle -->
 		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.resource" />
 		
 		<!-- The Bookshelf implementation -->
 		<system.part category="osgi.active.bundle" name="com.paremus.examples.bookshelf.impl" />
-
-		<!-- The RSA bundles, for publishing availability of the REST endpoint -->
-		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
-		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
-		<system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
 
 		<!-- Replicate this system across as many nodes as we have available -->
 		<replication.handler type="scalable">
@@ -23,5 +21,5 @@
 			<property name="minimum" value="1" type="integer" />
 		</replication.handler>
 	</system>
-
+	
 </system>

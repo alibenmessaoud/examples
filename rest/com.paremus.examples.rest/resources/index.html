@@ -2,43 +2,98 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link  rel="stylesheet" href="css/bootstrap.min.css">
+	<link  rel="stylesheet" href="css/bookshelf.css">
+	<link  rel="stylesheet" href="css/default/bootstrap.min.css">
 	<title>REST Demo</title>
+
+	<style type="text/css">
+	    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    		display: none;
+    	}
+    </style>
 </head>
 
 <body ng-app="demo">
 
-	<div class="container">
-		<div ng-controller="BookshelfCtrl" class="row">
-			<h1>Book List</h1>
-			
-			<form class="form-inline">
-				<select ng-model="selectedEndpoint" ng-change="listBooks()" ng-options="e.uri as e.uri for e in endpoints" >
-					<option value="">-- Select Bookshelf URI --</option>
-				</select>
-			</form>
-			
-			<table ng-show="selectedEndpoint" class="table table-striped">
-				<thead>
-					<tr>
-						<th>Author</th>
-						<th>Title</th>
-					</tr>
-				</thead>
-				
-				<tr ng-repeat="book in books">
-					<td>{{book.author}}</td>
-					<td>{{book.title}}</td>
-				</tr>
-				
-				<tr>
-					<form name="newBook" ng-submit="addBook()">
-						<td><input name="author"></td>
-						<td><input name="title"> <button type="submit" class="btn btn-primary"><i class="icon-white icon-plus"></i> Add</button></td>
-					</form>
-				</tr>
-			</table>
+	<div class="container-fluid">
+
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="page-header">
+					<h1>&ldquo;Bookshelves&rdquo; &mdash; A RESTful demonstration</p>
+				</div>
+			</div>
 		</div>
+
+		<!-- Hide everything below if Angular is not yet loaded -->
+		<div class="ng-cloak" ng-controller="BookshelfCtrl">
+			<div class="row-fluid">
+			
+				<!-- List of Endpoints -->
+				<div ng-switch on="endpointState">
+				
+					<!-- Waiting State -->
+					<div class="span4" ng-switch-when="waiting">
+						<div class="progress progress-striped active">
+				        	<div class="bar" style="width: 100%"><strong>Waiting for Data...</strong></div>
+				      	</div>		
+					</div>
+					
+					<!-- Error State -->
+					<div class="span4" ng-switch-when="error">
+						<div class="alert alert-block alert-error">
+							<p><i class="icon-warning-sign"></i> {{message}}</p>
+						</div>
+					</div>
+					
+					<!-- Default State (data received) -->
+					<div class="span4" ng-switch-default>
+						<div ng-repeat="endpoint in endpoints" ng-click="selectEndpoint(endpoint)" ng-class="findSelectedEndpointClass(endpoint)" class="pagination pagination-centered">
+							<div class="media">
+								<a class="pull-left" href="#">
+									<img class="media-object" src="img/books-icon-64.png"/>
+								</a>
+								<div class="media-body">
+									<p>{{endpoint}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				
+				<!-- Contents/Details Panel -->
+				<div class="span8">
+					<table ng-show="selectedEndpoint" class="table table-striped">
+						<thead>
+							<tr>
+								<th>Author</th>
+								<th>Title</th>
+							</tr>
+						</thead>
+						
+						<tr ng-repeat="book in books">
+							<td>{{book.author}}</td>
+							<td>{{book.title}}</td>
+						</tr>
+						
+						<tr>
+							<form name="newBook" ng-submit="addBook()">
+								<td><input name="author"></td>
+								<td><input name="title"> <button type="submit" class="btn btn-primary"><i class="icon-white icon-plus"></i> Add</button></td>
+							</form>
+						</tr>
+					</table>
+				</div>
+				 
+			</div>
+		</div>
+		
+		<!-- 
+		<div ng-controller="BookshelfCtrl" class="row">
+			
+		</div>
+		 -->
 	</div>
 	
 	<script type="text/javascript" src="js/angular.js"></script>
