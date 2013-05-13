@@ -16,7 +16,8 @@ import aQute.bnd.annotation.metatype.Configurable;
 import aQute.lib.io.IO;
 import aQute.libg.command.Command;
 
-@Component(properties = "package.type=nginx")
+@Component(properties = {PackageType.PACKAGE_TYPE + "=nginx", 
+		PackageType.VERSION + "=1.2.8"})
 public class NginxPackagerUnix implements PackageType {
 	
 	private final static String[] sourceFiles = new String[] {
@@ -79,7 +80,8 @@ public class NginxPackagerUnix implements PackageType {
 	
 	private String generateConfigFile(NginxProperties properties) {
 		StringBuilder sb = new StringBuilder();
-		if (properties.username() != null) {
+		
+		if (properties.username() != null && !"".equals(properties.username().trim())) {
 			sb.append("user  ").append(properties.username()).append(";\n");
 		}
 		sb.append("worker_processes  ").append(properties.workerProcesses()).append(";\n");

@@ -3,4 +3,6 @@ Private-Package: com.paremus.packager.nginx.guard,\
 	com.paremus.service.nginx,\
 	aQute.bnd.annotation.metatype
 Service-Component: *
-Require-Capability: packager.type;filter:="(packager.type=nginx)"
+Require-Capability: packager.type;filter:="(package.type=nginx)";effective:="active"
+Provide-Capability: packager.guard; package.type="nginx"; version:Version="1.2.8";\
+	effective:="active"

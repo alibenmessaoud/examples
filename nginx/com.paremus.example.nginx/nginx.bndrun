@@ -5,6 +5,8 @@
 	com.paremus.example.nginx.common;version=latest,\
 	com.paremus.example.nginx.guard;version=latest,\
 	com.paremus.example.nginx.macos-x86_64;version=latest,\
+	com.paremus.packager.manager;version='[0.0.2,0.0.3)',\
+	com.paremus.packager.watchdog.manager;version='[0.0.2,0.0.3)',\
 	javax.servlet;version='[2.5.0,2.5.1)',\
 	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
 	org.apache.felix.fileinstall;version='[3.2.4,3.2.5)',\
@@ -16,7 +18,7 @@
 	org.apache.felix.metatype;version='[1.0.4,1.0.5)',\
 	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
 	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
-	org.bndtools.rt.packager.manager;version='[0.1.0,0.1.1)',\
+	org.bndtools.rt.packager.api;version='[0.2.0,0.2.1)',\
 	osgi.cmpn;version='[4.2.0,4.2.1)'
 
 ## Uncomment if you need to change the HTTP port
@@ -31,7 +33,8 @@
 	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.2))',\
 	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.0))',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.fileinstall)',\
-	osgi.identity;filter:='(osgi.identity=com.paremus.example.nginx.guard)'
+	osgi.identity;filter:='(osgi.identity=com.paremus.example.nginx.guard)',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.http.jetty)(version>=2.2.0))'
 -resolve.effective: active
 
 -runsystemcapabilities: osgi.native;osgi.native.osname=MacOSX;osgi.native.processor=x86-64
