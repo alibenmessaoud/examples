@@ -1,0 +1,4 @@
+-nobundles
+-dependson:\
+	com.paremus.packager.pkg.jbossas,\
+	com.paremus.packager.test.javaee

@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='utf-8'?>
+<repository increment='1367486543524' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='biz.aQute.bndlib'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='0b4ae9f66a45163f89e553c673d0d0540b86844a525c971ef8bdccd905619344'/>
+      <attribute name='url' value='biz.aQute.bndlib/biz.aQute.bndlib-2.0.0.jar'/>
+      <attribute name='size' type='Long' value='1286708'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.annotation'/>
+      <attribute name='version' type='Version' value='1.43.1'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.annotation.component'/>
+      <attribute name='version' type='Version' value='1.43.1'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.annotation.metatype'/>
+      <attribute name='version' type='Version' value='1.43.1'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.osgi'/>
+      <attribute name='version' type='Version' value='2.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.service,aQute.service.reporter,aQute.bnd.version,aQute.bnd.header'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.osgi.resource'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='org.osgi.resource'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.build'/>
+      <attribute name='version' type='Version' value='2.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.service,aQute.bnd.maven.support,aQute.bnd.service.action,aQute.service.reporter,aQute.bnd.version,aQute.bnd.osgi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.differ'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.service,aQute.bnd.service.diff,aQute.service.reporter,aQute.bnd.version,aQute.bnd.header,aQute.bnd.osgi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.service'/>
+      <attribute name='version' type='Version' value='3.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.build,aQute.service.reporter,aQute.bnd.version,aQute.bnd.osgi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.service.action'/>
+      <attribute name='version' type='Version' value='1.43.1'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.build'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.service.diff'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.osgi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.service.repository'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.service.reporter,aQute.bnd.version'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.service.url'/>
+      <attribute name='version' type='Version' value='1.1.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.help'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.osgi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.service.repository'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='org.osgi.resource'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.resource'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.header'/>
+      <attribute name='version' type='Version' value='1.1.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.service.reporter'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.version'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.filerepo'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.version'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.properties'/>
+      <attribute name='version' type='Version' value='2.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.build.model'/>
+      <attribute name='version' type='Version' value='2.1.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.properties,org.osgi.resource,aQute.bnd.build.model.clauses'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.build.model.clauses'/>
+      <attribute name='version' type='Version' value='2.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.header'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.service.reporter'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.bnd.maven.support'/>
+      <attribute name='version' type='Version' value='2.0.0'/>
+      <attribute name='bundle-symbolic-name' value='biz.aQute.bndlib'/>
+      <attribute name='bundle-version' type='Version' value='2.0.0.20121021-234834'/>
+      <directive name='uses' value='aQute.bnd.service,javax.xml.xpath,org.w3c.dom,aQute.service.reporter,aQute.bnd.version'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=junit.framework)(version&gt;=3.8.0)(!(version&gt;=4.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.resource)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.bnd.annotation.component)(version&gt;=1.43.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.bnd.annotation.metatype)(version&gt;=1.43.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.bnd.build.model.clauses)(version&gt;=2.0.0)(!(version&gt;=3.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.bnd.service)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.bnd.version)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.naming)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.namespace)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.parsers)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.stream)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.xpath)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(osgi.ee=J2SE-1.5)'/>
+    </requirement>
+  </resource>
+</repository>

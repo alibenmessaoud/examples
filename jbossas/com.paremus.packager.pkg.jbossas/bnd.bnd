@@ -1,0 +1,26 @@
+Private-Package: com.paremus.packager.pkg.jbossas.impl,\
+	com.paremus.packager.pkg.jbossas.impl.guard,\
+	com.paremus.service.jbossas
+Include-Resource: data=jbossas
+Conditional-Package: aQute.lib*, aQute.service*
+Service-Component: *
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	org.bndtools.rt.packager.api,\
+	biz.aQute.bndlib;version=2.0.0.20121021-234834,\
+	org.bndtools.service
+Provide-Capability: packager.guard; type=jbossas; effective:=active,\
+	packager.type; package.type=jbossas; version:Version=7.1.1.FINAL; effective:=active;\
+	uses:="org.bndtools.service.packager",\
+	com.paremus.javaee; vendor=jboss; version:Version=7.1.1.FINAL; javaee.version:Version=6; effective:=active
+
+Require-Capability:\
+	packager.manager; effective:=active,\
+	osgi.native; filter:="(| \
+		(osgi.native.osname=Linux) \
+		(osgi.native.osname=MacOSX) \
+		(osgi.native.osname=Solaris) \
+		(osgi.native.osname=Win32) \
+	)"; effective:=active

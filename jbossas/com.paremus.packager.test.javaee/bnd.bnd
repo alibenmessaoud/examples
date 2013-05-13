@@ -1,0 +1,4 @@
+Include-Resource: javaee=lib
+
+Require-Capability:\
+	com.paremus.javaee; filter:="(javaee.version>=6)"; effective:=active
