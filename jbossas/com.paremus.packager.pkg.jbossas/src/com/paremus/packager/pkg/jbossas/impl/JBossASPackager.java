@@ -47,6 +47,11 @@ public class JBossASPackager implements PackageType {
 		
 		JBossASSetup jbossConfig = Converter.cnv(JBossASSetup.class, properties);
 
+		data = new File(data, jbossConfig.appSymbolicName() + '/' + jbossConfig.appVersion());
+		if(!data.mkdirs())
+			throw new IOException("Unable to create a JBoss extract for application " 
+					+ jbossConfig.appSymbolicName() + '/' + jbossConfig.appVersion());
+		
 		File inited = new File(data, "inited");
 		if (!inited.isFile()) {
 			extractJBoss(data, inited);
