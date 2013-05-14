@@ -2,10 +2,10 @@
 -runee: JavaSE-1.6
 
 -runbundles: biz.aQute.bndlib;version='[2.0.0,2.0.1)',\
-	com.paremus.packager.manager;version=latest,\
+	com.paremus.packager.manager;version='[0.0.2,0.0.3)',\
 	com.paremus.packager.pkg.jbossas;version=latest,\
 	com.paremus.packager.test.javaee;version=latest,\
-	com.paremus.packager.watchdog.manager;version=latest,\
+	com.paremus.packager.watchdog.manager;version='[0.0.2,0.0.3)',\
 	javax.servlet;version='[2.5.0,2.5.1)',\
 	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\

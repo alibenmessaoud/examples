@@ -54,26 +54,35 @@ public class JBossASPackager implements PackageType {
 			IO.store(new Date().toString(), inited);
 		}
 
+		String setJAVA_HOME = new StringBuilder(isWindows? "set" : "export")
+		.append(" JAVA_HOME=")
+		.append(System.getProperty("java.home"))
+		.append("\n")
+		.toString();
+		
+		
 		PackageDescriptor pd = new PackageDescriptor();
 		pd.description = "JBoss AS version " + jbossVersion;
 
-		StringBuilder sb = new StringBuilder(data.getAbsolutePath())
+		pd.startScript = new StringBuilder(setJAVA_HOME)
+				.append(data.getAbsolutePath())
 				.append("/bin/standalone")
-				.append(isWindows ? ".bat" : ".sh");
+				.append(isWindows ? ".bat" : ".sh")
+				.toString();
 		
-
-		pd.startScript = sb.toString();
-		
-		pd.stopScript = new StringBuilder(data.getAbsolutePath())
+		pd.stopScript = new StringBuilder(setJAVA_HOME)
+				.append(data.getAbsolutePath())
 				.append("/bin/jboss-cli")
 				.append(isWindows ? ".bat" : ".sh")
-				.append(" --connect command=:shutdown").toString();
+				.append(" --connect command=:shutdown")
+				.toString();
 
-		pd.statusScript = new StringBuilder(data.getAbsolutePath())
-			.append("/bin/jboss-cli")
-			.append(isWindows ? ".bat" : ".sh")
-			
-		.append(" -c --commands=\"read-attribute server-state\"").toString();
+		pd.statusScript = new StringBuilder(setJAVA_HOME)
+				.append(data.getAbsolutePath())
+				.append("/bin/jboss-cli")
+				.append(isWindows ? ".bat" : ".sh")
+				.append(" -c --commands=\"read-attribute server-state\"")
+				.toString();
 
 		return pd;
 	}
