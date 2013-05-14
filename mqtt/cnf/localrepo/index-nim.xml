@@ -89,6 +89,11 @@
   <req name="osgi.resolved.bundle/org.jboss.netty:[3.6.5.Final,3.6.5.Final)" />
   <cap name="osgi.active.bundle/org.jboss.netty:3.6.5.Final" attrs="selfcap=&quot;true&quot;" />
  </part>
+ <part name="osgi.active.bundle/pi4j-core:1.0.0.SNAPSHOT" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/pi4j-core:[1.0.0.SNAPSHOT,1.0.0.SNAPSHOT)" />
+  <cap name="osgi.active.bundle/pi4j-core:1.0.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+ </part>
  <part name="osgi.resolved.bundle/biz.aQute.bndlib:2.0.0.20120813-120137" >
   <artifact name="biz.aQute.bndlib:2.0.0.20120813-120137" uri="biz.aQute.bndlib/biz.aQute.bndlib-2.0.0.jar" />
   <req name="builder/osgi.resolved.bundle" />
@@ -392,6 +397,26 @@
   <cap name="osgi.package/org.jboss.netty.handler.codec:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
   <cap name="osgi.package/org.jboss.netty.handler.stream:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
   <cap name="osgi.require.bundle/org.jboss.netty:3.6.5.Final" />
+ </part>
+ <part name="osgi.resolved.bundle/pi4j-core:1.0.0.SNAPSHOT" >
+  <artifact name="pi4j-core:1.0.0.SNAPSHOT" uri="pi4j-core/pi4j-core-1.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <cap name="osgi.resolved.bundle/pi4j-core:1.0.0.SNAPSHOT" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.pi4j.util:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.jni:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.wiringpi:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.system:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.serial:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.serial.impl:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.gpio.event:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.gpio.exception:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.gpio.trigger:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.gpio.impl:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.gpio:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.gpio.tasks.impl:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.i2c.impl:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.package/com.pi4j.io.i2c:1.0.0.SNAPSHOT" attrs="bundle-version=1.0.0.SNAPSHOT,bundle-symbolic-name=&quot;pi4j-core&quot;" />
+  <cap name="osgi.require.bundle/pi4j-core:1.0.0.SNAPSHOT" />
  </part>
  <ext name="ms.extension/org.bndtools.rt.packager.mosquitto.guard" target="msf/org.bndtools.rt.packager.mosquitto.guard:[0,0]" >
   <req name="builder/primordial.builder" />
