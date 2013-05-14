@@ -15,7 +15,10 @@ import com.paremus.example.play.PlayAppProperties;
 @Component(
 		name = "com.paremus.example.play.guard",
 		designateFactory = PlayAppProperties.class,
-		properties = "type=play-rest"
+		properties = {
+				ProcessGuard.PACKAGE_TYPE + "=play-rest",
+				ProcessGuard.VERSION + "=2.9.1"
+			}
 		)
 public class PlayAppProcessGuard implements ProcessGuard {
 	

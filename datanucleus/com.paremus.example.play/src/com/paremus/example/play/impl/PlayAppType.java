@@ -18,7 +18,11 @@ import aQute.lib.io.IO;
 
 import com.paremus.example.play.PlayAppProperties;
 
-@Component(properties = "package.type=play-rest")
+@Component(properties = {
+				PackageType.PACKAGE_TYPE + "=play-rest",
+				PackageType.VERSION + "=2.9.1"
+			}
+		)
 public class PlayAppType implements PackageType {
 	
 	private BundleContext context;
