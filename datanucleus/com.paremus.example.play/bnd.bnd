@@ -12,7 +12,7 @@ Conditional-Package: aQute.lib*,\
 Export-Package: com.paremus.example.play
 Service-Component: *
 Include-Resource: data=jars
-Require-Capability: packager.manager; filter:="(&(version>=1.2)(!(version>=2.0)))"; effective:=active
+Require-Capability: packager.manager; filter:="(!(version>=2.0))"; effective:=active
 Provide-Capability: packager.type;package.type=play-rest;version:Version="2.9.1";effective:=active
 
 -runbundles: osgi.cmpn,\
