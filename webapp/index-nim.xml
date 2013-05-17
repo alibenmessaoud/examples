@@ -1,0 +1,17 @@
+<repository name="webapp.example:0" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/osgi.web.app:0.0.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/osgi.web.app:[0.0.1,0.0.1)" />
+  <req name="osgi.extender/web.container" />
+  <cap name="osgi.active.bundle/osgi.web.app:0.0.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/osgi.web.app:0.0.1" >
+  <artifact name="osgi.web.app:0.0.1" uri="osgi.web.app.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.servlet" />
+  <req name="osgi.package/javax.servlet.http" />
+  <req name="osgi.package/org.osgi.framework:1.5" />
+  <cap name="osgi.resolved.bundle/osgi.web.app:0.0.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/osgi.web.app:0.0.1" />
+ </part>
+</repository>

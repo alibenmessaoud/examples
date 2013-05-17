@@ -1,0 +1,16 @@
+<repository name="Jenkins:1.462" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/jenkins:1.462" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/jenkins:[1.462,1.462)" />
+  <req name="osgi.extender/web.container" />
+  <cap name="osgi.active.bundle/jenkins:1.462" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/jenkins:1.462" >
+  <artifact name="jenkins:1.462.0" uri="jenkins-wab.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.servlet" />
+  <req name="osgi.package/javax.servlet.http" />
+  <cap name="osgi.resolved.bundle/jenkins:1.462" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/jenkins:1.462" />
+ </part>
+</repository>
