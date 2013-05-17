@@ -1,0 +1,10 @@
+Export-Package: com.paremus.packager.pkg.javaee,\
+	com.paremus.service.javaee
+Conditional-Package: aQute.lib*, aQute.service*
+Service-Component: *
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
+	junit.osgi,\
+	org.bndtools.rt.packager.api,\
+	biz.aQute.bndlib;version=2.0.0.20121021-234834,\
+	org.bndtools.service

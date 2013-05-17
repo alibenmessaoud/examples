@@ -1,16 +1,20 @@
 Private-Package: com.paremus.packager.pkg.jbossas.impl,\
 	com.paremus.packager.pkg.jbossas.impl.guard,\
-	com.paremus.service.jbossas
+	com.paremus.service.jbossas,\
+	com.paremus.packager.pkg.javaee,\
+	com.paremus.service.javaee
 Include-Resource: data=jbossas
 Conditional-Package: aQute.lib*, aQute.service*
 Service-Component: *
+-dsannotations-inherited=true
 -buildpath: osgi.core;version=4.3,\
 	osgi.cmpn;version=4.3,\
 	biz.aQute.bnd.annotation,\
 	junit.osgi,\
 	org.bndtools.rt.packager.api,\
 	biz.aQute.bndlib;version=2.0.0.20121021-234834,\
-	org.bndtools.service
+	org.bndtools.service,\
+	com.paremus.packager.pkg.javaee;version=latest
 Provide-Capability: packager.guard; type=jbossas; effective:=active,\
 	packager.type; package.type=jbossas; version:Version=7.1.1.FINAL; effective:=active;\
 	uses:="org.bndtools.service.packager",\

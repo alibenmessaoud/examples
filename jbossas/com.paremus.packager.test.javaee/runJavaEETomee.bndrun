@@ -3,7 +3,7 @@
 
 -runbundles: biz.aQute.bndlib;version='[2.0.0,2.0.1)',\
 	com.paremus.packager.manager;version='[0.0.2,0.0.3)',\
-	com.paremus.packager.pkg.jbossas;version=latest,\
+	com.paremus.packager.pkg.tomee;version=latest,\
 	com.paremus.packager.test.javaee;version=latest,\
 	com.paremus.packager.watchdog.manager;version='[0.0.2,0.0.3)',\
 	javax.servlet;version='[2.5.0,2.5.1)',\
@@ -32,7 +32,8 @@
 	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.2))',\
 	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.0))',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.packager.test.javaee)',\
-	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.http.jetty)(version>=2.2.0))'
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.http.jetty)(version>=2.2.0))',\
+	osgi.identity;filter:='(osgi.identity=com.paremus.packager.pkg.tomee)'
 -resolve.effective: active
 
 -runsystemcapabilities: ${native_capability}

@@ -1,0 +1,31 @@
+Private-Package: com.paremus.packager.pkg.tomee.impl,\
+	com.paremus.packager.pkg.tomee.impl.guard,\
+	com.paremus.service.tomee,\
+	com.paremus.packager.pkg.javaee,\
+	com.paremus.service.javaee
+Include-Resource: data=tomee
+-failok: true
+Conditional-Package: aQute.lib*, aQute.service*
+Service-Component: *
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	org.bndtools.rt.packager.api,\
+	biz.aQute.bndlib;version=2.0.0.20121021-234834,\
+	org.bndtools.service,\
+	com.paremus.packager.pkg.javaee;version=latest
+Provide-Capability: packager.guard; type=tomee; effective:=active,\
+	packager.type; package.type=tomee; version:Version=1.5.2; effective:=active;\
+	uses:="org.bndtools.service.packager",\
+	com.paremus.javaee; vendor=tomee; version:Version=1.5.2; javaee.version:Version=6;\
+	effective:=active
+
+Require-Capability:\
+	packager.manager; effective:=active,\
+	osgi.native; filter:="(| \
+		(osgi.native.osname=Linux) \
+		(osgi.native.osname=MacOSX) \
+		(osgi.native.osname=Solaris) \
+		(osgi.native.osname=Win32) \
+	)"; effective:=active
