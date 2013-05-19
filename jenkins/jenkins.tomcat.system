@@ -1,5 +1,5 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="jenkins.tomcat.system"
-	boundary="fibre" repopath="Jenkins:1.462,gemini-web,fabric,fabric-ext,policy,nimble-cmpn">
+	boundary="fibre" repopath="Jenkins:1.462,gemini-web,fabric,policy,nimble-cmpn">
 
 	<description>
 		Deploys a instance of Jenkins running in Tomcat
