@@ -1,4 +1,5 @@
 Include-Resource: javaee=lib
 
-Require-Capability:\
-	com.paremus.javaee; filter:="(javaee.version>=6)"; effective:=active
+Require-Capability: com.paremus.javaee; filter:="(javaee.version>=6)";\
+	context.roots="jboss-as-helloworld,jboss-as-ejb-in-war"
+	

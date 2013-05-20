@@ -10,11 +10,12 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.metatype.Configurable;
 
 import com.paremus.packager.pkg.javaee.AbstractJavaEEProcessGuard;
+import com.paremus.packager.pkg.tomee.impl.TomEEConfigurer;
 import com.paremus.service.javaee.JavaEEProperties;
 import com.paremus.service.tomee.TomeeProperties;
 
 @Component(
-		name = "com.paremus.packager.pkg.tomee",
+		name = TomEEConfigurer.TOMEE_GUARD_FACTORY_PID,
 		designateFactory = JavaEEProperties.class,
 		properties = {
 			ProcessGuard.PACKAGE_TYPE + "=" + TomeeProperties.TOMEE,

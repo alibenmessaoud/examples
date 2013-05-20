@@ -18,7 +18,7 @@ Service-Component: *
 Provide-Capability: packager.guard; type=jbossas; effective:=active,\
 	packager.type; package.type=jbossas; version:Version=7.1.1.FINAL; effective:=active;\
 	uses:="org.bndtools.service.packager",\
-	com.paremus.javaee; vendor=jboss; version:Version=7.1.1.FINAL; javaee.version:Version=6; effective:=active
+	com.paremus.javaee; vendor=jboss; version:Version=7.1.1.FINAL; javaee.version:Version=6
 
 Require-Capability:\
 	packager.manager; effective:=active,\

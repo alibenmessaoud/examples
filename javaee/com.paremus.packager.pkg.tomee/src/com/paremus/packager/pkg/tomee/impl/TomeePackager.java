@@ -29,11 +29,9 @@ public class TomeePackager extends AbstractJavaEEPackager implements PackageType
 		super.activate(context);
 	}
 
-	interface TomeeSetup extends JavaEESetup {}
-
 	public PackageDescriptor create(Map<String,Object> properties, File data) throws Exception {
 		
-		TomeeSetup tomeeConfig = Converter.cnv(TomeeSetup.class, properties); 
+		TomeeProperties tomeeConfig = Converter.cnv(TomeeProperties.class, properties); 
 		
 		File extractFolder = getExtractFolder(data, tomeeConfig);
 		
@@ -43,7 +41,7 @@ public class TomeePackager extends AbstractJavaEEPackager implements PackageType
 			File deploymentFolder = new File(extractFolder, "apps");
 			if(!deploymentFolder.isDirectory() && !deploymentFolder.mkdirs())
 				throw new IOException("Unable to deploy applications from " + 
-						tomeeConfig.appSymbolicName() + '_' + tomeeConfig.appVersion());
+						tomeeConfig.app_symbolic_name() + '_' + tomeeConfig.app_version());
 			extractApplication(deploymentFolder, tomeeConfig);
 			IO.store(new Date().toString(), inited);
 		}

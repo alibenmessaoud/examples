@@ -18,8 +18,7 @@ Service-Component: *
 Provide-Capability: packager.guard; type=tomee; effective:=active,\
 	packager.type; package.type=tomee; version:Version=1.5.2; effective:=active;\
 	uses:="org.bndtools.service.packager",\
-	com.paremus.javaee; vendor=tomee; version:Version=1.5.2; javaee.version:Version=6;\
-	effective:=active
+	com.paremus.javaee; vendor=tomee; version:Version=1.5.2; javaee.version:Version=6;
 
 Require-Capability:\
 	packager.manager; effective:=active,\
