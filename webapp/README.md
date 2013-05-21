@@ -5,11 +5,15 @@ Instructions:
 
 1. The repository index has not been generated for this example, this is left as an exercise. To generate the index from within posh, change to the `examples/webapp` directory and enter the command:
 
-	% index --enable-ee-spotters webapp.example . index-nim.xml
+<pre><code>
+	%index --enable-ee-spotters webapp.example . index-nim.xml
+</code></pre>
 
 Or from the O/S shell:
 
-	$ posh -c "index --enable-ee-spotters webapp.example . index-nim.xml"
+<pre><code>
+	$posh -c "index --enable-ee-spotters webapp.example . index-nim.xml"
+</code></pre>
 
 2. In posh, ensure that either the `jetty` or `gemini-web` (i.e. Tomcat) repository is loaded:
 <pre><code>
@@ -40,6 +44,7 @@ Or from the O/S shell:
 
 3. Deploy the web application:
 
-	% nim:add osgi.web.app@active
-
+<pre><code>
+	%nim:add osgi.web.app@active
+</code></pre>
 4. Open the web page at `http://localhost:8080/osgi-web-app` OR `http://localhost:9000/osgi-web-app` (depending on the web container and port).
