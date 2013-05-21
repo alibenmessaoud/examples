@@ -1,4 +1,4 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="hellogs" template="cli.xml" version="1.0.0"
+<system xmlns="http://schema.paremus.com/sf/1" name="hellogs" template="cli" version="1.0.0"
 	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
 
 	<description>
