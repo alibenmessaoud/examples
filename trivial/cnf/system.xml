@@ -1,0 +1,11 @@
+<system
+	xmlns="http://schema.paremus.com/sf/1"
+	name="trivial-system"
+	boundary="fibre"
+	repopath="http://localhost:9085/trivial/index-nim.xml">
+
+	<nature group="demo" />
+
+	<system.part category="osgi.active.bundle" name="com.paremus.examples.trivial" />
+
+</system>

@@ -1,0 +1,8 @@
+repo = poshx:sfs 9085 trivial releaserepo
+echo Serving repository from base URI $repo
+
+fibre -I
+
+fabric:connect
+fabric:import system.xml
+fabric:deploy trivial-system
