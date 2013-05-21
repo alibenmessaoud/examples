@@ -84,6 +84,11 @@
   <req name="osgi.resolved.bundle/org.bndtools.service:[0,0)" />
   <cap name="osgi.active.bundle/org.bndtools.service" attrs="selfcap=&quot;true&quot;" />
  </part>
+ <part name="osgi.active.bundle/org.jboss.netty:3.6.5.Final" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.jboss.netty:[3.6.5.Final,3.6.5.Final)" />
+  <cap name="osgi.active.bundle/org.jboss.netty:3.6.5.Final" attrs="selfcap=&quot;true&quot;" />
+ </part>
  <part name="osgi.active.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" >
   <req name="builder/osgi.active.bundle" />
   <req name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:[2.9.1.RELEASE,2.9.1.RELEASE)" />
@@ -406,6 +411,74 @@
   <cap name="osgi.package/org.bndtools.service.endpoint:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.service&quot;" />
   <cap name="osgi.package/org.bndtools.service.store:1" attrs="bundle-version=0.0.0,bundle-symbolic-name=&quot;org.bndtools.service&quot;" />
   <cap name="osgi.require.bundle/org.bndtools.service" />
+ </part>
+ <part name="osgi.resolved.bundle/org.jboss.netty:3.6.5.Final" >
+  <artifact name="org.jboss.netty:3.6.5.Final" uri="org.jboss.netty/org.jboss.netty-3.6.5.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.google.protobuf:[2.5,3)" optional="true" />
+  <req name="osgi.package/javax.activation" optional="true" />
+  <req name="osgi.package/javax.net.ssl" optional="true" />
+  <req name="osgi.package/javax.servlet" optional="true" />
+  <req name="osgi.package/javax.servlet.http" optional="true" />
+  <req name="osgi.package/org.apache.commons.logging" optional="true" />
+  <req name="osgi.package/org.apache.log4j" optional="true" />
+  <req name="osgi.package/org.jboss.logging" optional="true" />
+  <req name="osgi.package/org.jboss.marshalling" optional="true" />
+  <req name="osgi.package/org.jboss.netty.bootstrap:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.codec.frame:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.codec.oneone:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.codec.protobuf:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.codec.serialization:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.codec.string:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.logging:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.stream:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.jboss.netty.handler.timeout:[3.6,4)" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" optional="true" />
+  <req name="osgi.package/org.slf4j:[1.6,2)" optional="true" />
+  <cap name="osgi.resolved.bundle/org.jboss.netty:3.6.5.Final" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.serialization:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.util:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.ipfilter:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.marshalling:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.compression:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.execution:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.http.websocketx:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel.local:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.bootstrap:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.base64:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.timeout:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel.socket.nio:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.spdy:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.http.websocket:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.socks:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.replay:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.string:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.container.spring:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.ssl:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.container.microcontainer:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.rtsp:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.protobuf:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.http.multipart:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel.socket.http:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel.group:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.embedder:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel.socket.oio:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.traffic:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.frame:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.oneone:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.container.osgi:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.logging:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.buffer:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec.http:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.channel.socket:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.queue:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.logging:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.codec:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.package/org.jboss.netty.handler.stream:3.6.5.Final" attrs="bundle-version=3.6.5.Final,bundle-symbolic-name=&quot;org.jboss.netty&quot;" />
+  <cap name="osgi.require.bundle/org.jboss.netty:3.6.5.Final" />
  </part>
  <part name="osgi.resolved.bundle/org.mongodb.mongo-java-driver:2.9.1.RELEASE" >
   <artifact name="org.mongodb.mongo-java-driver:2.9.1.RELEASE" uri="org.mongodb.mongo-java-driver/org.mongodb.mongo-java-driver-2.9.1.jar" />
