@@ -12,7 +12,7 @@ Or from the O/S shell:
 	$ posh -c "index --enable-ee-spotters webapp.example . index-nim.xml"
 
 2. In posh, ensure that either the `jetty` or `gemini-web` (i.e. Tomcat) repository is loaded:
-<p><code>
+<pre><code>
     % repos -l gemini-web
     % repos
     policy:0
@@ -22,10 +22,10 @@ Or from the O/S shell:
     nimble-cmpn:1.3
     REPOPATH=*
     %
-</code></p>
+</code></pre>
 
 3. Load the example repository:
-<p><code>
+<pre><code>
     % repos -l examples/webapp/index-nim.xml
     % repos
     webapp.example:0
@@ -36,7 +36,7 @@ Or from the O/S shell:
     nimble-cmpn:1.3
     REPOPATH=*
     %
-</code></p>
+</code></pre>
 
 3. Deploy the web application:
 
