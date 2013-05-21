@@ -1,0 +1,23 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="hellogs" template="cli.xml" version="1.0.0"
+	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
+
+	<description>
+		Deploys Hello World Service.
+	</description>
+	<nature group="demo" />
+
+        <system name="cli" boundary="fibre">
+
+           <contract features="(type=LOCAL)" />
+
+        </system>
+
+
+        <!-- Declarative Services Version -->
+        <system.part category="ms" name="com.example.hello.ds">
+                <property name="language" value="ja" />
+                <contract features="(type=LOCAL)" />
+        </system.part>
+
+</system>
+
