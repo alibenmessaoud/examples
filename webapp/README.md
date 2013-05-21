@@ -40,6 +40,6 @@ Or from the O/S shell:
 
 3. Deploy the web application:
 
-    % nim:add osgi.web.app@active
+	% nim:add osgi.web.app@active
 
 4. Open the web page at `http://localhost:8080/osgi-web-app` OR `http://localhost:9000/osgi-web-app` (depending on the web container and port).
