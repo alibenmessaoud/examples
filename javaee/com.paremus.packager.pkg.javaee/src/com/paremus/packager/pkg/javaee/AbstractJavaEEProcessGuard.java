@@ -38,7 +38,7 @@ public abstract class AbstractJavaEEProcessGuard implements ProcessGuard {
 				Dictionary<String,Object> props = new Hashtable<String, Object>();
 				
 				String hostName = InetAddress.getLocalHost().getHostAddress();
-				String[] contextRoots = config.context_roots();
+				String[] contextRoots = config.contextRoots();
 				URI[] uris = new URI[contextRoots.length];
 				
 				for(int i = 0; i < uris.length; i ++) {
@@ -48,8 +48,8 @@ public abstract class AbstractJavaEEProcessGuard implements ProcessGuard {
 				}
 				
 				props.put(RemoteConstants.SERVICE_EXPORTED_INTERFACES, "*");
-				props.put("app.symbolic.name", config.app_symbolic_name());
-				props.put("app.version", config.app_version());
+				props.put("app.symbolic.name", config.appSymbolicName());
+				props.put("app.version", config.appVersion());
 				props.put("availableURIs", uris);
 				registration = context.registerService(Endpoint.class, new Endpoint() {}, props);
 			}

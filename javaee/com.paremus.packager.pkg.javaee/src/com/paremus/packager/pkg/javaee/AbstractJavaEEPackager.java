@@ -8,11 +8,10 @@ import org.bndtools.service.packager.PackageType;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
+import org.osgi.framework.Version;
 
 import aQute.lib.io.IO;
 import aQute.libg.command.Command;
-
-import com.paremus.service.javaee.JavaEEProperties;
 
 public abstract class AbstractJavaEEPackager implements PackageType {
 	protected BundleContext context;
@@ -24,12 +23,18 @@ public abstract class AbstractJavaEEPackager implements PackageType {
 				.toLowerCase().startsWith("windows");
 	}
 
-	protected File getExtractFolder(File data, JavaEEProperties javaEESetup) throws Exception {
-		data = new File(data, javaEESetup.app_symbolic_name() + '/' + javaEESetup.app_version());
+	protected interface JavaEESetup {
+		String appSymbolicName();
+		Version appVersion();
+		String pathToBinary();
+	}
+
+    protected File getExtractFolder(File data, JavaEESetup javaEESetup) throws Exception {
+		data = new File(data, javaEESetup.appSymbolicName() + '/' + javaEESetup.appVersion());
 		
 		if(!data.isDirectory() && !data.mkdirs())
 			throw new IOException("Unable to create an extract for the application " 
-					+ javaEESetup.app_symbolic_name() + '/' + javaEESetup.app_version());
+					+ javaEESetup.appSymbolicName() + '/' + javaEESetup.appVersion());
 		return data;
     }
 	
@@ -44,26 +49,21 @@ public abstract class AbstractJavaEEPackager implements PackageType {
 		}
 	}
 
-	protected void extractApplication(File deploymentFolder, JavaEEProperties javaeeConfig) throws IOException {
+	protected void extractApplication(File deploymentFolder, JavaEESetup javaeeConfig) throws IOException {
 		Bundle app = null;
-		
-		if(javaeeConfig.app_bundle_id() != null) {
-			app = context.getBundle(javaeeConfig.app_bundle_id());
-		} else {
-			for(Bundle b : context.getBundles()) {
-				if(b.getSymbolicName().equals(javaeeConfig.app_symbolic_name())
-						&& b.getVersion().equals(b.getVersion())) {
-					app = b;
-					break;
-				}
+		for(Bundle b : context.getBundles()) {
+			if(b.getSymbolicName().equals(javaeeConfig.appSymbolicName())
+					&& b.getVersion().equals(b.getVersion())) {
+				app = b;
+				break;
 			}
 		}
 		
 		if(app == null)
 			throw new IllegalStateException("Unable to locate the application " + 
-					javaeeConfig.app_symbolic_name() + '_' + javaeeConfig.app_version());
+					javaeeConfig.appSymbolicName() + '_' + javaeeConfig.appVersion());
 		
-		copy(app, javaeeConfig.path_to_binary(), deploymentFolder);
+		copy(app, javaeeConfig.pathToBinary(), deploymentFolder);
 		
 	}
 

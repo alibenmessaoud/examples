@@ -30,9 +30,11 @@ public class JBossASPackager extends AbstractJavaEEPackager implements PackageTy
 		super.activate(context);
 	}
 
+	interface JBossASSetup extends JavaEESetup { }
+
 	public PackageDescriptor create(Map<String,Object> properties, File data) throws Exception {
 		
-		JBossASProperties jbossConfig = Converter.cnv(JBossASProperties.class, properties); 
+		JBossASSetup jbossConfig = Converter.cnv(JBossASSetup.class, properties); 
 		
 		File extractFolder = getExtractFolder(data, jbossConfig);
 		

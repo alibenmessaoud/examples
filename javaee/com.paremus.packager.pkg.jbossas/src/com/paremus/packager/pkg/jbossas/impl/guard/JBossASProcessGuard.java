@@ -10,12 +10,11 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.metatype.Configurable;
 
 import com.paremus.packager.pkg.javaee.AbstractJavaEEProcessGuard;
-import com.paremus.packager.pkg.jbossas.impl.JBossConfigurer;
 import com.paremus.service.javaee.JavaEEProperties;
 import com.paremus.service.jbossas.JBossASProperties;
 
 @Component(
-		name = JBossConfigurer.JBOSS_GUARD_FACTORY_PID,
+		name = "com.paremus.packager.pkg.jbossas",
 		designateFactory = JavaEEProperties.class,
 		properties = {
 			ProcessGuard.PACKAGE_TYPE + "=" + JBossASProperties.JBOSSAS, 
