@@ -3,8 +3,9 @@
 	biz.aQute.bndlib,\
 	junit.osgi,\
 	org.bndtools.rt.packager.api,\
-	biz.aQute.bndlib
+	biz.aQute.bndlib,\
 	org.bndtools.service
+	
 -sub: *.bnd
 
 Conditional-Package: aQute.lib*, aQute.bnd.annotation.metatype
