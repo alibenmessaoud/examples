@@ -3,7 +3,7 @@ Conditional-Package: aQute.lib*
 Include-Resource: data=nginx/linux64
 
 Require-Capability: \
-	packager.manager;filter:="(!(version>=2.0))", \
+	packager.manager; effective:=active, \
 	osgi.native;filter:="(& \
 		(osgi.native.osname=Linux) \
 		(osgi.native.processor=x86-64) \
