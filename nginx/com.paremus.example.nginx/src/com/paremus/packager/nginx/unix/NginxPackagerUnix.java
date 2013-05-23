@@ -2,12 +2,14 @@ package com.paremus.packager.nginx.unix;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Map;
 
 import org.bndtools.service.packager.PackageDescriptor;
 import org.bndtools.service.packager.PackageType;
+import org.bndtools.service.packager.ScriptGenerator;
 
 import com.paremus.service.nginx.NginxProperties;
 
@@ -41,7 +43,7 @@ public class NginxPackagerUnix implements PackageType {
 		}
 		File nginxConf = new File(data, "nginx.conf");
 		IO.copy(new StringReader(generateConfigFile(config)), new FileWriter(nginxConf));
-		String nginxPath = new File(data, "nginx").getAbsolutePath();
+		final String nginxPath = new File(data, "nginx").getAbsolutePath();
 		String libPath = new File(data, "lib").getAbsolutePath();
 		String confPath = nginxConf.getAbsolutePath();
 		PackageDescriptor pd = new PackageDescriptor();
@@ -58,6 +60,21 @@ public class NginxPackagerUnix implements PackageType {
 		sb.append("ps x | grep nginx | grep 'master process'");
 		pd.statusScript = sb.toString();
 		pd.description = "Nginx Packager";
+		pd.reconfigure = new ScriptGenerator() {
+			@Override
+			public String generate(Map<String, Object> properties, File data) {
+				// nested method to reconfigure 
+				System.out.println("Script reconfiguration called");
+				NginxProperties config = Configurable.createConfigurable(NginxProperties.class, properties);
+				File nginxConf = new File(data, "nginx.conf");
+				try {
+					IO.copy(new StringReader(generateConfigFile(config)), new FileWriter(nginxConf));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				return new StringBuilder().append(nginxPath).append(" -s reload").toString();
+			}
+		};
 		return pd;
 	}
 	
