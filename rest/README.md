@@ -15,7 +15,7 @@ The supplied script `build/load-system.osh` can be used to load a fibre, load th
 
 	posh -k build/load-system.osh
 
-Once this is started, visit the following URL in your browser: `http://localhost:9000/index.html`.
+Once this is started, visit the following URL in your browser: `http://localhost:8000/`.
 
 Scaling
 -------
