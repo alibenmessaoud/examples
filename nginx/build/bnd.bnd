@@ -1,0 +1,2 @@
+-nobundles
+-dependson: com.paremus.example.nginx
