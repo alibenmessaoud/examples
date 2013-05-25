@@ -1,6 +1,5 @@
 -buildpath: osgi.core,\
 	osgi.cmpn,\
-	biz.aQute.bndlib,\
 	junit.osgi,\
 	org.bndtools.rt.packager.api,\
 	biz.aQute.bndlib,\
