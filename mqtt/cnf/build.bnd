@@ -24,9 +24,6 @@
 		pretty=true;\
 		type=R5|Nimble,\
 	aQute.bnd.deployer.repository.FixedIndexedRepo; \
-		name=Bndtools-RT; \
-		locations=https://bndtools.ci.cloudbees.com/job/bndtools-rt.master/lastSuccessfulBuild/artifact/cnf/releaserepo/index.xml.gz, \
-	aQute.bnd.deployer.repository.FixedIndexedRepo; \
 		name=Paremus; \
 		locations=http://bundlerepo.org/paremus/index.xml.gz, \
 	aQute.bnd.deployer.repository.FixedIndexedRepo; \
