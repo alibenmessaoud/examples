@@ -1,42 +1,12 @@
 -runfw: org.apache.felix.framework;version='[4,5)'
 -runee: JavaSE-1.6
 
--runbundles: biz.aQute.bndlib;version='[2.0.0,2.0.1)',\
-	ch.qos.logback.classic;version='[1.0.0,1.0.1)',\
-	ch.qos.logback.core;version='[1.0.0,1.0.1)',\
-	com.google.guava;version='[12.0.1,12.0.2)',\
-	com.paremus.dosgi;version='[1.3.1,1.3.2)',\
-	com.paremus.dosgi.discovery;version='[1.3.1,1.3.2)',\
-	com.paremus.dosgi.discovery.slp;version='[1.3.1,1.3.2)',\
-	com.paremus.dosgi.dsw;version='[1.3.1,1.3.2)',\
-	com.paremus.dosgi.dsw.essencermi;version='[1.3.1,1.3.2)',\
-	com.paremus.dosgi.topologymanager;version='[1.3.1,1.3.2)',\
-	com.paremus.examples.mqtt.server;version=latest,\
-	com.paremus.packager.manager;version='[0.0.2,0.0.3)',\
-	com.paremus.packager.watchdog.manager;version='[0.0.2,0.0.3)',\
-	org.apache.felix.configadmin;version='[1.4.0,1.4.1)',\
-	org.apache.felix.eventadmin;version='[1.3.2,1.3.3)',\
-	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
-	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
-	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
-	org.apache.felix.log;version='[1.0.1,1.0.2)',\
-	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
-	org.bndtools.rt.packager.api;version='[0.2.0,0.2.1)',\
-	org.bndtools.rt.packager.mosquitto.common;version='[0.0.0,0.0.1)',\
-	org.bndtools.rt.packager.mosquitto.guard;version='[0.0.0,0.0.1)',\
-	org.bndtools.rt.packager.mosquitto.macos-x86_64;version='[0.0.0,0.0.1)',\
-	org.eclipse.paho.client.mqttv3;version='[1.0.0,1.0.1)',\
-	org.jboss.netty;version='[3.6.5,3.6.6)',\
-	osgi.cmpn;version='[4.3.0,4.3.1)',\
-	slf4j.api;version='[1.6.2,1.6.3)'
 -runsystempackages: sun.misc
 -runsystemcapabilities: ${native_capability}
 -runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.examples.mqtt.server)',\
-	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.3))',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.eventadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.bndtools.rt.packager.mosquitto.guard)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.dosgi.discovery.slp)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.dosgi.topologymanager)',\

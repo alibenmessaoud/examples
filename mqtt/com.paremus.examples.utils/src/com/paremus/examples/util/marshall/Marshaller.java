@@ -1,4 +1,4 @@
-package com.paremus.examples.util;
+package com.paremus.examples.util.marshall;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

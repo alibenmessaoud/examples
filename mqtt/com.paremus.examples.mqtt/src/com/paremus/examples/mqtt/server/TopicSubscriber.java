@@ -17,7 +17,7 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
-import com.paremus.examples.util.Marshaller;
+import com.paremus.examples.util.marshall.Marshaller;
 
 /**
  * Subscribes to MQTT server and republishes messages from the topic "geiger" to

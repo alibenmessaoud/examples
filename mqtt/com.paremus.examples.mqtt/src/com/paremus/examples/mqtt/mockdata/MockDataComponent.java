@@ -17,7 +17,7 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Deactivate;
 import aQute.bnd.annotation.component.Reference;
 
-import com.paremus.examples.util.Marshaller;
+import com.paremus.examples.util.marshall.Marshaller;
 
 /**
  * Generates random geiger-counter data and sends it to the MQTT server using

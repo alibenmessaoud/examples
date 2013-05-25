@@ -6,13 +6,14 @@
 	org.bndtools.rt.packager.mosquitto.macos-x86_64,\
 	org.eclipse.paho.client.mqttv3,\
 	org.jboss.netty;version=3.6,\
-	biz.aQute.bndlib;version=2.0,\
-	org.json
+	biz.aQute.bndlib;version=2.1,\
+	org.json,\
+	com.paremus.examples.utils;version=project
 
 -sub: *.bnd
 
 Conditional-Package: \
 	aQute.lib.*,\
 	org.json,\
-	com.paremus.examples.util.*
+	com.paremus.examples.util.marshall.*
 	

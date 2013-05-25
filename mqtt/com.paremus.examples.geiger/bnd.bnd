@@ -1,7 +1,13 @@
-Private-Package: com.paremus.examples.geiger
-Service-Component: *
 -buildpath: osgi.core,\
 	osgi.cmpn,\
 	biz.aQute.bnd.annotation,\
 	junit.osgi,\
-	pi4j-core
+	pi4j-core,\
+	org.bndtools.service,\
+	org.eclipse.paho.client.mqttv3,\
+	com.paremus.examples.utils;version=project
+
+Private-Package: com.paremus.examples.geiger,\
+	aQute.bnd.annotation.metatype
+Conditional-Package: com.paremus.examples.util.*
+Service-Component: *

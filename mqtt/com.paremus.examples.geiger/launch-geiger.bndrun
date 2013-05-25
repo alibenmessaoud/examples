@@ -1,11 +1,13 @@
 -runfw: org.apache.felix.framework;version='[4,5)'
 -runee: JavaSE-1.6
 
--runsystempackages: sun.misc
 -runrequires: osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(osgi.identity=com.paremus.examples.mqtt.mockdata)',\
+	osgi.identity;filter:='(osgi.identity=com.paremus.examples.geiger)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.dosgi.discovery.slp)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.dosgi.dsw.essencermi)',\
 	osgi.identity;filter:='(osgi.identity=com.paremus.dosgi.topologymanager)'
+
+-runsystempackages: sun.misc
 -resolve.effective: active
+-resolve.preferences: org.apache.felix.scr
