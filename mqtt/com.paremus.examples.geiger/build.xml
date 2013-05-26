@@ -4,6 +4,7 @@
 	<import file="../cnf/build.xml" />
 	
 	<target name="release" depends="template.release">
+		<echo message="Packaging ${target}/launch-geiger.jar"/>
 		<bndpackage runfile="launch-geiger.bndrun" output="${target}/launch-geiger.jar"/>
 	</target>
 	
