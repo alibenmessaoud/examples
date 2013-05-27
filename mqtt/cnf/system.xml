@@ -1,0 +1,10 @@
+<system
+	xmlns="http://schema.paremus.com/sf/1"
+	name="MQTTdemo"
+	boundary="fibre"
+	repopath="Release,Local,fabric,nimble-cmpn,nimble,nimble-rs"
+	>
+	
+	<system.part category="msf" name="org.bndtools.rt.packager.mosquitto.guard">
+	</system.part>
+</system>
