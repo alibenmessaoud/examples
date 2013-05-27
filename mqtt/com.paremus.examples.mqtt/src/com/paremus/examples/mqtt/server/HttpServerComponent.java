@@ -63,13 +63,13 @@ public class HttpServerComponent implements EventHandler {
 			}
 		});
 		server.bind(new InetSocketAddress(port));
-		System.out.printf("[websocket] started server on port %d%n", port);
+		System.out.printf("[http] started server on port %d%n", port);
 	}
 	
 	@Deactivate
 	void stop() {
 		server.shutdown();
-		System.out.println("[websocket]: shutdown server");
+		System.out.println("[http]: shutdown server");
 	}
 
 	@Override
