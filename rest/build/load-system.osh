@@ -8,6 +8,5 @@ fibre -I
 fabric:connect
 
 fabric:repos -lcm $repoUri/repos.properties
-fabric:repos -l   http://bundlerepo.org/paremus/index-nim.xml
 fabric:import (($0 resolve restdemo-system.xml) getPath)
 fabric:deploy RESTdemo
