@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1369282738121' name='Packager' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1369908476111' name='Packager' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.linux-x86_64'/>
@@ -47,126 +47,64 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.common'/>
+      <attribute name='osgi.identity' value='com.paremus.packager.manager'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='version' type='Version' value='0.0.3.201305291639'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='aeed649e334cf6182b117a9eb61a5c731420c27cfe0455c8330a85dafc754c9e'/>
-      <attribute name='url' value='org.bndtools.rt.packager.mongodb.common/org.bndtools.rt.packager.mongodb.common-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='19910'/>
+      <attribute name='osgi.content' value='7e1e8ef9b17dedf5c61cf594129bd46ab4de732682745bd200ad08abc311d61a'/>
+      <attribute name='url' value='com.paremus.packager.manager/com.paremus.packager.manager-0.0.3.jar'/>
+      <attribute name='size' type='Long' value='223842'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.common'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.0.3.201305291639'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.common'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.bndtools.service.mongodb'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.mongodb.common'/>
-      <attribute name='bundle-version' type='Version' value='0.0.0'/>
-      <directive name='uses' value='org.bndtools.service.packager'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.watchdog.manager'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.3.201305230418'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='e7eccdd93f0d23b87a1253e4c77b904227ca5b695ded9aadaa6d451b3949bd29'/>
-      <attribute name='url' value='com.paremus.packager.watchdog.manager/com.paremus.packager.watchdog.manager-0.0.3.jar'/>
-      <attribute name='size' type='Long' value='128588'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.watchdog.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.3.201305230418'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.watchdog.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.3.201305230418'/>
+      <attribute name='osgi.wiring.host' value='com.paremus.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.0.3.201305291639'/>
     </capability>
     <capability namespace='osgi.wiring.package'>
       <attribute name='osgi.wiring.package' value='com.paremus.service.watchdog'/>
       <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.watchdog.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.3.201305230418'/>
+      <attribute name='bundle-symbolic-name' value='com.paremus.packager.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.0.3.201305291639'/>
       <directive name='uses' value='org.bndtools.service.packager'/>
     </capability>
-    <capability namespace='packager.watchdog.manager'>
+    <capability namespace='packager.manager'>
       <attribute name='version' type='Version' value='0.0.3'/>
+      <directive name='uses' value='org.bndtools.service.packager'/>
+      <directive name='effective' value='active'/>
     </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.watchdog)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
-    <requirement namespace='osgi.extender'>
-      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(osgi.ee=JavaSE-1.6)'/>
+    </requirement>
+    <requirement namespace='packager.watchdog.manager'>
+      <directive name='filter' value='(&amp;(version&gt;=0.0.3)(!(version&gt;=0.0.4)))'/>
       <directive name='effective' value='active'/>
     </requirement>
-  </resource>
-  <resource>
-    <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.bndtools.rt.packager.api'/>
-      <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.2.0.201305130902'/>
-    </capability>
-    <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='27d6581078ac50cdba32467e0392885c33b77ad21c05615379d912cc7621fba8'/>
-      <attribute name='url' value='org.bndtools.rt.packager.api/org.bndtools.rt.packager.api-0.2.0.jar'/>
-      <attribute name='size' type='Long' value='33057'/>
-      <attribute name='mime' value='application/vnd.osgi.bundle'/>
-    </capability>
-    <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
-    </capability>
-    <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.bndtools.service.packager'/>
-      <attribute name='version' type='Version' value='1.2.0'/>
-      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
-      <directive name='uses' value='org.osgi.resource'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='aQute.service.reporter'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.osgi.resource'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='org.bndtools.service.watchdog'/>
-      <attribute name='version' type='Version' value='0.2.0.201305130902'/>
-      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
-      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
-    </capability>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.resource)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
     </requirement>
   </resource>
   <resource>
@@ -260,38 +198,126 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='osgi.identity' value='com.paremus.packager.watchdog.manager'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.0.3.201305300953'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='f9215a3e6f1456e6989201c59a5d36c3cc6f2f81c3fc898a1cd67e72381b0132'/>
+      <attribute name='url' value='com.paremus.packager.watchdog.manager/com.paremus.packager.watchdog.manager-0.0.3.jar'/>
+      <attribute name='size' type='Long' value='128853'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.watchdog.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.0.3.201305300953'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='com.paremus.packager.watchdog.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.0.3.201305300953'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='com.paremus.service.watchdog'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='com.paremus.packager.watchdog.manager'/>
+      <attribute name='bundle-version' type='Version' value='0.0.3.201305300953'/>
+      <directive name='uses' value='org.bndtools.service.packager'/>
+    </capability>
+    <capability namespace='packager.watchdog.manager'>
+      <attribute name='version' type='Version' value='0.0.3'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.watchdog)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+    <requirement namespace='osgi.extender'>
+      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='effective' value='active'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.api'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='0.2.0.201305130902'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='27d6581078ac50cdba32467e0392885c33b77ad21c05615379d912cc7621fba8'/>
+      <attribute name='url' value='org.bndtools.rt.packager.api/org.bndtools.rt.packager.api-0.2.0.jar'/>
+      <attribute name='size' type='Long' value='33057'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.api'/>
+      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.api'/>
+      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.packager'/>
+      <attribute name='version' type='Version' value='1.2.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
+      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
+      <directive name='uses' value='org.osgi.resource'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='aQute.service.reporter'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
+      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.osgi.resource'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
+      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.watchdog'/>
+      <attribute name='version' type='Version' value='0.2.0.201305130902'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.api'/>
+      <attribute name='bundle-version' type='Version' value='0.2.0.201305130902'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.resource)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='daf2c67343ab1d0d6253ec07c0cd897db98396fa0ea7e4f27c55c088d3be6ceb'/>
-      <attribute name='url' value='org.bndtools.rt.packager.mongodb.client/org.bndtools.rt.packager.mongodb.client-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='6543'/>
+      <attribute name='osgi.content' value='aeed649e334cf6182b117a9eb61a5c731420c27cfe0455c8330a85dafc754c9e'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.common/org.bndtools.rt.packager.mongodb.common-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='19910'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.common'/>
       <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.bndtools.service.mongodb'/>
+      <attribute name='version' type='Version' value='1.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.bndtools.rt.packager.mongodb.common'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
+      <directive name='uses' value='org.bndtools.service.packager'/>
+    </capability>
     <requirement namespace='osgi.wiring.package'>
-      <attribute name='status' value='provisional'/>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0)))'/>
-      <directive name='resolution' value='optional'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.mongodb)(version&gt;=2.9.0)(!(version&gt;=3.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.endpoint)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.extender'>
-      <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>
-      <directive name='effective' value='active'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
   </resource>
   <resource>
@@ -526,60 +552,34 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
-      <attribute name='osgi.identity' value='com.paremus.packager.manager'/>
+      <attribute name='osgi.identity' value='org.bndtools.rt.packager.mongodb.client'/>
       <attribute name='type' value='osgi.bundle'/>
-      <attribute name='version' type='Version' value='0.0.3.201305222154'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='79bbcb6242a61eca9ca7b3084029185d2af1d105b8cfdcd3905c0f02ed387b78'/>
-      <attribute name='url' value='com.paremus.packager.manager/com.paremus.packager.manager-0.0.3.jar'/>
-      <attribute name='size' type='Long' value='223541'/>
+      <attribute name='osgi.content' value='daf2c67343ab1d0d6253ec07c0cd897db98396fa0ea7e4f27c55c088d3be6ceb'/>
+      <attribute name='url' value='org.bndtools.rt.packager.mongodb.client/org.bndtools.rt.packager.mongodb.client-0.0.0.jar'/>
+      <attribute name='size' type='Long' value='6543'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
-      <attribute name='osgi.wiring.bundle' value='com.paremus.packager.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.3.201305222154'/>
+      <attribute name='osgi.wiring.bundle' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.wiring.host'>
-      <attribute name='osgi.wiring.host' value='com.paremus.packager.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.3.201305222154'/>
-    </capability>
-    <capability namespace='osgi.wiring.package'>
-      <attribute name='osgi.wiring.package' value='com.paremus.service.watchdog'/>
-      <attribute name='version' type='Version' value='1.0.0'/>
-      <attribute name='bundle-symbolic-name' value='com.paremus.packager.manager'/>
-      <attribute name='bundle-version' type='Version' value='0.0.3.201305222154'/>
-      <directive name='uses' value='org.bndtools.service.packager'/>
-    </capability>
-    <capability namespace='packager.manager'>
-      <attribute name='version' type='Version' value='0.0.3'/>
-      <directive name='uses' value='org.bndtools.service.packager'/>
-      <directive name='effective' value='active'/>
+      <attribute name='osgi.wiring.host' value='org.bndtools.rt.packager.mongodb.client'/>
+      <attribute name='bundle-version' type='Version' value='0.0.0'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=com.paremus.service.watchdog)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
+      <attribute name='status' value='provisional'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0)))'/>
+      <directive name='resolution' value='optional'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.packager)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=com.mongodb)(version&gt;=2.9.0)(!(version&gt;=3.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.wiring.package'>
-      <directive name='filter' value='(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))'/>
-    </requirement>
-    <requirement namespace='osgi.ee'>
-      <directive name='filter' value='(osgi.ee=JavaSE-1.6)'/>
-    </requirement>
-    <requirement namespace='packager.watchdog.manager'>
-      <directive name='filter' value='(&amp;(version&gt;=0.0.3)(!(version&gt;=0.0.4)))'/>
-      <directive name='effective' value='active'/>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.bndtools.service.endpoint)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))'/>
     </requirement>
     <requirement namespace='osgi.extender'>
       <directive name='filter' value='(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))'/>

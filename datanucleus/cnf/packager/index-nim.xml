@@ -12,19 +12,19 @@
   <req name="osgi.resolved.bundle/biz.aQute.bndlib:[2.0.0.20121021-234834,2.0.0.20121021-234834)" />
   <cap name="osgi.active.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" attrs="selfcap=&quot;true&quot;" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.manager:0.0.3.201305222154" >
+ <part name="osgi.active.bundle/com.paremus.packager.manager:0.0.3.201305291639" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.manager:[0.0.3.201305222154,0.0.3.201305222154)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.manager:[0.0.3.201305291639,0.0.3.201305291639)" />
   <req name="osgi.service/component" />
   <req name="osgi.generic/packager.watchdog.manager" ldap="(&amp;(version&gt;=0.0.3)(!(version&gt;=0.0.4)))" />
-  <cap name="osgi.active.bundle/com.paremus.packager.manager:0.0.3.201305222154" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.active.bundle/com.paremus.packager.manager:0.0.3.201305291639" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.manager" attrs="version=0.0.3" />
  </part>
- <part name="osgi.active.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305230418" >
+ <part name="osgi.active.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305300953" >
   <req name="builder/osgi.active.bundle" />
-  <req name="osgi.resolved.bundle/com.paremus.packager.watchdog.manager:[0.0.3.201305230418,0.0.3.201305230418)" />
+  <req name="osgi.resolved.bundle/com.paremus.packager.watchdog.manager:[0.0.3.201305300953,0.0.3.201305300953)" />
   <req name="osgi.service/component" />
-  <cap name="osgi.active.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305230418" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.active.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305300953" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.watchdog.manager" attrs="version=0.0.3" />
  </part>
  <part name="osgi.active.bundle/org.bndtools.rt.packager.api:0.2.0.201305130902" >
@@ -112,8 +112,8 @@
   <cap name="osgi.package/aQute.bnd.maven.support:2" attrs="bundle-version=2.0.0.20121021-234834,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
   <cap name="osgi.require.bundle/biz.aQute.bndlib:2.0.0.20121021-234834" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.manager:0.0.3.201305222154" >
-  <artifact name="com.paremus.packager.manager:0.0.3.201305222154" uri="com.paremus.packager.manager/com.paremus.packager.manager-0.0.3.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.manager:0.0.3.201305291639" >
+  <artifact name="com.paremus.packager.manager:0.0.3.201305291639" uri="com.paremus.packager.manager/com.paremus.packager.manager-0.0.3.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/com.paremus.service.watchdog:[1,2)" />
   <req name="osgi.package/org.bndtools.service.packager:[1.2,2)" />
@@ -121,20 +121,20 @@
   <req name="osgi.package/org.osgi.framework.wiring:[1,2)" />
   <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
   <req name="osgi.package/org.osgi.util.tracker:[1.5,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.manager:0.0.3.201305222154" attrs="selfcap=&quot;true&quot;" />
-  <cap name="osgi.package/com.paremus.service.watchdog:1" attrs="bundle-version=0.0.3.201305222154,bundle-symbolic-name=&quot;com.paremus.packager.manager&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.manager:0.0.3.201305222154" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.manager:0.0.3.201305291639" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/com.paremus.service.watchdog:1" attrs="bundle-version=0.0.3.201305291639,bundle-symbolic-name=&quot;com.paremus.packager.manager&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.manager:0.0.3.201305291639" />
  </part>
- <part name="osgi.resolved.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305230418" >
-  <artifact name="com.paremus.packager.watchdog.manager:0.0.3.201305230418" uri="com.paremus.packager.watchdog.manager/com.paremus.packager.watchdog.manager-0.0.3.jar" />
+ <part name="osgi.resolved.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305300953" >
+  <artifact name="com.paremus.packager.watchdog.manager:0.0.3.201305300953" uri="com.paremus.packager.watchdog.manager/com.paremus.packager.watchdog.manager-0.0.3.jar" />
   <req name="builder/osgi.resolved.bundle" />
   <req name="osgi.package/aQute.service.reporter:[1,2)" />
   <req name="osgi.package/com.paremus.service.watchdog:[1,2)" />
   <req name="osgi.package/org.bndtools.service.packager:[1.2,2)" />
-  <cap name="osgi.resolved.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305230418" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.resolved.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305300953" attrs="selfcap=&quot;true&quot;" />
   <cap name="osgi.generic/packager.watchdog.manager" attrs="version=0.0.3" />
-  <cap name="osgi.package/com.paremus.service.watchdog:1" attrs="bundle-version=0.0.3.201305230418,bundle-symbolic-name=&quot;com.paremus.packager.watchdog.manager&quot;" />
-  <cap name="osgi.require.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305230418" />
+  <cap name="osgi.package/com.paremus.service.watchdog:1" attrs="bundle-version=0.0.3.201305300953,bundle-symbolic-name=&quot;com.paremus.packager.watchdog.manager&quot;" />
+  <cap name="osgi.require.bundle/com.paremus.packager.watchdog.manager:0.0.3.201305300953" />
  </part>
  <part name="osgi.resolved.bundle/org.bndtools.rt.packager.api:0.2.0.201305130902" >
   <artifact name="org.bndtools.rt.packager.api:0.2.0.201305130902" uri="org.bndtools.rt.packager.api/org.bndtools.rt.packager.api-0.2.0.jar" />
@@ -200,7 +200,7 @@
  </part>
  <ext name="ms.extension/org.bndtools.rt.packager.manager" target="ms/org.bndtools.rt.packager.manager:[0,0]" >
   <req name="builder/primordial.builder" />
-  <req name="osgi.active.bundle/com.paremus.packager.manager:[0.0.3.201305222154,0.0.3.201305222154]" />
+  <req name="osgi.active.bundle/com.paremus.packager.manager:[0.0.3.201305291639,0.0.3.201305291639]" />
   <cap name="ms.extension/org.bndtools.rt.packager.manager" attrs="selfcap=&quot;true&quot;" />
  </ext>
  <ext name="ms.extension/org.bndtools.rt.packager.mongodb.guard" target="msf/org.bndtools.rt.packager.mongodb.guard:[0,0]" >
