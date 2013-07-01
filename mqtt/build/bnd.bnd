@@ -1,0 +1,4 @@
+-nobundles
+-dependson: \
+  com.paremus.examples.mqtt,\
+  com.paremus.examples.geiger
