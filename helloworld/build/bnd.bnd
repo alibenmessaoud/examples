@@ -2,4 +2,5 @@
 -dependson:\
 	helloworld.cli,\
 	helloworld.ds,\
-	helloworld.blueprint
+	helloworld.blueprint,\
+	helloworld.activator
