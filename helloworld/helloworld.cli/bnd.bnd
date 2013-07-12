@@ -1,5 +1,5 @@
 -buildpath: osgi.core,\
-	osgi.cmpn,\
+	osgi.cmpn; version=4.3,\
 	helloworld.api;version=latest
 Private-Package: com.example.hello.cli
 Bundle-Activator: com.example.hello.cli.HelloWorldCLIActivator

@@ -2,3 +2,11 @@
 Private-Package: com.example.hello.impl
 Include-Resource: resources
 Bundle-Blueprint: OSGI-INF/hello.xml
+
+Require-Capability: \
+	osgi.extender; \
+		filter:="(osgi.extender=osgi.blueprint)"; \
+		effective:=active, \
+	osgi.blueprint.xmlns; \
+		filter:="(osgi.blueprint.xmlns=http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0)"; \
+		effective:=active
