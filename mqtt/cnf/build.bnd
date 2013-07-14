@@ -24,8 +24,8 @@
 		pretty=true;\
 		type=R5|Nimble,\
 	aQute.bnd.deployer.repository.FixedIndexedRepo; \
-		name=Bndtools Hub; \
-		locations=https://github.com/bndtools/bundle-hub/raw/master/index.xml.gz, \
+		name=BundleRepo-OSS; \
+		locations=https://www.bundlerepo.org/repos/oss/index-20130714-1600.xml.gz, \
 	aQute.lib.deployer.FileRepo; \
 		name=Build;\
 		location=${workspace}/cnf/buildrepo,\
