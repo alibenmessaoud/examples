@@ -1,9 +1,0 @@
-fibre -I
-fabric:connect
-
-fabric:repos -l file:releaserepo/index-nim.xml
-fabric:repos -l file:localrepo/index-nim.xml
-fabric:repos -l https://www.bundlerepo.org/repos/oss/index-nim.xml
-fabric:repos -l https://www.bundlerepo.org/repos/paremus/index-nim.xml
-
-fabric:import -f system-legacy.xml

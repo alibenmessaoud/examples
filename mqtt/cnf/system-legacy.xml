@@ -5,24 +5,24 @@
     repopath="
         Release,
         Local,
+        nimble,
+        nimble-cmpn,
         BundleRepo-OSS-20130714-1600,
-        BundleRepo-Paremus-20130704-2300,
-        nimble
+        BundleRepo-Paremus-20130704-2300
     ">
-    
+
+    <!-- Mosquitto Server -->
     <system.part category="msf" name="org.bndtools.rt.packager.mosquitto.guard">
-      <!-- optional config -->
-    <!-- <property name="port" value="1883" type="integer"/> -->
+        <!-- optional config -->
+        <!-- <property name="port" value="1883" type="integer"/> -->
     </system.part>
 
-  <system.part category="osgi.active.bundle" name="com.paremus.examples.mqtt.server"/>
+    <!-- Application Bundle -->
+    <system.part category="osgi.active.bundle" name="com.paremus.examples.mqtt.server"/>
 
-  <!-- RSA Stack, with SLP discovery -->
-  <!--
-  <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.slp"/>
-  <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dws.essencermi"/>
-  <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager"/>
-  -->
-
+    <!-- RSA Stack, with SLP discovery -->
+    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.slp" />
+    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
+    <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
 
 </system>
