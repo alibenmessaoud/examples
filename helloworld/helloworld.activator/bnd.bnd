@@ -1,5 +1,0 @@
--buildpath: \
-	osgi.core; version='[4.2,5)',\
-	helloworld.api; version=latest
-Private-Package: com.example.hello.impl
-Bundle-Activator: com.example.hello.impl.GreetingActivator
