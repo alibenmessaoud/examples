@@ -1,10 +1,5 @@
-<system
-    xmlns="http://schema.paremus.com/sf/1"
-    name="helloworld-ds-system"
-    boundary="fibre"
-    repopath="
-        file:cnf/releaserepo/index-nim.xml
-    ">
+<system xmlns="http://schema.paremus.com/sf/1" name="helloworld-ds-system"
+	boundary="fibre" repopath="helloworld,fabric,nimble-cmpn">
 
 	<description>
 		Deploys a Declarative Services based Greeting service and a CLI command.
