@@ -1,0 +1,18 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="helloworld-blueprint-system"
+        boundary="fibre" repopath="helloworld-ext,helloworld,aries-ext,aries,fabric,nimble-cmpn">
+
+        <description>
+                Deploys a Blueprint-based Greeting service and a CLI command.
+        </description>
+        <nature group="demo" />
+
+        <!-- Blueprint Version -->
+        <system.part category="ms" name="com.example.hello">
+                <property name="language" value="de" />
+        </system.part>
+        
+        <system.part category="osgi.active.bundle" name="helloworld.cli" >
+                <contract features="(fibre.composite.com.example.hello=1)" />
+        </system.part>
+
+</system>
