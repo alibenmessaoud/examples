@@ -1,0 +1,4 @@
+nim:repos -l file:releaserepo/index-nim.xml
+nim:repos -l file:localrepo/index-nim.xml
+nim:repos -l https://www.bundlerepo.org/repos/oss/index-nim.xml
+nim:repos -l https://www.bundlerepo.org/repos/paremus/index-nim.xml

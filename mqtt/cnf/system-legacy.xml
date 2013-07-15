@@ -3,11 +3,11 @@
     name="MQTTdemo"
     boundary="fibre"
     repopath="
-      file:releaserepo/index-nim.xml,
-      file:localrepo/index-nim.xml,
-      https://www.bundlerepo.org/repos/oss/index-nim.xml,
-      https://www.bundlerepo.org/repos/paremus/index-nim.xml,
-      urn:partbase
+        Release,
+        Local,
+        BundleRepo-OSS-20130714-1600,
+        BundleRepo-Paremus-20130704-2300,
+        nimble
     ">
     
     <system.part category="msf" name="org.bndtools.rt.packager.mosquitto.guard">
