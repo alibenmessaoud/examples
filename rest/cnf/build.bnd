@@ -25,7 +25,7 @@
 		type=R5|Nimble,\
 	aQute.bnd.deployer.repository.FixedIndexedRepo;\
 		name=Paremus;\
-		locations=https://www.bundlerepo.org/paremus/index.xml.gz,\
+        	locations=https://www.bundlerepo.org/repos/paremus/index.xml.gz,\
 	aQute.lib.deployer.FileRepo;\
 		name=Build;\
 		location=${workspace}/cnf/buildrepo,\
