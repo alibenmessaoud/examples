@@ -1,0 +1,284 @@
+<repository name="localrepo:0" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="osgi.active.bundle/biz.aQute.bnd:1.51.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/biz.aQute.bnd:[1.51.1,1.51.1)" />
+  <cap name="osgi.active.bundle/biz.aQute.bnd:1.51.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/biz.aQute.bnd.annotation:1.51.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/biz.aQute.bnd.annotation:[1.51.1,1.51.1)" />
+  <cap name="osgi.active.bundle/biz.aQute.bnd.annotation:1.51.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/biz.aQute.bndlib:1.51" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/biz.aQute.bndlib:[1.51,1.51)" />
+  <cap name="osgi.active.bundle/biz.aQute.bndlib:1.51" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/biz.aQute.junit:1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/biz.aQute.junit:[1,1)" />
+  <cap name="osgi.active.bundle/biz.aQute.junit:1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/biz.aQute.launcher:1.0.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/biz.aQute.launcher:[1.0.1,1.0.1)" />
+  <cap name="osgi.active.bundle/biz.aQute.launcher:1.0.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.felix.shell:1.4.2" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.shell:[1.4.2,1.4.2)" />
+  <cap name="osgi.active.bundle/org.apache.felix.shell:1.4.2" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.felix.shell.tui:1.4.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.shell.tui:[1.4.1,1.4.1)" />
+  <cap name="osgi.active.bundle/org.apache.felix.shell.tui:1.4.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.osgi.impl.bundle.bindex:2.2" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.osgi.impl.bundle.bindex:[2.2,2.2)" />
+  <req name="osgi.service/component" />
+  <cap name="osgi.active.bundle/org.osgi.impl.bundle.bindex:2.2" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/osgi.cmpn:4.2.0.200908310645" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/osgi.cmpn:[4.2.0.200908310645,4.2.0.200908310645)" />
+  <cap name="osgi.active.bundle/osgi.cmpn:4.2.0.200908310645" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/biz.aQute.bnd:1.51.1" versionSingleton="true" attrs="singleton=true" >
+  <artifact name="biz.aQute.bnd:1.51.1" uri="biz.aQute.bnd/biz.aQute.bnd-1.51.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/aQute.bnd.service.url" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.xml.namespace" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.transform" />
+  <req name="osgi.package/javax.xml.transform.dom" />
+  <req name="osgi.package/javax.xml.transform.sax" />
+  <req name="osgi.package/javax.xml.transform.stream" />
+  <req name="osgi.package/javax.xml.xpath" />
+  <req name="osgi.package/junit.framework:[3.8,4)" />
+  <req name="osgi.package/org.apache.tools.ant" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.types" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.bindex:[1,2)" />
+  <req name="osgi.package/org.osgi.service.component.annotations:[1.2,2)" />
+  <req name="osgi.package/org.osgi.service.coordinator:[1,2)" />
+  <req name="osgi.package/org.osgi.service.packageadmin:[1.2,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <req name="osgi.require.bundle/org.eclipse.ui.ide:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.jface.text:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.ui.workbench.texteditor:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.ui.editors:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.ui:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.debug.ui:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.jdt.core:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.jdt.ui:[3.3,4)" />
+  <req name="osgi.require.bundle/org.eclipse.core.runtime:[3.2,4)" />
+  <req name="osgi.require.bundle/org.eclipse.jdt.launching:[3.2,4)" />
+  <req name="osgi.require.bundle/org.eclipse.jdt.debug.ui:[3.2,4)" />
+  <req name="osgi.require.bundle/org.eclipse.jdt.junit:[3.2,4)" />
+  <req name="osgi.require.bundle/org.junit" />
+  <req name="osgi.require.bundle/org.eclipse.osgi.services" />
+  <req name="osgi.require.bundle/org.apache.ant" />
+  <req name="osgi.require.bundle/org.eclipse.ui.console" />
+  <cap name="osgi.resolved.bundle/biz.aQute.bnd:1.51.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/aQute.bnd.service:1.44" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd&quot;" />
+  <cap name="osgi.package/aQute.bnd.service.url:1.51.1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd&quot;" />
+  <cap name="osgi.package/aQute.bnd.service.action:1.43.1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd&quot;" />
+  <cap name="osgi.package/org.osgi.service.bindex:1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd&quot;" />
+  <cap name="osgi.package/org.osgi.service.coordinator:1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd&quot;" />
+  <cap name="osgi.require.bundle/biz.aQute.bnd:1.51.1" />
+ </part>
+ <part name="osgi.resolved.bundle/biz.aQute.bnd.annotation:1.51.1" >
+  <artifact name="biz.aQute.bnd.annotation:1.51.1" uri="biz.aQute.bnd.annotation/biz.aQute.bnd.annotation-1.51.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/aQute.libg.reporter:[1,2)" />
+  <req name="osgi.package/javax.xml.namespace" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.xpath" />
+  <req name="osgi.package/junit.framework:[3.8,4)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <cap name="osgi.resolved.bundle/biz.aQute.bnd.annotation:1.51.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/aQute.bnd.annotation:1.43.1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd.annotation&quot;" />
+  <cap name="osgi.package/aQute.bnd.annotation.component:1.43.1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd.annotation&quot;" />
+  <cap name="osgi.package/aQute.bnd.annotation.metatype:1.43.1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd.annotation&quot;" />
+  <cap name="osgi.package/aQute.bnd.test:1.51.1" attrs="bundle-version=1.51.1,bundle-symbolic-name=&quot;biz.aQute.bnd.annotation&quot;" />
+  <cap name="osgi.require.bundle/biz.aQute.bnd.annotation:1.51.1" />
+ </part>
+ <part name="osgi.resolved.bundle/biz.aQute.bndlib:1.51" >
+  <artifact name="biz.aQute.bndlib:1.51.0" uri="biz.aQute.bndlib/biz.aQute.bndlib-1.51.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/aQute.libg.sax:[1,2)" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.xml.namespace" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.transform" />
+  <req name="osgi.package/javax.xml.transform.sax" />
+  <req name="osgi.package/javax.xml.transform.stream" />
+  <req name="osgi.package/javax.xml.xpath" />
+  <req name="osgi.package/junit.framework:[3.8,4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.bindex:[1,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <cap name="osgi.resolved.bundle/biz.aQute.bndlib:1.51" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/aQute.bnd.annotation:1.43.1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.annotation.metatype:1.43.1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.annotation.component:1.43.1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.lib.osgi:1.43.1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.build:1.43.1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.service:1.44" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.service.url:1.51" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.service.action:1.43.1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.bnd.help:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.libg.reporter:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.libg.version:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.libg.sed:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.libg.header:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.libg.qtokens:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/aQute.libg.sax:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/org.osgi.service.bindex:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.package/org.osgi.service.coordinator:1" attrs="bundle-version=1.51.0,bundle-symbolic-name=&quot;biz.aQute.bndlib&quot;" />
+  <cap name="osgi.require.bundle/biz.aQute.bndlib:1.51" />
+ </part>
+ <part name="osgi.resolved.bundle/biz.aQute.junit:1" >
+  <artifact name="biz.aQute.junit:1.0.0" uri="biz.aQute.junit/biz.aQute.junit-1.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/junit.framework:[3.8,4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <cap name="osgi.resolved.bundle/biz.aQute.junit:1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/junit.framework:3.8" attrs="bundle-version=1.0.0,bundle-symbolic-name=&quot;biz.aQute.junit&quot;" />
+  <cap name="osgi.require.bundle/biz.aQute.junit:1" />
+ </part>
+ <part name="osgi.resolved.bundle/biz.aQute.launcher:1.0.1" >
+  <artifact name="biz.aQute.launcher:1.0.1" uri="biz.aQute.launcher/biz.aQute.launcher-1.0.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/aQute.bnd.build:[1.43,2)" />
+  <req name="osgi.package/aQute.bnd.service:[1.44,2)" />
+  <req name="osgi.package/aQute.lib.io:[1,2)" />
+  <req name="osgi.package/aQute.lib.osgi:[1.43,2)" />
+  <req name="osgi.package/aQute.libg.generics:[1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.framework.launch:[1,2)" />
+  <req name="osgi.package/org.osgi.service.packageadmin:[1.2,2)" />
+  <req name="osgi.package/org.osgi.service.permissionadmin:[1.2,2)" />
+  <cap name="osgi.resolved.bundle/biz.aQute.launcher:1.0.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/biz.aQute.launcher:1.0.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.shell:1.4.2" >
+  <artifact name="org.apache.felix.shell:1.4.2" uri="org.apache.felix.shell/org.apache.felix.shell-1.4.2.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.shell:1" />
+  <req name="osgi.package/org.osgi.framework:1.4" />
+  <req name="osgi.package/org.osgi.service.log:1.3" />
+  <req name="osgi.package/org.osgi.service.packageadmin:1.2" />
+  <req name="osgi.package/org.osgi.service.startlevel:1.1" />
+  <req name="osgi.package/org.ungoverned.osgi.service.shell:1" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.shell:1.4.2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.ungoverned.osgi.service.shell:1" attrs="bundle-version=1.4.2,bundle-symbolic-name=&quot;org.apache.felix.shell&quot;" />
+  <cap name="osgi.package/org.osgi.service.log:1.3" attrs="bundle-version=1.4.2,bundle-symbolic-name=&quot;org.apache.felix.shell&quot;" />
+  <cap name="osgi.package/org.apache.felix.shell:1" attrs="bundle-version=1.4.2,bundle-symbolic-name=&quot;org.apache.felix.shell&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.shell:1.4.2" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.shell.tui:1.4.1" >
+  <artifact name="org.apache.felix.shell.tui:1.4.1" uri="org.apache.felix.shell.tui/org.apache.felix.shell.tui-1.4.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.shell:1" />
+  <req name="osgi.package/org.osgi.framework:1.3" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.shell.tui:1.4.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.shell.tui:1.4.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.osgi.impl.bundle.bindex:2.2" >
+  <artifact name="org.osgi.impl.bundle.bindex:2.2.0" uri="org.osgi.impl.bundle.bindex/org.osgi.impl.bundle.bindex-2.2.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.tools.ant" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.types" optional="true" />
+  <req name="osgi.package/org.osgi.service.bindex:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.osgi.impl.bundle.bindex:2.2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.osgi.service.bindex:1" attrs="bundle-version=2.2.0,bundle-symbolic-name=&quot;org.osgi.impl.bundle.bindex&quot;" />
+  <cap name="osgi.require.bundle/org.osgi.impl.bundle.bindex:2.2" />
+ </part>
+ <part name="osgi.resolved.bundle/osgi.cmpn:4.2.0.200908310645" >
+  <artifact name="osgi.cmpn:4.2.0.200908310645" uri="osgi.cmpn/osgi.cmpn-4.2.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/info.dmtree:[1,2)" optional="true" />
+  <req name="osgi.package/info.dmtree.notification:[1,2)" optional="true" />
+  <req name="osgi.package/info.dmtree.notification.spi:[1,2)" optional="true" />
+  <req name="osgi.package/info.dmtree.registry:[1,2)" optional="true" />
+  <req name="osgi.package/info.dmtree.security:[1,2)" optional="true" />
+  <req name="osgi.package/info.dmtree.spi:[1,2)" optional="true" />
+  <req name="osgi.package/javax.microedition.io" optional="true" />
+  <req name="osgi.package/javax.servlet" optional="true" />
+  <req name="osgi.package/javax.servlet.http" optional="true" />
+  <req name="osgi.package/javax.xml.parsers" optional="true" />
+  <req name="osgi.package/org.osgi.application:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.application:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.blueprint.container:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.blueprint.reflect:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.cm:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.component:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.condpermadmin:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.deploymentadmin:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.deploymentadmin.spi:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.device:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.event:[1.2,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.http:[1.2,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.io:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.metatype:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.monitor:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.prefs:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.provisioning:[1.2,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.upnp:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.useradmin:[1.1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.wireadmin:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.cdma:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.gsm:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.measurement:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.mobile:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.position:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.xml:[1,2)" optional="true" />
+  <cap name="osgi.resolved.bundle/osgi.cmpn:4.2.0.200908310645" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/info.dmtree:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/info.dmtree.spi:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/info.dmtree.registry:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/info.dmtree.notification.spi:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/info.dmtree.security:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/info.dmtree.notification:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.application:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.application:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint.container:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint.reflect:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.cm:1.3" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.component:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.deploymentadmin.spi:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.deploymentadmin:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.device:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.event:1.2" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.http:1.2.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.io:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.log:1.3" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.metatype:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.monitor:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.prefs:1.1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.provisioning:1.2" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.upnp:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.useradmin:1.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.service.wireadmin:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.measurement:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.position:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.cdma:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.gsm:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.mobile:1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.tracker:1.4" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.package/org.osgi.util.xml:1.0.1" attrs="bundle-version=4.2.0.200908310645,bundle-symbolic-name=&quot;osgi.cmpn&quot;" />
+  <cap name="osgi.require.bundle/osgi.cmpn:4.2.0.200908310645" />
+ </part>
+</repository>

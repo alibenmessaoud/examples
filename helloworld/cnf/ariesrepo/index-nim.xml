@@ -1,0 +1,1278 @@
+<repository name="aries:0" xmlns="http://schema.paremus.com/nri/2" >
+ <part name="ms/org.apache.felix.fileinstall" attrs="felix.fileinstall.bundles.new.start=&quot;true&quot;,felix.fileinstall.bundles.startActivationPolicy=&quot;true&quot;,felix.fileinstall.bundles.startTransient=&quot;false&quot;,felix.fileinstall.dir=&quot;load&quot;,felix.fileinstall.filter=&quot;&quot;,felix.fileinstall.log.level=&quot;0&quot;,felix.fileinstall.noInitialDelay=&quot;false&quot;,felix.fileinstall.poll=&quot;2000&quot;,felix.fileinstall.start.level=&quot;0&quot;,felix.fileinstall.tmpdir=&quot;tmp&quot;" >
+  <req name="builder/ms" />
+  <cap name="ms/org.apache.felix.fileinstall" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/derby:10.5.3000000.802917" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/derby:[10.5.3000000.802917,10.5.3000000.802917)" />
+  <cap name="osgi.active.bundle/derby:10.5.3000000.802917" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.api:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.api:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.api:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.default.local.platform:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.default.local.platform:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.default.local.platform:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.deployment.management:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.deployment.management:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.deployment.management:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.install:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.install:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.install:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.management:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.management:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.management:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.modeller:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.modeller:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.modeller:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.noop.platform.repo:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.noop.platform.repo:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.noop.platform.repo:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.noop.postresolve.process:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.noop.postresolve.process:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.noop.postresolve.process:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.resolver.obr:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.resolver.obr:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.resolver.obr:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.runtime:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.runtime:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.runtime:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.application.utils:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.application.utils:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.application.utils:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.blueprint:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.blueprint:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.blueprint:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.jndi:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.jndi:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.jndi:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.jpa.api:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.jpa.api:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.jpa.api:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.jpa.blueprint.aries:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.jpa.blueprint.aries:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.jpa.blueprint.aries:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.jpa.container:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.jpa.container:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.jpa.container:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.jpa.container.context:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.jpa.container.context:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.jpa.container.context:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.proxy:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.proxy:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.proxy:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.samples.ariestrader.derby.ds:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.samples.ariestrader.derby.ds:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.samples.ariestrader.derby.ds:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.transaction.blueprint:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.transaction.blueprint:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.transaction.blueprint:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.transaction.manager:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.transaction.manager:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.transaction.manager:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.transaction.wrappers:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.transaction.wrappers:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.transaction.wrappers:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.aries.util:0.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.aries.util:[0.3,0.3)" />
+  <cap name="osgi.active.bundle/org.apache.aries.util:0.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.commons.collections:3.2.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.commons.collections:[3.2.1,3.2.1)" />
+  <cap name="osgi.active.bundle/org.apache.commons.collections:3.2.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.commons.lang:2.5" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.commons.lang:[2.5,2.5)" />
+  <cap name="osgi.active.bundle/org.apache.commons.lang:2.5" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.commons.pool:1.5.4" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.commons.pool:[1.5.4,1.5.4)" />
+  <cap name="osgi.active.bundle/org.apache.commons.pool:1.5.4" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.felix.bundlerepository:1.6.4" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.bundlerepository:[1.6.4,1.6.4)" />
+  <cap name="osgi.active.bundle/org.apache.felix.bundlerepository:1.6.4" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.felix.fileinstall:3.1.4" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.felix.fileinstall:[3.1.4,3.1.4)" />
+  <cap name="osgi.active.bundle/org.apache.felix.fileinstall:3.1.4" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.geronimo.components.geronimo-transaction:2.1.3" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.geronimo.components.geronimo-transaction:[2.1.3,2.1.3)" />
+  <cap name="osgi.active.bundle/org.apache.geronimo.components.geronimo-transaction:2.1.3" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.geronimo.specs.geronimo-jpa_2.0_spec:1.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-jpa_2.0_spec:[1.1,1.1)" />
+  <cap name="osgi.active.bundle/org.apache.geronimo.specs.geronimo-jpa_2.0_spec:1.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.geronimo.specs.geronimo-jta_1.1_spec:1.1.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-jta_1.1_spec:[1.1.1,1.1.1)" />
+  <cap name="osgi.active.bundle/org.apache.geronimo.specs.geronimo-jta_1.1_spec:1.1.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.geronimo.specs.geronimo-servlet_2.5_spec:1.2" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-servlet_2.5_spec:[1.2,1.2)" />
+  <cap name="osgi.active.bundle/org.apache.geronimo.specs.geronimo-servlet_2.5_spec:1.2" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.apache.openjpa:2" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.apache.openjpa:[2,2)" />
+  <cap name="osgi.active.bundle/org.apache.openjpa:2" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.eclipse.equinox.cm:3.2.0.v20070116" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.eclipse.equinox.cm:[3.2.0.v20070116,3.2.0.v20070116)" />
+  <cap name="osgi.active.bundle/org.eclipse.equinox.cm:3.2.0.v20070116" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.eclipse.osgi.services:3.1.200.v20070605" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.eclipse.osgi.services:[3.1.200.v20070605,3.1.200.v20070605)" />
+  <cap name="osgi.active.bundle/org.eclipse.osgi.services:3.1.200.v20070605" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.objectweb.asm.all:3.2" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.objectweb.asm.all:[3.2,3.2)" />
+  <cap name="osgi.active.bundle/org.objectweb.asm.all:3.2" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.ops4j.pax.logging.pax-logging-api:1.4" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.ops4j.pax.logging.pax-logging-api:[1.4,1.4)" />
+  <cap name="osgi.active.bundle/org.ops4j.pax.logging.pax-logging-api:1.4" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.ops4j.pax.logging.pax-logging-service:1.4" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.ops4j.pax.logging.pax-logging-service:[1.4,1.4)" />
+  <cap name="osgi.active.bundle/org.ops4j.pax.logging.pax-logging-service:1.4" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.ops4j.pax.web.pax-web-extender-war:0.8.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-extender-war:[0.8.1,0.8.1)" />
+  <cap name="osgi.active.bundle/org.ops4j.pax.web.pax-web-extender-war:0.8.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.ops4j.pax.web.pax-web-jetty-bundle:0.8.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-jetty-bundle:[0.8.1,0.8.1)" />
+  <cap name="osgi.active.bundle/org.ops4j.pax.web.pax-web-jetty-bundle:0.8.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.active.bundle/org.ops4j.pax.web.pax-web-jsp:0.8.1" >
+  <req name="builder/osgi.active.bundle" />
+  <req name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-jsp:[0.8.1,0.8.1)" />
+  <cap name="osgi.active.bundle/org.ops4j.pax.web.pax-web-jsp:0.8.1" attrs="selfcap=&quot;true&quot;" />
+ </part>
+ <part name="osgi.resolved.bundle/derby:10.5.3000000.802917" >
+  <artifact name="derby:10.5.3000000.802917" uri="derby-10.5.3.0_1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <cap name="osgi.resolved.bundle/derby:10.5.3000000.802917" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.derby.authentication" attrs="bundle-version=10.5.3000000.802917,bundle-symbolic-name=&quot;derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.database" attrs="bundle-version=10.5.3000000.802917,bundle-symbolic-name=&quot;derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.io" attrs="bundle-version=10.5.3000000.802917,bundle-symbolic-name=&quot;derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.jdbc" attrs="bundle-version=10.5.3000000.802917,bundle-symbolic-name=&quot;derby&quot;" />
+  <cap name="osgi.package/org.apache.derby.vti" attrs="bundle-version=10.5.3000000.802917,bundle-symbolic-name=&quot;derby&quot;" />
+  <cap name="osgi.require.bundle/derby:10.5.3000000.802917" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.api:0.3" >
+  <artifact name="org.apache.aries.application.api:0.3.0" uri="org.apache.aries.application.api-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.api:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.application:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.filesystem:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management.spi.runtime:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management.spi.convert:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management.spi.resolve:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management.spi.repository:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management.spi.update:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.management.spi.framework:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.modelling:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.modelling.utils:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.api&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.api:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.default.local.platform:0.3" >
+  <artifact name="org.apache.aries.application.default.local.platform:0.3.0" uri="org.apache.aries.application.default.local.platform-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.runtime:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.default.local.platform:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.default.local.platform:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.deployment.management:0.3" >
+  <artifact name="org.apache.aries.application.deployment.management:0.3.0" uri="org.apache.aries.application.deployment.management-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.resolve:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.runtime:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling.utils:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.manifest:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint.container:[1,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.deployment.management:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.deployment.management:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.install:0.3" >
+  <artifact name="org.apache.aries.application.install:0.3.0" uri="org.apache.aries.application.install-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.felix.fileinstall:[3.1,4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.install:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.install:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.install&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.install:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.management:0.3" >
+  <artifact name="org.apache.aries.application.management:0.3.0" uri="org.apache.aries.application.management-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.convert:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.framework:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.repository:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.resolve:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.runtime:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.manifest:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.management:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.management:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.modeller:0.3" >
+  <artifact name="org.apache.aries.application.modeller:0.3.0" uri="org.apache.aries.application.modeller-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling.utils:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.manifest:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.blueprint:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint.reflect:[1,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.modeller:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.modeller:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.noop.platform.repo:0.3" >
+  <artifact name="org.apache.aries.application.noop.platform.repo:0.3.0" uri="org.apache.aries.application.noop.platform.repo-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.repository:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.noop.platform.repo:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.noop.platform.repo:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.noop.postresolve.process:0.3" >
+  <artifact name="org.apache.aries.application.noop.postresolve.process:0.3.0" uri="org.apache.aries.application.noop.postresolve.process-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.resolve:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.noop.postresolve.process:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.noop.postresolve.process:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.resolver.obr:0.3" >
+  <artifact name="org.apache.aries.application.resolver.obr:0.3.0" uri="org.apache.aries.application.resolver.obr-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.transform" />
+  <req name="osgi.package/javax.xml.transform.dom" />
+  <req name="osgi.package/javax.xml.transform.stream" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.repository:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.resolve:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.modelling.utils:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.filesystem:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.utils.manifest:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.felix.bundlerepository:[2,3)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.resolver.obr:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.resolver.obr.ext:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.resolver.obr&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.resolver.obr:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.runtime:0.3" >
+  <artifact name="org.apache.aries.application.runtime:0.3.0" uri="org.apache.aries.application.runtime-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.resolve:[0.3,0.4)" />
+  <req name="osgi.package/org.apache.aries.application.management.spi.runtime:[0.3,0.4)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.osgi.service.packageadmin:[1.2,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.runtime:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.runtime:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.application.utils:0.3" >
+  <artifact name="org.apache.aries.application.utils:0.3.0" uri="org.apache.aries.application.utils-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.application:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.application.filesystem:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.application.management:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.util:[0.3,1)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" optional="true" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.application.utils:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.utils:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.utils&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.utils.filesystem:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.utils&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.utils.manifest:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.utils&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.utils.management:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.utils&quot;" />
+  <cap name="osgi.package/org.apache.aries.application.utils.service:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.application.utils&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.application.utils:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.blueprint:0.3" >
+  <artifact name="org.apache.aries.blueprint:0.3.0" uri="org.apache.aries.blueprint-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.transform" />
+  <req name="osgi.package/javax.xml.transform.dom" />
+  <req name="osgi.package/javax.xml.transform.stream" />
+  <req name="osgi.package/javax.xml.validation" />
+  <req name="osgi.package/org.apache.aries.blueprint.annotation.service" optional="true" />
+  <req name="osgi.package/org.apache.aries.proxy:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.quiesce.manager:[0.2,1)" optional="true" />
+  <req name="osgi.package/org.apache.aries.quiesce.participant:[0.2,1)" optional="true" />
+  <req name="osgi.package/org.apache.aries.util:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.util.tracker:[0.3,1)" />
+  <req name="osgi.package/org.eclipse.osgi.framework.adaptor" optional="true" />
+  <req name="osgi.package/org.eclipse.osgi.framework.internal.core" optional="true" />
+  <req name="osgi.package/org.eclipse.osgi.internal.loader" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.cm:[1.2,2)" />
+  <req name="osgi.package/org.osgi.service.event:[1.2,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.framework:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.blueprint:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint:1.0.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint.container:1.0.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.osgi.service.blueprint.reflect:1.0.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.ext:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.compendium.cm:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.namespace:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.utils:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.nls:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.container:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.di:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.reflect:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.mutable:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.package/org.apache.aries.blueprint.proxy:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.blueprint&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.blueprint:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.jndi:0.3" >
+  <artifact name="org.apache.aries.jndi:0.3.0" uri="org.apache.aries.jndi-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.naming.directory" />
+  <req name="osgi.package/javax.naming.ldap" />
+  <req name="osgi.package/javax.naming.spi" />
+  <req name="osgi.package/org.apache.aries.jndi.spi:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.jndi.urls:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.proxy:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.util:[0.3,1)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint.container" />
+  <req name="osgi.package/org.osgi.service.jndi:[1,2)" />
+  <req name="osgi.package/org.osgi.util.tracker" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.jndi:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.osgi.service.jndi:1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jndi&quot;" />
+  <cap name="osgi.package/org.apache.aries.jndi.urls:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jndi&quot;" />
+  <cap name="osgi.package/org.apache.aries.jndi.spi:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jndi&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.jndi:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.jpa.api:0.3" >
+  <artifact name="org.apache.aries.jpa.api:0.3.0" uri="org.apache.aries.jpa.api-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.persistence:[1,2.1)" />
+  <req name="osgi.package/javax.persistence.spi:[1,2.1)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.jpa.api:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container.parsing:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.api&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container.context:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.api&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.jpa.api:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.jpa.blueprint.aries:0.3" >
+  <artifact name="org.apache.aries.jpa.blueprint.aries:0.3.0" uri="org.apache.aries.jpa.blueprint.aries-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.persistence:[1,3)" />
+  <req name="osgi.package/org.apache.aries.blueprint:[0.1,1.1)" />
+  <req name="osgi.package/org.apache.aries.blueprint.mutable:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.jpa.container.context:[0.1,1.1)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint.reflect:[1,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.jpa.blueprint.aries:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.jpa.blueprint.aries:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.jpa.container:0.3" >
+  <artifact name="org.apache.aries.jpa.container:0.3.0" uri="org.apache.aries.jpa.container-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.persistence:[1,2.1)" />
+  <req name="osgi.package/javax.persistence.criteria:[1.1,2.1)" optional="true" />
+  <req name="osgi.package/javax.persistence.metamodel:[1.1,2.1)" optional="true" />
+  <req name="osgi.package/javax.persistence.spi:[1,2.1)" />
+  <req name="osgi.package/javax.sql" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.validation" />
+  <req name="osgi.package/org.apache.aries.jpa.container:[0.1,1.1)" />
+  <req name="osgi.package/org.apache.aries.jpa.container.parsing:[0.1,1.1)" />
+  <req name="osgi.package/org.apache.aries.quiesce.manager:[0.2,1)" optional="true" />
+  <req name="osgi.package/org.apache.aries.quiesce.participant:[0.2,1)" optional="true" />
+  <req name="osgi.package/org.apache.aries.util:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.util.tracker:[0.3,1)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.jpa.container:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container.context:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.container&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container.parsing:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.container&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.container&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.jpa.container:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.jpa.container.context:0.3" >
+  <artifact name="org.apache.aries.jpa.container.context:0.3.0" uri="org.apache.aries.jpa.container.context-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.persistence:[1,2.1)" />
+  <req name="osgi.package/javax.persistence.criteria:[1.1,2.1)" optional="true" />
+  <req name="osgi.package/javax.persistence.metamodel:[1.1,2.1)" optional="true" />
+  <req name="osgi.package/javax.transaction:[1.1,2)" />
+  <req name="osgi.package/org.apache.aries.jpa.container.context:[0.1,1.1)" />
+  <req name="osgi.package/org.apache.aries.quiesce.manager:[0.2,1)" optional="true" />
+  <req name="osgi.package/org.apache.aries.quiesce.participant:[0.2,1)" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.jpa.container.context:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.jpa.container.context:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.jpa.container.context&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.jpa.container.context:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.proxy:0.3" >
+  <artifact name="org.apache.aries.proxy:0.3.0" uri="org.apache.aries.proxy-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.aries.util:[0.3,1)" />
+  <req name="osgi.package/org.apache.aries.util.nls:[0.3,1)" />
+  <req name="osgi.package/org.objectweb.asm" />
+  <req name="osgi.package/org.objectweb.asm.commons" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.proxy:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.proxy:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.proxy&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.proxy:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.samples.ariestrader.derby.ds:0.3" >
+  <artifact name="org.apache.aries.samples.ariestrader.derby.ds:0.3.0" uri="org.apache.aries.samples.ariestrader.derby.ds-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.sql" />
+  <req name="osgi.package/org.apache.derby.jdbc" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.samples.ariestrader.derby.ds:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.samples.ariestrader.derby.ds:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.transaction.blueprint:0.3" >
+  <artifact name="org.apache.aries.transaction.blueprint:0.3.0" uri="org.apache.aries.transaction.blueprint-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.transaction:[1.1,2)" />
+  <req name="osgi.package/org.apache.aries.blueprint:[0.3,1)" />
+  <req name="osgi.package/org.osgi.framework:1.5" />
+  <req name="osgi.package/org.osgi.service.blueprint:[1,2)" />
+  <req name="osgi.package/org.osgi.service.blueprint.reflect:[1,2)" />
+  <req name="osgi.package/org.osgi.service.cm:[1.2,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.transaction.blueprint:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.transaction.exception:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.transaction.blueprint&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.transaction.blueprint:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.transaction.manager:0.3" >
+  <artifact name="org.apache.aries.transaction.manager:0.3.0" uri="org.apache.aries.transaction.manager-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.resource.spi:1.5" optional="true" />
+  <req name="osgi.package/javax.transaction:[1.1,2)" />
+  <req name="osgi.package/javax.transaction.xa:[1.1,2)" />
+  <req name="osgi.package/org.osgi.framework:1.4" />
+  <req name="osgi.package/org.osgi.service.cm:[1.2,2)" />
+  <req name="osgi.package/org.slf4j:[1.5,2)" />
+  <req name="osgi.package/org.springframework.transaction:[2.5,4)" optional="true" />
+  <req name="osgi.package/org.springframework.transaction.jta:[2.5,4)" optional="true" />
+  <req name="osgi.package/org.springframework.transaction.support:[2.5,4)" optional="true" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.transaction.manager:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.geronimo.transaction.log:2.2.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.transaction.manager&quot;" />
+  <cap name="osgi.package/org.apache.geronimo.transaction.manager:2.2.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.transaction.manager&quot;" />
+  <cap name="osgi.package/org.apache.geronimo.transaction:2.2.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.transaction.manager&quot;" />
+  <cap name="osgi.package/javax.transaction:1.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.transaction.manager&quot;" />
+  <cap name="osgi.package/javax.transaction.xa:1.1" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.transaction.manager&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.transaction.manager:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.transaction.wrappers:0.3" >
+  <artifact name="org.apache.aries.transaction.wrappers:0.3.0" uri="org.apache.aries.transaction.wrappers-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.sql" />
+  <req name="osgi.package/javax.transaction:[1.1,2)" />
+  <req name="osgi.package/javax.transaction.xa:[1.1,2)" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.transaction.wrappers:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.transaction.wrappers:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.aries.util:0.3" >
+  <artifact name="org.apache.aries.util:0.3.0" uri="org.apache.aries.util-0.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.eclipse.osgi.framework.adaptor" optional="true" />
+  <req name="osgi.package/org.eclipse.osgi.framework.internal.core" optional="true" />
+  <req name="osgi.package/org.eclipse.osgi.internal.loader" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1.5,2)" />
+  <req name="osgi.package/org.osgi.framework.launch:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.framework:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.aries.util:0.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.aries.util:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.util&quot;" />
+  <cap name="osgi.package/org.apache.aries.util.tracker:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.util&quot;" />
+  <cap name="osgi.package/org.apache.aries.util.nls:0.3" attrs="bundle-version=0.3.0,bundle-symbolic-name=&quot;org.apache.aries.util&quot;" />
+  <cap name="osgi.require.bundle/org.apache.aries.util:0.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.commons.collections:3.2.1" >
+  <artifact name="org.apache.commons.collections:3.2.1" uri="commons-collections-3.2.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.commons.collections:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.bag:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.bidimap:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.buffer:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.collection:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.comparators:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.functors:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.iterators:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.keyvalue:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.list:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.map:3.2.1" />
+  <req name="osgi.package/org.apache.commons.collections.set:3.2.1" />
+  <cap name="osgi.resolved.bundle/org.apache.commons.collections:3.2.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.map:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.buffer:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.comparators:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.collection:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.bag:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.iterators:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.bidimap:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.set:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.functors:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.list:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections.keyvalue:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.package/org.apache.commons.collections:3.2.1" attrs="bundle-version=3.2.1,bundle-symbolic-name=&quot;org.apache.commons.collections&quot;" />
+  <cap name="osgi.require.bundle/org.apache.commons.collections:3.2.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.commons.lang:2.5" >
+  <artifact name="org.apache.commons.lang:2.5.0" uri="commons-lang-2.5.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.commons.lang:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.builder:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.enum:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.enums:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.exception:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.math:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.mutable:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.reflect:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.text:2.5" />
+  <req name="osgi.package/org.apache.commons.lang.time:2.5" />
+  <cap name="osgi.resolved.bundle/org.apache.commons.lang:2.5" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.enum:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.enums:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.builder:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.time:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.exception:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.mutable:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.text:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.reflect:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang.math:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.package/org.apache.commons.lang:2.5" attrs="bundle-version=2.5.0,bundle-symbolic-name=&quot;org.apache.commons.lang&quot;" />
+  <cap name="osgi.require.bundle/org.apache.commons.lang:2.5" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.commons.pool:1.5.4" >
+  <artifact name="org.apache.commons.pool:1.5.4" uri="commons-pool-1.5.4.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.commons.pool:1.5.4" />
+  <req name="osgi.package/org.apache.commons.pool.impl:1.5.4" />
+  <cap name="osgi.resolved.bundle/org.apache.commons.pool:1.5.4" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.commons.pool.impl:1.5.4" attrs="bundle-version=1.5.4,bundle-symbolic-name=&quot;org.apache.commons.pool&quot;" />
+  <cap name="osgi.package/org.apache.commons.pool:1.5.4" attrs="bundle-version=1.5.4,bundle-symbolic-name=&quot;org.apache.commons.pool&quot;" />
+  <cap name="osgi.require.bundle/org.apache.commons.pool:1.5.4" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.bundlerepository:1.6.4" >
+  <artifact name="org.apache.felix.bundlerepository:1.6.4" uri="org.apache.felix.bundlerepository-1.6.4.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.xml.stream" optional="true" />
+  <req name="osgi.package/org.apache.felix.bundlerepository:[2,3)" />
+  <req name="osgi.package/org.osgi.framework:[1.3,2)" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.obr:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.url:[1,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.bundlerepository:1.6.4" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.felix.bundlerepository:2" attrs="bundle-version=1.6.4,bundle-symbolic-name=&quot;org.apache.felix.bundlerepository&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.bundlerepository:1.6.4" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.felix.fileinstall:3.1.4" >
+  <artifact name="org.apache.felix.fileinstall:3.1.4" uri="org.apache.felix.fileinstall-3.1.4.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.apache.felix.fileinstall:[3.1,4)" />
+  <req name="osgi.package/org.osgi.framework:[1.4,2)" />
+  <req name="osgi.package/org.osgi.service.cm:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.packageadmin:[1.2,2)" />
+  <req name="osgi.package/org.osgi.service.startlevel:[1.1,2)" />
+  <req name="osgi.package/org.osgi.service.url:[1,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.4,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.felix.fileinstall:3.1.4" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.felix.fileinstall:3.1.4" attrs="bundle-version=3.1.4,bundle-symbolic-name=&quot;org.apache.felix.fileinstall&quot;" />
+  <cap name="osgi.require.bundle/org.apache.felix.fileinstall:3.1.4" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.geronimo.components.geronimo-transaction:2.1.3" >
+  <artifact name="org.apache.geronimo.components.geronimo-transaction:2.1.3" uri="geronimo-transaction-2.1.3.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.resource.spi:[1.5,2)" />
+  <req name="osgi.package/javax.transaction:[1.1,2)" />
+  <req name="osgi.package/javax.transaction.xa:[1.1,2)" />
+  <req name="osgi.package/org.objectweb.howl.log:[1,2)" optional="true" />
+  <req name="osgi.package/org.objectweb.howl.log.xa:[1,2)" optional="true" />
+  <req name="osgi.package/org.slf4j:[1.4,2)" />
+  <cap name="osgi.resolved.bundle/org.apache.geronimo.components.geronimo-transaction:2.1.3" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.geronimo.transaction.log:2.1.3" attrs="bundle-version=2.1.3,bundle-symbolic-name=&quot;org.apache.geronimo.components.geronimo-transaction&quot;" />
+  <cap name="osgi.package/org.apache.geronimo.transaction.manager:2.1.3" attrs="bundle-version=2.1.3,bundle-symbolic-name=&quot;org.apache.geronimo.components.geronimo-transaction&quot;" />
+  <cap name="osgi.package/org.apache.geronimo.transaction:2.1.3" attrs="bundle-version=2.1.3,bundle-symbolic-name=&quot;org.apache.geronimo.components.geronimo-transaction&quot;" />
+  <cap name="osgi.require.bundle/org.apache.geronimo.components.geronimo-transaction:2.1.3" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-jpa_2.0_spec:1.1" >
+  <artifact name="org.apache.geronimo.specs.geronimo-jpa_2.0_spec:1.1.0" uri="geronimo-jpa_2.0_spec-1.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.persistence:1.1" attrs="jpa=&quot;2.0&quot;" />
+  <req name="osgi.package/javax.persistence.criteria:1.1" attrs="jpa=&quot;2.0&quot;" />
+  <req name="osgi.package/javax.persistence.metamodel:1.1" attrs="jpa=&quot;2.0&quot;" />
+  <req name="osgi.package/javax.persistence.spi:1.1" attrs="jpa=&quot;2.0&quot;" />
+  <req name="osgi.package/javax.sql" optional="true" />
+  <req name="osgi.package/org.apache.geronimo.osgi.registry.api" optional="true" />
+  <req name="osgi.package/org.osgi.framework:1.5" optional="true" />
+  <req name="osgi.package/org.osgi.util.tracker:1.3" optional="true" />
+  <cap name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-jpa_2.0_spec:1.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/javax.persistence:1.1" attrs="bundle-version=1.1.0,jpa=&quot;2.0&quot;,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence.criteria:1.1" attrs="bundle-version=1.1.0,jpa=&quot;2.0&quot;,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence.metamodel:1.1" attrs="bundle-version=1.1.0,jpa=&quot;2.0&quot;,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence.spi:1.1" attrs="bundle-version=1.1.0,jpa=&quot;2.0&quot;,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence:2" attrs="bundle-version=1.1.0,jpa=&quot;2.0&quot;,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence.criteria:2" attrs="bundle-version=1.1.0,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence.metamodel:2" attrs="bundle-version=1.1.0,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.package/javax.persistence.spi:2" attrs="bundle-version=1.1.0,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jpa_2.0_spec&quot;" />
+  <cap name="osgi.require.bundle/org.apache.geronimo.specs.geronimo-jpa_2.0_spec:1.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-jta_1.1_spec:1.1.1" >
+  <artifact name="org.apache.geronimo.specs.geronimo-jta_1.1_spec:1.1.1" uri="geronimo-jta_1.1_spec-1.1.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.transaction:1.1" />
+  <req name="osgi.package/javax.transaction.xa:1.1" />
+  <cap name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-jta_1.1_spec:1.1.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/javax.transaction.xa:1.1" attrs="bundle-version=1.1.1,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jta_1.1_spec&quot;" />
+  <cap name="osgi.package/javax.transaction:1.1" attrs="bundle-version=1.1.1,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-jta_1.1_spec&quot;" />
+  <cap name="osgi.require.bundle/org.apache.geronimo.specs.geronimo-jta_1.1_spec:1.1.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-servlet_2.5_spec:1.2" >
+  <artifact name="org.apache.geronimo.specs.geronimo-servlet_2.5_spec:1.2.0" uri="geronimo-servlet_2.5_spec-1.2.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.servlet:2.5" />
+  <req name="osgi.package/javax.servlet.http:2.5" />
+  <req name="osgi.package/javax.servlet.resources:2.5" />
+  <cap name="osgi.resolved.bundle/org.apache.geronimo.specs.geronimo-servlet_2.5_spec:1.2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/javax.servlet.http:2.5" attrs="bundle-version=1.2.0,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-servlet_2.5_spec&quot;" />
+  <cap name="osgi.package/javax.servlet:2.5" attrs="bundle-version=1.2.0,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-servlet_2.5_spec&quot;" />
+  <cap name="osgi.package/javax.servlet.resources:2.5" attrs="bundle-version=1.2.0,bundle-symbolic-name=&quot;org.apache.geronimo.specs.geronimo-servlet_2.5_spec&quot;" />
+  <cap name="osgi.require.bundle/org.apache.geronimo.specs.geronimo-servlet_2.5_spec:1.2" />
+ </part>
+ <part name="osgi.resolved.bundle/org.apache.openjpa:2" >
+  <artifact name="org.apache.openjpa:2.0.0" uri="openjpa-2.0.0.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.ibm.websphere.jtaextensions" optional="true" />
+  <req name="osgi.package/com.ibm.wsspi.uow" optional="true" />
+  <req name="osgi.package/javax.annotation" />
+  <req name="osgi.package/javax.annotation.processing" />
+  <req name="osgi.package/javax.jms:[1.1,1.2)" optional="true" />
+  <req name="osgi.package/javax.lang.model" />
+  <req name="osgi.package/javax.lang.model.element" />
+  <req name="osgi.package/javax.lang.model.type" />
+  <req name="osgi.package/javax.lang.model.util" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.persistence:[2,2.1)" />
+  <req name="osgi.package/javax.persistence.criteria:[2,2.1)" />
+  <req name="osgi.package/javax.persistence.metamodel:[2,2.1)" />
+  <req name="osgi.package/javax.persistence.spi:[2,2.1)" />
+  <req name="osgi.package/javax.rmi" />
+  <req name="osgi.package/javax.sql" />
+  <req name="osgi.package/javax.tools" />
+  <req name="osgi.package/javax.transaction:[1.1,1.2)" optional="true" />
+  <req name="osgi.package/javax.transaction.xa:[1.1,1.2)" optional="true" />
+  <req name="osgi.package/javax.validation:[1,1.1)" optional="true" />
+  <req name="osgi.package/javax.validation.groups:[1,1.1)" optional="true" />
+  <req name="osgi.package/javax.validation.metadata:[1,1.1)" optional="true" />
+  <req name="osgi.package/javax.xml.bind" optional="true" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/javax.xml.transform" />
+  <req name="osgi.package/javax.xml.transform.sax" />
+  <req name="osgi.package/javax.xml.transform.stream" />
+  <req name="osgi.package/org.apache.commons.collections:3.2" />
+  <req name="osgi.package/org.apache.commons.collections.bidimap:3.2" />
+  <req name="osgi.package/org.apache.commons.collections.comparators:3.2" />
+  <req name="osgi.package/org.apache.commons.collections.iterators:3.2" />
+  <req name="osgi.package/org.apache.commons.collections.map:3.2" />
+  <req name="osgi.package/org.apache.commons.collections.set:3.2" />
+  <req name="osgi.package/org.apache.commons.lang" />
+  <req name="osgi.package/org.apache.commons.lang.exception" />
+  <req name="osgi.package/org.apache.commons.logging" />
+  <req name="osgi.package/org.apache.commons.pool:1.5" />
+  <req name="osgi.package/org.apache.commons.pool.impl:1.5" />
+  <req name="osgi.package/org.apache.log4j" optional="true" />
+  <req name="osgi.package/org.apache.openjpa.abstractstore:2" />
+  <req name="osgi.package/org.apache.openjpa.ant:2" />
+  <req name="osgi.package/org.apache.openjpa.conf:2" />
+  <req name="osgi.package/org.apache.openjpa.datacache:2" />
+  <req name="osgi.package/org.apache.openjpa.ee:2" />
+  <req name="osgi.package/org.apache.openjpa.enhance:2" />
+  <req name="osgi.package/org.apache.openjpa.event:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.ant:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.conf:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.identifier:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.kernel:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.kernel.exps:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.meta:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.meta.strats:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.schema:2" />
+  <req name="osgi.package/org.apache.openjpa.jdbc.sql:2" />
+  <req name="osgi.package/org.apache.openjpa.kernel:2" />
+  <req name="osgi.package/org.apache.openjpa.kernel.exps:2" />
+  <req name="osgi.package/org.apache.openjpa.kernel.jpql:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.ant:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.conf:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.encryption:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.graph:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.identifier:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.jdbc:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.log:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.meta:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.rop:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.util:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.util.concurrent:2" />
+  <req name="osgi.package/org.apache.openjpa.lib.xml:2" />
+  <req name="osgi.package/org.apache.openjpa.meta:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.criteria:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.jdbc:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.meta:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.osgi:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.query:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.util:2" />
+  <req name="osgi.package/org.apache.openjpa.persistence.validation:2" />
+  <req name="osgi.package/org.apache.openjpa.slice:2" />
+  <req name="osgi.package/org.apache.openjpa.slice.jdbc:2" />
+  <req name="osgi.package/org.apache.openjpa.slice.transaction:2" />
+  <req name="osgi.package/org.apache.openjpa.util:2" />
+  <req name="osgi.package/org.apache.openjpa.validation:2" />
+  <req name="osgi.package/org.apache.openjpa.xmlstore:2" />
+  <req name="osgi.package/org.apache.tools.ant" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.taskdefs" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.types" optional="true" />
+  <req name="osgi.package/org.osgi.framework" />
+  <req name="osgi.package/org.postgresql" optional="true" />
+  <req name="osgi.package/org.postgresql.largeobject" optional="true" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.ext" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <req name="osgi.package/serp.bytecode" optional="true" />
+  <req name="osgi.package/serp.bytecode.lowlevel" optional="true" />
+  <req name="osgi.package/serp.util" optional="true" />
+  <cap name="osgi.resolved.bundle/org.apache.openjpa:2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.slice.transaction:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.encryption:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.validation:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.util:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.log:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.criteria:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.ant:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.util:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.identifier:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.kernel.exps:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.slice.jdbc:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.meta:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.datacache:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.slice:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.conf:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.ee:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.meta:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.util:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.query:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.ant:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.identifier:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.schema:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.meta:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.xml:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.sql:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.rop:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.conf:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.kernel.jpql:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.conf:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.enhance:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.kernel:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.event:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.meta:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.util.concurrent:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.osgi:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.xmlstore:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.ant:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.validation:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.kernel:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.jdbc:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.lib.graph:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.abstractstore:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.persistence.jdbc:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.kernel.exps:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.package/org.apache.openjpa.jdbc.meta.strats:2" attrs="bundle-version=2.0.0,bundle-symbolic-name=&quot;org.apache.openjpa&quot;" />
+  <cap name="osgi.require.bundle/org.apache.openjpa:2" />
+ </part>
+ <part name="osgi.resolved.bundle/org.eclipse.equinox.cm:3.2.0.v20070116" >
+  <artifact name="org.eclipse.equinox.cm:3.2.0.v20070116" uri="cm-3.2.0-v20070116.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.eclipse.osgi.util:1" />
+  <req name="osgi.package/org.osgi.framework:1.3" />
+  <req name="osgi.package/org.osgi.service.cm:1.2" />
+  <req name="osgi.package/org.osgi.service.log:1.3" />
+  <req name="osgi.package/org.osgi.util.tracker:1.3.1" />
+  <cap name="osgi.resolved.bundle/org.eclipse.equinox.cm:3.2.0.v20070116" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.eclipse.equinox.cm:3.2.0.v20070116" />
+ </part>
+ <part name="osgi.resolved.bundle/org.eclipse.osgi.services:3.1.200.v20070605" >
+  <artifact name="org.eclipse.osgi.services:3.1.200.v20070605" uri="services-3.1.200-v20070605.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/org.osgi.framework:1.2" />
+  <req name="osgi.package/javax.servlet" optional="true" />
+  <req name="osgi.package/javax.servlet.http" optional="true" />
+  <cap name="osgi.resolved.bundle/org.eclipse.osgi.services:3.1.200.v20070605" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.osgi.service.cm:1.2" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.component:1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.device:1.1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.event:1.1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.http:1.2" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.io:1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.log:1.3" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.metatype:1.1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.provisioning:1.1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.upnp:1.1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.useradmin:1.1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.package/org.osgi.service.wireadmin:1" attrs="bundle-version=3.1.200.v20070605,bundle-symbolic-name=&quot;org.eclipse.osgi.services&quot;" />
+  <cap name="osgi.require.bundle/org.eclipse.osgi.services:3.1.200.v20070605" />
+ </part>
+ <part name="osgi.resolved.bundle/org.objectweb.asm.all:3.2" >
+  <artifact name="org.objectweb.asm.all:3.2.0" uri="asm-all-3.2.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <cap name="osgi.resolved.bundle/org.objectweb.asm.all:3.2" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.objectweb.asm:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.package/org.objectweb.asm.signature:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.package/org.objectweb.asm.commons:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.package/org.objectweb.asm.tree:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.package/org.objectweb.asm.tree.analysis:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.package/org.objectweb.asm.util:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.package/org.objectweb.asm.xml:3.2" attrs="bundle-version=3.2.0,bundle-symbolic-name=&quot;org.objectweb.asm.all&quot;" />
+  <cap name="osgi.require.bundle/org.objectweb.asm.all:3.2" />
+ </part>
+ <part name="osgi.resolved.bundle/org.ops4j.pax.logging.pax-logging-api:1.4" >
+  <artifact name="org.ops4j.pax.logging.pax-logging-api:1.4.0" uri="pax-logging-api-1.4.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/org.apache.avalon.framework.logger:4.3" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.apache.commons.logging:1.1.1" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.apache.commons.logging.impl:1.1.1" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.apache.juli.logging:1" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.apache.log" optional="true" />
+  <req name="osgi.package/org.apache.log4j:1.2.15" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.apache.log4j.spi:1.2.15" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.apache.log4j.xml:1.2.15" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.knopflerfish.service.log:1.1" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.ops4j.pax.logging:[0.9.5,2)" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.ops4j.pax.logging.avalon:[0.9.5,2)" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.osgi.framework:[1,2)" />
+  <req name="osgi.package/org.osgi.service.event:[1,2)" optional="true" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1,2)" />
+  <req name="osgi.package/org.slf4j:1.5.6" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.slf4j.helpers:1.5.6" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.slf4j.spi:1.5.6" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.w3c.dom" />
+  <cap name="osgi.resolved.bundle/org.ops4j.pax.logging.pax-logging-api:1.4" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.apache.juli.logging:1" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.knopflerfish.service.log:1.1" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.slf4j.spi:1.5.6" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.apache.log4j.spi:1.2.15" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.apache.avalon.framework.logger:4.3" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.apache.log4j.xml:1.2.15" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.apache.commons.logging:1.1.1" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.ops4j.pax.logging:1.4" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.apache.commons.logging.impl:1.1.1" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.apache.log4j:1.2.15" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.osgi.service.log:1.3" attrs="bundle-version=1.4.0,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.slf4j:1.5.6" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.slf4j.helpers:1.5.6" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.package/org.ops4j.pax.logging.avalon:1.4" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-api&quot;" />
+  <cap name="osgi.require.bundle/org.ops4j.pax.logging.pax-logging-api:1.4" />
+ </part>
+ <part name="osgi.resolved.bundle/org.ops4j.pax.logging.pax-logging-service:1.4" >
+  <artifact name="org.ops4j.pax.logging.pax-logging-service:1.4.0" uri="pax-logging-service-1.4.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.sun.jdmk.comm" optional="true" />
+  <req name="osgi.package/javax.jms" optional="true" />
+  <req name="osgi.package/javax.mail" optional="true" />
+  <req name="osgi.package/javax.mail.internet" optional="true" />
+  <req name="osgi.package/javax.management" optional="true" />
+  <req name="osgi.package/javax.naming" optional="true" />
+  <req name="osgi.package/javax.swing" optional="true" />
+  <req name="osgi.package/javax.swing.border" optional="true" />
+  <req name="osgi.package/javax.swing.event" optional="true" />
+  <req name="osgi.package/javax.swing.table" optional="true" />
+  <req name="osgi.package/javax.swing.text" optional="true" />
+  <req name="osgi.package/javax.swing.tree" optional="true" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/org.knopflerfish.service.log:[1.1,2)" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.ops4j.pax.logging:[0.9.5,2)" />
+  <req name="osgi.package/org.ops4j.pax.logging.spi:1.4" attrs="provider=&quot;paxlogging&quot;" />
+  <req name="osgi.package/org.osgi.framework:[1,2)" />
+  <req name="osgi.package/org.osgi.service.cm:[1,2)" />
+  <req name="osgi.package/org.osgi.service.log:[1.3,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.3,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <cap name="osgi.resolved.bundle/org.ops4j.pax.logging.pax-logging-service:1.4" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.ops4j.pax.logging.spi:1.4" attrs="bundle-version=1.4.0,provider=&quot;paxlogging&quot;,bundle-symbolic-name=&quot;org.ops4j.pax.logging.pax-logging-service&quot;" />
+  <cap name="osgi.require.bundle/org.ops4j.pax.logging.pax-logging-service:1.4" />
+ </part>
+ <part name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-extender-war:0.8.1" >
+  <artifact name="org.ops4j.pax.web.pax-web-extender-war:0.8.1" uri="pax-web-extender-war-0.8.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.servlet:2.1" />
+  <req name="osgi.package/javax.servlet.http:2.1" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/org.apache.commons.logging:1.0.4" optional="true" />
+  <req name="osgi.package/org.ops4j.pax.web.service:0.6" optional="true" />
+  <req name="osgi.package/org.osgi.framework:[1,2)" />
+  <req name="osgi.package/org.osgi.service.http:[1,2)" />
+  <req name="osgi.package/org.osgi.util.tracker:[1.3,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <cap name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-extender-war:0.8.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.require.bundle/org.ops4j.pax.web.pax-web-extender-war:0.8.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-jetty-bundle:0.8.1" >
+  <artifact name="org.ops4j.pax.web.pax-web-jetty-bundle:0.8.1" uri="pax-web-jetty-bundle-0.8.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/com.sun.org.apache.commons.logging" optional="true" />
+  <req name="osgi.package/javax.crypto" />
+  <req name="osgi.package/javax.management" />
+  <req name="osgi.package/javax.management.modelmbean" />
+  <req name="osgi.package/javax.management.remote" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.naming.directory" />
+  <req name="osgi.package/javax.naming.spi" />
+  <req name="osgi.package/javax.net" />
+  <req name="osgi.package/javax.net.ssl" optional="true" />
+  <req name="osgi.package/javax.security.auth" />
+  <req name="osgi.package/javax.security.auth.callback" />
+  <req name="osgi.package/javax.security.auth.login" />
+  <req name="osgi.package/javax.security.auth.spi" />
+  <req name="osgi.package/javax.security.auth.x500" />
+  <req name="osgi.package/javax.security.cert" optional="true" />
+  <req name="osgi.package/javax.security.sasl" />
+  <req name="osgi.package/javax.servlet:[2.3,2.6)" />
+  <req name="osgi.package/javax.servlet.http:[2.3,2.6)" />
+  <req name="osgi.package/javax.sql" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/org.apache.commons.logging:1.0.4" optional="true" />
+  <req name="osgi.package/org.eclipse.jetty:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.ajp:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.annotations:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.client:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.client.security:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.client.webdav:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.continuation:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.deploy:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.deploy.bindings:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.deploy.graph:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.deploy.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.deploy.providers:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.deploy.util:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.http:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.http.security:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.io:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.io.bio:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.io.nio:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.jndi:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.jndi.factories:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.jndi.java:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.jndi.local:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.jsp:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.annotation:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.jaas:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.jaas.callback:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.jaas.spi:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.jndi:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.security:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.servlet:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.plus.webapp:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.rewrite.handler:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.security:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.security.authentication:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.security.jaspi:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.security.jaspi.callback:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.security.jaspi.modules:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.bio:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.handler:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.handler.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.nio:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.nio.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.session:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.session.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.server.ssl:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.servlet:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.servlet.api:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.servlet.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.servlets:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.servlets.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.ajax:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.component:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.component.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.log:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.log.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.resource:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.statistic:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.thread:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.util.thread.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.webapp:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.webapp.jmx:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.websocket:[7.1,8)" />
+  <req name="osgi.package/org.eclipse.jetty.xml:[7.1,8)" />
+  <req name="osgi.package/org.mortbay.log" optional="true" />
+  <req name="osgi.package/org.mortbay.util.ajax" optional="true" />
+  <req name="osgi.package/org.ops4j.pax.web.jsp:0.8.1" optional="true" />
+  <req name="osgi.package/org.ops4j.pax.web.service:0.8.1" />
+  <req name="osgi.package/org.osgi.framework:[1,2)" />
+  <req name="osgi.package/org.osgi.service.cm:[1,2)" />
+  <req name="osgi.package/org.osgi.service.http:[1,2)" />
+  <req name="osgi.package/org.osgi.util.tracker" />
+  <req name="osgi.package/org.slf4j:1.4.3" optional="true" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <cap name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-jetty-bundle:0.8.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.ops4j.pax.web.service:0.8.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.osgi.service.http:1.2" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.webapp.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.security.authentication:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.continuation:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.ssl:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.thread:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.jaas.spi:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.io.bio:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.jsp:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.handler:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.deploy.util:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.jndi:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.servlets:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.servlets.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.servlet.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.deploy.graph:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.deploy:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.resource:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.annotation:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.webapp:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.webapp:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.deploy.bindings:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.security.jaspi.callback:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.handler.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.deploy.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.bio:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.io:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.http:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.jaas:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.deploy.providers:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.ajp:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.security.jaspi.modules:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.session:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.client:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.client.security:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.security:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.jndi.factories:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.jndi.java:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.log.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.nio.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.component:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.component.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.servlet:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.jaas.callback:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.websocket:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.xml:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.servlet:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.thread.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.nio:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.jndi:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.jndi.local:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.plus.security:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.client.webdav:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.io.nio:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.statistic:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.annotations:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.servlet.api:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.rewrite.handler:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.session.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.security.jaspi:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.server.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.http.security:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.jmx:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.log:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.package/org.eclipse.jetty.util.ajax:7.2.0.v20101020" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jetty-bundle&quot;" />
+  <cap name="osgi.require.bundle/org.ops4j.pax.web.pax-web-jetty-bundle:0.8.1" />
+ </part>
+ <part name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-jsp:0.8.1" >
+  <artifact name="org.ops4j.pax.web.pax-web-jsp:0.8.1" uri="pax-web-jsp-0.8.1.jar" />
+  <req name="builder/osgi.resolved.bundle" />
+  <req name="osgi.package/javax.el:[2.1,3)" />
+  <req name="osgi.package/javax.naming" />
+  <req name="osgi.package/javax.servlet:[2.3,3)" />
+  <req name="osgi.package/javax.servlet.http:[2.3,3)" />
+  <req name="osgi.package/javax.servlet.jsp:[2.1,3)" />
+  <req name="osgi.package/javax.servlet.jsp.el:[2.1,3)" />
+  <req name="osgi.package/javax.servlet.jsp.resources:[2.1,3)" />
+  <req name="osgi.package/javax.servlet.jsp.tagext:[2.1,3)" />
+  <req name="osgi.package/javax.servlet.resources:[2.3,3)" />
+  <req name="osgi.package/javax.xml.parsers" />
+  <req name="osgi.package/org.apache.commons.logging:1.0.4" optional="true" />
+  <req name="osgi.package/org.apache.juli.logging" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.taskdefs" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.types" optional="true" />
+  <req name="osgi.package/org.apache.tools.ant.util" optional="true" />
+  <req name="osgi.package/org.eclipse.core.resources" optional="true" />
+  <req name="osgi.package/org.eclipse.core.runtime" optional="true" />
+  <req name="osgi.package/org.eclipse.jdt.core" optional="true" />
+  <req name="osgi.package/org.eclipse.jdt.core.dom" optional="true" />
+  <req name="osgi.package/org.eclipse.jdt.internal.compiler.apt.dispatch" optional="true" />
+  <req name="osgi.package/org.eclipse.jdt.internal.core" optional="true" />
+  <req name="osgi.package/org.eclipse.jdt.internal.core.builder" optional="true" />
+  <req name="osgi.package/org.ops4j.pax.web.jsp:0.8.1" />
+  <req name="osgi.package/org.osgi.framework:[1,2)" />
+  <req name="osgi.package/org.w3c.dom" />
+  <req name="osgi.package/org.xml.sax" />
+  <req name="osgi.package/org.xml.sax.ext" />
+  <req name="osgi.package/org.xml.sax.helpers" />
+  <cap name="osgi.resolved.bundle/org.ops4j.pax.web.pax-web-jsp:0.8.1" attrs="selfcap=&quot;true&quot;" />
+  <cap name="osgi.package/org.ops4j.pax.web.jsp:0.8.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/javax.el:2.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/javax.servlet.jsp:2.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/javax.servlet.jsp.el:2.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/javax.servlet.jsp.resources:2.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/javax.servlet.jsp.tagext:2.1" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/org.apache.jasper.compiler:6.0.18" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/org.apache.jasper.el:6.0.18" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.package/org.apache.el:6.0.18" attrs="bundle-version=0.8.1,bundle-symbolic-name=&quot;org.ops4j.pax.web.pax-web-jsp&quot;" />
+  <cap name="osgi.require.bundle/org.ops4j.pax.web.pax-web-jsp:0.8.1" />
+ </part>
+ <ext name="ms.extension/org.apache.felix.fileinstall" target="ms/org.apache.felix.fileinstall:[0,0]" >
+  <req name="builder/primordial.builder" />
+  <req name="osgi.active.bundle/org.apache.felix.fileinstall:[3.1.4,3.1.4]" />
+  <cap name="ms.extension/org.apache.felix.fileinstall" attrs="selfcap=&quot;true&quot;" />
+ </ext>
+ <ext-policy ext="ms.extension/org.apache.felix.fileinstall" part="ms/org.apache.felix.fileinstall:[0,0]" />
+</repository>
