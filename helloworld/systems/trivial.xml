@@ -1,0 +1,14 @@
+<system
+    xmlns="http://schema.paremus.com/sf/1"
+    name="helloworld-trivial-system"
+    boundary="fibre"
+    repopath="
+      file:cnf/releaserepo/index-nim.xml
+    ">
+
+    <nature group="demo" />
+
+    <system.part category="osgi.active.bundle" name="helloworld.activator" />
+    <system.part category="osgi.active.bundle" name="helloworld.cli" />
+
+</system>
