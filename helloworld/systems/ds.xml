@@ -3,7 +3,8 @@
     name="helloworld-ds-system"
     boundary="fibre"
     repopath="
-        file:cnf/releaserepo/index-nim.xml
+        file:cnf/releaserepo/index-nim.xml,
+        https://www.bundlerepo.org/repos/oss/index-nim.xml
     ">
 
 	<description>
