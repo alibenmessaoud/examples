@@ -2,8 +2,8 @@
         name="helloworld-blueprint-system"
         boundary="fibre"
         repopath="
-                file:cnf/releaserepo/index-nim.xml,
-                file:helloworld.blueprint/index-nim-ext.xml,
+                ../cnf/releaserepo/index-nim.xml,
+                ../helloworld.blueprint/index-nim-ext.xml,
                 https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
