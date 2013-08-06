@@ -1,0 +1,6 @@
+-buildpath: lib/jedis-2.1.0.jar;version=file,\
+	org.apache.commons.pool
+Export-Package: redis.clients.jedis;version=${Bundle-Version},\
+	redis.clients.jedis.exceptions;version=${Bundle-Version},\
+	redis.clients.util;version=${Bundle-Version}
+Bundle-Version: 2.1.0

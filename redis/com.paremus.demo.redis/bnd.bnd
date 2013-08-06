@@ -1,0 +1,14 @@
+Private-Package: com.paremus.demo.redis
+Service-Component: *
+-buildpath: osgi.core;version=4.3.0,\
+	osgi.cmpn;version=4.3.0,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	jackson-core,\
+	jackson-databind,\
+	com.paremus.org.jedis,\
+	org.bndtools.service;version=0.0.0,\
+	org.apache.commons.pool,\
+	javax.servlet
+	
+Include-Resource: web=web
