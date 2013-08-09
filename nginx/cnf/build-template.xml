@@ -7,7 +7,7 @@
 	     This file is maintained automatically by Bndtools! You should not edit it directly.
 	     Instead, insert overrides into build.xml as follows:
 	     
-	     <target name="compile">
+	     <target name="compile" depends="template.init">
 	        <echo message="This task executed before compilation..."/>
 	        <antcall target="template.compile"/>
 	        <echo message="This task executed AFTER compilation."/>
@@ -30,7 +30,7 @@
 		<dirname property="workspacedir" file="${projectdir}" />
 
 		<!-- Define the location of bnd -->
-		<path id="bnd-classpath" location="${workspacedir}/cnf/plugins/biz.aQute.bnd/biz.aQute.bnd-2.0.0.jar" />
+		<path id="bnd-classpath" location="${workspacedir}/cnf/plugins/biz.aQute.bnd/biz.aQute.bnd-2.1.0.jar" />
 
 		<!-- Load bnd and prepare the workspace -->
 		<taskdef resource="aQute/bnd/ant/taskdef.properties" classpathref="bnd-classpath" />
