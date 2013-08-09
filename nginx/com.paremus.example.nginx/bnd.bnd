@@ -1,5 +1,5 @@
--buildpath: osgi.core,\
-	osgi.cmpn,\
+-buildpath: osgi.core;version=4.3,\
+	osgi.cmpn;version=4.3,\
 	junit.osgi,\
 	org.bndtools.rt.packager.api,\
 	biz.aQute.bndlib,\
