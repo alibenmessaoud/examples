@@ -5,9 +5,8 @@
     repopath="
       file:releaserepo/index-nim.xml,
       file:localrepo/index-nim.xml,
-      https://www.bundlerepo.org/repos/oss/index-nim.xml,
       https://www.bundlerepo.org/repos/paremus/index-nim.xml,
-      urn:partbase
+      https://www.bundlerepo.org/repos/oss/index-nim.xml
     ">
     
     <system.part category="msf" name="org.bndtools.rt.packager.mosquitto.guard">

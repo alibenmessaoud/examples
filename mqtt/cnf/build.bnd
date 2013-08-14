@@ -25,7 +25,7 @@
 		type=R5|Nimble,\
 	aQute.bnd.deployer.repository.FixedIndexedRepo; \
 		name=BundleRepo-OSS; \
-		locations=https://www.bundlerepo.org/repos/oss/index-20130714-1600.xml.gz, \
+		locations=https://www.bundlerepo.org/repos/oss/index-20130721-1300.xml.gz, \
 	aQute.lib.deployer.FileRepo; \
 		name=Build;\
 		location=${workspace}/cnf/buildrepo,\
