@@ -1,0 +1,7 @@
+nim:repos -l releaserepo/index-nim.xml
+nim:repos -l localrepo/index-nim.xml
+nim:repos -l https://www.bundlerepo.org/repos/oss/index-nim.xml
+nim:repos -l https://www.bundlerepo.org/repos/paremus/index-nim.xml
+
+nim:repos -p Release,Local,BundleRepo-OSS-20130731-0900,BundleRepo-Paremus-20130704-2300
+nim:add -dt com.paremus.examples.rest.resource@active

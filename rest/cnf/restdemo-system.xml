@@ -1,6 +1,11 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="RESTdemo"
 	boundary="fabric"
-	repopath="Release,Local,jetty,fabric,nimble-cmpn,nimble,nimble-rs">
+	repopath="
+		releaserepo/index-nim.xml,
+		localrepo/index-nim.xml,
+		https://www.bundlerepo.org/repos/oss/index-nim.xml,
+		https://www.bundlerepo.org/repos/paremus/index-nim.xml
+	">
 	
 	<!-- The web application that talks to the REST endpoint -->
 	<system name="Bookshelf-Site" boundary="fibre">
