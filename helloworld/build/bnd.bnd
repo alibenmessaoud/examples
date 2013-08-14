@@ -3,4 +3,5 @@
 	helloworld.cli,\
 	helloworld.ds,\
 	helloworld.blueprint,\
-	helloworld.activator
+	helloworld.activator,\
+	systems

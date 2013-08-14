@@ -3,7 +3,7 @@
     name="helloworld-trivial-system"
     boundary="fibre"
     repopath="
-      file:cnf/releaserepo/index-nim.xml
+    	../index-nim.xml
     ">
 
     <nature group="demo" />
