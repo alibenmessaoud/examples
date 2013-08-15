@@ -1,4 +1,4 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="cli" version="1.0.0" abstract="true"
+<system xmlns="http://schema.paremus.com/sf/1" name="cli-abstract" version="1.0.0" abstract="true"
 	boundary="fabric" 
         repopath="
             ../cnf/releaserepo/index-nim.xml,
