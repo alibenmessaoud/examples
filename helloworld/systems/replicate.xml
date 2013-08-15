@@ -1,0 +1,27 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="replicate"
+	boundary="fabric"
+        repopath="
+            ../cnf/releaserepo/index-nim.xml,
+            https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
+
+	<description>
+                Deploys a Replicated Greeting Service - Remote Declarative Services Version.
+	</description>
+
+	<nature group="demo" />
+
+        <system.part category="ms" name="com.example.hello.ds">
+           <property name="language" value="en" />
+           <property name="service.exported.interfaces" value="*" />
+        </system.part>
+
+        <contract features="(type=REMOTE)" />
+
+	<replication.handler type="scalable">
+           <property name="scaleFactor" value="1" type="float" />
+           <property name="fixedDelta" value="-2" type="integer" />
+           <property name="minimum" value="1" type="integer" />
+        </replication.handler>
+
+</system>
