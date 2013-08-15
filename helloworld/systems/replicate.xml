@@ -14,13 +14,15 @@
         <system.part category="ms" name="com.example.hello.ds">
            <property name="language" value="en" />
            <property name="service.exported.interfaces" value="*" />
-
+           <replicator name="scale" />
         </system.part>
 
         <contract features="(type=REMOTE)" />
 
-       <replication.handler type="fixed">
-          <property name="size" value="5" type="integer" />
-       </replication.handler>
+        <replication.handler name="scale" type="scalable">
+           <property name="scaleFactor" value="1" type="float" />
+           <property name="fixedDelta" value="-2" type="integer" />
+           <property name="minimum" value="1" type="integer" />
+        </replication.handler>
 
 </system>
