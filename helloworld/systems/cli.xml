@@ -1,22 +1,19 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="cli" version="1.0.0" abstract="true"
-	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
+<system xmlns="http://schema.paremus.com/sf/1" name="cli"
+	boundary="fabric"
+        repopath="
+           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
 
 	<description>
-		Abstract CLI System - Non Runnable.	
+		Deploys CLI command service.
 	</description>
 	<nature group="demo" />
 
-        <system name="cli" boundary="fibre">
 
 	<!-- Declarative Services Version -->
-           <system.part category="osgi.active.bundle" name="helloworld.cli" />
+        <system.part category="osgi.active.bundle" name="helloworld.cli" />
 
-           <!-- The RSA bundles, for publishing availability of the REST endpoint -->
-           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
-           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
-           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
-
-	</system>
+        <contract features="(type=LOCAL)" />
 
 </system>
-

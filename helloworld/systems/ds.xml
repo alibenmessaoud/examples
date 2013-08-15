@@ -8,7 +8,7 @@
     ">
 
 	<description>
-		Deploys a Declarative Services based Greeting service and a CLI command.
+		Deploys Greeting and CLI services - Declarative Services Version.
 	</description>
 	<nature group="demo" />
 

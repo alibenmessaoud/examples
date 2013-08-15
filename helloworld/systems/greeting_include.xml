@@ -1,8 +1,12 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="hellogs" template="cli" version="1.0.0"
-	boundary="fabric" repopath="helloworld,fabric,nimble-cmpn">
+<system xmlns="http://schema.paremus.com/sf/1" name="greeting-include" template="cli" version="1.0.0"
+	boundary="fabric" 
+        repopath="
+            ../cnf/releaserepo/index-nim.xml,
+            https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
 
 	<description>
-		Deploys Hello World Service.
+		The Hello World Greeting Service - Local Declarative Services | Requires CLI template.
 	</description>
 	<nature group="demo" />
 

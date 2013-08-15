@@ -8,7 +8,7 @@
         ">
 
         <description>
-                Deploys a Blueprint-based Greeting service and a CLI command.
+                Deploys Greeting and CLI services - Blueprint Version. 
         </description>
 
         <nature group="demo" />

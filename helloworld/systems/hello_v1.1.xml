@@ -1,8 +1,13 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="HelloWorld" version="1.1.0"
-	boundary="fabric" repopath="helloworld-ext,helloworld,aries-ext,aries,fabric,nimble-cmpn">
+	boundary="fabric" 
+        repopath="
+           ../cnf/releaserepo/index-nim.xml,
+           ../helloworld.blueprint/index-nim-ext.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
 
 	<description>
-		Deploys Hello World Service.
+		Hello World - Local Blueprint Version.
 	</description>
 	<nature group="demo" />
 
@@ -11,17 +16,12 @@
 	<!-- Declarative Services Version -->
            <system.part category="osgi.active.bundle" name="helloworld.cli" />
 
-           <!-- The RSA bundles, for publishing availability of the REST endpoint -->
-           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.rtidds" />
-           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" />
-           <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" />
-
            <contract features="(type=LOCAL)" />
 
 	</system>
 
         <!-- Blueprint Version -->
-        <system.part category="ms" name="com.example.hello">
+        <system.part category="ms" name="com.example.hello.blueprint">
                 <property name="language" value="de" />
                 <contract features="(type=LOCAL)" />
         </system.part>

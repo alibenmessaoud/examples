@@ -1,0 +1,17 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="cli" version="1.0.0" abstract="true"
+	boundary="fabric" 
+        repopath="
+            ../cnf/releaserepo/index-nim.xml,
+            https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
+
+	<description>
+		Abstract CLI System - Non Runnable.	
+	</description>
+	<nature group="demo" />
+
+	<!-- Declarative Services Version -->
+           <system.part category="osgi.active.bundle" name="helloworld.cli" />
+
+</system>
+
