@@ -1,14 +1,12 @@
-<system
-    xmlns="http://schema.paremus.com/sf/1"
-    name="helloworld-ds-system"
-    boundary="fibre"
-    repopath="
-        ../cnf/releaserepo/index-nim.xml,
-        https://www.bundlerepo.org/repos/oss/index-nim.xml
-    ">
+<system xmlns="http://schema.paremus.com/sf/1" name="helloworld-ds-system"
+        boundary="fibre"
+        repopath="
+           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
 
 	<description>
-		Deploys Greeting and CLI services - Declarative Services Version.
+		A Greeting service and CLI - Declarative Services Version.
 	</description>
 	<nature group="demo" />
 

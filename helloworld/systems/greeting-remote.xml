@@ -1,13 +1,12 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="greeting-remote"
 	boundary="fabric"
         repopath="
-            ../cnf/releaserepo/index-nim.xml,
-            https://www.bundlerepo.org/repos/oss/index-nim.xml
+           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
- 
 
 	<description>
-                Deploys a Greeting Service - Remote Declarative Services Version.
+                A Greeting Service - Remote Declarative Services Version.
 	</description>
 	<nature group="demo" />
 

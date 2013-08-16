@@ -1,9 +1,9 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="HelloWorld" version="1.1.0"
-	boundary="fabric" 
+	boundary="fibre" 
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
-           ../helloworld.blueprint/index-nim-ext.xml,
-           https://www.bundlerepo.org/repos/oss/index-nim.xml
+                ../cnf/releaserepo/index-nim.xml,
+                ../helloworld.blueprint/index-nim-blueprint.xml,
+                https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>

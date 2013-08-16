@@ -1,8 +1,8 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="cli-abstract" version="1.0.0" abstract="true"
-	boundary="fabric" 
+	boundary="fibre" 
         repopath="
-            ../cnf/releaserepo/index-nim.xml,
-            https://www.bundlerepo.org/repos/oss/index-nim.xml
+           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>

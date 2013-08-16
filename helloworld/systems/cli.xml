@@ -1,12 +1,12 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="cli"
-	boundary="fabric"
+	boundary="fibre"
         repopath="
            ../cnf/releaserepo/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
-		Deploys CLI command service.
+		A CLI command service.
 	</description>
 	<nature group="demo" />
 

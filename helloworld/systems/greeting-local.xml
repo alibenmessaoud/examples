@@ -1,12 +1,12 @@
 <system xmlns="http://schema.paremus.com/sf/1" name="greeting-local"
-	boundary="fabric" 
+	boundary="fibre" 
         repopath="
            ../cnf/releaserepo/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
-		Deploys a Greeting Service - Local Declarative Services Version.
+		A Greeting Service - Local Declarative Services Version.
 	</description>
 	<nature group="demo" />
 
