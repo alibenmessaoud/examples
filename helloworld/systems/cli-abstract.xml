@@ -11,7 +11,9 @@
 	<nature group="demo" />
 
 	<!-- Declarative Services Version -->
-        <system.part category="osgi.active.bundle" name="helloworld.cli" />
+        <system.part category="osgi.active.bundle" name="helloworld.cli">
+           <contract features="(type=LOCAL)" />
+        </system.part>
 
 </system>
 
