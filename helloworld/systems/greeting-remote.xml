@@ -13,8 +13,7 @@
            <system.part category="ms" name="com.example.hello.ds">
                <property name="language" value="en" />
                <property name="service.exported.interfaces" value="*" />
+	       <contract features="(type=REMOTE)" />
            </system.part>
-
-           <contract features="(type=REMOTE)" />
 
 </system>
