@@ -15,9 +15,8 @@
            <property name="language" value="en" />
            <property name="service.exported.interfaces" value="*" />
            <replicator name="scale" />
+           <contract features="(type=REMOTE)" />
         </system.part>
-
-        <contract features="(type=REMOTE)" />
 
 	<replication.handler name="scale" type="managed">
            <property name="scaleFactor" value="1" type="float" />
