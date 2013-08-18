@@ -1,0 +1,18 @@
+<system xmlns="http://schema.paremus.com/sf/1" name="jenkins"
+	boundary="fibre" 
+        repopath="
+                ../cnf/releaserepo/index-nim.xml,
+                ../helloworld.blueprint/index-nim-blueprint.xml,
+                https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
+
+	<description>
+		Deploys a instance of Jenkins running in Tomcat
+	</description>
+	<nature group="demo" />
+
+	<system.part category="osgi.active.bundle" name="jenkins">
+		<!--<contract features="(!(infra=true))" />-->
+        </system.part>
+	
+</system>
