@@ -10,24 +10,15 @@
 	</description>
 	<nature group="demo" />
 
-        <system name="cli" boundary="fibre">
-
 	<!-- Declarative Services Version -->
-           <system.part category="osgi.active.bundle" name="helloworld.cli" />
-
+        <system.part category="osgi.active.bundle" name="helloworld.cli">
            <contract features="(type=LOCAL)" />
+        </system.part>
 
-	</system>
-
-        <system name="hello-remote" boundary="fibre">
-
-           <system.part category="ms" name="com.example.hello.ds">
-               <property name="language" value="en" />
-               <property name="service.exported.interfaces" value="*" />
-           </system.part>
-
-           <contract features="(type=REMOTE)" />
-
-        </system>
+        <system.part category="ms" name="com.example.hello.ds">
+           <property name="language" value="en" />
+           <property name="service.exported.interfaces" value="*" />
+	   <contract features="(type=REMOTE)" />
+        </system.part>
 
 </system>

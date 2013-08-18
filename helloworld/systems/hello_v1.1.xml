@@ -11,21 +11,15 @@
 	</description>
 	<nature group="demo" />
 
-        <system name="cli" boundary="fibre">
-
 	<!-- Declarative Services Version -->
-           <system.part category="osgi.active.bundle" name="helloworld.cli" />
-
+        <system.part category="osgi.active.bundle" name="helloworld.cli">
            <contract features="(type=LOCAL)" />
-
-	</system>
+	</system.part>
 
         <!-- Blueprint Version -->
         <system.part category="ms" name="com.example.hello.blueprint">
-                <property name="language" value="de" />
-                <contract features="(type=LOCAL)" />
+           <property name="language" value="de" />
+           <contract features="(type=LOCAL)" />
         </system.part>
 
-
 </system>
-

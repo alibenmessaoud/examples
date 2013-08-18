@@ -10,20 +10,16 @@
 	</description>
 	<nature group="demo" />
 
-        <system name="cli" boundary="fibre">
-
 	<!-- Declarative Services Version -->
-           <system.part category="osgi.active.bundle" name="helloworld.cli" />
-
+        <system.part category="osgi.active.bundle" name="helloworld.cli">
            <contract features="(type=LOCAL)" />
+	</system.part>
 
-	</system>
 
         <!-- Declarative Services Version -->
         <system.part category="ms" name="com.example.hello.ds">
-                <property name="language" value="ja" />
-                <contract features="(type=LOCAL)" />
+           <property name="language" value="ja" />
+           <contract features="(type=LOCAL)" />
         </system.part>
 
 </system>
-
