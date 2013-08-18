@@ -1,0 +1,20 @@
+<system xmlns="http://schema.paremus.com/sf/1" xmlns:sf="http://www.paremus.com/service-fabric" name="hello-green"
+        boundary="fibre"
+        repopath="
+           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
+
+	<description>
+		A Greeting service and CLI - Declarative Services Version.
+	</description>
+	<nature group="demo" />
+
+	<!-- Declarative Services Version -->
+	<system.part category="ms" name="com.example.hello.ds">
+		<property name="language" value="ja" />
+	</system.part>
+	
+	<system.part category="osgi.active.bundle" name="helloworld.cli" />
+
+</system>
