@@ -10,17 +10,15 @@
 	</description>
 	<nature group="demo" />
 
-        <system name="cli" boundary="fibre">
-
+        <systemn.part name="helloworld.cli" >
            <contract features="(type=LOCAL)" />
-
-        </system>
+        </system.part>
 
 
         <!-- Declarative Services Version -->
         <system.part category="ms" name="com.example.hello.ds">
-                <property name="language" value="ja" />
-                <contract features="(type=LOCAL)" />
+           <property name="language" value="ja" />
+           <contract features="(type=LOCAL)" />
         </system.part>
 
 </system>
