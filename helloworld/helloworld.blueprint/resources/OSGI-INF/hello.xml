@@ -5,7 +5,7 @@
 
 	<!-- The main bean -->
 	<bean id="hello" class="com.example.hello.impl.GreetingImpl">
-		<cm:managed-properties persistent-id="com.example.hello"
+		<cm:managed-properties persistent-id="com.example.hello.bp"
 			update-strategy="container-managed" />
 	</bean>
 

@@ -1,9 +1,9 @@
 <repository name="Release-Ext" xmlns="http://schema.paremus.com/nri/2" >
 
- <part name="ms/com.example.hello.blueprint" attrs="language=&quot;en&quot;" >
+ <part name="ms/com.example.hello.bp" attrs="language=&quot;en&quot;" >
   <req name="builder/ms" />
   <req name="osgi.active.bundle/helloworld.blueprint" />
-  <cap name="ms/com.example.hello.blueprint" attrs="selfcap=&quot;true&quot;" />
+  <cap name="ms/com.example.hello.bp" attrs="selfcap=&quot;true&quot;" />
  </part>
 
 </repository>
