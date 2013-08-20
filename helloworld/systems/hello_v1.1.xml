@@ -17,7 +17,7 @@
 	</system.part>
 
         <!-- Blueprint Version -->
-        <system.part category="ms" name="com.example.hello.blueprint">
+        <system.part category="ms" name="com.example.hello.bp">
            <property name="language" value="de" />
            <contract features="(type=LOCAL)" />
         </system.part>
