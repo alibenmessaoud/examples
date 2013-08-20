@@ -14,7 +14,7 @@
         <nature group="demo" />
 
         <!-- Blueprint Version -->
-        <system.part category="ms" name="ms/com.example.hello.bp">
+        <system.part category="ms" name="com.example.hello.bp">
                 <property name="language" value="de" />
         </system.part>
 
