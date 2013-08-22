@@ -10,15 +10,29 @@ Instructions for Blueprint Version
 
 		$ ant -f build/build.xml build release
 
-2.	Start the Blueprint service example:
+2. 	Start a Posh / Nimble run time.
 
-		% nim:add osgi.active.bundle/helloworld.blueprint
+		$FABRIC_HOME/bin/posh -C
 
-3.	Start the CLI bundle and test the service:
+3. 	Set the following -- temporary work around for an Aries BluePrint bug (fix on the way)
+	        system:setproperty org.apache.aries.proxy.weaving.disabled org.objectweb.asm.*,org.slf4j.*,org.
+apache.log4j.*,javax.*,ch.qos.logback.* 
+
+3.      Set the local repositories
+
+		% repos -l ~/Desktop/examples-master/helloworld/cnf/releaserepo/index-nim.xml
+                % repos -l ~/Desktop/examples-master/helloworld/helloworld.blueprint/index-nim-blueprint.xml
+                % repos -l https://www.bundlerepo.org/repos/oss/index-nim.xml
+
+4.	Start the Blueprint service example:
+
+		% nim:add ms/com.example.hello.bp 
+
+5.	Start the CLI bundle and test the service:
 
 		% nim:add osgi.active.bundle/helloworld.cli
 
-4.	Lets test the service :)
+6.	Lets test the service :)
 
 		% sayHello Neil
                 Hello Neil!
@@ -27,23 +41,24 @@ Instructions for Blueprint Version
 		% sayHello Neil
 		Guten Tag, Neil.
 
+7.	And remove blueprint
+
+	        % nim:remove ms/com.example.hello.bp
+
 
 Instructions for Declarative Service Version
 ----------------------------------
 
-1.	Build the bundles:
 
-                $ ant -f build/build.xml build release
-
-2.	Start the Declarative Service example:
+1.	Start the Declarative Service example:
 
                 % nim:add ms/com.example.hello.ds 
 
-3.	Start the CLI bundle and test the service:
+2.	Start the CLI bundle and test the service:
 
                 % nim:add osgi.active.bundle/helloworld.cli
 
-4.	Lets test the service :)
+3.	Lets test the service :)
 
 		% sayHello Neil
 		Hello Neil!
@@ -67,13 +82,13 @@ Deploy to Fibre
 
 2.	Import, deploy and test the system:
 
-		% fabric:import helloworld.scripts/helloworld-blueprint-system.xml
-		% fabric:deploy helloworld-blueprint-system
+		% fabric:import cnf/system/ds.xml
+		% fabric:deploy helloworld-ds-system
 		% sayHello Neil
 		Hello Neil!
 
 3.	Update configuration (using part:systemname/partname/pid):
 
-		% fabric:config part:helloworld-blueprint-system/com.example.hello/com.example.hello language=de
+		% fabric:config part:helloworld-ds-system/com.example.hello.ds/com.example.hello language.ds=de
 		% sayHello Neil
 		Guten Tag Neil!
