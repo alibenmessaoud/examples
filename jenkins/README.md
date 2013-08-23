@@ -14,9 +14,8 @@ It is not necessary to build anything to run this example. Steps required to run
 
 1. posh -kc fibre -I --tomcat
 2. fabric:connect
-3. fabric:repos -l $PWD/index-nim.xml
-4. fabric:import jenkins.tomcat.system
-5. fabric:deploy jenkins.tomcat.system
+3. fabric:import $location:/jenkins.tomcat.system
+4. fabric:deploy jenkins.tomcat.system
 
 Once this is deployed, you should be able to use the Jenkins instance by pointing your web browser at `http://localhost:8080/jenkins`. Bear in mind that Jenkins is quite a large application and takes some time to start up.
 

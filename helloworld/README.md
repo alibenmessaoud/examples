@@ -36,7 +36,7 @@ apache.log4j.*,javax.*,ch.qos.logback.*
 
 		% sayHello Neil
                 Hello Neil!
-		% setpid com.example.hello language=de
+		% setpid com.example.hellobp language=de
 		-------> Setting language to de
 		% sayHello Neil
 		Guten Tag, Neil.
