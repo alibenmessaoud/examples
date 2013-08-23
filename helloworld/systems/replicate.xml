@@ -14,14 +14,14 @@
         <system.part category="ms" name="com.example.hello.ds">
            <property name="language" value="en" />
            <property name="service.exported.interfaces" value="*" />
-           <replicator name="scale" />
            <contract features="(type=REMOTE)" />
-        </system.part>
 
-	<replication.handler name="scale" type="managed">
-           <property name="scaleFactor" value="1" type="float" />
-           <property name="fixedDelta" value="-2" type="integer" />
-           <property name="minimum" value="1" type="integer" />
-        </replication.handler>
+           <!-- Replicate this system across as many nodes as we have available -->
+           <replication.handler name="scale" type="scalable">
+              <property name="scaleFactor" value="1" type="float" />
+              <property name="minimum" value="1" type="integer" />
+           </replication.handler>
+
+        </system.part>
 
 </system>
