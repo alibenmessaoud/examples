@@ -1,30 +1,35 @@
 <system xmlns="http://schema.paremus.com/sf/1"
         name="DataNucleusExample"
         boundary="fabric"
-        repopath="Camel,Packager,jetty,DataNucleus,DataNucleusDeps,fabric,nimble-cmpn,nimble"
-        >
+        repopath="
+           ../cnf/releaserepo/index-nim.xml,
+           ../cnf/localrepo/index-nim.xml,
+	   ../cnf/camelrepo/index-nim.xml,
+	   ../cnf/packager/index-nim.xml,
+	   https://www.bundlerepo.org/repos/oss/index-nim.xml
+        ">
 
-  <!-- MongoDB package -->
-  <system.part category="msf" name="org.bndtools.rt.packager.mongodb.guard" >
-        <property name="port" value="27017" />
-  </system.part>
+   <!-- MongoDB package -->
+   <system.part category="msf" name="org.bndtools.rt.packager.mongodb.guard" >
+       <property name="port" value="27017" />
+   </system.part>
 
 
-  <!-- The top-level "application" bundles -->
-  <system name="MidTier OSGi" boundary="fibre">
+   <!-- The top-level "application" bundles -->
+   <system name="MidTier OSGi" boundary="fibre">
 
-    <!-- Add the datanucleus part -->
-    <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
+     <!-- Add the datanucleus part -->
+     <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
     
-    <!-- Add the camel part -->
-    <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
+     <!-- Add the camel part -->
+     <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
   
-  </system>
+   </system>
 
 
-  <!-- Play-REST application -->
-  <system.part category="msf" name="com.paremus.example.play.guard" >
-        <property name="httpPort" value="9999" />
-  </system.part>
+   <!-- Play-REST application -->
+   <system.part category="msf" name="com.paremus.example.play.guard" >
+      <property name="httpPort" value="9999" />
+   </system.part>
 
 </system>
