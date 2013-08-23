@@ -1,5 +1,5 @@
 
 fibre -I
 fabric:connect
-fabric:import (($0 resolve datanucleus-mongodb-system.xml) getPath)
+fabric:import (($0 resolve datanucleus-mongodb.xml) getPath)
 fabric:deploy DataNucleusExample
