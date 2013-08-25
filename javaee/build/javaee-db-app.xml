@@ -3,7 +3,6 @@
         repopath="
            ../cnf/releaserepo/index-nim.xml,
            ../cnf/localrepo/index.xml,
-	   ../cnf/packager/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml,
            https://www.bundlerepo.org/repos/paremus/index-nim.xml
         ">
