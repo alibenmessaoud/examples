@@ -1,0 +1,26 @@
+<system
+    xmlns="http://schema.paremus.com/sf/1"
+    name="Nginxdemo"
+    boundary="fibre"
+    repopath="
+        Release,
+        nimble,
+        nimble-cmpn,
+        BundleRepo-OSS-20130825-1200,
+        BundleRepo-Paremus-20130825-1200
+    ">
+
+    <!-- Nginx Server -->
+    <system.part category="msf" name="com.paremus.example.nginx.guard">
+        <property name="listen" value="9080" type="integer"/>
+        <property name="proxyPass" value="http://paremus5.paremus.com:8080" type="string"/>
+    </system.part>
+
+    <!-- Application Bundle -->
+
+    <!-- RSA Stack, with SLP discovery -->
+    <!-- <system.part category="osgi.active.bundle" name="com.paremus.dosgi.discovery.slp" /> -->
+    <!-- <system.part category="osgi.active.bundle" name="com.paremus.dosgi.dsw.essencermi" /> -->
+    <!-- <system.part category="osgi.active.bundle" name="com.paremus.dosgi.topologymanager" /> -->
+
+</system>
