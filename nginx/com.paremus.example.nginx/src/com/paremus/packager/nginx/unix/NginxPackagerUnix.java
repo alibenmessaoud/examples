@@ -19,12 +19,10 @@ import aQute.lib.io.IO;
 import aQute.libg.command.Command;
 
 @Component(properties = {PackageType.PACKAGE_TYPE + "=nginx", 
-		PackageType.VERSION + "=1.2.8"})
+		PackageType.VERSION + "=1.4.2"})
 public class NginxPackagerUnix implements PackageType {
 	
-	private final static String[] sourceFiles = new String[] {
-		"nginx", "mime.types", "lib/libcrypto.0.9.8.dylib", "lib/libpcre.1.dylib",
-		"lib/libssl.0.9.8.dylib", "lib/libSystem.B.dylib", "lib/libz.1.dylib" };
+	private final static String[] sourceFiles = new String[] { "nginx" };
 
 	@Override
 	public PackageDescriptor create(Map<String, Object> properties, File data)
@@ -32,8 +30,7 @@ public class NginxPackagerUnix implements PackageType {
 		NginxProperties config = Configurable.createConfigurable(NginxProperties.class, properties);
 		File[] destFiles = copyFilesToDir(sourceFiles, "/data", data);
 		for (File file : destFiles) {
-			if (!file.getName().equals("mime.types"))
-				run("chmod a+x " + file.getAbsolutePath());
+			run("chmod a+x " + file.getAbsolutePath());
 		}
 		File logsDir = new File(data, "logs");
 		if (!logsDir.exists()) {
@@ -44,11 +41,9 @@ public class NginxPackagerUnix implements PackageType {
 		File nginxConf = new File(data, "nginx.conf");
 		IO.copy(new StringReader(generateConfigFile(config)), new FileWriter(nginxConf));
 		final String nginxPath = new File(data, "nginx").getAbsolutePath();
-		String libPath = new File(data, "lib").getAbsolutePath();
 		String confPath = nginxConf.getAbsolutePath();
 		PackageDescriptor pd = new PackageDescriptor();
 		StringBuilder sb = new StringBuilder();
-		sb.append("export DYLD_LIBRARY_PATH=").append(libPath).append("\n");
 		sb.append(nginxPath).append(" -p " + data.getAbsolutePath());
 		sb.append(" -c " + confPath);
 		sb.append(" -g \"daemon off;\"");
@@ -106,7 +101,6 @@ public class NginxPackagerUnix implements PackageType {
 		sb.append("    worker_connections  ").append(properties.workerConnections()).append(";\n");
 		sb.append("}\n");
 		sb.append("http {\n");
-		sb.append("    include       mime.types;\n");
 		sb.append("    default_type  application/octet-stream;\n");
 		sb.append("    server {\n");
 		sb.append("        listen       ").append(properties.listen()).append(";\n");;

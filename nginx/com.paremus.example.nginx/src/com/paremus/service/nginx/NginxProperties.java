@@ -4,9 +4,9 @@ import aQute.bnd.annotation.metatype.Meta;
 
 /**
  * <pre>
- * nginx version: nginx/1.2.7
+ * nginx version: nginx/1.4.2
  * Usage: nginx [-?hvVtq] [-s signal] [-c filename] [-p prefix] [-g directives]
- *
+ * 
  * Options:
  *   -?,-h         : this help
  *   -v            : show version and exit
@@ -14,10 +14,10 @@ import aQute.bnd.annotation.metatype.Meta;
  *   -t            : test configuration and exit
  *   -q            : suppress non-error messages during configuration testing
  *   -s signal     : send signal to a master process: stop, quit, reopen, reload
- *   -p prefix     : set prefix path (default: /usr/local/Cellar/nginx/1.2.7/)
- *   -c filename   : set configuration file (default: /usr/local/etc/nginx/nginx.conf)
+ *   -p prefix     : set prefix path (default: /usr/local/nginx/)
+ *   -c filename   : set configuration file (default: conf/nginx.conf)
  *   -g directives : set global directives out of configuration file
- *</pre>
+ * </pre>
  */
 public interface NginxProperties {
 	

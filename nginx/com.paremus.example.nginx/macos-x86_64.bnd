@@ -8,7 +8,7 @@ Require-Capability: \
 		(osgi.native.osname=MacOSX) \
 		(osgi.native.processor=x86-64) \
 	)";effective:=active
-Provide-Capability: packager.type;package.type=nginx;version:Version=1.2.8;\
+Provide-Capability: packager.type;package.type=nginx;version:Version=1.4.2;\
 	effective:=active
 
 Service-Component: *

@@ -17,7 +17,7 @@ import aQute.bnd.annotation.metatype.Configurable;
 import com.paremus.service.nginx.NginxProperties;
 
 @Component(designateFactory = NginxProperties.class, 
-	properties = {ProcessGuard.PACKAGE_TYPE + "=nginx", ProcessGuard.VERSION + "=1.2.8"}, 
+	properties = {ProcessGuard.PACKAGE_TYPE + "=nginx", ProcessGuard.VERSION + "=1.4.2"}, 
 	name="com.paremus.example.nginx.guard")
 public class NginxProcessGuard implements ProcessGuard {
 	
