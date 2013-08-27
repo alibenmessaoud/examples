@@ -1,17 +1,5 @@
-repoPath = ($0 resolve cnf)
-echo Repository path = $repoPath
-
-repoUri = poshx:sfs 9085 helloworld $repoPath
-echo Local repository root URI = $repoUri
-
 fibre -I
 fabric:connect
-
-echo Loading repositories
-fabric:repos -l $repoUri/releaserepo/index-nim.xml
-echo fabric:repos -l $repoUri/localrepo/index-nim.xml
-fabric:repos -l https://www.bundlerepo.org/repos/oss/index-nim-20130825-1200.xml
-fabric:repos -l https://www.bundlerepo.org/repos/paremus/index-nim-20130825-1200.xml
 
 fabric:import -f cnf/system-legacy.xml
 echo Deploying Nginxdemo...

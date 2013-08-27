@@ -3,11 +3,9 @@
     name="Nginxdemo"
     boundary="fibre"
     repopath="
-        Release,
-        nimble,
-        nimble-cmpn,
-        BundleRepo-OSS-20130825-1200,
-        BundleRepo-Paremus-20130825-1200
+        https://www.bundlerepo.org/repos/oss/index-nim.xml,
+        https://www.bundlerepo.org/repos/paremus/index-nim.xml,
+        ../cnf/releaserepo/index-nim.xml
     ">
 
     <!-- Nginx Server -->
