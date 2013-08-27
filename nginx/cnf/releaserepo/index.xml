@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1376571042960' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1377612275586' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='com.paremus.example.nginx.linux-x86_64'/>
@@ -7,9 +7,9 @@
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='a48f785ffbace5cc243a7a482ea7a750d07efa5bb0b5eee683dd9db11ae46a06'/>
+      <attribute name='osgi.content' value='857df8245244ee69c6e44d4c4918b39ae19fdda34db0b19a551087e9e42f5183'/>
       <attribute name='url' value='com.paremus.example.nginx.linux-x86_64/com.paremus.example.nginx.linux-x86_64-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='1273419'/>
+      <attribute name='size' type='Long' value='1273187'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -22,7 +22,7 @@
     </capability>
     <capability namespace='packager.type'>
       <attribute name='package.type' value='nginx'/>
-      <attribute name='version' type='Version' value='1.2.8'/>
+      <attribute name='version' type='Version' value='1.4.2'/>
       <directive name='effective' value='active'/>
       <directive name='uses' value='org.bndtools.service.packager'/>
     </capability>
@@ -56,9 +56,9 @@
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='b33fe43ad9cb0d42b6988c28d7a0b89c9060c7a5c0f3c8e9eec231777a101a3f'/>
+      <attribute name='osgi.content' value='a48ffe12f63488c3e6c8e5598dd08bfaa5a7f7bcacb32cb4c92112cfe6de4576'/>
       <attribute name='url' value='com.paremus.example.nginx.guard/com.paremus.example.nginx.guard-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='23865'/>
+      <attribute name='size' type='Long' value='23922'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -71,7 +71,7 @@
     </capability>
     <capability namespace='packager.guard'>
       <attribute name='package.type' value='nginx'/>
-      <attribute name='version' type='Version' value='1.2.8'/>
+      <attribute name='version' type='Version' value='1.4.2'/>
       <directive name='effective' value='active'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
@@ -96,9 +96,9 @@
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='975c39703d31bdb1433c288cf5d9dcd2ba74a1b85617eb09e3b8481da2417517'/>
+      <attribute name='osgi.content' value='2b83876d7e08c6e677663b49b47362b9d18ba2a97bc2698975e13fc424f225a3'/>
       <attribute name='url' value='com.paremus.example.nginx.common/com.paremus.example.nginx.common-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='18378'/>
+      <attribute name='size' type='Long' value='18372'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -123,9 +123,9 @@
       <attribute name='version' type='Version' value='0.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='24b49d4da991ad605643856b8ce98fac70bca6b9fe8e0a1f92e8bf9ea6248511'/>
+      <attribute name='osgi.content' value='23d58346753b1f080d3b5f259783c9979c32a6a9fd519119b22c292c3bc49cd4'/>
       <attribute name='url' value='com.paremus.example.nginx.macos-x86_64/com.paremus.example.nginx.macos-x86_64-0.0.0.jar'/>
-      <attribute name='size' type='Long' value='1915445'/>
+      <attribute name='size' type='Long' value='383195'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -138,7 +138,7 @@
     </capability>
     <capability namespace='packager.type'>
       <attribute name='package.type' value='nginx'/>
-      <attribute name='version' type='Version' value='1.2.8'/>
+      <attribute name='version' type='Version' value='1.4.2'/>
       <directive name='effective' value='active'/>
     </capability>
     <requirement namespace='osgi.wiring.package'>
