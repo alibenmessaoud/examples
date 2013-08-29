@@ -142,7 +142,7 @@ public class RedisDemoServlet extends HttpServlet{
 	@Reference(cardinality = ReferenceCardinality.MULTIPLE,
 			policy = ReferencePolicy.DYNAMIC,
 			service = Endpoint.class,
-			target = "(type=redis)")
+			target = "(&(type=redis)(redis.group=redis-demo))")
 	void setEndpoint(ServiceReference<Endpoint> endpoint) {
 		lock.writeLock().lock();
 		try {
