@@ -1,0 +1,20 @@
+<system
+    xmlns="http://schema.paremus.com/sf/1"
+    name="Apache_Felix_Web_Console"
+    boundary="fibre"
+    repopath="
+        repo/index-nim-ext.xml,
+        repo/index-nim.xml
+    ">
+
+    <system.part category="osgi.active.bundle" name="org.apache.felix.webconsole">
+        <replication.handler name="scale" type="scalable">
+            <property name="scaleFactor" value="1" type="float" />
+            <property name="minimum" value="1" type="integer" />
+        </replication.handler>
+    </system.part>
+
+    <system.part category="osgi.active.bundle" name="aQute.xray.plugin" />
+
+
+</system>

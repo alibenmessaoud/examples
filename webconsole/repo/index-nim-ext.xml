@@ -1,0 +1,8 @@
+<repository name="webconsole-ext:0" xmlns="http://schema.paremus.com/nri/2" >
+    <part name="paremus.service/felix.http">
+        <req name="builder/primordial.builder"/>
+        <cap name="osgi.service/http:1.2"/>
+        <cap name="osgi.generic/osgi.service" attrs="objectClass=org.osgi.service.http.HttpService"/>
+        <req name="osgi.active.bundle/org.apache.felix.http.jetty"/>
+    </part>
+</repository>
