@@ -13,12 +13,12 @@
 * Use of the Fabric's Remote Services
 * Upgrade and RollBack capabilities
 
-The following examples introduce the Fabric's DOSGi capabilities [see related documentation](http://docs.paremus.com/display/SF111/Distributed+OSGi):
+The following examples introduce the Fabric's DOSGi capabilities ([see related documentation](http://docs.paremus.com/display/SF111/Distributed+OSGi)):
 * Use of the Fabric's Remote Services
 * Example of the Fabric's dynamic Scale Out via replication handlers. 
 * Example of the Fabric's load-balancer behavior. 
 
-The final set of examples demonstrate the Fabric's ability to deploy and manage traditional software artefacts [see related documentation](http://docs.paremus.com/pages/viewpage.action?pageId=5080069): 
+The final set of examples demonstrate the Fabric's ability to deploy and manage traditional software artefacts ([see related documentation](http://docs.paremus.com/pages/viewpage.action?pageId=5080069)): 
 * The [Rest](https://github.com/paremus/examples/tree/master/rest) Demonstrates Fabric deployment and dynamic wire-up of REST based Services.
 * The [JEE](https://github.com/paremus/examples/tree/master/javaee) Demonstrates Fabric deployment of traditional JEE application; including the choice of application Server (GlassFish or JBoss).  
 * The [Redis](https://github.com/paremus/examples/tree/master/redis) Demonstrates Fabric deployment use of the Redis Key-Value store.
