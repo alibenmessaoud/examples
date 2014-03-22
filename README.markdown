@@ -1,7 +1,7 @@
 # Paremus Service Fabric #
 ### A distributed OSGi based Cloud platform ###
 
-[Terminology and Concepts](https://docs.paremus.com/display/SF111/Terminology+and+Concepts)
+[Terminology and Concepts](https://docs.paremus.com/display/SF111/Introduction)
 
 ##Examples: 
 
