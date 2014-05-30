@@ -1,27 +1,31 @@
-<system xmlns="http://schema.paremus.com/sf/1" xmlns:sf="http://www.paremus.com/service-fabric" name="hello-red"
+<system xmlns="http://schema.paremus.com/sf/1.1" version="1.0.0" name="hello-red"
         boundary="fibre"
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
 		A Greeting service and CLI - Declarative Services Version.
 	</description>
-	<nature group="demo" />
+	<admin group="demo" />
 
 	<!-- Declarative Services Version -->
-	<system.part category="ms" name="com.example.hello.ds">
+        <system.part name="hello.ds">
 
-		<property name="language" value="ja" />
-                <contract>
-                   <sf:select>
-                      <sf:require features="(colour=red)"/>
-                   </sf:select> 
-                </contract>
+	   <system.part.element category="ms" name="com.example.hello.ds">
+              <config>
+                 <property name="language" value="ja" />
+              </config>
+           </system.part.element>
+           <contract>
+              <select>
+                 <require features="(colour=red)"/>
+              </select> 
+           </contract>
 
-	</system.part>
+        </system.part>
 	
-	<system.part category="osgi.active.bundle" name="helloworld.cli" />
+	<system.part category="osgi.bundle" name="helloworld.cli" />
 
 </system>

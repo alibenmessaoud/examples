@@ -1,28 +1,31 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="rest"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="rest"
+	version="1.0.0"
 	boundary="fabric"
         repopath="
-           releaserepo/index-nim.xml,
-           localrepo/index-nim.xml
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 	
 	<!-- The web application that talks to the REST endpoint -->
-	<system name="Bookshelf-Site" boundary="fibre">
-		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.site" />
-	</system>
+	<system.part name="Bookshelf-Site">
+		<system.part.element category="osgi.bundle" name="com.paremus.examples.rest.site" />
+                <contract features="(master=true)" cancelationCost="-1" />
+	</system.part>
 
 	<!-- The "back-end" application that creates the REST endpoint -->
-	<system name="Bookshelf" boundary="fibre">
+	<system.part name="Bookshelf">
 		<!-- The REST endpoint bundle -->
-		<system.part category="osgi.active.bundle" name="com.paremus.examples.rest.resource" />
+		<system.part.element category="osgi.bundle" name="com.paremus.examples.rest.resource" />
 		
 		<!-- The Bookshelf implementation -->
-		<system.part category="osgi.active.bundle" name="com.paremus.examples.bookshelf.impl" />
+		<system.part.element category="osgi.bundle" name="com.paremus.examples.bookshelf.impl" />
 
 		<!-- Replicate this system across as many nodes as we have available -->
 		<replication.handler type="scalable">
 			<property name="scaleFactor" value="1" type="float" />
 			<property name="minimum" value="1" type="integer" />
 		</replication.handler>
-	</system>
+	        <contract features="(!(|(infra=true)(fibre.composite.Bookshelf &gt;0)))" />
+	</system.part>
 	
 </system>

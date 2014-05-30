@@ -1,9 +1,10 @@
-<system xmlns="http://schema.paremus.com/sf/1.1" name="javaee-basic"
-        version="1.0.0"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="javaee-basic-glassfish"
+	version="1.0.0"
 	boundary="fabric" 
         repopath="
 	   https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml,
+           https://www.bundlerepo.org/repos/paremus/glassfish-nim.xml,
            https://www.bundlerepo.org/repos/paremus/index-nim.xml
         ">
 
@@ -12,9 +13,14 @@
 	</description>
 	<admin group="demo" />
 
+        <!-- Force GlassFish to be used -->
+        <system.part name="glassfish">
+	   <system.part.element category="osgi.bundle" name="com.paremus.packager.pkg.glassfish"/>
+        </system.part>
+    
 	<!-- Basic deployment with no database -->
         <system.part name="eeExample">
-	   <system.part.element category="osgi.active.bundle" name="com.paremus.packager.test.javaee"/>
+	   <system.part.element category="osgi.bundle" name="com.paremus.packager.test.javaee"/>
         </system.part>
 
 </system>

@@ -1,0 +1,72 @@
+<system
+    xmlns="http://schema.paremus.com/sf/1.1"
+    name="redis-demo"
+    version="1.0.0"
+    boundary="fabric"
+    repopath="
+        https://www.bundlerepo.org/repos/paremus/index-nim.xml,
+        https://www.bundlerepo.org/repos/oss/index-nim.xml,
+	https://www.bundlerepo.org/repos/examples/index-nim.xml
+    ">
+
+    <description>
+       Deploys a Redis client application, as well as a highly
+       available Redis group
+    </description>
+    <admin group="demo" />
+    
+    <!-- 
+    The Redis client bundle is a simple web application for viewing
+    the data stored in the Redis data store.
+    -->
+    <system.part name="client">
+
+       <system.part.element category="osgi.bundle" name="com.paremus.demo.redis"/>
+       <contract features="(master=true)" cancelationCost="-1" />
+
+    </system.part>
+
+    <!-- The Redis Master Node -->
+    <system.part name="master">
+
+       <system.part.element category="msf" name="com.paremus.packager.pkg.redis.master.guard">
+          <config>
+             <property name="redis.group" value="redis-demo" />
+             <property name="port" value="6379" />
+          </config>
+       </system.part.element>
+
+       <contract features="(master=true)" cancelationCost="-1" />
+
+     </system.part>
+    
+    <!-- Redis Normal Slave Nodes -->
+    <system.part name="slave">
+
+       <system.part.element category="msf" name="com.paremus.packager.pkg.redis.slave.guard">
+          <config>
+             <property name="redis.group" value="redis-demo" />
+             <property name="port" value="${port#any}" />
+          </config>
+
+          <!--
+          We leave this property commented out because part of the
+          demo involves switching it on to see the change
+          -->
+          <!-- <property name="can.become.master" value="true" /> -->
+
+          </system.part.element>
+
+       <!-- Replicate this system across as many nodes as we have available -->
+       <replication.handler name="scale" type="scalable">
+          <property name="scaleFactor" value="1" type="float" />
+          <property name="minimum" value="1" type="integer" />
+       </replication.handler>
+
+       <!-- <contract features="(!(master=true))" /> -->
+       <!-- <contract features="(!(|(master=true)(fibre.composite.com.paremus.packager.pkg.redis.slave.guard &gt;2)))" /> -->
+       <contract features="(!(|(master=true)(fibre.system.redis-demo &gt;2)))" />
+
+    </system.part>
+    
+</system>

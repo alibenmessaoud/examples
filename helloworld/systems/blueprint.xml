@@ -1,9 +1,10 @@
-<system xmlns="http://schema.paremus.com/sf/1"
+<system xmlns="http://schema.paremus.com/sf/1.1"
         name="helloworld-blueprint-system"
+	version="1.0.0"
         boundary="fibre"
         repopath="
-                ../cnf/releaserepo/index-nim.xml,
-                ../helloworld.blueprint/index-nim-blueprint.xml,
+                https://www.bundlerepo.org/repos/examples/index-nim.xml,
+                https://www.bundlerepo.org/repos/examples/index-nim-blueprint.xml,
                 https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
@@ -11,15 +12,17 @@
                 A Greeting service and CLI - Blueprint Version. 
         </description>
 
-        <nature group="demo" />
+        <admin group="demo" />
 
         <!-- Blueprint Version -->
         <system.part category="ms" name="com.example.hello.bp">
+        	<config>
                 <property name="language" value="de" />
+        	</config>
         </system.part>
 
 
-        <system.part category="osgi.active.bundle" name="helloworld.cli" >
+        <system.part category="osgi.bundle" name="helloworld.cli" >
                 <!--contract features="(fibre.composite.com.example.hello=1)" /-->
         </system.part>
 

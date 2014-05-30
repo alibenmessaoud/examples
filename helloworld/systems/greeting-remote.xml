@@ -1,19 +1,26 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="greeting-remote"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="greeting-remote"
+        version="1.0.0"
 	boundary="fabric"
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
                 A Greeting Service - Remote Declarative Services Version.
 	</description>
-	<nature group="demo" />
+	<admin group="demo" />
 
-           <system.part category="ms" name="com.example.hello.ds">
-               <property name="language" value="en" />
-               <property name="service.exported.interfaces" value="*" />
-	       <contract features="(type=REMOTE)" />
-           </system.part>
+        <system.part name="hello.ds">
+
+           <system.part.element category="ms" name="com.example.hello.ds">
+              <config>
+                 <property name="language" value="en" />
+                 <property name="service.exported.interfaces" value="*" />
+              </config>
+           </system.part.element>
+	   <contract features="(type=REMOTE)" />
+
+        </system.part>
 
 </system>

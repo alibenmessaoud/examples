@@ -1,8 +1,8 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="javaee-db-db"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="javaee-db-db"
+	version="1.0.0"
 	boundary="fabric" 
 	repopath="
-           ../cnf/releaserepo/index-nim.xml,
-           ../cnf/localrepo/index.xml,
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,          
            https://www.bundlerepo.org/repos/oss/index-nim.xml,
            https://www.bundlerepo.org/repos/paremus/index-nim.xml
         ">
@@ -10,12 +10,18 @@
 	<description>
 		Deploys the database for the JBoss sample application which uses Hibernate
 	</description>
-	<nature group="demo" />
+	<admin group="demo" />
 
 	<!-- Basic deployment of the database -->
-	<system.part category="msf" name="com.paremus.packager.demos.derby.guard">
-               <property name="database.names" value="test" />
-               <property name="derby.storage.location" value="/tmp/packager/javaee/derby" />
-    </system.part>
+        <system.part name="derby">
+
+	   <system.part.element category="msf" name="com.paremus.packager.demos.derby.guard">
+	      <config>
+	         <property name="database.names" value="test" />
+                 <property name="derby.storage.location" value="/tmp/packager/javaee/derby" />
+	      </config>
+           </system.part.element>
+
+        </system.part>
 
 </system>

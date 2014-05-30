@@ -1,18 +1,25 @@
 <system
-    xmlns="http://schema.paremus.com/sf/1"
+    xmlns="http://schema.paremus.com/sf/1.1"
     name="MQTTdemo"
+    version="1.0.0"
     boundary="fibre"
     repopath="
-      ./releaserepo/index-nim.xml,
-      ./localrepo/index-nim.xml,
-      https://www.bundlerepo.org/repos/paremus/index-nim.xml
+      https://www.bundlerepo.org/repos/examples/index-nim.xml,
+      https://www.bundlerepo.org/repos/paremus/index-nim.xml,
+      https://www.bundlerepo.org/repos/oss/index-nim.xml
     ">
-    
-    <system.part category="msf" name="org.bndtools.rt.packager.mosquitto.guard">
-      <!-- optional config -->
-    <!-- <property name="port" value="1883" type="integer"/> -->
+
+    <system.part name="MQTTserver">    
+       <system.part.element category="msf" name="org.bndtools.rt.packager.mosquitto.guard">
+          <!-- optional config -->
+          <!-- <config>
+             <property name="port" value="1883" type="integer"/> 
+    	  </config> -->
+       </system.part.element>
     </system.part>
 
-    <system.part category="osgi.active.bundle" name="com.paremus.examples.mqtt.server"/>
+    <system.part name="mqttExample">
+       <system.part.element category="osgi.bundle" name="com.paremus.examples.mqtt.server"/>
+    </system.part>	
 
 </system>

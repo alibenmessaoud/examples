@@ -1,9 +1,10 @@
-<system xmlns="http://schema.paremus.com/sf/1.1" name="javaee-db-app"
-        version="1.0.0"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="javaee-db-app-jboss"
+	version="1.0.0"
 	boundary="fabric" 
         repopath="
            https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml,
+           https://www.bundlerepo.org/repos/paremus/jboss-nim.xml,
            https://www.bundlerepo.org/repos/paremus/index-nim.xml
         ">
 
@@ -11,6 +12,11 @@
 		Deploys a JBoss sample application which uses Hibernate
 	</description>
 	<admin group="demo" />
+    
+        <!-- Force JBoss to be used -->
+        <system.part name="jbossAS">
+	   <system.part.element category="osgi.active.bundle" name="com.paremus.packager.pkg.jbossas"/>
+        </system.part>    
 
 	<!-- Basic deployment for the application -->
         <system.part name="dbExample">

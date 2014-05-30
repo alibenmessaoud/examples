@@ -1,18 +1,18 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="cli"
+<system xmlns="http://schema.paremus.com/sf/1.1" version="1.0.0" name="cli"
 	boundary="fibre"
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
 		A CLI command service.
 	</description>
-	<nature group="demo" />
+	<admin group="demo" />
 
 
 	<!-- Declarative Services Version -->
-        <system.part category="osgi.active.bundle" name="helloworld.cli" >
+        <system.part category="osgi.bundle" name="helloworld.cli" >
            <contract features="(type=LOCAL)" />
         </system.part>
 

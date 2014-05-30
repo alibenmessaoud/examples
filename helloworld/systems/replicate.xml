@@ -1,21 +1,26 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="replicate"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="replicate"
+        version="1.0.0"
 	boundary="fabric"
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
                 A Replicated Greeting Service - Remote Declarative Services Version.
 	</description>
+	<admin group="demo" />
 
-	<nature group="demo" />
+        <system.part name="hello.ds">
 
-        <system.part category="ms" name="com.example.hello.ds">
-           <property name="language" value="en" />
-           <property name="service.exported.interfaces" value="*" />
+           <system.part.element category="ms" name="com.example.hello.ds">
+              <config>
+                 <property name="language" value="en" />
+                 <property name="service.exported.interfaces" value="*" />
+              </config>
+           </system.part.element>
            <contract features="(type=REMOTE)" />
-
+           
            <!-- Replicate this system across as many nodes as we have available -->
            <replication.handler name="scale" type="scalable">
               <property name="scaleFactor" value="1" type="float" />

@@ -1,35 +1,46 @@
-<system xmlns="http://schema.paremus.com/sf/1"
+<system xmlns="http://schema.paremus.com/sf/1.1"
         name="DataNucleusExample"
+        version="1.0.0"
         boundary="fabric"
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
-           ../cnf/localrepo/index-nim.xml,
-	   ../cnf/camelrepo/index-nim.xml,
-	   ../cnf/packager/index-nim.xml,
-	   https://www.bundlerepo.org/repos/oss/index-nim.xml
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml,
+	   https://www.bundlerepo.org/repos/paremus/index-nim.xml
         ">
 
    <!-- MongoDB package -->
-   <system.part category="msf" name="org.bndtools.rt.packager.mongodb.guard" >
-       <property name="port" value="27017" />
+   <system.part name="MongoDB">
+
+      <system.part.element category="msf" name="org.bndtools.rt.packager.mongodb.guard" >
+         <config>
+            <property name="port" value="27017" />
+         </config>
+      </system.part.element>
+
    </system.part>
 
 
    <!-- The top-level "application" bundles -->
-   <system name="MidTier OSGi" boundary="fibre">
+   <system.part name="Camel-DataNucleus">
 
      <!-- Add the datanucleus part -->
-     <system.part category="osgi.active.bundle" name="com.paremus.example.datanucleus.service" />
+     <system.part.element category="osgi.bundle" name="com.paremus.example.datanucleus.service" />
     
      <!-- Add the camel part -->
-     <system.part category="osgi.active.bundle" name="com.paremus.example.camel" />
+     <system.part.element category="osgi.bundle" name="com.paremus.example.camel" />
   
-   </system>
+   </system.part>
 
 
    <!-- Play-REST application -->
-   <system.part category="msf" name="com.paremus.example.play.guard" >
-      <property name="httpPort" value="9999" />
+   <system.part name="Play UI">
+
+      <system.part.element category="msf" name="com.paremus.example.play.guard" >
+         <config>
+            <property name="httpPort" value="9999" />
+         </config>
+      </system.part.element>
+
    </system.part>
 
 </system>

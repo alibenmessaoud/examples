@@ -1,20 +1,21 @@
-<system xmlns="http://schema.paremus.com/sf/1" name="greeting-include" template="cli-abstract" version="1.0.0"
+<system xmlns="http://schema.paremus.com/sf/1.1" name="greeting-include" template="cli-abstract" version="1.0.0"
 	boundary="fibre" 
         repopath="
-           ../cnf/releaserepo/index-nim.xml,
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
            https://www.bundlerepo.org/repos/oss/index-nim.xml
         ">
 
 	<description>
-		A Greeting service - Local Declarative Services | Requires CLI template.
+	   A Greeting service - Local Declarative Services | Requires CLI template.
 	</description>
-	<nature group="demo" />
+	<admin group="demo" />
 
         <!-- Declarative Services Version -->
         <system.part category="ms" name="com.example.hello.ds">
-           <property name="language" value="ja" />
+           <config>
+              <property name="language" value="ja" />
+           </config>
            <contract features="(type=LOCAL)" />
         </system.part>
 
 </system>
-

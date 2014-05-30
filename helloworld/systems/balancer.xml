@@ -1,0 +1,45 @@
+<system xmlns="http://schema.paremus.com/sf/1.1" version="1.0.0" name="helloBalancer"
+        boundary="fabric"
+        repopath="
+           https://www.bundlerepo.org/repos/examples/index-nim.xml,
+           https://www.bundlerepo.org/repos/oss/index-nim.xml,
+           https://www.bundlerepo.org/repos/paremus/index-nim.xml
+        ">
+
+        <description>
+                A Replicated Greeting Service - Remote Declarative Services Version.
+        </description>
+        <admin group="demo" />
+
+        <system.part name="balancer">
+ 
+           <system.part.element category="msf" name="com.paremus.fabric.balancer">
+              <config>
+                <property name="interfaces" value="com.example.hello.Greeting" />
+                <property name="service.ranking" value="1" type="integer" />
+              </config>
+           </system.part.element>
+           <contract features="(type=LOCAL)" />
+
+        </system.part>
+
+
+        <system.part name="hello.ds">
+
+           <system.part.element category="ms" name="com.example.hello.ds">
+              <config>
+                <property name="language" value="en" />
+                <property name="service.exported.interfaces" value="*" />
+              </config>
+           </system.part.element>
+           <contract features="(type=REMOTE)" />
+
+           <!-- Replicate this system across as many nodes as we have available -->
+           <replication.handler name="scale" type="scalable">
+              <property name="scaleFactor" value="1" type="float" />
+              <property name="minimum" value="1" type="integer" />
+           </replication.handler>
+
+        </system.part>
+
+</system>
