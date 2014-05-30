@@ -1,0 +1,9 @@
+-include: ${workspace}/cnf/build.bnd
+Private-Package: com.paremus.demo.fractal.equation
+Service-Component: *
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	com.paremus.demo.fractal.api;version=latest
+Bundle-Version: 1.0.0

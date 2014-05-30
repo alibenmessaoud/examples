@@ -1,0 +1,4 @@
+-include: ${workspace}/cnf/build.bnd
+-buildpath: biz.aQute.bnd.annotation
+Export-Package: com.paremus.demo.fractal.api
+Bundle-Version: 1.0.0

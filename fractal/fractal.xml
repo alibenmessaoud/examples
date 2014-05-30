@@ -1,0 +1,73 @@
+<system
+    xmlns="http://schema.paremus.com/sf/1.1"
+    name="fractal-demo"
+    boundary="fabric"
+    repopath="
+        https://www.bundlerepo.org/repos/oss/index-nim.xml,
+        https://www.bundlerepo.org/repos/examples/index-nim.xml">
+
+    <description>
+       Deploy the Fractal viewer and optional additional calculation workers
+    </description>
+    
+    <admin group="demo" />
+    
+    <!-- 
+   		The Fractal viewer, a load balancer, a local calculation engine,
+   		and some basic colour maps.
+    -->
+    <system.part name="viewer">
+    
+        <description>
+            The Fractal viewer and local calculation services, running on a single node
+        </description>
+    
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.http" />
+           
+        <!-- Provide colour mappings -->
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.colours" />
+        
+        <!-- Provide a basic mandelbrot equation -->
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.equation" />
+        
+        <!-- Configure a load balancer for mandelbrot equation instances -->
+        <config pid="com.paremus.fabric.balancer" factory="true">
+            <property name="interfaces" value="com.paremus.demo.fractal.api.Equation" />
+            <property name="target.filter" value="(equation.type=mandelbrot)" />
+            <property name="equation.type" value="mandelbrot (load balanced)" />
+            <!-- Add defaults which cover the standard range of fractal values -->
+            <property name="minX" value="-2.0" />
+            <property name="maxX" value="1.0" />
+            <property name="minY" value="-1.3" />
+            <property name="maxY" value="1.3" />
+            <property name="iterations" value="100" />
+        </config>
+        
+       <contract features="(master=true)" cancelationCost="-1" />
+    </system.part>
+
+    
+    <!-- Optional workers -->
+    <system.part name="workers" >
+
+        <description>
+            Optional remote worker services
+        </description>
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.equation" >
+            <!-- Make the equation available remotely -->
+            <config pid="com.paremus.demo.fractal.equation.MandelbrotEquation">
+                <property name="service.exported.interfaces" value="com.paremus.demo.fractal.api.Equation" />
+            </config>
+        </system.part.element>
+        
+        <!-- Start with zero extra, and add them in by changing this value -->
+        <replication.handler type="fixed">
+            <property name="size" value="0" type="integer" />
+        </replication.handler>
+        
+        <!-- Don't deploy us on the master node, or on a node that already has a worker  -->
+        <contract features="(!(|(master=true)(fibre.system.fractal-demo&gt;0)))" />
+
+    </system.part>
+    
+</system>

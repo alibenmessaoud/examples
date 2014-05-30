@@ -1,0 +1,11 @@
+-include: ${workspace}/cnf/build.bnd
+Private-Package: com.paremus.demo.fractal.colours
+Service-Component: *
+-buildpath: osgi.core;version=4.3.1,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	com.paremus.demo.fractal.api;version=latest
+	
+Include-Resource: colourSchemes=images
+Bundle-Version: 1.0.0
