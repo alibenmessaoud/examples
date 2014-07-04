@@ -1,6 +1,7 @@
 <system
     xmlns="http://schema.paremus.com/sf/1.1"
     name="fractal-demo"
+    version="1.0.0"
     boundary="fabric"
     repopath="
         https://www.bundlerepo.org/repos/oss/index-nim.xml,
@@ -22,13 +23,13 @@
             The Fractal viewer and local calculation services, running on a single node
         </description>
     
-        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.http" />
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.http" version="[1.0.0,1.0.0]"/>
            
         <!-- Provide colour mappings -->
-        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.colours" />
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.colours" version="[1.0.0,1.0.0]"/>
         
         <!-- Provide a basic mandelbrot equation -->
-        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.equation" />
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.equation" version="[1.0.0,1.0.0]"/>
         
         <!-- Configure a load balancer for mandelbrot equation instances -->
         <config pid="com.paremus.fabric.balancer" factory="true">
@@ -43,6 +44,19 @@
             <property name="iterations" value="100" />
         </config>
         
+        <!-- Configure a load balancer for julia equation instances -->
+        <config pid="com.paremus.fabric.balancer" factory="true">
+            <property name="interfaces" value="com.paremus.demo.fractal.api.Equation" />
+            <property name="target.filter" value="(equation.type=julia)" />
+            <property name="equation.type" value="julia (load balanced)" />
+            <!-- Add defaults which cover the standard range of fractal values -->
+            <property name="minX" value="-1.65" />
+            <property name="maxX" value="1.65" />
+            <property name="minY" value="-1.43" />
+            <property name="maxY" value="1.43" />
+            <property name="iterations" value="200" />
+        </config>
+        
        <contract features="(master=true)" cancelationCost="-1" />
     </system.part>
 
@@ -53,9 +67,12 @@
         <description>
             Optional remote worker services
         </description>
-        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.equation" >
-            <!-- Make the equation available remotely -->
+        <system.part.element category="osgi.bundle" name="com.paremus.demo.fractal.equation" version="[1.0.0,1.0.0]" >
+            <!-- Make the equations available remotely -->
             <config pid="com.paremus.demo.fractal.equation.MandelbrotEquation">
+                <property name="service.exported.interfaces" value="com.paremus.demo.fractal.api.Equation" />
+            </config>
+            <config pid="com.paremus.demo.fractal.equation.JuliaEquation">
                 <property name="service.exported.interfaces" value="com.paremus.demo.fractal.api.Equation" />
             </config>
         </system.part.element>
