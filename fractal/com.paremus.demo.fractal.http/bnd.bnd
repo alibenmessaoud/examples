@@ -14,14 +14,14 @@ Service-Component: *
 	javax.ws.rs-api;version=2.0,\
 	org.glassfish.jersey.core.jersey-server,\
 	org.glassfish.jersey.core.jersey-common,\
-	org.glassfish.jersey.bundles.repackaged.jersey-guava;version=2.8,\
+	org.glassfish.jersey.core.jersey-client,\
+	org.glassfish.jersey.bundles.repackaged.jersey-guava,\
 	org.glassfish.hk2.api,\
 	org.glassfish.hk2.utils,\
+	org.glassfish.hk2.locator,\
 	javax.annotation-api;version=1.2,\
-	org.glassfish.hk2.locator;version=2.2,\
 	javassist;version=3.18,\
 	javax.validation.api,\
-	org.glassfish.jersey.core.jersey-client,\
 	org.osgi.service.async,\
 	org.osgi.util.promise
 	
