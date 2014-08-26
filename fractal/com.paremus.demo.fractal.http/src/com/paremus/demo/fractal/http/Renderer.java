@@ -149,7 +149,7 @@ public class Renderer {
 		
 		public AsynchronousRender(double minX, double maxX, double minY, double maxY, 
 				int maxIterations, ColourMap colourMap, Equation eqn) {
-			super(minX, maxX, minY, maxY, maxIterations, colourMap, async.mediate(eqn));
+			super(minX, maxX, minY, maxY, maxIterations, colourMap, async.mediate(eqn, Equation.class));
 		}
 		
 		@Override

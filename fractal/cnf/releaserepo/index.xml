@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1404824820246' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1409063024884' name='Release' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='com.paremus.demo.fractal.http'/>
@@ -7,9 +7,9 @@
       <attribute name='version' type='Version' value='1.0.0'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='45767af29e9acf3818f05e59d048c32c54417a7944d45bd8d80b1d3b8a6e1001'/>
+      <attribute name='osgi.content' value='e34afdabc118f2ba74bd4e94dfa36f69e97bacc507a723c4fd5459e6cbde2620'/>
       <attribute name='url' value='com.paremus.demo.fractal.http/com.paremus.demo.fractal.http-1.0.0.jar'/>
-      <attribute name='size' type='Long' value='3846609'/>
+      <attribute name='size' type='Long' value='3846628'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
